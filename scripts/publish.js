@@ -22,6 +22,13 @@ const REPO = process.env.GITHUB_REPOSITORY;      // owner/name
 const BRANCH = process.env.GITHUB_REF_NAME || 'main';
 const DRY = process.env.DRY_RUN === '1';
 
+// DRY_RUN=2 is the smoke test. It really does call Facebook, with published:false,
+// so the photo lands in the Page's library and appears on nobody's feed. This is
+// the only honest way to prove pages_manage_posts before a live post: permission
+// to publish cannot be read, only exercised. Instagram has no equivalent — it has
+// no unpublished state — so the smoke test covers Facebook only and says so.
+const SMOKE = process.env.DRY_RUN === '2';
+
 const ROOT = path.join(__dirname, '..');
 
 const FIXED_TAGS = '#HenryCountyGA #SouthMetroAtlanta #KellerWilliams #Realtor';
@@ -101,6 +108,18 @@ async function main() {
   if (DRY) {
     console.log('\nDRY RUN — nothing sent.');
     console.log('\n--- caption ---\n' + msg + '\n---------------');
+    return;
+  }
+
+  if (SMOKE) {
+    console.log('\nSMOKE TEST — uploading to Facebook with published:false.');
+    console.log('It will not appear on the Page, in the feed, or in notifications.');
+    const res = await post(`https://graph.facebook.com/${API}/${PAGE_ID}/photos`, {
+      url, message: msg, published: false, access_token: TOKEN
+    });
+    console.log(`\nSMOKE TEST PASSED — facebook accepted the upload, id ${res.id}`);
+    console.log('That is proof the token can post to the Page.');
+    console.log('The photo sits unpublished in Page > Photos and can be deleted there.');
     return;
   }
 
