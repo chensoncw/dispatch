@@ -15,8 +15,6 @@ const TOKEN = process.env.META_PAGE_TOKEN;
 const PAGE_ID = process.env.META_PAGE_ID;
 const IG_ID = process.env.META_IG_USER_ID;
 
-const NEEDED = ['pages_manage_posts', 'pages_read_engagement', 'instagram_basic', 'instagram_content_publish'];
-
 async function get(url) {
   const r = await fetch(url);
   const j = await r.json().catch(() => ({}));
@@ -46,20 +44,18 @@ async function main() {
     console.warn(`preflight: WARNING token belongs to ${me.id} but META_PAGE_ID is ${PAGE_ID}`);
   }
 
-  // 2. does it still hold the permissions we publish with
-  try {
-    const perms = await get(`https://graph.facebook.com/${API}/me/permissions?access_token=${TOKEN}`);
-    const granted = (perms.data || []).filter(p => p.status === 'granted').map(p => p.permission);
-    const lost = NEEDED.filter(n => !granted.includes(n));
-    if (lost.length) {
-      console.warn('preflight: WARNING these permissions are not reported as granted: ' + lost.join(', '));
-      console.warn('A Page token often does not list them here. Treat as a hint, not a verdict.');
-    } else {
-      console.log('preflight: all publishing permissions present');
-    }
-  } catch (e) {
-    console.warn('preflight: could not read permissions (' + e.message + ') — continuing');
-  }
+  // 2. can it still read the Page's own feed
+  //
+  // There is no read-only way to prove pages_manage_posts — the only proof of
+  // permission to post is a post. So this reads the feed instead, which needs
+  // pages_read_engagement. The two are granted together and revoked together,
+  // so a feed read that works is good evidence the posting grant survived too.
+  //
+  // (/me/permissions used to live here. It is a User node field: against a Page
+  // token it fails every single run, which is how it trained us to skim past
+  // preflight output. A check that always warns is worse than no check.)
+  await get(`https://graph.facebook.com/${API}/${PAGE_ID}/feed?limit=1&access_token=${TOKEN}`);
+  console.log('preflight: page feed readable — read/engagement grant intact');
 
   // 3. can we see the Instagram account
   const ig = await get(`https://graph.facebook.com/${API}/${IG_ID}?fields=username&access_token=${TOKEN}`);
