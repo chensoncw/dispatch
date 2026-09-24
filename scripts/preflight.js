@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * preflight.js â€” check the token before anything tries to publish.
+ * preflight.js — check the token before anything tries to publish.
  *
  * The token is the real failure mode, not the API. Change a Facebook
- * password or revoke a permission and it invalidates â€” and without this
+ * password or revoke a permission and it invalidates — and without this
  * check the post simply does not happen and nobody finds out until
  * somebody asks why the account went quiet.
  *
@@ -40,7 +40,7 @@ async function main() {
 
   // 1. is the token alive, and whose is it
   const me = await get(`https://graph.facebook.com/${API}/me?fields=id,name&access_token=${TOKEN}`);
-  console.log(`preflight: token valid â€” ${me.name} (${me.id})`);
+  console.log(`preflight: token valid — ${me.name} (${me.id})`);
 
   if (me.id !== PAGE_ID) {
     console.warn(`preflight: WARNING token belongs to ${me.id} but META_PAGE_ID is ${PAGE_ID}`);
@@ -58,12 +58,12 @@ async function main() {
       console.log('preflight: all publishing permissions present');
     }
   } catch (e) {
-    console.warn('preflight: could not read permissions (' + e.message + ') â€” continuing');
+    console.warn('preflight: could not read permissions (' + e.message + ') — continuing');
   }
 
   // 3. can we see the Instagram account
   const ig = await get(`https://graph.facebook.com/${API}/${IG_ID}?fields=username&access_token=${TOKEN}`);
-  console.log(`preflight: instagram reachable â€” @${ig.username}`);
+  console.log(`preflight: instagram reachable — @${ig.username}`);
 
   console.log('preflight: OK');
 }
