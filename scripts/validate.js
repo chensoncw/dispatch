@@ -112,16 +112,21 @@ function checkLengths(file, card, tpl) {
 
 function checkRules(file, card, tpl, tplName) {
   const text = allText(card).join(' \u0001 ');
-  const isHoliday = tplName === 'holiday';
+  // A claimless card states nothing checkable — a greeting, or a story about
+  // the characters — so there is nothing to cite and a source would be
+  // decoration. Driven by the template's own no_source flag rather than a
+  // hardcoded name, so it covers holiday and series alike.
+  const claimless = tpl.no_source === true;
 
   // --- sourced ---
-  if (!isHoliday && !tpl.no_source) {
-    if (!card.source) fail(file, 'sourced', 'source is required on every card except holiday');
-    if (!card.disclaimer) fail(file, 'sourced', 'disclaimer is required on every card except holiday');
+  if (!claimless) {
+    if (!card.source) fail(file, 'sourced', 'source is required on every card that states something');
+    if (!card.disclaimer) fail(file, 'sourced', 'disclaimer is required on every card that states something');
   }
-  if (isHoliday && (card.source || card.disclaimer)) {
+  if (claimless && (card.source || card.disclaimer)) {
     fail(file, 'sourced',
-      'a holiday card carries no source or disclaimer — if it states something checkable it is not a holiday card');
+      `a ${tplName} card carries no source or disclaimer — ` +
+      'the moment it states something checkable it is a different template and the sourcing rules apply');
   }
 
   // --- dated figures ---
