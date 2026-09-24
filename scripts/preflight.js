@@ -47,15 +47,28 @@ async function main() {
   // 2. can it still read the Page's own feed
   //
   // There is no read-only way to prove pages_manage_posts — the only proof of
-  // permission to post is a post. So this reads the feed instead, which needs
-  // pages_read_engagement. The two are granted together and revoked together,
-  // so a feed read that works is good evidence the posting grant survived too.
+  // permission to post is a post. Reading the feed needs pages_read_engagement,
+  // which Meta lists as required for Page publishing alongside it, so a feed
+  // read is the closest honest proxy available before the fact.
+  //
+  // Not fatal. The first token we issued passed /me and reached Instagram but
+  // failed here, which proves the two Page grants can travel separately: a
+  // token can be perfectly alive and still not hold this one. Instagram does
+  // not need it at all. So this warns loudly and lets the run continue —
+  // Facebook may still refuse the post, and the publish step will say so.
   //
   // (/me/permissions used to live here. It is a User node field: against a Page
   // token it fails every single run, which is how it trained us to skim past
   // preflight output. A check that always warns is worse than no check.)
-  await get(`https://graph.facebook.com/${API}/${PAGE_ID}/feed?limit=1&access_token=${TOKEN}`);
-  console.log('preflight: page feed readable — read/engagement grant intact');
+  try {
+    await get(`https://graph.facebook.com/${API}/${PAGE_ID}/feed?limit=1&access_token=${TOKEN}`);
+    console.log('preflight: page feed readable — pages_read_engagement present');
+  } catch (e) {
+    console.warn('preflight: WARNING cannot read the page feed — ' + e.message);
+    console.warn('The token is alive but appears to lack pages_read_engagement.');
+    console.warn('Instagram is unaffected. The Facebook post may be refused.');
+    console.warn('Fix: reissue the Page token with pages_read_engagement checked.');
+  }
 
   // 3. can we see the Instagram account
   const ig = await get(`https://graph.facebook.com/${API}/${IG_ID}?fields=username&access_token=${TOKEN}`);
