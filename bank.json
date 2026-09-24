@@ -1,0 +1,400 @@
+{
+  "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
+  "_built": "2026-09-24",
+  "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
+  "_intervals_months": {
+    "market": 1,
+    "teaching": 24,
+    "community": 1,
+    "home": 12,
+    "calendar": 12,
+    "series": 6,
+    "_default": 12
+  },
+  "count": 5,
+  "by_year": {
+    "2026": {
+      "2026-09": [
+        {
+          "date": "2026-09-25",
+          "topic": "meet",
+          "headline": "Titan And Echo Will Take It From Here"
+        },
+        {
+          "date": "2026-09-29",
+          "topic": "heat",
+          "headline": "Check The Heat Before You Need It"
+        },
+        {
+          "date": "2026-09-30",
+          "topic": "market",
+          "headline": "Homes Sold Faster And Closer To Asking"
+        }
+      ],
+      "2026-10": [
+        {
+          "date": "2026-10-01",
+          "topic": "events",
+          "headline": "October Opens Busy Around Here"
+        },
+        {
+          "date": "2026-10-02",
+          "topic": "taxdate",
+          "headline": "The Only Tax Due Date That Counts Is On Your Bill"
+        }
+      ]
+    }
+  },
+  "by_topic": {
+    "meet": [
+      {
+        "date": "2026-09-25",
+        "year": "2026",
+        "month": "2026-09",
+        "topic": "meet",
+        "template": "series",
+        "slot": "series",
+        "headline": "Titan And Echo Will Take It From Here",
+        "said": [
+          "Titan And Echo\nWill Take It From Here",
+          "Echo, from here on we handle the updates. What is happening around the county, what the numbers actually did, and the bits of a house nobody thinks about until they leak.",
+          "And when I don't follow something, I'll say so. If it takes me two goes, it probably takes someone else two goes."
+        ],
+        "keywords": [
+          "echo",
+          "here",
+          "takes",
+          "goes",
+          "titan",
+          "take",
+          "handle",
+          "updates",
+          "happening",
+          "around",
+          "county",
+          "numbers"
+        ],
+        "source": null
+      }
+    ],
+    "heat": [
+      {
+        "date": "2026-09-29",
+        "year": "2026",
+        "month": "2026-09",
+        "topic": "heat",
+        "template": "home-safety",
+        "slot": "home",
+        "headline": "Check The Heat Before You Need It",
+        "said": [
+          "Check The Heat\nBefore You Need It",
+          "Echo, the NFPA counted 37,365 home heating fires a year from 2020 to 2024. Space heaters and heating stoves caused 30% of those fires — and 73% of the deaths.",
+          "Chimneys and heating systems get inspected and cleaned each year before the season — a licensed contractor's job",
+          "Anything that burns stays three feet clear of a heater — the spacing a fire department repeats every winter",
+          "A furnace that sat unused all summer is worth a look from a licensed HVAC contractor before the first cold night",
+          "Thirty percent of the fires. Seventy-three percent of the deaths. That gap stays with me."
+        ],
+        "keywords": [
+          "before",
+          "heating",
+          "fires",
+          "year",
+          "deaths",
+          "licensed",
+          "contractor",
+          "stays",
+          "three",
+          "percent",
+          "2020",
+          "2024"
+        ],
+        "source": "NFPA · Home Heating Fires, 2020–2024 annual averages · retrieved September 24, 2026"
+      }
+    ],
+    "market": [
+      {
+        "date": "2026-09-30",
+        "year": "2026",
+        "month": "2026-09",
+        "topic": "market",
+        "template": "market-two-figures",
+        "slot": "market",
+        "headline": "Homes Sold Faster And Closer To Asking",
+        "said": [
+          "Homes Sold Faster\nAnd Closer To Asking",
+          "Henry County · three months ending August 2026",
+          "Median Sold",
+          "$333,883",
+          "past 3 months",
+          "Days On Market",
+          "61",
+          "was 85 last year",
+          "Echo, two numbers from Redfin. The median home sold for **$333,883**, down 1.8% on a year ago. And homes sold after **61 days** on the market, against 85 days last year.",
+          "Homes closed at **98.3%** of list price — up 1.3 points",
+          "Redfin's median covers three months, not one",
+          "Median? …Oh — the middle one. Half above, half below. So quicker, and nearer the asking number than last year. I'd still check my street."
+        ],
+        "keywords": [
+          "sold",
+          "median",
+          "year",
+          "homes",
+          "months",
+          "days",
+          "last",
+          "asking",
+          "three",
+          "market",
+          "redfin",
+          "half"
+        ],
+        "source": "Redfin · Henry County, GA housing market · retrieved September 24, 2026"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-10-01",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "events",
+        "template": "community-diary",
+        "slot": "community",
+        "headline": "October Opens Busy Around Here",
+        "said": [
+          "October Opens\nBusy Around Here",
+          "Echo, three things worth knowing about this week — and every one of them is still ahead of us as this goes up.",
+          "Oct 2–11",
+          "Fall Georgia State Fair",
+          "EchoPark Speedway, 1500 Tara Place in Hampton. Rides, shows and fair food over two weekends.",
+          "Oct 2–4",
+          "FoodeesFest",
+          "Three days of food vendors. Venue and times are on the county tourism calendar.",
+          "Oct 3",
+          "Pizza Cook-Off Competition",
+          "In McDonough, from 9am to 3:30pm on the Saturday.",
+          "2026-10-02",
+          "Ten days of fair? …Oh — it runs across two weekends. That's the one I'd take the kids to."
+        ],
+        "keywords": [
+          "fair",
+          "three",
+          "food",
+          "weekends",
+          "days",
+          "1500",
+          "2026",
+          "october",
+          "opens",
+          "busy",
+          "around",
+          "here"
+        ],
+        "source": "Visit Henry County Georgia events calendar · retrieved September 24, 2026"
+      }
+    ],
+    "taxdate": [
+      {
+        "date": "2026-10-02",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "taxdate",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "The Only Tax Due Date That Counts Is On Your Bill",
+        "said": [
+          "The Only Tax Due Date\nThat Counts Is On Your Bill",
+          "Echo, Georgia's default property tax due date is December 20. But a county can move it to December 1 or November 15, or split it into instalments.",
+          "So there's no single date for everybody. How do I find mine?",
+          "From the bill itself. Henry's office publishes no fixed date online — it says payment must reach them by the current due date, or carry a USPS postmark by it.",
+          "So the envelope is the instruction, not the calendar. I'd read the date on mine before I assumed December."
+        ],
+        "keywords": [
+          "date",
+          "december",
+          "bill",
+          "mine",
+          "only",
+          "counts",
+          "echo",
+          "georgia",
+          "default",
+          "property",
+          "county",
+          "move"
+        ],
+        "source": "Georgia Dept. of Revenue & Henry County Tax Commissioner · retrieved Sept 24, 2026"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "date": "2026-09-25",
+      "year": "2026",
+      "month": "2026-09",
+      "topic": "meet",
+      "template": "series",
+      "slot": "series",
+      "headline": "Titan And Echo Will Take It From Here",
+      "said": [
+        "Titan And Echo\nWill Take It From Here",
+        "Echo, from here on we handle the updates. What is happening around the county, what the numbers actually did, and the bits of a house nobody thinks about until they leak.",
+        "And when I don't follow something, I'll say so. If it takes me two goes, it probably takes someone else two goes."
+      ],
+      "keywords": [
+        "echo",
+        "here",
+        "takes",
+        "goes",
+        "titan",
+        "take",
+        "handle",
+        "updates",
+        "happening",
+        "around",
+        "county",
+        "numbers"
+      ],
+      "source": null
+    },
+    {
+      "date": "2026-09-29",
+      "year": "2026",
+      "month": "2026-09",
+      "topic": "heat",
+      "template": "home-safety",
+      "slot": "home",
+      "headline": "Check The Heat Before You Need It",
+      "said": [
+        "Check The Heat\nBefore You Need It",
+        "Echo, the NFPA counted 37,365 home heating fires a year from 2020 to 2024. Space heaters and heating stoves caused 30% of those fires — and 73% of the deaths.",
+        "Chimneys and heating systems get inspected and cleaned each year before the season — a licensed contractor's job",
+        "Anything that burns stays three feet clear of a heater — the spacing a fire department repeats every winter",
+        "A furnace that sat unused all summer is worth a look from a licensed HVAC contractor before the first cold night",
+        "Thirty percent of the fires. Seventy-three percent of the deaths. That gap stays with me."
+      ],
+      "keywords": [
+        "before",
+        "heating",
+        "fires",
+        "year",
+        "deaths",
+        "licensed",
+        "contractor",
+        "stays",
+        "three",
+        "percent",
+        "2020",
+        "2024"
+      ],
+      "source": "NFPA · Home Heating Fires, 2020–2024 annual averages · retrieved September 24, 2026"
+    },
+    {
+      "date": "2026-09-30",
+      "year": "2026",
+      "month": "2026-09",
+      "topic": "market",
+      "template": "market-two-figures",
+      "slot": "market",
+      "headline": "Homes Sold Faster And Closer To Asking",
+      "said": [
+        "Homes Sold Faster\nAnd Closer To Asking",
+        "Henry County · three months ending August 2026",
+        "Median Sold",
+        "$333,883",
+        "past 3 months",
+        "Days On Market",
+        "61",
+        "was 85 last year",
+        "Echo, two numbers from Redfin. The median home sold for **$333,883**, down 1.8% on a year ago. And homes sold after **61 days** on the market, against 85 days last year.",
+        "Homes closed at **98.3%** of list price — up 1.3 points",
+        "Redfin's median covers three months, not one",
+        "Median? …Oh — the middle one. Half above, half below. So quicker, and nearer the asking number than last year. I'd still check my street."
+      ],
+      "keywords": [
+        "sold",
+        "median",
+        "year",
+        "homes",
+        "months",
+        "days",
+        "last",
+        "asking",
+        "three",
+        "market",
+        "redfin",
+        "half"
+      ],
+      "source": "Redfin · Henry County, GA housing market · retrieved September 24, 2026"
+    },
+    {
+      "date": "2026-10-01",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "events",
+      "template": "community-diary",
+      "slot": "community",
+      "headline": "October Opens Busy Around Here",
+      "said": [
+        "October Opens\nBusy Around Here",
+        "Echo, three things worth knowing about this week — and every one of them is still ahead of us as this goes up.",
+        "Oct 2–11",
+        "Fall Georgia State Fair",
+        "EchoPark Speedway, 1500 Tara Place in Hampton. Rides, shows and fair food over two weekends.",
+        "Oct 2–4",
+        "FoodeesFest",
+        "Three days of food vendors. Venue and times are on the county tourism calendar.",
+        "Oct 3",
+        "Pizza Cook-Off Competition",
+        "In McDonough, from 9am to 3:30pm on the Saturday.",
+        "2026-10-02",
+        "Ten days of fair? …Oh — it runs across two weekends. That's the one I'd take the kids to."
+      ],
+      "keywords": [
+        "fair",
+        "three",
+        "food",
+        "weekends",
+        "days",
+        "1500",
+        "2026",
+        "october",
+        "opens",
+        "busy",
+        "around",
+        "here"
+      ],
+      "source": "Visit Henry County Georgia events calendar · retrieved September 24, 2026"
+    },
+    {
+      "date": "2026-10-02",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "taxdate",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "The Only Tax Due Date That Counts Is On Your Bill",
+      "said": [
+        "The Only Tax Due Date\nThat Counts Is On Your Bill",
+        "Echo, Georgia's default property tax due date is December 20. But a county can move it to December 1 or November 15, or split it into instalments.",
+        "So there's no single date for everybody. How do I find mine?",
+        "From the bill itself. Henry's office publishes no fixed date online — it says payment must reach them by the current due date, or carry a USPS postmark by it.",
+        "So the envelope is the instruction, not the calendar. I'd read the date on mine before I assumed December."
+      ],
+      "keywords": [
+        "date",
+        "december",
+        "bill",
+        "mine",
+        "only",
+        "counts",
+        "echo",
+        "georgia",
+        "default",
+        "property",
+        "county",
+        "move"
+      ],
+      "source": "Georgia Dept. of Revenue & Henry County Tax Commissioner · retrieved Sept 24, 2026"
+    }
+  ]
+}
