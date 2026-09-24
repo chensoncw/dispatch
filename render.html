@@ -1,0 +1,483 @@
+<title>Card Renderer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+
+<style>
+/* ============================================================
+   CARD RENDERER â€” one file, 13 templates, driven by a JSON record.
+   Pipeline: writes card.json beside this file, screenshots #stage.
+   Review:   no card.json, renders the sample gallery instead.
+   ============================================================ */
+:root{
+  --navy:#152A4E; --navy-deep:#0D1D38; --navy-lift:#1C3560;
+  --gold:#D4A017; --maroon:#7A1E2E; --cream:#F7F5F0;
+  --ink:#1B2430; --ink-soft:#586374; --ink-faint:#8B94A3;
+  --ground:#EFEDE7; --surface:#FBFAF7; --rule:#D9D5CB;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ color-scheme:dark;
+    --ink:#ECEAE4; --ink-soft:#A3AAB6; --ink-faint:#737B88;
+    --ground:#12161C; --surface:#1A1F27; --rule:#2C333D; }
+}
+:root[data-theme="dark"]{ color-scheme:dark;
+  --ink:#ECEAE4; --ink-soft:#A3AAB6; --ink-faint:#737B88;
+  --ground:#12161C; --surface:#1A1F27; --rule:#2C333D; }
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:'Roboto',-apple-system,Segoe UI,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+
+/* ---- page chrome (review mode only) ---- */
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:0 70px}
+.hero{background:var(--navy);margin-inline:-20px;padding:40px 20px 34px;border-bottom:3px solid var(--gold)}
+.hero-in{max-width:960px;margin:0 auto}
+.kicker{font-family:'Archivo',Arial,sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:'Archivo',Arial,sans-serif;font-weight:900;font-size:clamp(28px,5.6vw,46px);
+  line-height:1.02;text-transform:uppercase;color:#fff;margin:12px 0 0}
+.hero p{color:#C7D0E0;font-size:15.5px;line-height:1.6;max-width:62ch;margin:14px 0 0}
+.hero code{background:rgba(255,255,255,.12);padding:1px 6px;border-radius:2px;font-size:13px}
+.spec{margin-top:40px}
+.spec h2{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:14px;
+  letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px}
+.spec .tpl{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;
+  color:var(--ink-faint);margin-bottom:12px}
+
+/* ---- the stage ---- */
+.frame{width:100%;max-width:640px;aspect-ratio:1/1;position:relative;overflow:hidden;
+  border-radius:2px;box-shadow:0 12px 36px rgba(10,20,40,.26)}
+#stage.solo{width:1080px;height:1080px;max-width:none;aspect-ratio:auto;box-shadow:none;border-radius:0}
+#stage.solo .card{transform:none}
+
+.card{position:absolute;top:0;left:0;width:1080px;height:1080px;transform-origin:0 0;
+  transform:scale(var(--s,.59));overflow:hidden;color:#fff;
+  font-family:'Roboto',Helvetica,Arial,sans-serif;display:flex;flex-direction:column;
+  background:radial-gradient(120% 90% at 50% 0%,#1D3862 0%,#152A4E 46%,#0E1F3C 100%)}
+.hair{position:absolute;inset:10px;border:1px solid rgba(212,160,23,.55);z-index:6;pointer-events:none}
+.deco{position:absolute;inset:0;z-index:1;pointer-events:none}
+.body{flex:1;display:flex;flex-direction:column;padding:42px 50px 0;position:relative;z-index:2}
+
+.eyebrow{text-align:center;font-family:'Archivo',Arial,sans-serif;font-size:15px;font-weight:700;
+  letter-spacing:.42em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::after{content:"";display:block;width:104px;height:2px;background:var(--gold);margin:10px auto 0}
+.head{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:52px;line-height:1.07;
+  letter-spacing:-.008em;text-transform:uppercase;text-align:center;margin:26px 0 0}
+.head em{font-style:normal;color:var(--gold)}
+.head.xl{font-size:64px}
+.asof{text-align:center;font-size:16px;font-style:italic;color:#9FAEC6;margin-top:12px}
+
+/* Titan speaking */
+.say{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;margin-top:24px}
+.say .fig{width:128px}
+.say .fig img{width:100%;height:auto;display:block}
+.say .bub{background:rgba(255,255,255,.07);border-left:4px solid var(--gold);padding:19px 23px}
+.say .nm{font-family:'Archivo',Arial,sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.say p{margin:0;font-size:20.5px;line-height:1.47;color:rgba(255,255,255,.94)}
+.say b{color:#fff;font-weight:700}
+
+/* stat tiles */
+.stats{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:24px}
+.stat{flex:1;border:1px solid rgba(212,160,23,.7);padding:16px 12px 14px;text-align:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
+.stat .l{font-size:13.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C9D3E4}
+.stat .v{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:48px;line-height:1.05;
+  color:var(--gold);margin-top:4px;font-variant-numeric:tabular-nums}
+.stat .s{font-size:14px;font-style:italic;color:#9FAEC6;margin-top:3px}
+.arrow{font-size:30px;color:var(--gold);flex:0 0 auto}
+
+.bignum{text-align:center;margin-top:22px}
+.bignum .n{font-family:'Archivo',Arial,sans-serif;font-weight:900;font-size:146px;line-height:.95;
+  color:var(--gold);font-variant-numeric:tabular-nums}
+.bignum .c{font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:#C9D3E4;margin-top:10px}
+
+.statement{text-align:center;font-family:'Archivo',Arial,sans-serif;font-weight:800;
+  font-size:58px;line-height:1.14;margin:38px 0 0;color:#fff}
+
+/* rows / checks / steps / items */
+.rows{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.row{background:rgba(255,255,255,.045);display:grid;grid-template-columns:auto 1fr;gap:15px;
+  align-items:start;padding:15px 20px}
+.row .n{width:28px;height:28px;border-radius:50%;background:var(--gold);color:#152A4E;
+  font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:15px;
+  display:flex;align-items:center;justify-content:center;margin-top:2px;flex:0 0 auto}
+.row .t{font-size:18.5px;line-height:1.45;color:rgba(255,255,255,.82)}
+.row .t b{color:#fff;font-weight:700}
+.checks{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.check{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
+.check .tick{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gold);
+  color:var(--gold);font-size:13px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.check .t{font-size:19px;line-height:1.4;color:rgba(255,255,255,.85)}
+.check .t b{color:#fff;font-weight:700}
+.diary{display:flex;flex-direction:column;gap:11px;margin-top:20px}
+.item{display:grid;grid-template-columns:118px 1fr;gap:18px;align-items:start;
+  background:rgba(255,255,255,.045);padding:15px 20px}
+.item .w{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:16px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--gold);line-height:1.25}
+.item .d{font-size:18.5px;line-height:1.45;color:rgba(255,255,255,.85)}
+.item .d b{color:#fff;display:block;margin-bottom:2px}
+
+/* definition / deadline blocks */
+.defn{margin-top:22px;background:rgba(255,255,255,.065);border-left:4px solid var(--gold);padding:21px 25px}
+.defn .term{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:30px;
+  text-transform:uppercase;color:var(--gold)}
+.defn p{margin:9px 0 0;font-size:20.5px;line-height:1.47;color:rgba(255,255,255,.93)}
+.defn b{color:#fff}
+.datebox{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:22px}
+.datebox .dd{border:1px solid rgba(212,160,23,.7);padding:14px 30px;text-align:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
+.datebox .dd .k{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#C9D3E4}
+.datebox .dd .v{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:42px;
+  color:var(--gold);line-height:1.1;margin-top:4px}
+.myth{margin-top:22px;background:rgba(122,30,46,.22);border-left:4px solid var(--maroon);padding:19px 23px}
+.myth .nm{font-family:'Archivo',Arial,sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:#D98A98;margin-bottom:7px}
+.myth p{margin:0;font-size:20.5px;line-height:1.45;color:rgba(255,255,255,.9);font-style:italic}
+
+/* dialogue */
+.dlg{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+.turn{display:grid;gap:14px;align-items:start}
+.turn.a{grid-template-columns:auto 1fr}
+.turn.b{grid-template-columns:1fr auto}
+.turn .who{width:92px;flex:0 0 auto}
+.turn .who img{width:100%;height:auto;display:block}
+.bub2{background:rgba(255,255,255,.075);border:1px solid rgba(212,160,23,.4);padding:16px 20px}
+.bub2 .nm{font-family:'Archivo',Arial,sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.bub2 p{margin:0;font-size:20px;line-height:1.44;color:#fff}
+.turn.b .bub2{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.18)}
+.turn.b .bub2 .nm{color:#B7A06A}
+.turn.b .bub2 p{color:rgba(255,255,255,.88)}
+
+/* echo line â€” the standing device */
+.echo{margin-top:auto;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;
+  background:rgba(212,160,23,.09);border-top:1px solid rgba(212,160,23,.4);
+  border-bottom:1px solid rgba(212,160,23,.4);padding:14px 22px;position:relative;z-index:3}
+.echo .e{width:76px;flex:0 0 auto}
+.echo .e img{width:100%;height:auto;display:block}
+.echo .nm{font-family:'Archivo',Arial,sans-serif;font-size:11.5px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:#C9A94A;margin-bottom:4px}
+.echo p{margin:0;font-size:19.5px;line-height:1.36;font-weight:500}
+.echo.big{padding:20px 26px}
+.echo.big .e{width:100px}
+.echo.big p{font-size:23px}
+
+.foot{padding:14px 0 16px;text-align:center;position:relative;z-index:3}
+.foot .src{font-size:15.5px;color:rgba(255,255,255,.72)}
+.foot .src b{color:var(--gold);font-weight:700}
+.foot .dis{font-size:13px;font-style:italic;line-height:1.4;color:rgba(255,255,255,.44);
+  margin:6px auto 0;max-width:86%}
+.spacer{margin-top:auto}
+
+.sig{background:var(--navy-deep);border-top:2px solid var(--gold);
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:30px;
+  padding:20px 50px;position:relative;z-index:3}
+.sig .nm{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:25px;line-height:1.08;
+  text-transform:uppercase;color:#fff}
+.sig .sb{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);margin-top:5px}
+.sig .dv{width:1px;height:50px;background:rgba(255,255,255,.28)}
+.sig .r{text-align:right}
+
+#err{display:none;background:var(--surface);border:1px solid var(--maroon);
+  border-left:3px solid var(--maroon);padding:18px 22px;border-radius:2px;
+  font-size:15px;line-height:1.6;margin-top:24px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div id="app"></div>
+
+<script>
+(function(){
+/* ---------------- helpers ---------------- */
+function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+/* *gold* â†’ gold span, **bold** â†’ bold. Copy stays plain text in the data. */
+function rich(s){
+  return esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<em>$1</em>');
+}
+/* Poses landed one level deep when they were uploaded. Harmless â€” change this
+   one line if they ever get moved to poses/ proper. */
+var POSE_DIR = 'poses/poses/';
+function pose(name){ return POSE_DIR+(name||'titan-front')+'.png'; }
+
+/* ---------------- skins ---------------- */
+var SKINS = {
+  plain: '',
+  winter:
+    '<path d="M11 11 H1069 V60 C1000 82 946 44 876 66 C806 88 752 48 682 68 C612 88 558 50 488 68 '+
+    'C418 86 364 48 294 66 C224 84 170 46 100 62 C70 69 40 66 11 58 Z" fill="#E8EFF8" opacity=".92"/>'+
+    '<g fill="#E8EFF8" opacity=".5"><circle cx="180" cy="150" r="7"/><circle cx="420" cy="120" r="5"/>'+
+    '<circle cx="660" cy="162" r="6"/><circle cx="900" cy="128" r="5"/></g>',
+  spring:
+    '<g stroke="#7FA86B" stroke-width="5" fill="none" opacity=".72" stroke-linecap="round">'+
+    '<path d="M30 210 C110 176 150 120 168 40"/><path d="M84 190 C120 178 140 150 146 118"/>'+
+    '<path d="M1050 210 C970 176 930 120 912 40"/><path d="M996 190 C960 178 940 150 934 118"/></g>'+
+    '<g fill="#8FBF77" opacity=".78">'+
+    '<ellipse cx="150" cy="96" rx="15" ry="9" transform="rotate(-42 150 96)"/>'+
+    '<ellipse cx="112" cy="160" rx="13" ry="8" transform="rotate(-28 112 160)"/>'+
+    '<ellipse cx="930" cy="96" rx="15" ry="9" transform="rotate(42 930 96)"/>'+
+    '<ellipse cx="968" cy="160" rx="13" ry="8" transform="rotate(28 968 160)"/></g>',
+  summer:
+    '<circle cx="1040" cy="44" r="118" fill="#E8A82E" opacity=".15"/>'+
+    '<circle cx="1040" cy="44" r="74" fill="#E8A82E" opacity=".19"/>'+
+    '<g stroke="#E8A82E" stroke-width="4" opacity=".38" stroke-linecap="round">'+
+    '<path d="M1040 178 V246"/><path d="M932 106 L868 140"/><path d="M966 166 L916 214"/>'+
+    '<path d="M912 62 L840 66"/></g>',
+  autumn:
+    '<g opacity=".78">'+
+    '<path d="M1020 120 C1048 96 1060 128 1042 152 C1024 176 996 166 1000 142 Z" fill="#C9762A"/>'+
+    '<path d="M962 300 C992 278 1004 310 984 332 C964 354 938 342 944 318 Z" fill="#8A3A24"/>'+
+    '<path d="M1032 470 C1060 448 1072 480 1052 502 C1032 524 1006 512 1012 488 Z" fill="#D4A017"/>'+
+    '<path d="M60 200 C88 176 100 208 82 232 C64 256 36 246 40 222 Z" fill="#C9762A"/>'+
+    '<path d="M96 430 C126 408 138 440 118 462 C98 484 72 472 78 448 Z" fill="#8A3A24"/></g>',
+  patriotic:
+    '<g opacity=".5"><rect x="11" y="18" width="1058" height="9" fill="#9E2B33"/>'+
+    '<rect x="11" y="36" width="1058" height="9" fill="#F0EDE6"/>'+
+    '<rect x="11" y="54" width="1058" height="9" fill="#9E2B33"/></g>'+
+    '<g fill="#F0EDE6" opacity=".36">'+
+    '<path d="M70 130 l7 21 h22 l-18 13 7 21 -18-13 -18 13 7-21 -18-13 h22 Z"/>'+
+    '<path d="M1010 130 l7 21 h22 l-18 13 7 21 -18-13 -18 13 7-21 -18-13 h22 Z"/></g>'
+};
+function skin(name){
+  var s = SKINS[name] || '';
+  return s ? '<svg class="deco" viewBox="0 0 1080 1080" aria-hidden="true">'+s+'</svg>' : '';
+}
+
+/* ---------------- shared blocks ---------------- */
+function eyebrow(t){ return '<div class="eyebrow">'+esc(t)+'</div>'; }
+function head(t,xl){ return '<h2 class="head'+(xl?' xl':'')+'">'+rich(t).replace(/\n/g,'<br>')+'</h2>'; }
+function say(c,text,p){
+  return '<div class="say"><div class="fig"><img src="'+pose(p||c.titan_pose||'titan-front')+'" alt=""></div>'+
+         '<div class="bub"><div class="nm">Titan</div><p>'+rich(text)+'</p></div></div>';
+}
+function echo(c,big){
+  if(!c.echo_line) return '<div class="spacer"></div>';
+  return '<div class="echo'+(big?' big':'')+'"><div class="e"><img src="'+
+    pose(c.echo_pose||'echo-alt')+'" alt=""></div><div><div class="nm">Echo</div><p>'+
+    rich(c.echo_line)+'</p></div></div>';
+}
+function foot(c){
+  if(!c.source && !c.disclaimer) return '';
+  return '<div class="foot">'+
+    (c.source ? '<div class="src"><b>SOURCE:</b> '+esc(c.source)+'</div>' : '')+
+    (c.disclaimer ? '<div class="dis">'+esc(c.disclaimer)+'</div>' : '')+'</div>';
+}
+function sig(){
+  return '<div class="sig">'+
+    '<div><div class="nm">Chenson<br>Wedderburn</div><div class="sb">Army Veteran Â· Realtor&reg;</div></div>'+
+    '<div class="dv"></div>'+
+    '<div class="r"><div class="nm">Keller Williams<br>Atlanta Partners</div>'+
+    '<div class="sb">Stockbridge, Georgia</div></div></div>';
+}
+function rows(list,numbered){
+  if(!list||!list.length) return '';
+  return '<div class="rows">'+list.map(function(r,i){
+    return '<div class="row">'+(numbered!==false?'<div class="n">'+(i+1)+'</div>':'')+
+           '<div class="t">'+rich(r)+'</div></div>'; }).join('')+'</div>';
+}
+function checks(list){
+  if(!list||!list.length) return '';
+  return '<div class="checks">'+list.map(function(r){
+    return '<div class="check"><div class="tick">&#10003;</div><div class="t">'+rich(r)+'</div></div>';
+  }).join('')+'</div>';
+}
+
+/* ---------------- the 13 templates ---------------- */
+var T = {};
+
+T['market-two-figures'] = function(c){
+  return eyebrow(c.eyebrow||'Market') + head(c.headline) +
+    (c.asof?'<div class="asof">'+esc(c.asof)+'</div>':'') +
+    '<div class="stats">'+
+      '<div class="stat"><div class="l">'+esc(c.stat_a.label)+'</div><div class="v">'+esc(c.stat_a.value)+
+      '</div><div class="s">'+esc(c.stat_a.sub||'')+'</div></div><div class="arrow">&rarr;</div>'+
+      '<div class="stat"><div class="l">'+esc(c.stat_b.label)+'</div><div class="v">'+esc(c.stat_b.value)+
+      '</div><div class="s">'+esc(c.stat_b.sub||'')+'</div></div></div>' +
+    say(c,c.titan_line) + checks(c.checks_rows) + echo(c) + foot(c);
+};
+
+T['market-one-figure'] = function(c){
+  return eyebrow(c.eyebrow||'Market') + head(c.headline,true) +
+    '<div class="bignum"><div class="n">'+esc(c.big_number)+'</div>'+
+    '<div class="c">'+esc(c.big_caption)+'</div></div>' +
+    say(c,c.titan_line) + echo(c) + foot(c);
+};
+
+T['teaching-lesson'] = function(c){
+  return eyebrow(c.eyebrow||'Teaching') + head(c.headline) +
+    '<div class="dlg">'+
+    '<div class="turn a"><div class="who"><img src="'+pose('titan-front')+'" alt=""></div>'+
+      '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_1)+'</p></div></div>'+
+    '<div class="turn b"><div class="bub2"><div class="nm">Echo</div><p>'+rich(c.turn_2)+'</p></div>'+
+      '<div class="who"><img src="'+pose('echo-surprised')+'" alt=""></div></div>'+
+    '<div class="turn a"><div class="who"><img src="'+pose('titan-alt')+'" alt=""></div>'+
+      '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_3)+'</p></div></div>'+
+    '</div>' + echo(c) + foot(c);
+};
+
+T['teaching-definition'] = function(c){
+  return eyebrow(c.eyebrow||'Teaching') + head('What People Actually Mean By') +
+    '<div class="defn"><div class="term">'+esc(c.term)+'</div><p>'+rich(c.definition)+'</p></div>' +
+    rows(c.rows) + echo(c) + foot(c);
+};
+
+T['myth-vs-fact'] = function(c){
+  return eyebrow(c.eyebrow||'Teaching') + head(c.headline) +
+    '<div class="myth"><div class="nm">Echo thought</div><p>&ldquo;'+rich(c.myth)+'&rdquo;</p></div>' +
+    say(c,c.correction) + rows(c.rows) + echo(c) + foot(c);
+};
+
+T['process-timeline'] = function(c){
+  return eyebrow(c.eyebrow||'Teaching') + head(c.headline) + say(c,c.titan_line) +
+    '<div class="rows">'+(c.steps||[]).map(function(s,i){
+      return '<div class="row"><div class="n">'+(i+1)+'</div><div class="t"><b>'+
+        esc(s.label)+'</b> '+rich(s.detail)+'</div></div>'; }).join('')+'</div>' +
+    echo(c) + foot(c);
+};
+
+T['deadline-countdown'] = function(c){
+  return eyebrow(c.eyebrow||'Deadline') + head(c.headline) +
+    '<div class="datebox"><div class="dd"><div class="k">The date</div><div class="v">'+
+      esc(c.the_date)+'</div></div>'+
+      (c.days_left?'<div class="dd"><div class="k">Left</div><div class="v">'+esc(c.days_left)+'</div></div>':'')+
+    '</div>' + say(c,c.titan_line) +
+    rows([ '**What it is.** '+c.what_it_is,
+           '**Miss it and.** '+c.what_you_lose,
+           '**Who to ask.** '+c.who_to_ask ]) +
+    echo(c) + foot(c);
+};
+
+T['community-diary'] = function(c){
+  return eyebrow(c.eyebrow||'Around The County') + head(c.headline) + say(c,c.titan_line) +
+    '<div class="diary">'+(c.items||[]).map(function(i){
+      return '<div class="item"><div class="w">'+esc(i.when).replace(/\n/g,'<br>')+'</div>'+
+        '<div class="d"><b>'+esc(i.title)+'</b>'+rich(i.detail)+'</div></div>'; }).join('')+'</div>' +
+    echo(c) + foot(c);
+};
+
+T['community-spotlight'] = function(c){
+  return eyebrow(c.eyebrow||'Around The County') + head(c.headline) + say(c,c.titan_line) +
+    '<div class="rows">'+(c.rows||[]).map(function(r,i){
+      return '<div class="row"><div class="n">'+(i+1)+'</div><div class="t"><b>'+
+        esc(r.label)+'</b> '+rich(r.detail)+'</div></div>'; }).join('')+'</div>' +
+    echo(c) + foot(c);
+};
+
+T['home-walkround'] = function(c){
+  return eyebrow(c.eyebrow||'Home') + head(c.headline) + say(c,c.titan_line) +
+    rows(c.rows) + echo(c) + foot(c);
+};
+
+T['home-safety'] = function(c){
+  return eyebrow(c.eyebrow||'Home Safety') + head(c.headline) + say(c,c.titan_line) +
+    rows(c.rows) + echo(c) + foot(c);
+};
+
+T['single-statement'] = function(c){
+  return eyebrow(c.eyebrow) + '<div class="statement">'+rich(c.statement)+'</div>' +
+    say(c,c.titan_line) + echo(c) + foot(c);
+};
+
+T['holiday'] = function(c){
+  return eyebrow(c.eyebrow) + head(c.headline,true) + say(c,c.titan_line) + echo(c,true);
+};
+
+/* ---------------- render ---------------- */
+function renderCard(c){
+  var fn = T[c.template];
+  if(!fn) return '<div class="card"><div class="body"><h2 class="head">Unknown template<br><em>'+
+                 esc(c.template)+'</em></h2></div>'+sig()+'</div>';
+  return '<div class="card">'+ skin(c.skin||'plain') +'<div class="hair"></div>'+
+         '<div class="body">'+ fn(c) +'</div>'+ sig() +'</div>';
+}
+function fit(){
+  document.querySelectorAll('.frame').forEach(function(f){
+    if(f.id==='stage' && f.classList.contains('solo')) return;
+    var w=f.clientWidth; if(w) f.style.setProperty('--s',(w/1080).toFixed(5));
+  });
+}
+
+/* ---------------- sample records ---------------- */
+var SAMPLES = [
+  { template:'holiday', skin:'patriotic', eyebrow:'Memorial Day',
+    headline:'Today Belongs\n<em>To Them</em>', titan_pose:'titan-alt', echo_pose:'echo-alt',
+    event_date:'2027-05-31',
+    titan_line:"Echo, I'm here to enjoy today. A lot of the men and women I served with aren't. That's who this day belongs to.",
+    echo_line:"You went as a unit. You did your job. Some of you came home and some of you didn't. â€¦To the ones who did â€” thank you. To the ones who didn't, and to the families they left behind â€” thank you for what it cost you." },
+
+  { template:'deadline-countdown', skin:'spring', eyebrow:'Deadline',
+    headline:'The Homestead\n<em>Deadline</em>', the_date:'April 1', days_left:'6 weeks',
+    titan_pose:'titan-front', echo_pose:'echo-notepad', event_date:'2027-04-01',
+    titan_line:"Echo, if you own the home you live in, Georgia has an exemption that lowers what you get taxed on. You have to apply for it.",
+    what_it_is:'An exemption on your legal residence, applied for once with the county.',
+    what_you_lose:'You wait until the following tax year.',
+    who_to_ask:'The Henry County Tax Commissioner.',
+    echo_line:"Wait, you have to ask for it? Okay, so it's not automatic. I'd want to check whether mine's already on there before April.",
+    source:'Henry County Tax Commissioner Â· henrycountytax.com',
+    disclaimer:'General information, not tax or legal advice. Exemptions and deadlines vary by county â€” confirm yours with the Tax Commissioner.' },
+
+  { template:'myth-vs-fact', skin:'autumn', eyebrow:'Teaching',
+    headline:'Under Contract\n<em>Is Not Sold</em>', titan_pose:'titan-front', echo_pose:'echo-notepad',
+    myth:"If it says under contract, the house is gone. No point even looking.",
+    correction:"Echo, under contract means the seller accepted an offer and both sides signed. Nothing's moved yet though â€” no money, no deed. The inspection, the appraisal and the loan all still have to clear.",
+    rows:['**It is not sold yet.** A contract can fall through before it closes.',
+          '**Some sellers take backup offers.** Worth asking rather than assuming.',
+          '**"Sold" means closed.** The deed recorded and the keys moved.'],
+    echo_line:"So it's agreed, not done. Okay â€” if I really wanted that house, I'd ask whether they take backup offers. Probably nothing comes of it. Costs nothing to ask.",
+    source:'Georgia Association of REALTORSÂ® standard purchase agreement',
+    disclaimer:'General explanation of common terms, not legal advice. Your own agreement and your attorney govern your transaction.' },
+
+  { template:'market-one-figure', skin:'plain', eyebrow:'Market',
+    headline:'The 30-Year\n<em>Rate This Week</em>', big_number:'6.71%',
+    big_caption:'Week ending September 10, 2026', titan_pose:'titan-alt', echo_pose:'echo-surprised',
+    titan_line:"Echo, that's the average for one week â€” the week ending September 10. It was **6.66%** the week before, and **6.50%** a year ago.",
+    echo_line:"Oh â€” so that's just this week's. Okay, so it's lock in while I know the number, or wait and take next week's. Better or worse â€” nobody knows.",
+    source:'Freddie Mac Primary Mortgage Market Survey Â· week ending September 10, 2026',
+    disclaimer:'A national weekly average for that week only â€” not a quote, not an offer, and not a prediction. Your own rate depends on your lender, your credit and your down payment.' },
+
+  { template:'single-statement', skin:'winter', eyebrow:'Home',
+    statement:'The alarm on your ceiling<br><em>has an expiry date.</em>',
+    titan_pose:'titan-front', echo_pose:'echo-notepad',
+    titan_line:"Echo, most people test the battery. Far fewer know the unit itself expires â€” the NFPA says replace it ten years from the date printed on the back.",
+    echo_line:"Ten years, then it's done. Okay â€” I'm checking the date on mine tonight.",
+    source:'National Fire Protection Association Â· nfpa.org',
+    disclaimer:"General information only. Follow your alarm manufacturer's instructions and your local fire code." }
+];
+
+/* ---------------- boot ---------------- */
+function solo(card){
+  document.getElementById('app').innerHTML =
+    '<div id="stage" class="frame solo">'+renderCard(card)+'</div>';
+  document.body.style.background = '#fff';
+  document.body.style.margin = '0';
+}
+function gallery(){
+  var html = '<div class="hero"><div class="hero-in">'+
+    '<div class="kicker">Social System Â· Chenson Wedderburn</div>'+
+    '<h1>Card Renderer</h1>'+
+    '<p>One file, thirteen templates, driven by a record. The pipeline writes <code>card.json</code> '+
+    'beside this page and screenshots the stage at 1080&times;1080. With no card file it renders '+
+    'these samples instead, which is what makes it reviewable.</p>'+
+    '<p>Templates are empty shells. Nothing here is written ahead â€” the copy below is sample data, '+
+    'and the real thing gets written the week it runs.</p></div></div><div class="wrap">';
+  SAMPLES.forEach(function(c){
+    html += '<div class="spec"><h2>'+esc(c.eyebrow||c.template)+'</h2>'+
+            '<div class="tpl">'+esc(c.template)+' Â· skin: '+esc(c.skin)+'</div>'+
+            '<div class="frame">'+renderCard(c)+'</div></div>';
+  });
+  html += '<div id="err">No <code>card.json</code> found â€” showing samples. That is the expected '+
+          'behaviour for review; the pipeline supplies one at render time.</div></div>';
+  document.getElementById('app').innerHTML = html;
+}
+
+fetch('card.json')
+  .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+  .then(function(card){ solo(card); fit(); })
+  .catch(function(){ gallery(); fit(); });
+
+window.addEventListener('resize', fit);
+window.addEventListener('load', fit);
+})();
+</script>
