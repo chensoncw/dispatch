@@ -38,32 +38,58 @@ async function main() {
     const card = JSON.parse(fs.readFileSync(file, 'utf8'));
     const name = path.basename(file, '.json');
 
-    // A fresh page per card. Injected scripts accumulate on a reused page, so
-    // this keeps each render honest about which record it drew.
-    const page = await browser.newPage({
-      viewport: { width: 1080, height: 1080 },
-      deviceScaleFactor: 1
-    });
+    // Every card renders twice: the square for the feed, the tall one for
+    // Stories. Same record both times, so the words are only ever written once.
+    // The story file is <name>-story.png and lives beside the square.
+    const shapes = [
+      { story: false, w: 1080, h: 1080, suffix: '' },
+      { story: true,  w: 1080, h: 1920, suffix: '-story' }
+    ];
 
-    // Inject the record rather than fetch it — fetch() is blocked on file://
-    // in Chromium, which would silently fall back to the sample gallery.
-    await page.addInitScript(c => { window.__CARD__ = c; }, card);
+    for (const shape of shapes) {
+      // A fresh page per shape. Injected scripts accumulate on a reused page, so
+      // this keeps each render honest about which record it drew.
+      const page = await browser.newPage({
+        viewport: { width: shape.w, height: shape.h },
+        deviceScaleFactor: 1
+      });
 
-    await page.goto('file://' + path.join(ROOT, 'render.html'), { waitUntil: 'load' });
+      // Inject the record rather than fetch it — fetch() is blocked on file://
+      // in Chromium, which would silently fall back to the sample gallery.
+      await page.addInitScript(([c, s]) => {
+        window.__CARD__ = c;
+        window.__STORY__ = s;
+      }, [card, shape.story]);
 
-    // fonts must settle or the headline wraps differently than it will for a reader
-    await page.evaluate(() => document.fonts && document.fonts.ready);
-    await page.waitForSelector('#stage.solo', { timeout: 10000 });
-    await page.waitForTimeout(400);
+      await page.goto('file://' + path.join(ROOT, 'render.html'), { waitUntil: 'load' });
 
-    const stage = await page.$('#stage');
-    const dest = path.join(OUT, name + '.png');
-    await stage.screenshot({ path: dest });
+      // fonts must settle or the headline wraps differently than it will for a reader
+      await page.evaluate(() => document.fonts && document.fonts.ready);
+      await page.waitForSelector('#stage.solo', { timeout: 10000 });
+      await page.waitForTimeout(400);
 
-    const { size } = fs.statSync(dest);
-    console.log(`rendered  ${name}.png  ${(size / 1024).toFixed(0)} KB  [${card.template}]`);
+      const stage = await page.$('#stage');
+      const dest = path.join(OUT, name + shape.suffix + '.png');
+      await stage.screenshot({ path: dest });
 
-    await page.close();
+      // Guard against a silently wrong canvas: a story that came out square
+      // would publish as a Story with the top and bottom cropped off.
+      const box = await stage.boundingBox();
+      if (Math.round(box.width) !== shape.w || Math.round(box.height) !== shape.h) {
+        throw new Error(
+          `${name}${shape.suffix}: expected ${shape.w}x${shape.h}, ` +
+          `stage measured ${Math.round(box.width)}x${Math.round(box.height)}`
+        );
+      }
+
+      const { size } = fs.statSync(dest);
+      console.log(
+        `rendered  ${name}${shape.suffix}.png  ${shape.w}x${shape.h}  ` +
+        `${(size / 1024).toFixed(0)} KB  [${card.template}]`
+      );
+
+      await page.close();
+    }
   }
 
   await browser.close();
