@@ -1,0 +1,31 @@
+{
+  "_": "Wed 30 Sep 2026 · market slot. Figures read directly off Redfin's Henry County page on 24 Sep 2026, not from a search summary — an FMLS-based report circulating the same week gives different numbers because it measures a single month, not a rolling three.",
+
+  "approved": true,
+
+  "template": "market-two-figures",
+  "skin": "plain",
+  "eyebrow": "Market",
+
+  "headline": "Homes Sold Faster\nAnd Closer To Asking",
+  "asof": "Henry County · three months ending August 2026",
+
+  "stat_a": { "label": "Median Sold",    "value": "$333,883", "sub": "past 3 months" },
+  "stat_b": { "label": "Days On Market", "value": "61",       "sub": "was 85 last year" },
+
+  "titan_line": "Echo, two numbers from Redfin. The median home sold for **$333,883**, down 1.8% on a year ago. And homes sold after **61 days** on the market, against 85 days last year.",
+
+  "checks_rows": [
+    "Homes closed at **98.3%** of list price — up 1.3 points",
+    "Redfin's median covers three months, not one"
+  ],
+
+  "echo_line": "Median? …Oh — the middle one. Half above, half below. So quicker, and nearer the asking number than last year. I'd still check my street.",
+
+  "source": "Redfin · Henry County, GA housing market · retrieved September 24, 2026",
+  "disclaimer": "County-wide figures for the period stated. Not an appraisal, a valuation, or a prediction for any individual property.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-notepad",
+  "hashtag": "#MarketUpdate"
+}
