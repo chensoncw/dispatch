@@ -1,7 +1,7 @@
 {
   "_": "The Instagram Story path cannot be rehearsed - Instagram has no unpublished state, so the first one is live. This card exists to be that first one. Deliberately inconsequential: no figures, no dates, no deadline, nothing anyone could act on wrongly. If it breaks, nothing was riding on it. First card of the Titan and Echo series.",
 
-  "approved": false,
+  "approved": true,
 
   "template": "series",
   "skin": "plain",
