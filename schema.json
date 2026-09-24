@@ -325,6 +325,28 @@
       "_note": "For one idea that needs room. If it needs a list, it is a different template."
     },
 
+    "series": {
+      "slot": "any", "skin": "plain",
+      "_new": true,
+      "_runs": "occasionally, and especially in a week with nothing worth reporting",
+      "no_source": true,
+      "no_disclaimer": true,
+      "fields": {
+        "eyebrow":    { "max": 26, "_note": "defaults to Titan & Echo" },
+        "headline":   { "max": 40, "lines": 2, "required": true },
+        "titan_line": { "max": 190, "required": true },
+        "echo_line":  { "max": 180, "required": true, "register": ["warm", "funny"] },
+        "hashtag":    { "free": true }
+      },
+      "_rules": [
+        "Lore, not business. No figures, no teaching, nothing to sell.",
+        "No source and no disclaimer - the card makes no checkable claim, so there is nothing to cite. State something checkable and it is a different template.",
+        "Both characters together, centred, sharing the greeting layout. On these cards they are the content.",
+        "The joke stays on Echo, never on the reader.",
+        "This is the third option for a thin week, instead of a weak card or an empty slot."
+      ]
+    },
+
     "holiday": {
       "slot": "calendar", "skin": "patriotic_or_seasonal",
       "_new": true,
