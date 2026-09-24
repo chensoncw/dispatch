@@ -18,6 +18,13 @@
     }
   },
 
+  "_marks": {
+    "_about": "Loose seasonal pieces, placed one at a time. A skin is a fixed arrangement; a mark is a sticker you put where you want it. Both can be used on the same card.",
+    "available": ["flag", "star", "bauble", "present", "leaf", "snowflake", "sun", "bloom", "key", "house"],
+    "shape": { "id": "which mark", "x": "0-1080 across", "y": "0-1080 down", "size": "1 is about 100px", "rot": "degrees", "opacity": "0-1, default .85" },
+    "_watch": "Keep marks out of the middle column on a series or holiday card. Titan and Echo stand there and anything behind them is invisible - that mistake has already been made once with the Christmas presents."
+  },
+
   "fixed": {
     "signature_left": "CHENSON WEDDERBURN",
     "signature_left_sub": "ARMY VETERAN · REALTOR®",
@@ -334,9 +341,15 @@
       "fields": {
         "eyebrow":    { "max": 26, "_note": "defaults to Titan & Echo" },
         "headline":   { "max": 40, "lines": 2, "required": true },
+        "layout":     { "options": ["together", "apart"], "default": "together" },
         "titan_line": { "max": 190, "required": true },
         "echo_line":  { "max": 180, "required": true, "register": ["warm", "funny"] },
+        "marks":      { "count": [0, 6], "_note": "loose seasonal pieces placed by hand" },
         "hashtag":    { "free": true }
+      },
+      "_layouts": {
+        "together": "Side by side in the middle. For a greeting, where the two of them ARE the message.",
+        "apart": "Each with his own words beside him, Titan left and Echo right. For a story, a joke, anything back and forth."
       },
       "_rules": [
         "Lore, not business. No figures, no teaching, nothing to sell.",
