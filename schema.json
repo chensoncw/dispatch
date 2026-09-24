@@ -6,8 +6,9 @@
 
   "_template_count": {
     "total": 13,
-    "built_as_html": 8,
-    "defined_here_only": ["deadline-countdown", "holiday", "myth-vs-fact", "process-timeline", "single-statement"],
+    "built_as_html": 13,
+    "defined_here_only": [],
+    "_corrected": "2026-09-24 — this block claimed 8 built and listed 5 as schema-only. All 13 render functions exist in render.html and have done for some time. The note was stale and kept a phantom job on the list. Counted by grepping render.html for the template functions, not by reading this file.",
     "_merged_away": {
       "q-and-a": "teaching-lesson with one turn instead of three. Same shell.",
       "checklist": "home-walkround with a different eyebrow. Same rows."
