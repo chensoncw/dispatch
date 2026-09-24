@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * publish.js â€” post one card to the Facebook Page and Instagram.
+ * publish.js — post one card to the Facebook Page and Instagram.
  *
  *   node scripts/publish.js content/2026-09-29-market.json
  *
  * Facebook is one call. Instagram is two: create a media container pointing
  * at a public image URL, then publish that container. Instagram will not
- * take raw bytes â€” it fetches from a URL, which is why the repo is public.
+ * take raw bytes — it fetches from a URL, which is why the repo is public.
  *
  * Set DRY_RUN=1 to print what would happen and send nothing.
  */
@@ -86,7 +86,7 @@ async function main() {
   const png = path.join(ROOT, 'out', name + '.png');
 
   if (!fs.existsSync(png)) {
-    console.error(`publish: out/${name}.png does not exist â€” render before publishing`);
+    console.error(`publish: out/${name}.png does not exist — render before publishing`);
     process.exit(1);
   }
 
@@ -96,10 +96,10 @@ async function main() {
   console.log(`publish: ${name}`);
   console.log(`  template  ${card.template}`);
   console.log(`  image     ${url}`);
-  console.log(`  caption   ${msg.split('\n')[0]} â€¦`);
+  console.log(`  caption   ${msg.split('\n')[0]} …`);
 
   if (DRY) {
-    console.log('\nDRY RUN â€” nothing sent.');
+    console.log('\nDRY RUN — nothing sent.');
     console.log('\n--- caption ---\n' + msg + '\n---------------');
     return;
   }
@@ -107,7 +107,7 @@ async function main() {
   if (card.human_gate || card.template === 'market-one-figure') {
     if (process.env.APPROVED !== '1') {
       console.error('\npublish: this card is gated and APPROVED is not set.');
-      console.error('The rate card never publishes unseen â€” it is the figure agents check most');
+      console.error('The rate card never publishes unseen — it is the figure agents check most');
       console.error('and the one that goes stale fastest. Re-run with APPROVED=1 once looked at.');
       process.exit(1);
     }
