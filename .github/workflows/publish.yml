@@ -5,7 +5,7 @@ name: Publish
 
 on:
   schedule:
-    - cron: '0 14 * * 2,3,4,5'   # Tueâ€“Fri 14:00 UTC â€” mid-morning in Georgia
+    - cron: '0 14 * * 2,3,4,5'   # Tue–Fri 14:00 UTC — mid-morning in Georgia
   workflow_dispatch:
     inputs:
       card:
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Preflight â€” is the token still alive
+      - name: Preflight — is the token still alive
         env:
           META_PAGE_TOKEN:  ${{ secrets.META_PAGE_TOKEN }}
           META_PAGE_ID:     ${{ secrets.META_PAGE_ID }}
