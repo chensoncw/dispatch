@@ -42,7 +42,10 @@
       "id": "no_forecast",
       "applies_to": "all",
       "forbidden_patterns": ["will be", "expect", "heading", "on track to", "poised", "forecast", "predict", "next month will", "by the end of the year"],
-      "why": "State what a number was on a named day. Never where it is going."
+      "unless": "a named body is credited within 60 characters — an attributed projection is a fact about what that body said",
+      "allowed_example": "The Fed's September projections put it at X by year end.",
+      "blocked_example": "Rates are heading down.",
+      "why": "State what a number was on a named day. Never where it is going — unless somebody else said it and is named for it."
     },
     {
       "id": "no_bare_quantifiers",
