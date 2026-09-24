@@ -1,12 +1,12 @@
 {
-  "_": "Example record. Rename to YYYY-MM-DD-slug.json to schedule it â€” the publish workflow picks the file matching today's date. Delete or leave; files starting with _ are still validated, so keep it correct.",
+  "_": "Example record. Rename to YYYY-MM-DD-slug.json to schedule it — the publish workflow picks the file matching today's date. Delete or leave; files starting with _ are still validated, so keep it correct.",
 
   "template": "market-two-figures",
   "skin": "plain",
   "eyebrow": "Market",
 
   "headline": "What Sellers *Asked*\nvs. What Buyers *Paid*",
-  "asof": "Henry County Â· figures as of September 10, 2026",
+  "asof": "Henry County · figures as of September 10, 2026",
 
   "stat_a": { "label": "Median Asking", "value": "$375,000", "sub": "homes for sale" },
   "stat_b": { "label": "Median Sold",   "value": "$334,000", "sub": "homes that closed" },
@@ -14,13 +14,13 @@
   "titan_line": "Hey Echo, look at these two side by side. As of September 10, the median asking price around here was **$375,000**. The median sold price was **$334,000**.",
 
   "checks_rows": [
-    "Homes took about **59 days** to sell â€” roughly two months",
+    "Homes took about **59 days** to sell — roughly two months",
     "About **1,340 homes** were for sale across the county"
   ],
 
-  "echo_line": "Median? â€¦Oh â€” the middle one. Half above, half below. Okay, so the asking price isn't the real price. I'd check what sold nearby.",
+  "echo_line": "Median? …Oh — the middle one. Half above, half below. Okay, so the asking price isn't the real price. I'd check what sold nearby.",
 
-  "source": "Redfin & Zillow Â· Henry County, GA Â· retrieved September 10, 2026",
+  "source": "Redfin & Zillow · Henry County, GA · retrieved September 10, 2026",
   "disclaimer": "County-wide figures for that date only. Not an appraisal, a valuation, or a prediction for any individual property.",
 
   "titan_pose": "titan-front",
