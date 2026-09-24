@@ -171,6 +171,35 @@ function checkRules(file, card, tpl, tplName) {
       `attribute it to a named body, or drop it`);
   }
 
+  // --- the pose has to agree with the card ---
+  //
+  // The art carries tone whether or not it was chosen for tone, and the picture
+  // is what people see before they read a word. Echo delighted with his fists up
+  // on a card about house fire deaths contradicts the sentence under it.
+  //
+  // Only the two checkable mistakes are caught here. Whether a pose suits the
+  // subject is a judgement, and stays Chenson's on the rendered card.
+  const SOBER = ['home-safety'];
+  const BUST = 'echo-alt';
+  const CROPPED = { 'echo-alt': 'a bust that ends mid-chest', 'titan-alt': 'a clipped right ear' };
+
+  if (SOBER.includes(card.template) && card.echo_pose === 'echo-surprised') {
+    fail(file, 'pose_matches_register',
+      `${card.template} is the sober register and echo-surprised is delighted — ` +
+      `use ${BUST} in the band, or a neutral standing pose`);
+  }
+
+  // Poses are small in the echo band, where a bust is right. On a holiday card
+  // they are the subject at full size, so a crop shows as a missing body.
+  if (card.template === 'holiday') {
+    for (const f of ['titan_pose', 'echo_pose']) {
+      if (CROPPED[card[f]]) {
+        fail(file, 'pose_full_body',
+          `${card[f]} has ${CROPPED[card[f]]} — a holiday card shows the figure at full size`);
+      }
+    }
+  }
+
   // --- bare quantifiers ---
   const q = findWord(text, QUANTIFIERS);
   if (q && !card.source) {
