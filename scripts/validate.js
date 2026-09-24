@@ -189,13 +189,20 @@ function checkRules(file, card, tpl, tplName) {
       `use ${BUST} in the band, or a neutral standing pose`);
   }
 
-  // Poses are small in the echo band, where a bust is right. On a holiday card
-  // they are the subject at full size, so a crop shows as a missing body.
+  // Poses are small in the echo band, where a bust is exactly right. On a
+  // holiday card they are the subject at full size, so a crop reads as a
+  // missing body.
+  //
+  // A warning, not a failure. Neither pose is retired — echo-alt is a
+  // legitimate bust and titan-alt is usable until it is re-cut. Blocking them
+  // outright would take working art out of service over a judgement that
+  // belongs to Chenson looking at the rendered card.
   if (card.template === 'holiday') {
     for (const f of ['titan_pose', 'echo_pose']) {
       if (CROPPED[card[f]]) {
-        fail(file, 'pose_full_body',
-          `${card[f]} has ${CROPPED[card[f]]} — a holiday card shows the figure at full size`);
+        warn(file, 'pose_full_body',
+          `${card[f]} is ${CROPPED[card[f]]} and a holiday card shows the figure at full size — ` +
+          `check the render before approving`);
       }
     }
   }
