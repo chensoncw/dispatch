@@ -186,7 +186,10 @@ function checkRules(file, card, tpl, tplName) {
   // subject is a judgement, and stays Chenson's on the rendered card.
   const SOBER = ['home-safety'];
   const BUST = 'echo-alt';
-  const CROPPED = { 'echo-alt': 'a bust that ends mid-chest', 'titan-alt': 'a clipped right ear' };
+  // titan-alt was here too until its crown was repaired on 2026-09-24. echo-alt
+  // stays, but it is not damaged - it is a bust, which is correct in the echo
+  // band and wrong only where the figure is the subject.
+  const CROPPED = { 'echo-alt': 'a bust that ends mid-chest' };
 
   if (SOBER.includes(card.template) && card.echo_pose === 'echo-surprised') {
     fail(file, 'pose_matches_register',
