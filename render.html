@@ -654,11 +654,12 @@ T['teaching-lesson'] = function(c){
       '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_1)+'</p></div></div>'+
     '<div class="turn b"><div class="bub2"><div class="nm">Echo</div><p>'+rich(c.turn_2)+'</p></div>'+
       '<div class="who"><img src="'+pose('echo-surprised')+'" alt=""></div></div>'+
-    // Was titan-alt for variety against turn 1. titan-alt has a clipped right
-    // ear - the cut-out shaved it flat where the headset crosses - so it shipped
-    // that defect on every teaching card. Same pose twice beats a broken one.
-    // Put titan-alt back here once it has been re-cut from the original art.
-    '<div class="turn a"><div class="who"><img src="'+pose('titan-front')+'" alt=""></div>'+
+    // titan-alt again, for variety against turn 1. It was swapped out for a
+    // while: the whole top of that pose's head had been sliced off by a tight
+    // canvas crop - ear tips and crown both, not just an ear. Repaired on
+    // 2026-09-24 by grafting the crown from titan-front, scaled to match. His
+    // own art, so nothing can drift.
+    '<div class="turn a"><div class="who"><img src="'+pose('titan-alt')+'" alt=""></div>'+
       '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_3)+'</p></div></div>'+
     '</div>' + echo(c) + foot(c);
 };
