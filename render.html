@@ -5,7 +5,7 @@
 
 <style>
 /* ============================================================
-   CARD RENDERER â€” one file, 13 templates, driven by a JSON record.
+   CARD RENDERER — one file, 13 templates, driven by a JSON record.
    Pipeline: writes card.json beside this file, screenshots #stage.
    Review:   no card.json, renders the sample gallery instead.
    ============================================================ */
@@ -150,7 +150,7 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .turn.b .bub2 .nm{color:#B7A06A}
 .turn.b .bub2 p{color:rgba(255,255,255,.88)}
 
-/* echo line â€” the standing device */
+/* echo line — the standing device */
 .echo{margin-top:auto;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;
   background:rgba(212,160,23,.09);border-top:1px solid rgba(212,160,23,.4);
   border-bottom:1px solid rgba(212,160,23,.4);padding:14px 22px;position:relative;z-index:3}
@@ -193,11 +193,11 @@ body{margin:0;background:var(--ground);color:var(--ink);
 /* ---------------- helpers ---------------- */
 function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,function(c){
   return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
-/* *gold* â†’ gold span, **bold** â†’ bold. Copy stays plain text in the data. */
+/* *gold* → gold span, **bold** → bold. Copy stays plain text in the data. */
 function rich(s){
   return esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<em>$1</em>');
 }
-/* Poses landed one level deep when they were uploaded. Harmless â€” change this
+/* Poses landed one level deep when they were uploaded. Harmless — change this
    one line if they ever get moved to poses/ proper. */
 var POSE_DIR = 'poses/poses/';
 function pose(name){ return POSE_DIR+(name||'titan-front')+'.png'; }
@@ -266,7 +266,7 @@ function foot(c){
 }
 function sig(){
   return '<div class="sig">'+
-    '<div><div class="nm">Chenson<br>Wedderburn</div><div class="sb">Army Veteran Â· Realtor&reg;</div></div>'+
+    '<div><div class="nm">Chenson<br>Wedderburn</div><div class="sb">Army Veteran · Realtor&reg;</div></div>'+
     '<div class="dv"></div>'+
     '<div class="r"><div class="nm">Keller Williams<br>Atlanta Partners</div>'+
     '<div class="sb">Stockbridge, Georgia</div></div></div>';
@@ -405,7 +405,7 @@ var SAMPLES = [
     headline:'Today Belongs\n<em>To Them</em>', titan_pose:'titan-alt', echo_pose:'echo-alt',
     event_date:'2027-05-31',
     titan_line:"Echo, I'm here to enjoy today. A lot of the men and women I served with aren't. That's who this day belongs to.",
-    echo_line:"You went as a unit. You did your job. Some of you came home and some of you didn't. â€¦To the ones who did â€” thank you. To the ones who didn't, and to the families they left behind â€” thank you for what it cost you." },
+    echo_line:"You went as a unit. You did your job. Some of you came home and some of you didn't. …To the ones who did — thank you. To the ones who didn't, and to the families they left behind — thank you for what it cost you." },
 
   { template:'deadline-countdown', skin:'spring', eyebrow:'Deadline',
     headline:'The Homestead\n<em>Deadline</em>', the_date:'April 1', days_left:'6 weeks',
@@ -415,34 +415,34 @@ var SAMPLES = [
     what_you_lose:'You wait until the following tax year.',
     who_to_ask:'The Henry County Tax Commissioner.',
     echo_line:"Wait, you have to ask for it? Okay, so it's not automatic. I'd want to check whether mine's already on there before April.",
-    source:'Henry County Tax Commissioner Â· henrycountytax.com',
-    disclaimer:'General information, not tax or legal advice. Exemptions and deadlines vary by county â€” confirm yours with the Tax Commissioner.' },
+    source:'Henry County Tax Commissioner · henrycountytax.com',
+    disclaimer:'General information, not tax or legal advice. Exemptions and deadlines vary by county — confirm yours with the Tax Commissioner.' },
 
   { template:'myth-vs-fact', skin:'autumn', eyebrow:'Teaching',
     headline:'Under Contract\n<em>Is Not Sold</em>', titan_pose:'titan-front', echo_pose:'echo-notepad',
     myth:"If it says under contract, the house is gone. No point even looking.",
-    correction:"Echo, under contract means the seller accepted an offer and both sides signed. Nothing's moved yet though â€” no money, no deed. The inspection, the appraisal and the loan all still have to clear.",
+    correction:"Echo, under contract means the seller accepted an offer and both sides signed. Nothing's moved yet though — no money, no deed. The inspection, the appraisal and the loan all still have to clear.",
     rows:['**It is not sold yet.** A contract can fall through before it closes.',
           '**Some sellers take backup offers.** Worth asking rather than assuming.',
           '**"Sold" means closed.** The deed recorded and the keys moved.'],
-    echo_line:"So it's agreed, not done. Okay â€” if I really wanted that house, I'd ask whether they take backup offers. Probably nothing comes of it. Costs nothing to ask.",
-    source:'Georgia Association of REALTORSÂ® standard purchase agreement',
+    echo_line:"So it's agreed, not done. Okay — if I really wanted that house, I'd ask whether they take backup offers. Probably nothing comes of it. Costs nothing to ask.",
+    source:'Georgia Association of REALTORS® standard purchase agreement',
     disclaimer:'General explanation of common terms, not legal advice. Your own agreement and your attorney govern your transaction.' },
 
   { template:'market-one-figure', skin:'plain', eyebrow:'Market',
     headline:'The 30-Year\n<em>Rate This Week</em>', big_number:'6.71%',
     big_caption:'Week ending September 10, 2026', titan_pose:'titan-alt', echo_pose:'echo-surprised',
-    titan_line:"Echo, that's the average for one week â€” the week ending September 10. It was **6.66%** the week before, and **6.50%** a year ago.",
-    echo_line:"Oh â€” so that's just this week's. Okay, so it's lock in while I know the number, or wait and take next week's. Better or worse â€” nobody knows.",
-    source:'Freddie Mac Primary Mortgage Market Survey Â· week ending September 10, 2026',
-    disclaimer:'A national weekly average for that week only â€” not a quote, not an offer, and not a prediction. Your own rate depends on your lender, your credit and your down payment.' },
+    titan_line:"Echo, that's the average for one week — the week ending September 10. It was **6.66%** the week before, and **6.50%** a year ago.",
+    echo_line:"Oh — so that's just this week's. Okay, so it's lock in while I know the number, or wait and take next week's. Better or worse — nobody knows.",
+    source:'Freddie Mac Primary Mortgage Market Survey · week ending September 10, 2026',
+    disclaimer:'A national weekly average for that week only — not a quote, not an offer, and not a prediction. Your own rate depends on your lender, your credit and your down payment.' },
 
   { template:'single-statement', skin:'winter', eyebrow:'Home',
     statement:'The alarm on your ceiling<br><em>has an expiry date.</em>',
     titan_pose:'titan-front', echo_pose:'echo-notepad',
-    titan_line:"Echo, most people test the battery. Far fewer know the unit itself expires â€” the NFPA says replace it ten years from the date printed on the back.",
-    echo_line:"Ten years, then it's done. Okay â€” I'm checking the date on mine tonight.",
-    source:'National Fire Protection Association Â· nfpa.org',
+    titan_line:"Echo, most people test the battery. Far fewer know the unit itself expires — the NFPA says replace it ten years from the date printed on the back.",
+    echo_line:"Ten years, then it's done. Okay — I'm checking the date on mine tonight.",
+    source:'National Fire Protection Association · nfpa.org',
     disclaimer:"General information only. Follow your alarm manufacturer's instructions and your local fire code." }
 ];
 
@@ -455,24 +455,24 @@ function solo(card){
 }
 function gallery(){
   var html = '<div class="hero"><div class="hero-in">'+
-    '<div class="kicker">Social System Â· Chenson Wedderburn</div>'+
+    '<div class="kicker">Social System · Chenson Wedderburn</div>'+
     '<h1>Card Renderer</h1>'+
     '<p>One file, thirteen templates, driven by a record. The pipeline writes <code>card.json</code> '+
     'beside this page and screenshots the stage at 1080&times;1080. With no card file it renders '+
     'these samples instead, which is what makes it reviewable.</p>'+
-    '<p>Templates are empty shells. Nothing here is written ahead â€” the copy below is sample data, '+
+    '<p>Templates are empty shells. Nothing here is written ahead — the copy below is sample data, '+
     'and the real thing gets written the week it runs.</p></div></div><div class="wrap">';
   SAMPLES.forEach(function(c){
     html += '<div class="spec"><h2>'+esc(c.eyebrow||c.template)+'</h2>'+
-            '<div class="tpl">'+esc(c.template)+' Â· skin: '+esc(c.skin)+'</div>'+
+            '<div class="tpl">'+esc(c.template)+' · skin: '+esc(c.skin)+'</div>'+
             '<div class="frame">'+renderCard(c)+'</div></div>';
   });
-  html += '<div id="err">No <code>card.json</code> found â€” showing samples. That is the expected '+
+  html += '<div id="err">No <code>card.json</code> found — showing samples. That is the expected '+
           'behaviour for review; the pipeline supplies one at render time.</div></div>';
   document.getElementById('app').innerHTML = html;
 }
 
-/* The pipeline injects the record before load â€” fetch() does not work over
+/* The pipeline injects the record before load — fetch() does not work over
    file:// in Chromium, so a fetch alone would silently fall back to the gallery
    and the screenshot would be wrong. The fetch stays for serving over http. */
 if (window.__CARD__) {
