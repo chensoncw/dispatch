@@ -1,9 +1,9 @@
 {
-  "_about": "Recurring calendar for Chenson's social system. The source of truth â€” the renderer and, later, the pipeline both read this file.",
+  "_about": "Recurring calendar for Chenson's social system. The source of truth — the renderer and, later, the pipeline both read this file.",
   "_updated": "2026-09-23",
   "_rules": {
     "fixed": "same month/day every year",
-    "nth": "nth weekday of a month â€” 0=Sunday",
+    "nth": "nth weekday of a month — 0=Sunday",
     "last": "last given weekday of a month",
     "window": "a known season, no fixed day",
     "lookup": "date must be pulled each year from the named source",
@@ -13,20 +13,20 @@
     "lead_days": "how many days BEFORE the date it publishes. 0 = same day.",
     "slot": "market | teaching | community | home | calendar",
     "skin": "winter | spring | summer | autumn | patriotic | plain",
-    "angles": "different ways into the same topic â€” a DIFFERENT one each year"
+    "angles": "different ways into the same topic — a DIFFERENT one each year"
   },
 
   "_variation_rule": {
     "minimum": 5,
-    "why": "An entry is a topic, not a card. The same date must not produce the same sentence year after year â€” five angles means the same reader sees a fresh take for five years. Record which angle ran in the data bank so next year picks another.",
-    "growth": "Research adds angles. When a pull turns up something new about a recurring topic, append it here rather than losing it â€” that is how the list gets richer instead of staler.",
+    "why": "An entry is a topic, not a card. The same date must not produce the same sentence year after year — five angles means the same reader sees a fresh take for five years. Record which angle ran in the data bank so next year picks another.",
+    "growth": "Research adds angles. When a pull turns up something new about a recurring topic, append it here rather than losing it — that is how the list gets richer instead of staler.",
     "status": "Angles written for homestead-deadline and tax-bills-mailed as worked examples. Every other entry still needs its five."
   },
 
   "entries": [
-    { "id": "new-year", "name": "New Year's Day", "rule": {"type":"fixed","month":1,"day":1}, "lead_days": 1, "slot": "calendar", "skin": "winter", "register": "funny", "note": "Publishes Dec 31. Never on the day â€” by then the year already turned." },
+    { "id": "new-year", "name": "New Year's Day", "rule": {"type":"fixed","month":1,"day":1}, "lead_days": 1, "slot": "calendar", "skin": "winter", "register": "funny", "note": "Publishes Dec 31. Never on the day — by then the year already turned." },
     { "id": "homestead-eligibility", "name": "Homestead: the Jan 1 rule", "rule": {"type":"fixed","month":1,"day":8}, "lead_days": 0, "slot": "teaching", "skin": "winter", "note": "You must own as of Jan 1 to claim for that year. First of three." },
-    { "id": "veteran-exemption-q1", "name": "Veteran exemption â€” awareness", "rule": {"type":"fixed","month":1,"day":15}, "lead_days": 0, "slot": "teaching", "skin": "winter", "note": "Pull the current indexed figure. Qualification is wider than 100% rating." },
+    { "id": "veteran-exemption-q1", "name": "Veteran exemption — awareness", "rule": {"type":"fixed","month":1,"day":15}, "lead_days": 0, "slot": "teaching", "skin": "winter", "note": "Pull the current indexed figure. Qualification is wider than 100% rating." },
     { "id": "mlk", "name": "Martin Luther King Jr. Day", "rule": {"type":"nth","month":1,"weekday":1,"n":3}, "lead_days": 0, "slot": "calendar", "skin": "winter", "register": "warm" },
     { "id": "freeze-watch", "name": "Frozen pipes and the cold snap", "rule": {"type":"window","month":1,"note":"first hard freeze"}, "lead_days": 3, "slot": "home", "skin": "winter" },
     { "id": "form-1098", "name": "The 1098 in the mail", "rule": {"type":"fixed","month":1,"day":29}, "lead_days": 0, "slot": "teaching", "skin": "winter", "note": "Mortgage interest statements arrive late January." },
@@ -40,37 +40,37 @@
     { "id": "homestead-lastcall", "name": "Homestead: last call", "rule": {"type":"fixed","month":3,"day":9}, "lead_days": 0, "slot": "teaching", "skin": "spring", "note": "Third of three. Run it early March, not March 30." },
     { "id": "dst-begins", "name": "Clocks go forward", "rule": {"type":"nth","month":3,"weekday":0,"n":2}, "lead_days": 3, "slot": "home", "skin": "spring", "note": "Pair with a smoke-alarm check." },
     { "id": "st-patricks", "name": "St Patrick's Day", "rule": {"type":"fixed","month":3,"day":17}, "lead_days": 1, "slot": "calendar", "skin": "spring", "register": "funny" },
-    { "id": "spring-equinox", "name": "First day of spring", "rule": {"type":"computed","month":3,"note":"~Mar 20, varies 19â€“21"}, "lead_days": 1, "slot": "calendar", "skin": "spring" },
+    { "id": "spring-equinox", "name": "First day of spring", "rule": {"type":"computed","month":3,"note":"~Mar 20, varies 19–21"}, "lead_days": 1, "slot": "calendar", "skin": "spring" },
     { "id": "winter-damage", "name": "What winter did to the roof", "rule": {"type":"window","month":3,"note":"after the last freeze"}, "lead_days": 0, "slot": "home", "skin": "spring" },
     { "id": "spring-season", "name": "Spring listing season opens", "rule": {"type":"window","month":3,"note":"early March"}, "lead_days": 0, "slot": "market", "skin": "spring", "note": "Report dated figures. Never forecast the season." },
 
-    { "id": "homestead-deadline", "name": "April 1 â€” homestead closes", "rule": {"type":"fixed","month":4,"day":1}, "lead_days": 2, "slot": "teaching", "skin": "spring", "note": "The deadline itself. Verify Henry's late-filing rule first.",
+    { "id": "homestead-deadline", "name": "April 1 — homestead closes", "rule": {"type":"fixed","month":4,"day":1}, "lead_days": 2, "slot": "teaching", "skin": "spring", "note": "The deadline itself. Verify Henry's late-filing rule first.",
       "angles": [
-        "The deadline and what missing it costs â€” you wait a full tax year.",
+        "The deadline and what missing it costs — you wait a full tax year.",
         "The two dates people confuse: you must OWN as of Jan 1, but you FILE by Apr 1.",
         "Bought a house last year? You are not automatically on it. Nobody enrolls you.",
-        "You file once and it carries â€” so the question is whether it was ever filed, not whether to re-file.",
+        "You file once and it carries — so the question is whether it was ever filed, not whether to re-file.",
         "There is more than one exemption. Age-based and veteran tracks sit alongside the basic one.",
         "What the exemption actually does to a bill, in plain terms, with no dollar figure attached."
       ]},
     { "id": "tax-day", "name": "Federal Tax Day", "rule": {"type":"fixed","month":4,"day":15}, "lead_days": 5, "slot": "calendar", "skin": "spring" },
-    { "id": "easter", "name": "Easter", "rule": {"type":"computed","month":4,"note":"lunar â€” first Sunday after the first full moon following the equinox"}, "lead_days": 0, "slot": "calendar", "skin": "spring", "register": "warm", "note": "Personally important to Chenson. Draft first, then show him." },
+    { "id": "easter", "name": "Easter", "rule": {"type":"computed","month":4,"note":"lunar — first Sunday after the first full moon following the equinox"}, "lead_days": 0, "slot": "calendar", "skin": "spring", "register": "warm", "note": "Personally important to Chenson. Draft first, then show him." },
     { "id": "ac-service", "name": "Service the AC before you need it", "rule": {"type":"fixed","month":4,"day":14}, "lead_days": 0, "slot": "home", "skin": "spring", "pair": "heat-service" },
     { "id": "earth-day", "name": "Earth Day", "rule": {"type":"fixed","month":4,"day":22}, "lead_days": 1, "slot": "calendar", "skin": "spring" },
 
-    { "id": "assessment-notices", "name": "Assessment notices â€” Henry mails mid-May", "rule": {"type":"window","month":5,"note":"mid-May in Henry County"}, "lead_days": 3, "slot": "teaching", "skin": "spring", "note": "45-day clock starts on YOUR notice date. Watch the mailbox." },
+    { "id": "assessment-notices", "name": "Assessment notices — Henry mails mid-May", "rule": {"type":"window","month":5,"note":"mid-May in Henry County"}, "lead_days": 3, "slot": "teaching", "skin": "spring", "note": "45-day clock starts on YOUR notice date. Watch the mailbox." },
     { "id": "assessment-clock", "name": "Your 45 days are running", "rule": {"type":"fixed","month":6,"day":8}, "lead_days": 0, "slot": "teaching", "skin": "summer", "note": "Follows the mid-May mailing." },
     { "id": "mothers-day", "name": "Mother's Day", "rule": {"type":"nth","month":5,"weekday":0,"n":2}, "lead_days": 2, "slot": "calendar", "skin": "spring", "register": "warm" },
-    { "id": "armed-forces-day", "name": "Armed Forces Day", "rule": {"type":"nth","month":5,"weekday":6,"n":3}, "lead_days": 0, "slot": "calendar", "skin": "patriotic", "note": "For those currently serving â€” distinct from both Memorial and Veterans Day." },
+    { "id": "armed-forces-day", "name": "Armed Forces Day", "rule": {"type":"nth","month":5,"weekday":6,"n":3}, "lead_days": 0, "slot": "calendar", "skin": "patriotic", "note": "For those currently serving — distinct from both Memorial and Veterans Day." },
     { "id": "memorial-day", "name": "Memorial Day", "rule": {"type":"last","month":5,"weekday":1}, "lead_days": 0, "slot": "calendar", "skin": "patriotic", "register": "warm", "note": "The fallen, AND their families. Echo speaks for everyone. Never 'thank you for your service' framing." },
-    { "id": "school-ends", "name": "Last day of school", "rule": {"type":"lookup","month":5,"source":"henry.k12.ga.us","note":"May 22 '26 Â· May 26 '27 Â· May 24 '28"}, "lead_days": 2, "slot": "community", "skin": "spring" },
+    { "id": "school-ends", "name": "Last day of school", "rule": {"type":"lookup","month":5,"source":"henry.k12.ga.us","note":"May 22 '26 · May 26 '27 · May 24 '28"}, "lead_days": 2, "slot": "community", "skin": "spring" },
     { "id": "storm-prep", "name": "Before hurricane season opens", "rule": {"type":"fixed","month":5,"day":26}, "lead_days": 0, "slot": "home", "skin": "summer" },
 
     { "id": "hurricane-season-start", "name": "Atlantic hurricane season begins", "rule": {"type":"fixed","month":6,"day":1}, "lead_days": 3, "slot": "home", "skin": "summer" },
     { "id": "flag-day", "name": "Flag Day", "rule": {"type":"fixed","month":6,"day":14}, "lead_days": 1, "slot": "calendar", "skin": "patriotic" },
     { "id": "juneteenth", "name": "Juneteenth", "rule": {"type":"fixed","month":6,"day":19}, "lead_days": 1, "slot": "calendar", "skin": "patriotic", "register": "warm" },
     { "id": "fathers-day", "name": "Father's Day", "rule": {"type":"nth","month":6,"weekday":0,"n":3}, "lead_days": 2, "slot": "calendar", "skin": "summer", "register": "warm" },
-    { "id": "summer-solstice", "name": "First day of summer", "rule": {"type":"computed","month":6,"note":"~Jun 20, varies 20â€“21"}, "lead_days": 1, "slot": "calendar", "skin": "summer" },
+    { "id": "summer-solstice", "name": "First day of summer", "rule": {"type":"computed","month":6,"note":"~Jun 20, varies 20–21"}, "lead_days": 1, "slot": "calendar", "skin": "summer" },
     { "id": "summer-moving", "name": "Summer moving season", "rule": {"type":"window","month":6,"note":"families move when school is out"}, "lead_days": 0, "slot": "market", "skin": "summer" },
 
     { "id": "assessment-backstop", "name": "All notices out by July 1", "rule": {"type":"fixed","month":7,"day":1}, "lead_days": 0, "slot": "teaching", "skin": "summer", "note": "Statewide backstop. If you never got one, ask." },
@@ -78,23 +78,23 @@
     { "id": "power-bill", "name": "Why the power bill spiked", "rule": {"type":"fixed","month":7,"day":21}, "lead_days": 0, "slot": "home", "skin": "summer", "note": "Sourced, no dollar figures." },
     { "id": "half-year-market", "name": "Half-year market read", "rule": {"type":"window","month":7,"note":"once June figures publish"}, "lead_days": 0, "slot": "market", "skin": "summer" },
 
-    { "id": "school-starts", "name": "First day of school", "rule": {"type":"lookup","month":8,"source":"henry.k12.ga.us","note":"Aug 3 '26 Â· Aug 2 '27"}, "lead_days": 7, "slot": "community", "skin": "summer" },
+    { "id": "school-starts", "name": "First day of school", "rule": {"type":"lookup","month":8,"source":"henry.k12.ga.us","note":"Aug 3 '26 · Aug 2 '27"}, "lead_days": 7, "slot": "community", "skin": "summer" },
     { "id": "school-zones", "name": "School zones and bus routes", "rule": {"type":"lookup","month":8,"source":"henry.k12.ga.us","note":"the week school returns"}, "lead_days": 2, "slot": "home", "skin": "summer" },
     { "id": "late-summer-market", "name": "Late-summer slowdown", "rule": {"type":"window","month":8,"note":"report it dated, never predict it"}, "lead_days": 0, "slot": "market", "skin": "summer" },
 
     { "id": "labor-day", "name": "Labor Day", "rule": {"type":"nth","month":9,"weekday":1,"n":1}, "lead_days": 1, "slot": "calendar", "skin": "summer" },
     { "id": "patriot-day", "name": "Patriot Day", "rule": {"type":"fixed","month":9,"day":11}, "lead_days": 0, "slot": "calendar", "skin": "patriotic", "register": "warm" },
-    { "id": "tax-bills-mailed", "name": "Tax bills are in the mail", "rule": {"type":"window","month":9,"note":"Henry mails mid-September"}, "lead_days": 3, "slot": "teaching", "skin": "autumn", "note": "First of three. Due Nov 16 in Henry â€” NOT the Dec 20 state default.",
+    { "id": "tax-bills-mailed", "name": "Tax bills are in the mail", "rule": {"type":"window","month":9,"note":"Henry mails mid-September"}, "lead_days": 3, "slot": "teaching", "skin": "autumn", "note": "First of three. Due Nov 16 in Henry — NOT the Dec 20 state default.",
       "angles": [
-        "It is in the mail this week â€” watch for it rather than waiting to be chased.",
+        "It is in the mail this week — watch for it rather than waiting to be chased.",
         "Henry is due Nov 16, not the December date people assume. Movers from other counties get caught by this.",
         "The clock is 60 days from the POSTMARK, not from the day you opened the envelope.",
         "The penalty schedule: interest monthly, then 5% every 120 days, up to 20%.",
         "Moved recently? The bill goes to the address on file, and not getting it does not pause anything.",
-        "Who the bill actually goes to â€” the owner as of January 1, even if the house sold since."
+        "Who the bill actually goes to — the owner as of January 1, even if the house sold since."
       ]},
     { "id": "hurricane-peak", "name": "Peak of hurricane season", "rule": {"type":"fixed","month":9,"day":10}, "lead_days": 2, "slot": "home", "skin": "summer" },
-    { "id": "autumn-equinox", "name": "First day of autumn", "rule": {"type":"computed","month":9,"note":"~Sep 22, varies 22â€“23"}, "lead_days": 1, "slot": "calendar", "skin": "autumn" },
+    { "id": "autumn-equinox", "name": "First day of autumn", "rule": {"type":"computed","month":9,"note":"~Sep 22, varies 22–23"}, "lead_days": 1, "slot": "calendar", "skin": "autumn" },
     { "id": "heat-service", "name": "Check the heat before you need it", "rule": {"type":"fixed","month":9,"day":29}, "lead_days": 0, "slot": "home", "skin": "autumn", "pair": "ac-service" },
 
     { "id": "tax-check-date", "name": "Check the date on your bill", "rule": {"type":"fixed","month":10,"day":13}, "lead_days": 0, "slot": "teaching", "skin": "autumn", "note": "Second of three. 60 days from postmark before interest." },
@@ -104,7 +104,7 @@
 
     { "id": "dst-ends", "name": "Clocks go back", "rule": {"type":"nth","month":11,"weekday":0,"n":1}, "lead_days": 3, "slot": "home", "skin": "autumn", "note": "Pair with the smoke-alarm card." },
     { "id": "veterans-day", "name": "Veterans Day", "rule": {"type":"fixed","month":11,"day":11}, "lead_days": 0, "slot": "calendar", "skin": "patriotic", "register": "warm", "note": "The most personal slot of the year. For those who served and came home." },
-    { "id": "veteran-exemption-q4", "name": "Veteran exemption â€” reminder", "rule": {"type":"fixed","month":11,"day":12}, "lead_days": 0, "slot": "teaching", "skin": "patriotic", "note": "Ride Veterans Day. Pull the current indexed figure." },
+    { "id": "veteran-exemption-q4", "name": "Veteran exemption — reminder", "rule": {"type":"fixed","month":11,"day":12}, "lead_days": 0, "slot": "teaching", "skin": "patriotic", "note": "Ride Veterans Day. Pull the current indexed figure." },
     { "id": "tax-due", "name": "Tax due November 16", "rule": {"type":"fixed","month":11,"day":16}, "lead_days": 5, "slot": "teaching", "skin": "autumn", "note": "Third of three. Henry's actual date. 5% penalty every 120 days, 20% max." },
     { "id": "thanksgiving", "name": "Thanksgiving", "rule": {"type":"nth","month":11,"weekday":4,"n":4}, "lead_days": 1, "slot": "calendar", "skin": "autumn", "register": "funny" },
     { "id": "small-business-saturday", "name": "Small Business Saturday", "rule": {"type":"nth","month":11,"weekday":6,"n":4}, "lead_days": 2, "slot": "community", "skin": "autumn" },
@@ -112,14 +112,14 @@
     { "id": "winterizing", "name": "Winterizing the outside taps", "rule": {"type":"fixed","month":11,"day":20}, "lead_days": 0, "slot": "home", "skin": "winter" },
 
     { "id": "pearl-harbor", "name": "Pearl Harbor Remembrance Day", "rule": {"type":"fixed","month":12,"day":7}, "lead_days": 0, "slot": "calendar", "skin": "patriotic", "register": "warm" },
-    { "id": "winter-solstice", "name": "First day of winter", "rule": {"type":"computed","month":12,"note":"~Dec 21, varies 21â€“22"}, "lead_days": 1, "slot": "calendar", "skin": "winter" },
+    { "id": "winter-solstice", "name": "First day of winter", "rule": {"type":"computed","month":12,"note":"~Dec 21, varies 21–22"}, "lead_days": 1, "slot": "calendar", "skin": "winter" },
     { "id": "empty-house", "name": "Leaving the house over the holidays", "rule": {"type":"fixed","month":12,"day":18}, "lead_days": 0, "slot": "home", "skin": "winter" },
     { "id": "christmas", "name": "Christmas", "rule": {"type":"fixed","month":12,"day":25}, "lead_days": 1, "slot": "calendar", "skin": "winter", "register": "warm", "note": "About Christ and giving thanks, never gifts. Said subliminally, never named outright. Draft first, then show him." },
     { "id": "year-in-figures", "name": "The year in figures", "rule": {"type":"window","month":12,"note":"late December"}, "lead_days": 0, "slot": "market", "skin": "winter", "note": "Report the year. Do NOT forecast the next one." },
     { "id": "new-years-eve", "name": "New Year's Eve", "rule": {"type":"fixed","month":12,"day":31}, "lead_days": 0, "slot": "calendar", "skin": "winter", "register": "funny" },
 
     { "id": "monthly-birthdays", "name": "Birthdays this month", "rule": {"type":"monthly","day":1}, "lead_days": 0, "slot": "calendar", "skin": "plain", "register": "funny", "note": "Runs every month. No claim, no source needed." },
-    { "id": "weekly-rate", "name": "The 30-year rate", "rule": {"type":"weekly","weekday":4,"source":"Freddie Mac PMMS"}, "lead_days": 0, "slot": "market", "skin": "plain", "note": "Published Thursdays. Pulled fresh EVERY week â€” never banked. Human eyes before it ships." },
+    { "id": "weekly-rate", "name": "The 30-year rate", "rule": {"type":"weekly","weekday":4,"source":"Freddie Mac PMMS"}, "lead_days": 0, "slot": "market", "skin": "plain", "note": "Published Thursdays. Pulled fresh EVERY week — never banked. Human eyes before it ships." },
     { "id": "monthly-county", "name": "County figures", "rule": {"type":"monthly","note":"published in arrears"}, "lead_days": 0, "slot": "market", "skin": "plain", "source": "FRED, Redfin, Zillow" }
   ],
 
