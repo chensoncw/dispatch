@@ -1,0 +1,42 @@
+{
+  "_": "Thu 1 Oct 2026 · community slot · calendar id fall-events. Every item starts on 2 Oct or later, so all three are still ahead at publish. BridgeFest was dropped: it fell on 26 Sep and would already have passed.",
+
+  "approved": true,
+
+  "template": "community-diary",
+  "skin": "autumn",
+  "eyebrow": "Around The County",
+
+  "headline": "October Opens\nBusy Around Here",
+
+  "titan_line": "Echo, three things worth knowing about this week — and every one of them is still ahead of us as this goes up.",
+
+  "items": [
+    {
+      "when": "Oct 2–11",
+      "title": "Fall Georgia State Fair",
+      "detail": "EchoPark Speedway, 1500 Tara Place in Hampton. Rides, shows and fair food over two weekends."
+    },
+    {
+      "when": "Oct 2–4",
+      "title": "FoodeesFest",
+      "detail": "Three days of food vendors. Venue and times are on the county tourism calendar."
+    },
+    {
+      "when": "Oct 3",
+      "title": "Pizza Cook-Off Competition",
+      "detail": "In McDonough, from 9am to 3:30pm on the Saturday."
+    }
+  ],
+
+  "event_date": "2026-10-02",
+
+  "echo_line": "Ten days of fair? …Oh — it runs across two weekends. That's the one I'd take the kids to.",
+
+  "source": "Visit Henry County Georgia events calendar · retrieved September 24, 2026",
+  "disclaimer": "Dates as published by the organisers on the date retrieved. Confirm with the event before travelling.",
+
+  "titan_pose": "titan-alt",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#AroundTheCounty"
+}
