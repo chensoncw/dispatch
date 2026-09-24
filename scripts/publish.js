@@ -84,6 +84,39 @@ async function publishInstagram(url, msg) {
   return out.id;
 }
 
+/* ----------------------------------------------------------------
+   Stories.
+
+   Same two-step shape as a feed post on Instagram, but media_type
+   STORIES and no caption - a Story has nowhere to put one. The words
+   are already drawn into the image, which is the point of rendering
+   a separate tall version rather than letting the app crop a square.
+
+   Facebook is different again: a Page Story wants a photo that has
+   already been uploaded unpublished, then references it by id. That
+   is the same published:false upload the smoke test uses.
+   ---------------------------------------------------------------- */
+async function publishInstagramStory(url) {
+  const container = await post(`https://graph.facebook.com/${API}/${IG_ID}/media`, {
+    image_url: url, media_type: 'STORIES', access_token: TOKEN
+  });
+  await new Promise(r => setTimeout(r, 4000));
+  const out = await post(`https://graph.facebook.com/${API}/${IG_ID}/media_publish`, {
+    creation_id: container.id, access_token: TOKEN
+  });
+  return out.id;
+}
+
+async function publishFacebookStory(url) {
+  const photo = await post(`https://graph.facebook.com/${API}/${PAGE_ID}/photos`, {
+    url, published: false, access_token: TOKEN
+  });
+  const out = await post(`https://graph.facebook.com/${API}/${PAGE_ID}/photo_stories`, {
+    photo_id: photo.id, access_token: TOKEN
+  });
+  return out.post_id || out.id;
+}
+
 async function main() {
   const file = process.argv[2];
   if (!file) { console.error('usage: publish.js <content/card.json>'); process.exit(1); }
@@ -120,6 +153,29 @@ async function main() {
     console.log(`\nSMOKE TEST PASSED — facebook accepted the upload, id ${res.id}`);
     console.log('That is proof the token can post to the Page.');
     console.log('The photo sits unpublished in Page > Photos and can be deleted there.');
+
+    // The story image gets the same treatment, one step short of publishing.
+    // Uploading it unpublished proves the file is reachable and that Facebook
+    // accepts it — which is the half of a Page Story that can be tested without
+    // one actually appearing. Instagram has no unpublished state at all, so its
+    // Story path cannot be rehearsed; the first real one is the first one.
+    const sName = name + '-story';
+    if (!fs.existsSync(path.join(ROOT, 'out', sName + '.png'))) {
+      console.log(`\nstory: no out/${sName}.png to test.`);
+    } else {
+      const sUrl = imageUrl(sName);
+      console.log(`\nstory image  ${sUrl}`);
+      try {
+        const s = await post(`https://graph.facebook.com/${API}/${PAGE_ID}/photos`, {
+          url: sUrl, published: false, access_token: TOKEN
+        });
+        console.log(`story: facebook accepted the tall image, id ${s.id}`);
+        console.log('story: it was NOT posted as a Story — that cannot be rehearsed.');
+      } catch (e) {
+        console.error(`story: FAILED — ${e.message}`);
+        process.exit(1);
+      }
+    }
     return;
   }
 
@@ -156,6 +212,43 @@ async function main() {
 
   const igId = await publishInstagram(url, msg);
   console.log(`  instagram posted ${igId}`);
+
+  // --- stories -------------------------------------------------------------
+  //
+  // The feed post is the deliverable. A Story is a bonus reach on the same
+  // words, and it is gone in 24 hours either way. So a Story failure NEVER
+  // fails this run: by the time we get here the feed post is already public
+  // and cannot be taken back, and exiting non-zero would light up the "it
+  // broke" alert about something that did not break.
+  //
+  // It is reported loudly instead, and it publishes only if the tall image
+  // was actually rendered. No story file means this card was rendered before
+  // stories existed, which is not an error.
+  const storyName = name + '-story';
+  const storyPng = path.join(ROOT, 'out', storyName + '.png');
+
+  if (!fs.existsSync(storyPng)) {
+    console.log('  stories   skipped — no out/' + storyName + '.png');
+  } else {
+    const storyUrl = imageUrl(storyName);
+    console.log(`  story img ${storyUrl}`);
+
+    try {
+      const igs = await publishInstagramStory(storyUrl);
+      console.log(`  ig story  posted ${igs}`);
+    } catch (e) {
+      console.warn(`  ig story  FAILED — ${e.message}`);
+      console.warn('            the feed post above is unaffected and is live.');
+    }
+
+    try {
+      const fbs = await publishFacebookStory(storyUrl);
+      console.log(`  fb story  posted ${fbs}`);
+    } catch (e) {
+      console.warn(`  fb story  FAILED — ${e.message}`);
+      console.warn('            the feed post above is unaffected and is live.');
+    }
+  }
 
   console.log('publish: done');
 }
