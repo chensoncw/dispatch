@@ -1,0 +1,24 @@
+{
+  "_": "Fri 2 Oct 2026 · teaching slot. Note: calendar.json asserts Henry is due Nov 16. That could NOT be verified — the Tax Commissioner publishes no fixed date online, only 'the current due date'. So the card teaches the real trap instead: there is no single statewide date, and yours is on your bill. Do not restore the Nov 16 claim without a primary source.",
+
+  "approved": true,
+
+  "template": "teaching-lesson",
+  "skin": "autumn",
+  "eyebrow": "Teaching",
+
+  "headline": "The Only Tax Due Date\nThat Counts Is On Your Bill",
+
+  "turn_1": "Echo, Georgia's default property tax due date is December 20. But a county can move it to December 1 or November 15, or split it into instalments.",
+  "turn_2": "So there's no single date for everybody. How do I find mine?",
+  "turn_3": "From the bill itself. Henry's office publishes no fixed date online — it says payment must reach them by the current due date, or carry a USPS postmark by it.",
+
+  "echo_line": "So the envelope is the instruction, not the calendar. I'd read the date on mine before I assumed December.",
+
+  "source": "Georgia Dept. of Revenue & Henry County Tax Commissioner · retrieved Sept 24, 2026",
+  "disclaimer": "General information about county practice, not advice on any individual bill. Confirm your own date and balance with the Henry County Tax Commissioner.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-alt",
+  "hashtag": "#RealEstateExplained"
+}
