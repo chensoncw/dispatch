@@ -603,6 +603,23 @@ T['single-statement'] = function(c){
     say(c,c.titan_line) + echo(c) + foot(c);
 };
 
+T['series'] = function(c){
+  // The Titan and Echo series: lore, not business. No figures, no teaching,
+  // nothing to sell - so no source and no disclaimer either, because there is
+  // no claim to back up. Shares the greeting layout: the two of them together,
+  // centred, because on these cards they ARE the content.
+  return eyebrow(c.eyebrow||'Titan &amp; Echo') + head(c.headline,true) +
+    '<div class="greet">'+
+      '<div class="pair">'+
+        '<img src="'+pose(c.titan_pose||'titan-front')+'" alt="">'+
+        '<img src="'+pose(c.echo_pose||'echo-surprised')+'" alt="">'+
+      '</div>'+
+      '<div class="who">Titan &amp; Echo</div>'+
+      '<p>'+rich(c.titan_line)+'</p>'+
+      (c.echo_line ? '<p>'+rich(c.echo_line)+'</p>' : '')+
+    '</div>';
+};
+
 T['holiday'] = function(c){
   // Both characters, centred, together. Chenson's note on 2026-09-24: on a day
   // that is purely a greeting they are "literally saying merry christmas
