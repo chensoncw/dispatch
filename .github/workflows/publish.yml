@@ -1,0 +1,72 @@
+name: Publish
+
+# Publishes the card whose filename matches today's date.
+# Content files are named  content/YYYY-MM-DD-slug.json
+
+on:
+  schedule:
+    - cron: '0 14 * * 2,3,4,5'   # Tueâ€“Fri 14:00 UTC â€” mid-morning in Georgia
+  workflow_dispatch:
+    inputs:
+      card:
+        description: 'Content file to publish (blank = today)'
+        required: false
+      approved:
+        description: 'Set to 1 to release a gated card (the rate card)'
+        required: false
+        default: '0'
+      dry_run:
+        description: 'Set to 1 to print without sending'
+        required: false
+        default: '0'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Preflight â€” is the token still alive
+        env:
+          META_PAGE_TOKEN:  ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID:     ${{ secrets.META_PAGE_ID }}
+          META_IG_USER_ID:  ${{ secrets.META_IG_USER_ID }}
+        run: node scripts/preflight.js
+
+      - name: Find today's card
+        id: pick
+        run: |
+          CARD="${{ github.event.inputs.card }}"
+          if [ -z "$CARD" ]; then
+            TODAY=$(date -u +%Y-%m-%d)
+            CARD=$(ls content/${TODAY}-*.json 2>/dev/null | head -n1)
+          fi
+          if [ -z "$CARD" ]; then
+            echo "No card for today. Nothing to publish."
+            echo "card=" >> $GITHUB_OUTPUT
+          else
+            echo "Publishing $CARD"
+            echo "card=$CARD" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Publish
+        if: steps.pick.outputs.card != ''
+        env:
+          META_PAGE_TOKEN:  ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID:     ${{ secrets.META_PAGE_ID }}
+          META_IG_USER_ID:  ${{ secrets.META_IG_USER_ID }}
+          APPROVED:         ${{ github.event.inputs.approved }}
+          DRY_RUN:          ${{ github.event.inputs.dry_run }}
+        run: node scripts/publish.js "${{ steps.pick.outputs.card }}"
+
+      - name: Tell Chenson it broke
+        if: failure()
+        run: |
+          echo "### Publish failed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Most likely the token. Check the preflight step above." >> $GITHUB_STEP_SUMMARY
+          echo "Nothing was posted." >> $GITHUB_STEP_SUMMARY
