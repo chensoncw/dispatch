@@ -140,7 +140,10 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .turn{display:grid;gap:14px;align-items:start}
 .turn.a{grid-template-columns:auto 1fr}
 .turn.b{grid-template-columns:1fr auto}
-.turn .who{width:92px;flex:0 0 auto}
+/* Same rule in the dialogue: turn a is Titan, turn b is Echo. */
+.turn .who{flex:0 0 auto}
+.turn.a .who{width:92px}
+.turn.b .who{width:76px}
 .turn .who img{width:100%;height:auto;display:block}
 .bub2{background:rgba(255,255,255,.075);border:1px solid rgba(212,160,23,.4);padding:16px 20px}
 .bub2 .nm{font-family:'Archivo',Arial,sans-serif;font-size:12px;font-weight:700;
@@ -272,8 +275,14 @@ body{margin:0;background:var(--ground);color:var(--ink);
    ================================================================ */
 .greet{margin-top:auto;display:flex;flex-direction:column;align-items:center;
   text-align:center;padding-bottom:18px;position:relative;z-index:3}
-.greet .pair{display:flex;align-items:flex-end;justify-content:center;gap:4px;margin-bottom:20px}
-.greet .pair img{width:196px;height:auto;display:block}
+/* Titan is the leader and stands taller. Echo is a kid - smaller, and not by a
+   lot, but enough that you can see who is who at a glance. align-items:flex-end
+   stands them on the same ground so the difference reads as height, not as one
+   of them floating. */
+.greet .pair{display:flex;align-items:flex-end;justify-content:center;gap:2px;margin-bottom:20px}
+.greet .pair img{height:auto;display:block}
+.greet .pair img.t{width:214px}
+.greet .pair img.e{width:162px}
 .greet .who{font-family:'Archivo',Arial,sans-serif;font-size:12.5px;font-weight:700;
   letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .greet p{margin:0;font-size:24px;line-height:1.46;color:rgba(255,255,255,.95);max-width:78%}
@@ -316,12 +325,14 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .card.story .row,.card.story .item{padding:20px 24px}
 .card.story .row .t,.card.story .item .d,.card.story .check .t{font-size:21px}
 .card.story .bub2 p{font-size:22px}
-.card.story .turn .who{width:112px}
+.card.story .turn.a .who{width:112px}
+.card.story .turn.b .who{width:92px}
 .card.story .echo{padding:20px 26px}
 .card.story .echo .e{width:92px}
 .card.story .echo p{font-size:22px}
 .card.story .foot{padding:20px 0 22px}
-.card.story .greet .pair img{width:240px}
+.card.story .greet .pair img.t{width:262px}
+.card.story .greet .pair img.e{width:198px}
 .card.story .greet p{font-size:27px}
 .card.story .greet p + p{font-size:24px}
 
@@ -611,8 +622,8 @@ T['series'] = function(c){
   return eyebrow(c.eyebrow||'Titan &amp; Echo') + head(c.headline,true) +
     '<div class="greet">'+
       '<div class="pair">'+
-        '<img src="'+pose(c.titan_pose||'titan-front')+'" alt="">'+
-        '<img src="'+pose(c.echo_pose||'echo-surprised')+'" alt="">'+
+        '<img class="t" src="'+pose(c.titan_pose||'titan-front')+'" alt="">'+
+        '<img class="e" src="'+pose(c.echo_pose||'echo-surprised')+'" alt="">'+
       '</div>'+
       '<div class="who">Titan &amp; Echo</div>'+
       '<p>'+rich(c.titan_line)+'</p>'+
@@ -631,8 +642,8 @@ T['holiday'] = function(c){
         // Full-body poses only here. At 196px these are the main subject of the
         // card, so a torso crop shows as a character with no legs. echo-alt is
         // a bust - fine small in the echo band, wrong at this size.
-        '<img src="'+pose(c.titan_pose||'titan-front')+'" alt="">'+
-        '<img src="'+pose(c.echo_pose||'echo-surprised')+'" alt="">'+
+        '<img class="t" src="'+pose(c.titan_pose||'titan-front')+'" alt="">'+
+        '<img class="e" src="'+pose(c.echo_pose||'echo-surprised')+'" alt="">'+
       '</div>'+
       '<div class="who">Titan &amp; Echo</div>'+
       '<p>'+rich(c.titan_line)+'</p>'+
