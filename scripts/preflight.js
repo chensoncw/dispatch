@@ -44,31 +44,28 @@ async function main() {
     console.warn(`preflight: WARNING token belongs to ${me.id} but META_PAGE_ID is ${PAGE_ID}`);
   }
 
-  // 2. can it still read the Page's own feed
+  // 2. nothing here checks whether the token may post.
   //
-  // There is no read-only way to prove pages_manage_posts — the only proof of
-  // permission to post is a post. Reading the feed needs pages_read_engagement,
-  // which Meta lists as required for Page publishing alongside it, so a feed
-  // read is the closest honest proxy available before the fact.
+  // Two attempts lived here and both were wrong, in the same way and worth
+  // recording so a third is not written:
   //
-  // Not fatal. The first token we issued passed /me and reached Instagram but
-  // failed here, which proves the two Page grants can travel separately: a
-  // token can be perfectly alive and still not hold this one. Instagram does
-  // not need it at all. So this warns loudly and lets the run continue —
-  // Facebook may still refuse the post, and the publish step will say so.
+  //   /me/permissions   — a User node field. Against a Page token it fails on
+  //                       every run, so it warned on every run.
+  //   /{page-id}/feed   — needs pages_read_engagement, which reads like a
+  //                       reasonable proxy for pages_manage_posts. It is not.
+  //                       On 2026-09-24 this warned that the token could not
+  //                       post, while DRY_RUN=2 uploaded to that same Page with
+  //                       that same token and Facebook accepted it. The proxy
+  //                       was wrong, not the token.
   //
-  // (/me/permissions used to live here. It is a User node field: against a Page
-  // token it fails every single run, which is how it trained us to skim past
-  // preflight output. A check that always warns is worse than no check.)
-  try {
-    await get(`https://graph.facebook.com/${API}/${PAGE_ID}/feed?limit=1&access_token=${TOKEN}`);
-    console.log('preflight: page feed readable — pages_read_engagement present');
-  } catch (e) {
-    console.warn('preflight: WARNING cannot read the page feed — ' + e.message);
-    console.warn('The token is alive but appears to lack pages_read_engagement.');
-    console.warn('Instagram is unaffected. The Facebook post may be refused.');
-    console.warn('Fix: reissue the Page token with pages_read_engagement checked.');
-  }
+  // The second one cost an afternoon of reissuing perfectly good tokens. A
+  // check that can fail while the real thing works does more damage than no
+  // check, because it sends you off fixing something that was never broken.
+  //
+  // Permission to publish cannot be read. It can only be exercised. That is
+  // what DRY_RUN=2 in publish.js is for: it posts with published:false, which
+  // reaches no feed and no follower, and either succeeds or names the real
+  // error. Run that after any token change — it is the only honest answer.
 
   // 3. can we see the Instagram account
   const ig = await get(`https://graph.facebook.com/${API}/${IG_ID}?fields=username&access_token=${TOKEN}`);
