@@ -183,6 +183,104 @@ body{margin:0;background:var(--ground);color:var(--ink);
 #err{display:none;background:var(--surface);border:1px solid var(--maroon);
   border-left:3px solid var(--maroon);padding:18px 22px;border-radius:2px;
   font-size:15px;line-height:1.6;margin-top:24px}
+/* ================================================================
+   LIGHT COLOURWAY — same card, cream field, navy as the outline.
+   Add "theme": "light" to a record. Everything below only inverts
+   colour: no layout, no type, no spacing changes, so a card reads
+   identically either way.
+
+   Four navy cards a week reads as one long wall in a feed. This is
+   what breaks it up without touching a word of the copy.
+
+   Gold is darkened to #A87C0C on cream. The brand gold #D4A017 is
+   tuned for a navy ground and goes muddy on light — same gold, one
+   step down, so it still reads as gold and still passes as text.
+
+   The signature bar deliberately stays navy in both. It is the
+   anchor at the foot of every card and should not move.
+   ================================================================ */
+.card.light{color:var(--ink);
+  background:radial-gradient(120% 90% at 50% 0%,#FFFDF8 0%,#F7F5F0 46%,#EDEAE2 100%)}
+.card.light .hair{border-color:rgba(21,42,78,.5)}
+.card.light .eyebrow{color:#A87C0C}
+.card.light .eyebrow::after{background:#A87C0C}
+.card.light .head{color:var(--navy)}
+.card.light .head em{color:#A87C0C}
+.card.light .asof{color:#5A6B86}
+.card.light .say .bub{background:rgba(21,42,78,.055);border-left-color:#A87C0C}
+.card.light .say .nm{color:#A87C0C}
+.card.light .say p{color:#1B2430}
+.card.light .say b{color:var(--navy)}
+.card.light .stat{border-color:rgba(21,42,78,.34);
+  background:linear-gradient(180deg,rgba(21,42,78,.055),rgba(21,42,78,.02))}
+.card.light .stat .l{color:#5A6B86}
+.card.light .stat .v{color:var(--navy)}
+.card.light .stat .s{color:#6B7A93}
+.card.light .arrow{color:#A87C0C}
+.card.light .bignum .n{color:var(--navy)}
+.card.light .bignum .c{color:#5A6B86}
+.card.light .statement{color:var(--navy)}
+.card.light .row{background:rgba(21,42,78,.055)}
+.card.light .row .n{background:var(--navy);color:#F7F5F0}
+.card.light .row .t{color:#2A3444}
+.card.light .row .t b{color:var(--navy)}
+.card.light .check .tick{border-color:#A87C0C;color:#A87C0C}
+.card.light .check .t{color:#2A3444}
+.card.light .check .t b{color:var(--navy)}
+.card.light .item{background:rgba(21,42,78,.055)}
+.card.light .item .w{color:#A87C0C}
+.card.light .item .d{color:#2A3444}
+.card.light .item .d b{color:var(--navy)}
+.card.light .defn{background:rgba(21,42,78,.055);border-left-color:#A87C0C}
+.card.light .defn .term{color:#A87C0C}
+.card.light .defn p{color:#1B2430}
+.card.light .defn b{color:var(--navy)}
+.card.light .datebox .dd{border-color:rgba(21,42,78,.34);
+  background:linear-gradient(180deg,rgba(21,42,78,.055),rgba(21,42,78,.02))}
+.card.light .datebox .dd .k{color:#5A6B86}
+.card.light .datebox .dd .v{color:var(--navy)}
+.card.light .myth{background:rgba(122,30,46,.08);border-left-color:var(--maroon)}
+.card.light .myth .nm{color:#8B3A48}
+.card.light .myth p{color:#2A3444}
+.card.light .bub2{background:rgba(21,42,78,.05);border-color:rgba(21,42,78,.22)}
+.card.light .bub2 .nm{color:#A87C0C}
+.card.light .bub2 p{color:#1B2430}
+.card.light .turn.b .bub2{background:rgba(21,42,78,.028);border-color:rgba(21,42,78,.15)}
+.card.light .turn.b .bub2 .nm{color:#7A6330}
+.card.light .turn.b .bub2 p{color:#2A3444}
+.card.light .echo{background:rgba(212,160,23,.15);
+  border-top-color:rgba(21,42,78,.26);border-bottom-color:rgba(21,42,78,.26)}
+.card.light .echo .nm{color:#8A6510}
+.card.light .echo p{color:#1B2430}
+.card.light .foot .src{color:#4A5769}
+.card.light .foot .src b{color:#A87C0C}
+.card.light .foot .dis{color:#78849A}
+
+/* Seasonal decoration drawn in near-white or cream disappears entirely on a
+   cream card. Winter snow and the flag's white stripe and stars are marked
+   .pale and get a muted blue-grey here so the shape still reads. Skins drawn
+   in mid-tone colours (spring green, autumn rust, christmas red and green)
+   need nothing — they work on both grounds as they are. */
+.card.light .deco .pale{fill:#A9BDD8}
+
+/* ================================================================
+   GREETING LAYOUT — holiday cards only.
+   A holiday card is not a lesson. There is no figure, no source, no
+   takeaway, so the teaching layout (Titan on the left explaining,
+   Echo underneath restating) is the wrong shape for it. Here the two
+   of them stand together in the middle and say the thing once.
+   ================================================================ */
+.greet{margin-top:auto;display:flex;flex-direction:column;align-items:center;
+  text-align:center;padding-bottom:18px;position:relative;z-index:3}
+.greet .pair{display:flex;align-items:flex-end;justify-content:center;gap:4px;margin-bottom:20px}
+.greet .pair img{width:196px;height:auto;display:block}
+.greet .who{font-family:'Archivo',Arial,sans-serif;font-size:12.5px;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.greet p{margin:0;font-size:24px;line-height:1.46;color:rgba(255,255,255,.95);max-width:78%}
+.greet p + p{margin-top:14px;font-size:21.5px;color:rgba(255,255,255,.84)}
+.card.light .greet p{color:#1B2430}
+.card.light .greet p + p{color:#3A4657}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -207,8 +305,8 @@ var SKINS = {
   plain: '',
   winter:
     '<path d="M11 11 H1069 V60 C1000 82 946 44 876 66 C806 88 752 48 682 68 C612 88 558 50 488 68 '+
-    'C418 86 364 48 294 66 C224 84 170 46 100 62 C70 69 40 66 11 58 Z" fill="#E8EFF8" opacity=".92"/>'+
-    '<g fill="#E8EFF8" opacity=".5"><circle cx="180" cy="150" r="7"/><circle cx="420" cy="120" r="5"/>'+
+    'C418 86 364 48 294 66 C224 84 170 46 100 62 C70 69 40 66 11 58 Z" class="pale" fill="#E8EFF8" opacity=".92"/>'+
+    '<g class="pale" fill="#E8EFF8" opacity=".5"><circle cx="180" cy="150" r="7"/><circle cx="420" cy="120" r="5"/>'+
     '<circle cx="660" cy="162" r="6"/><circle cx="900" cy="128" r="5"/></g>',
   spring:
     '<g stroke="#7FA86B" stroke-width="5" fill="none" opacity=".72" stroke-linecap="round">'+
@@ -232,11 +330,88 @@ var SKINS = {
     '<path d="M1032 470 C1060 448 1072 480 1052 502 C1032 524 1006 512 1012 488 Z" fill="#D4A017"/>'+
     '<path d="M60 200 C88 176 100 208 82 232 C64 256 36 246 40 222 Z" fill="#C9762A"/>'+
     '<path d="M96 430 C126 408 138 440 118 462 C98 484 72 472 78 448 Z" fill="#8A3A24"/></g>',
+  /* Christmas, centred. For a card that is only a greeting: the tree sits in
+     the middle behind Titan and Echo rather than off in a corner, because on
+     these cards the greeting IS the content and nothing competes with it.
+     Kept faint so the characters and the words read straight over the top. */
+  'christmas-center':
+    /* The tree sits behind the characters, so it is held back - but only
+       enough to keep the words legible, not so far that it stops being a
+       Christmas tree. The presents are OUTSIDE the middle column on purpose:
+       Titan and Echo stand around x440-640, so anything drawn there is simply
+       hidden by them. They flank instead, and stay near full strength. */
+    '<g opacity=".44">'+
+      '<path d="M540 168 L470 300 L610 300 Z" fill="#2E5D3A"/>'+
+      '<path d="M540 246 L440 396 L640 396 Z" fill="#2E5D3A"/>'+
+      '<path d="M540 330 L404 504 L676 504 Z" fill="#2E5D3A"/>'+
+      '<path d="M540 420 L370 620 L710 620 Z" fill="#2E5D3A"/>'+
+      '<rect x="512" y="620" width="56" height="70" fill="#6B4A2A"/>'+
+      '<g fill="#D4A017"><circle cx="500" cy="284" r="12"/><circle cx="592" cy="360" r="12"/>'+
+      '<circle cx="452" cy="470" r="12"/><circle cx="636" cy="486" r="12"/>'+
+      '<circle cx="418" cy="590" r="12"/><circle cx="668" cy="596" r="12"/></g>'+
+    '</g>'+
+    /* star, brighter than the tree - it is the top of the card, nothing behind it */
+    '<path d="M540 92 l15 45 h47 l-38 28 15 45 -39-28 -39 28 15-45 -38-28 h47 Z"'+
+      ' fill="#D4A017" opacity=".8"/>'+
+    /* presents, left cluster */
+    '<g opacity=".88">'+
+      '<rect x="196" y="690" width="118" height="92" fill="#9E2B33"/>'+
+      '<rect x="240" y="690" width="26" height="92" fill="#D4A017"/>'+
+      '<rect x="196" y="720" width="118" height="18" fill="#D4A017"/>'+
+      '<rect x="288" y="742" width="92" height="66" fill="#2E5D3A"/>'+
+      '<rect x="322" y="742" width="22" height="66" fill="#D4A017"/>'+
+      '<rect x="288" y="764" width="92" height="14" fill="#D4A017"/>'+
+      '<rect x="150" y="756" width="80" height="52" fill="#1C4F8A"/>'+
+      '<rect x="180" y="756" width="18" height="52" fill="#D4A017"/>'+
+    '</g>'+
+    /* presents, right cluster */
+    '<g opacity=".88">'+
+      '<rect x="766" y="700" width="112" height="86" fill="#2E5D3A"/>'+
+      '<rect x="808" y="700" width="26" height="86" fill="#D4A017"/>'+
+      '<rect x="766" y="728" width="112" height="18" fill="#D4A017"/>'+
+      '<rect x="700" y="748" width="86" height="60" fill="#9E2B33"/>'+
+      '<rect x="732" y="748" width="20" height="60" fill="#D4A017"/>'+
+      '<rect x="700" y="768" width="86" height="13" fill="#D4A017"/>'+
+      '<rect x="852" y="758" width="76" height="50" fill="#1C4F8A"/>'+
+      '<rect x="880" y="758" width="18" height="50" fill="#D4A017"/>'+
+    '</g>',
+
+  /* Christmas, cornered. For an ordinary December card that still has a job to
+     do - a market card, a teaching card - where the decoration stays out of the
+     way of the content. Mid-tone green, red and gold on purpose: unlike the
+     winter snow these read on both the navy and the cream card unchanged. */
+  christmas:
+    '<g opacity=".78">'+
+      /* tree, three tiers on a trunk */
+      '<path d="M96 300 L150 196 L204 300 Z" fill="#2E5D3A"/>'+
+      '<path d="M84 370 L150 252 L216 370 Z" fill="#2E5D3A"/>'+
+      '<path d="M70 444 L150 312 L230 444 Z" fill="#2E5D3A"/>'+
+      '<rect x="136" y="444" width="28" height="38" fill="#6B4A2A"/>'+
+      '<path d="M150 150 l9 27 h28 l-23 17 9 27 -23-17 -23 17 9-27 -23-17 h28 Z" fill="#D4A017"/>'+
+      '<g fill="#D4A017"><circle cx="128" cy="286" r="7"/><circle cx="176" cy="342" r="7"/>'+
+      '<circle cx="112" cy="404" r="7"/><circle cx="192" cy="414" r="7"/></g>'+
+      /* two presents at the foot */
+      '<rect x="58" y="482" width="76" height="60" fill="#9E2B33"/>'+
+      '<rect x="88" y="482" width="16" height="60" fill="#D4A017"/>'+
+      '<rect x="58" y="504" width="76" height="12" fill="#D4A017"/>'+
+      '<rect x="146" y="498" width="60" height="44" fill="#2E5D3A"/>'+
+      '<rect x="168" y="498" width="14" height="44" fill="#D4A017"/>'+
+      '<rect x="146" y="514" width="60" height="10" fill="#D4A017"/>'+
+    '</g>'+
+    /* baubles hanging off the top rule */
+    '<g opacity=".6" stroke="#D4A017" stroke-width="3" fill="none">'+
+      '<path d="M470 11 V74"/><path d="M640 11 V112"/><path d="M810 11 V60"/><path d="M960 11 V96"/>'+
+    '</g>'+
+    '<g opacity=".78"><circle cx="470" cy="92" r="18" fill="#9E2B33"/>'+
+      '<circle cx="640" cy="130" r="14" fill="#2E5D3A"/>'+
+      '<circle cx="810" cy="78" r="15" fill="#D4A017"/>'+
+      '<circle cx="960" cy="114" r="17" fill="#9E2B33"/></g>',
+
   patriotic:
     '<g opacity=".5"><rect x="11" y="18" width="1058" height="9" fill="#9E2B33"/>'+
-    '<rect x="11" y="36" width="1058" height="9" fill="#F0EDE6"/>'+
+    '<rect class="pale" x="11" y="36" width="1058" height="9" fill="#F0EDE6"/>'+
     '<rect x="11" y="54" width="1058" height="9" fill="#9E2B33"/></g>'+
-    '<g fill="#F0EDE6" opacity=".36">'+
+    '<g class="pale" fill="#F0EDE6" opacity=".36">'+
     '<path d="M70 130 l7 21 h22 l-18 13 7 21 -18-13 -18 13 7-21 -18-13 h22 Z"/>'+
     '<path d="M1010 130 l7 21 h22 l-18 13 7 21 -18-13 -18 13 7-21 -18-13 h22 Z"/></g>'
 };
@@ -312,7 +487,11 @@ T['teaching-lesson'] = function(c){
       '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_1)+'</p></div></div>'+
     '<div class="turn b"><div class="bub2"><div class="nm">Echo</div><p>'+rich(c.turn_2)+'</p></div>'+
       '<div class="who"><img src="'+pose('echo-surprised')+'" alt=""></div></div>'+
-    '<div class="turn a"><div class="who"><img src="'+pose('titan-alt')+'" alt=""></div>'+
+    // Was titan-alt for variety against turn 1. titan-alt has a clipped right
+    // ear - the cut-out shaved it flat where the headset crosses - so it shipped
+    // that defect on every teaching card. Same pose twice beats a broken one.
+    // Put titan-alt back here once it has been re-cut from the original art.
+    '<div class="turn a"><div class="who"><img src="'+pose('titan-front')+'" alt=""></div>'+
       '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_3)+'</p></div></div>'+
     '</div>' + echo(c) + foot(c);
 };
@@ -381,7 +560,23 @@ T['single-statement'] = function(c){
 };
 
 T['holiday'] = function(c){
-  return eyebrow(c.eyebrow) + head(c.headline,true) + say(c,c.titan_line) + echo(c,true);
+  // Both characters, centred, together. Chenson's note on 2026-09-24: on a day
+  // that is purely a greeting they are "literally saying merry christmas
+  // together" - so no speech bubbles, no left-right dialogue, no one teaching
+  // the other. One message, both names on it.
+  return eyebrow(c.eyebrow) + head(c.headline,true) +
+    '<div class="greet">'+
+      '<div class="pair">'+
+        // Full-body poses only here. At 196px these are the main subject of the
+        // card, so a torso crop shows as a character with no legs. echo-alt is
+        // a bust - fine small in the echo band, wrong at this size.
+        '<img src="'+pose(c.titan_pose||'titan-front')+'" alt="">'+
+        '<img src="'+pose(c.echo_pose||'echo-surprised')+'" alt="">'+
+      '</div>'+
+      '<div class="who">Titan &amp; Echo</div>'+
+      '<p>'+rich(c.titan_line)+'</p>'+
+      (c.echo_line ? '<p>'+rich(c.echo_line)+'</p>' : '')+
+    '</div>';
 };
 
 /* ---------------- render ---------------- */
@@ -389,7 +584,11 @@ function renderCard(c){
   var fn = T[c.template];
   if(!fn) return '<div class="card"><div class="body"><h2 class="head">Unknown template<br><em>'+
                  esc(c.template)+'</em></h2></div>'+sig()+'</div>';
-  return '<div class="card">'+ skin(c.skin||'plain') +'<div class="hair"></div>'+
+  // theme is the colourway (dark navy field, or light cream field with navy
+  // outline). skin is the seasonal decoration. They are independent — an autumn
+  // skin sits on either. Default stays dark so every existing record is unchanged.
+  var theme = (c.theme === 'light') ? ' light' : '';
+  return '<div class="card'+theme+'">'+ skin(c.skin||'plain') +'<div class="hair"></div>'+
          '<div class="body">'+ fn(c) +'</div>'+ sig() +'</div>';
 }
 function fit(){
