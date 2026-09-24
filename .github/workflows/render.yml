@@ -6,7 +6,7 @@ name: Render the week
 
 on:
   schedule:
-    - cron: '0 13 * * 0'   # Sundays 13:00 UTC â€” early Sunday morning in Georgia
+    - cron: '0 13 * * 0'   # Sundays 13:00 UTC — early Sunday morning in Georgia
   workflow_dispatch:        # or run it by hand from the Actions tab
 
 permissions:
