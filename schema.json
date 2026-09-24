@@ -91,6 +91,19 @@
       "why": "The card says what to look at, never what to do. This is the no-verdict rule as a machine check."
     },
     {
+      "id": "pose_matches_register",
+      "applies_to": ["home-safety"],
+      "rule": "echo_pose may not be echo-surprised on a sober-register card",
+      "why": "The art carries tone. A delighted pose above a death statistic contradicts the words, and the picture is read first."
+    },
+    {
+      "id": "pose_full_body",
+      "applies_to": ["holiday"],
+      "rule": "titan_pose and echo_pose may not be echo-alt or titan-alt",
+      "_defects": { "echo-alt": "a bust, ends mid-chest", "titan-alt": "right ear clipped flat by the cut-out" },
+      "why": "On a greeting card the characters are the subject at full size, so a crop shows as a body with no legs. Both are fine small in the echo band."
+    },
+    {
       "id": "no_prices",
       "applies_to": "all",
       "forbidden_pattern": "dollar amount attached to a repair, part or service",
