@@ -127,7 +127,20 @@ function checkRules(file, card, tpl, tplName) {
   }
 
   // --- no forecast ---
-  const fc = findPhrase(text, FORECAST);
+  // A disclaimer legitimately says "not a prediction" â€” that is the opposite of
+  // forecasting, so the disclaimer is excluded. Negated forms are ignored
+  // everywhere else too: "not a forecast" is a denial, not a forecast.
+  const { disclaimer: _d, ...rest } = card;
+  const forecastText = allText(rest).join(' \u0001 ').toLowerCase();
+  const fc = FORECAST.find(p => {
+    let i = forecastText.indexOf(p);
+    while (i >= 0) {
+      const before = forecastText.slice(Math.max(0, i - 16), i);
+      if (!/\b(not|never|no|isn't|is not|aren't|nobody knows)\s+(a\s+|an\s+)?$/.test(before)) return true;
+      i = forecastText.indexOf(p, i + 1);
+    }
+    return false;
+  });
   if (fc) fail(file, 'no_forecast', `contains forecasting language: "${fc}"`);
 
   // --- bare quantifiers ---
