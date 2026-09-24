@@ -472,10 +472,17 @@ function gallery(){
   document.getElementById('app').innerHTML = html;
 }
 
-fetch('card.json')
-  .then(function(r){ if(!r.ok) throw 0; return r.json(); })
-  .then(function(card){ solo(card); fit(); })
-  .catch(function(){ gallery(); fit(); });
+/* The pipeline injects the record before load â€” fetch() does not work over
+   file:// in Chromium, so a fetch alone would silently fall back to the gallery
+   and the screenshot would be wrong. The fetch stays for serving over http. */
+if (window.__CARD__) {
+  solo(window.__CARD__); fit();
+} else {
+  fetch('card.json')
+    .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(card){ solo(card); fit(); })
+    .catch(function(){ gallery(); fit(); });
+}
 
 window.addEventListener('resize', fit);
 window.addEventListener('load', fit);
