@@ -56,6 +56,7 @@ body{margin:0;background:var(--ground);color:var(--ink);
   background:radial-gradient(120% 90% at 50% 0%,#1D3862 0%,#152A4E 46%,#0E1F3C 100%)}
 .hair{position:absolute;inset:10px;border:1px solid rgba(212,160,23,.55);z-index:6;pointer-events:none}
 .deco{position:absolute;inset:0;z-index:1;pointer-events:none}
+.deco.art img{display:block}
 .body{flex:1;display:flex;flex-direction:column;padding:42px 50px 0;position:relative;z-index:2}
 
 /* Small uppercase text at wide letter-spacing loses a lot of ink, so the brand
@@ -567,19 +568,47 @@ var MARKS = {
     '<rect x="-8" y="12" width="16" height="24" fill="#D4A017"/></g>'
 };
 
+/* Marks drawn properly in Canva. These are real illustrations rather than my
+   hand-cut SVG, which was six lines and a circle pretending to be a snowflake.
+   Same placement API as before, so existing records keep working.
+
+   The coded SVG set above is NOT deleted - flag, star, bauble and bloom have no
+   Canva equivalent yet, and those still draw from code. An id present in both
+   uses the Canva artwork. */
+var ART_MARKS = {
+  lights:'mark-lights', tree:'mark-tree', presents:'mark-presents',
+  snowflake:'mark-snowflake', leaf:'mark-leaf', sun:'mark-sun',
+  key:'mark-key', house:'mark-house'
+};
+var MARK_BASE = 190;   // size:1 renders this many px tall
+
 function marks(list){
   if (!list || !list.length) return '';
-  var g = list.map(function(m){
-    var d = MARKS[m.id];
-    if (!d) return '';
+  var svg = '', html = '';
+  list.forEach(function(m){
     var x = m.x == null ? 540 : m.x;
     var y = m.y == null ? 540 : m.y;
     var s = m.size == null ? 1 : m.size;
     var r = m.rot  == null ? 0 : m.rot;
     var o = m.opacity == null ? 0.85 : m.opacity;
-    return '<g transform="translate('+x+','+y+') rotate('+r+') scale('+s+')" opacity="'+o+'">'+d+'</g>';
-  }).join('');
-  return g ? '<svg class="deco marks" viewBox="0 0 1080 1080" aria-hidden="true">'+g+'</svg>' : '';
+
+    if (ART_MARKS[m.id]) {
+      var px = MARK_BASE * s;
+      // centred on x,y so a record's coordinates mean the same thing whichever
+      // kind of mark it is
+      html += '<img src="'+pose(ART_MARKS[m.id])+'" alt="" style="position:absolute;'+
+              'left:'+x+'px;top:'+y+'px;height:'+px+'px;width:auto;opacity:'+o+';'+
+              'transform:translate(-50%,-50%) rotate('+r+'deg)">';
+      return;
+    }
+    var d = MARKS[m.id];
+    if (!d) return;
+    svg += '<g transform="translate('+x+','+y+') rotate('+r+') scale('+s+')" opacity="'+o+'">'+d+'</g>';
+  });
+  var out = '';
+  if (svg)  out += '<svg class="deco marks" viewBox="0 0 1080 1080" aria-hidden="true">'+svg+'</svg>';
+  if (html) out += '<div class="deco marks art">'+html+'</div>';
+  return out;
 }
 
 function skin(name){
