@@ -309,6 +309,22 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .card.light .greet p{color:var(--navy)}
 .card.light .greet p + p{color:#2A3444}
 
+/* APART — each of them with his own words beside him. Reuses the dialogue
+   blocks the teaching cards use, so a series story and a lesson read as the
+   same two characters rather than two different systems. Bigger here, because
+   a series card carries only these two lines and nothing else. */
+.apart{margin-top:26px;flex:1;display:flex;flex-direction:column;justify-content:center;
+  gap:24px;position:relative;z-index:3}
+.apart .turn .who img{height:232px}
+.apart .turn.b .who img{height:172px}
+.apart .bub2{padding:22px 26px}
+.apart .bub2 p{font-size:26px;line-height:1.44}
+.apart .turn.b .bub2 p{font-size:24px}
+.card.story .apart .turn .who img{height:282px}
+.card.story .apart .turn.b .who img{height:208px}
+.card.story .apart .bub2 p{font-size:31px}
+.card.story .apart .turn.b .bub2 p{font-size:29px}
+
 /* ================================================================
    STORY — the same card on a 1080x1920 canvas.
    Same record, same template, same colourway. Only the shape changes,
@@ -489,6 +505,83 @@ var SKINS = {
     '<path d="M70 130 l7 21 h22 l-18 13 7 21 -18-13 -18 13 7-21 -18-13 h22 Z"/>'+
     '<path d="M1010 130 l7 21 h22 l-18 13 7 21 -18-13 -18 13 7-21 -18-13 h22 Z"/></g>'
 };
+/* ---------------- loose marks ----------------
+   A skin is a fixed arrangement. MARKS are single pieces you place where you
+   want them - the difference between a wallpaper and a sticker.
+
+   Each mark is drawn around 0,0 at roughly 100 units, so it can be dropped at
+   any point and scaled. In a record:
+
+     "marks": [ { "id":"flag", "x":900, "y":140, "size":1.2, "rot":-8 } ]
+
+   x and y are card coordinates out of 1080, and the same numbers work on a
+   story because the marks layer keeps the square viewBox and is positioned
+   against the card, not the canvas.
+
+   Keep them out of the middle column on a greeting card - that is where Titan
+   and Echo stand, and anything behind them is simply invisible.
+*/
+var MARKS = {
+  flag:
+    '<g><rect x="-4" y="-56" width="6" height="112" fill="#6B4A2A"/>'+
+    '<rect x="2" y="-56" width="86" height="18" fill="#9E2B33"/>'+
+    '<rect x="2" y="-38" width="86" height="18" fill="#F0EDE6" class="pale"/>'+
+    '<rect x="2" y="-20" width="86" height="18" fill="#9E2B33"/>'+
+    '<rect x="2" y="-56" width="34" height="36" fill="#1C3560"/>'+
+    '<g fill="#F0EDE6" class="pale"><circle cx="11" cy="-48" r="2.6"/><circle cx="24" cy="-48" r="2.6"/>'+
+    '<circle cx="17" cy="-38" r="2.6"/><circle cx="11" cy="-28" r="2.6"/><circle cx="24" cy="-28" r="2.6"/></g></g>',
+  star:
+    '<path d="M0 -52 l14 42 h44 l-36 26 14 42 -36-26 -36 26 14-42 -36-26 h44 Z" fill="#D4A017"/>',
+  bauble:
+    '<g><path d="M0 -60 V-34" stroke="#D4A017" stroke-width="4" fill="none"/>'+
+    '<rect x="-7" y="-38" width="14" height="10" fill="#D4A017"/>'+
+    '<circle cx="0" cy="0" r="30" fill="#9E2B33"/>'+
+    '<path d="M-30 -4 h60" stroke="#D4A017" stroke-width="5"/></g>',
+  present:
+    '<g><rect x="-34" y="-24" width="68" height="52" fill="#2E5D3A"/>'+
+    '<rect x="-10" y="-24" width="20" height="52" fill="#D4A017"/>'+
+    '<rect x="-34" y="-6" width="68" height="12" fill="#D4A017"/></g>',
+  leaf:
+    '<path d="M0 -34 C30 -50 46 -16 24 10 C6 32 -22 24 -18 0 Z" fill="#C9762A"/>',
+  snowflake:
+    '<g stroke="#E8EFF8" class="pale" stroke-width="5" stroke-linecap="round" fill="none">'+
+    '<path d="M0 -34 V34"/><path d="M-29 -17 L29 17"/><path d="M-29 17 L29 -17"/>'+
+    '<path d="M0 -34 l-9 10 M0 -34 l9 10 M0 34 l-9 -10 M0 34 l9 -10"/></g>',
+  sun:
+    '<g><circle cx="0" cy="0" r="26" fill="#E8A82E"/>'+
+    '<g stroke="#E8A82E" stroke-width="6" stroke-linecap="round">'+
+    '<path d="M0 -40 V-54"/><path d="M0 40 V54"/><path d="M-40 0 H-54"/><path d="M40 0 H54"/>'+
+    '<path d="M-28 -28 L-38 -38"/><path d="M28 28 L38 38"/>'+
+    '<path d="M-28 28 L-38 38"/><path d="M28 -28 L38 -38"/></g></g>',
+  bloom:
+    '<g fill="#8FBF77"><ellipse cx="0" cy="-26" rx="12" ry="22"/><ellipse cx="0" cy="26" rx="12" ry="22"/>'+
+    '<ellipse cx="-26" cy="0" rx="22" ry="12"/><ellipse cx="26" cy="0" rx="22" ry="12"/></g>'+
+    '<circle cx="0" cy="0" r="11" fill="#D4A017"/>',
+  key:
+    '<g fill="#D4A017"><circle cx="-26" cy="0" r="18"/><circle cx="-26" cy="0" r="8" fill="none" '+
+    'stroke="#152A4E" stroke-width="6"/><rect x="-10" y="-5" width="54" height="10"/>'+
+    '<rect x="26" y="5" width="8" height="14"/><rect x="40" y="5" width="8" height="14"/></g>',
+  house:
+    '<g><path d="M-38 -4 L0 -40 L38 -4 Z" fill="#D4A017"/>'+
+    '<rect x="-28" y="-4" width="56" height="40" fill="#1C3560"/>'+
+    '<rect x="-8" y="12" width="16" height="24" fill="#D4A017"/></g>'
+};
+
+function marks(list){
+  if (!list || !list.length) return '';
+  var g = list.map(function(m){
+    var d = MARKS[m.id];
+    if (!d) return '';
+    var x = m.x == null ? 540 : m.x;
+    var y = m.y == null ? 540 : m.y;
+    var s = m.size == null ? 1 : m.size;
+    var r = m.rot  == null ? 0 : m.rot;
+    var o = m.opacity == null ? 0.85 : m.opacity;
+    return '<g transform="translate('+x+','+y+') rotate('+r+') scale('+s+')" opacity="'+o+'">'+d+'</g>';
+  }).join('');
+  return g ? '<svg class="deco marks" viewBox="0 0 1080 1080" aria-hidden="true">'+g+'</svg>' : '';
+}
+
 function skin(name){
   var s = SKINS[name] || '';
   return s ? '<svg class="deco" viewBox="0 0 1080 1080" aria-hidden="true">'+s+'</svg>' : '';
@@ -633,7 +726,33 @@ T['single-statement'] = function(c){
     say(c,c.titan_line) + echo(c) + foot(c);
 };
 
+/* Series cards are not one shape. "together" stands them shoulder to shoulder
+   in the middle, which suits a greeting. "apart" puts Titan on the left and
+   Echo on the right with the words underneath, which suits a story - they are
+   two people in a room rather than a pair posing for a photo.
+   Set "layout":"apart" on the record. Default stays together. */
 T['series'] = function(c){
+  if (c.layout === 'apart') {
+    // Each of them with his own words beside him: Titan on the left speaking
+    // rightward, Echo on the right speaking leftward. A conversation you
+    // walked in on, which is the right shape for a story or a joke.
+    return eyebrow(c.eyebrow||'Titan &amp; Echo') + head(c.headline,true) +
+      '<div class="apart">'+
+        '<div class="turn a">'+
+          '<div class="who"><img src="'+pose(c.titan_pose||'titan-front')+'" alt=""></div>'+
+          '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.titan_line)+'</p></div>'+
+        '</div>'+
+        (c.echo_line ?
+          '<div class="turn b">'+
+            '<div class="bub2"><div class="nm">Echo</div><p>'+rich(c.echo_line)+'</p></div>'+
+            '<div class="who"><img src="'+pose(c.echo_pose||'echo-surprised')+'" alt=""></div>'+
+          '</div>' : '')+
+      '</div>';
+  }
+  return T._seriesTogether(c);
+};
+
+T._seriesTogether = function(c){
   // The Titan and Echo series: lore, not business. No figures, no teaching,
   // nothing to sell - so no source and no disclaimer either, because there is
   // no claim to back up. Shares the greeting layout: the two of them together,
@@ -680,7 +799,8 @@ function renderCard(c, story){
   // skin sits on either. Default stays dark so every existing record is unchanged.
   var theme = (c.theme === 'light') ? ' light' : '';
   var tall  = story ? ' story' : '';
-  return '<div class="card'+theme+tall+'">'+ skin(c.skin||'plain') +'<div class="hair"></div>'+
+  return '<div class="card'+theme+tall+'">'+ skin(c.skin||'plain') + marks(c.marks) +
+         '<div class="hair"></div>'+
          '<div class="body">'+ fn(c) +'</div>'+ sig() +'</div>';
 }
 function fit(){
