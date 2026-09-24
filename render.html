@@ -281,6 +281,50 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .card.light .greet p{color:#1B2430}
 .card.light .greet p + p{color:#3A4657}
 
+/* ================================================================
+   STORY — the same card on a 1080x1920 canvas.
+   Same record, same template, same colourway. Only the shape changes,
+   so nothing is ever written twice.
+
+   THE SAFE AREA IS THE WHOLE PROBLEM. Instagram and Facebook draw
+   their own interface over a Story: the account name and progress
+   bars across the top, the reply box and buttons across the bottom.
+   Anything in those bands is covered on a real phone.
+
+   So the content sits in the middle 1080x1500, and the gold hairline
+   is inset to mark exactly that. The band above and below is left as
+   bare gradient on purpose - it reads as deliberate framing, and it
+   is where the app's own furniture lands.
+   ================================================================ */
+#stage.solo.story{width:1080px;height:1920px}
+.card.story{height:1920px}
+.card.story .hair{inset:210px 26px 210px}
+.card.story .body{padding:250px 64px 0}
+.card.story .sig{margin-bottom:210px;padding:24px 64px}
+
+/* More height to spend, so the card breathes rather than stretches. */
+.card.story .eyebrow{font-size:17px}
+.card.story .head{font-size:60px;margin-top:34px}
+.card.story .head.xl{font-size:72px}
+.card.story .asof{font-size:18px;margin-top:16px}
+.card.story .say{margin-top:34px;gap:24px}
+.card.story .say .fig{width:150px}
+.card.story .say p{font-size:23px}
+.card.story .stats{margin-top:34px}
+.card.story .stat .v{font-size:56px}
+.card.story .rows,.card.story .checks,.card.story .diary,.card.story .dlg{margin-top:28px;gap:16px}
+.card.story .row,.card.story .item{padding:20px 24px}
+.card.story .row .t,.card.story .item .d,.card.story .check .t{font-size:21px}
+.card.story .bub2 p{font-size:22px}
+.card.story .turn .who{width:112px}
+.card.story .echo{padding:20px 26px}
+.card.story .echo .e{width:92px}
+.card.story .echo p{font-size:22px}
+.card.story .foot{padding:20px 0 22px}
+.card.story .greet .pair img{width:240px}
+.card.story .greet p{font-size:27px}
+.card.story .greet p + p{font-size:24px}
+
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -580,7 +624,7 @@ T['holiday'] = function(c){
 };
 
 /* ---------------- render ---------------- */
-function renderCard(c){
+function renderCard(c, story){
   var fn = T[c.template];
   if(!fn) return '<div class="card"><div class="body"><h2 class="head">Unknown template<br><em>'+
                  esc(c.template)+'</em></h2></div>'+sig()+'</div>';
@@ -588,7 +632,8 @@ function renderCard(c){
   // outline). skin is the seasonal decoration. They are independent — an autumn
   // skin sits on either. Default stays dark so every existing record is unchanged.
   var theme = (c.theme === 'light') ? ' light' : '';
-  return '<div class="card'+theme+'">'+ skin(c.skin||'plain') +'<div class="hair"></div>'+
+  var tall  = story ? ' story' : '';
+  return '<div class="card'+theme+tall+'">'+ skin(c.skin||'plain') +'<div class="hair"></div>'+
          '<div class="body">'+ fn(c) +'</div>'+ sig() +'</div>';
 }
 function fit(){
@@ -646,9 +691,12 @@ var SAMPLES = [
 ];
 
 /* ---------------- boot ---------------- */
-function solo(card){
+function solo(card, story){
+  // story mode renders the same record on a 1080x1920 canvas. Same words, same
+  // template, same colourway - only the shape changes, so nothing is written twice.
+  var cls = story ? 'frame solo story' : 'frame solo';
   document.getElementById('app').innerHTML =
-    '<div id="stage" class="frame solo">'+renderCard(card)+'</div>';
+    '<div id="stage" class="'+cls+'">'+renderCard(card, story)+'</div>';
   document.body.style.background = '#fff';
   document.body.style.margin = '0';
 }
@@ -675,7 +723,7 @@ function gallery(){
    file:// in Chromium, so a fetch alone would silently fall back to the gallery
    and the screenshot would be wrong. The fetch stays for serving over http. */
 if (window.__CARD__) {
-  solo(window.__CARD__); fit();
+  solo(window.__CARD__, window.__STORY__ === true); fit();
 } else {
   fetch('card.json')
     .then(function(r){ if(!r.ok) throw 0; return r.json(); })
