@@ -11,7 +11,7 @@
    ============================================================ */
 :root{
   --navy:#152A4E; --navy-deep:#0D1D38; --navy-lift:#1C3560;
-  --gold:#D4A017; --maroon:#7A1E2E; --cream:#F7F5F0;
+  --gold:#D4A017; --gold-lift:#EABF3E; --maroon:#7A1E2E; --cream:#F7F5F0;
   --ink:#1B2430; --ink-soft:#586374; --ink-faint:#8B94A3;
   --ground:#EFEDE7; --surface:#FBFAF7; --rule:#D9D5CB;
 }
@@ -58,8 +58,12 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .deco{position:absolute;inset:0;z-index:1;pointer-events:none}
 .body{flex:1;display:flex;flex-direction:column;padding:42px 50px 0;position:relative;z-index:2}
 
-.eyebrow{text-align:center;font-family:'Archivo',Arial,sans-serif;font-size:15px;font-weight:700;
-  letter-spacing:.42em;text-transform:uppercase;color:var(--gold)}
+/* Small uppercase text at wide letter-spacing loses a lot of ink, so the brand
+   gold that reads strongly in a headline goes faint here. --gold-lift is the
+   same hue a step brighter, used ONLY for these small labels on a dark ground.
+   Headlines, figures and rules keep the exact brand gold. */
+.eyebrow{text-align:center;font-family:'Archivo',Arial,sans-serif;font-size:17px;font-weight:800;
+  letter-spacing:.34em;text-transform:uppercase;color:var(--gold-lift)}
 .eyebrow::after{content:"";display:block;width:104px;height:2px;background:var(--gold);margin:10px auto 0}
 .head{font-family:'Archivo',Arial,sans-serif;font-weight:800;font-size:52px;line-height:1.07;
   letter-spacing:-.008em;text-transform:uppercase;text-align:center;margin:26px 0 0}
@@ -72,8 +76,8 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .say .fig{width:128px}
 .say .fig img{width:100%;height:auto;display:block}
 .say .bub{background:rgba(255,255,255,.07);border-left:4px solid var(--gold);padding:19px 23px}
-.say .nm{font-family:'Archivo',Arial,sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.say .nm{font-family:'Archivo',Arial,sans-serif;font-size:14.5px;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:7px}
 .say p{margin:0;font-size:20.5px;line-height:1.47;color:rgba(255,255,255,.94)}
 .say b{color:#fff;font-weight:700}
 
@@ -147,8 +151,8 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .turn.b .who img{height:94px;width:auto}
 .turn .who img{width:100%;height:auto;display:block}
 .bub2{background:rgba(255,255,255,.075);border:1px solid rgba(212,160,23,.4);padding:16px 20px}
-.bub2 .nm{font-family:'Archivo',Arial,sans-serif;font-size:12px;font-weight:700;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.bub2 .nm{font-family:'Archivo',Arial,sans-serif;font-size:13.5px;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:6px}
 .bub2 p{margin:0;font-size:20px;line-height:1.44;color:#fff}
 .turn.b .bub2{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.18)}
 .turn.b .bub2 .nm{color:#B7A06A}
@@ -160,8 +164,8 @@ body{margin:0;background:var(--ground);color:var(--ink);
   border-bottom:1px solid rgba(212,160,23,.4);padding:14px 22px;position:relative;z-index:3}
 .echo .e{width:76px;flex:0 0 auto}
 .echo .e img{width:100%;height:auto;display:block}
-.echo .nm{font-family:'Archivo',Arial,sans-serif;font-size:11.5px;font-weight:700;
-  letter-spacing:.2em;text-transform:uppercase;color:#C9A94A;margin-bottom:4px}
+.echo .nm{font-family:'Archivo',Arial,sans-serif;font-size:13px;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:4px}
 .echo p{margin:0;font-size:19.5px;line-height:1.36;font-weight:500}
 .echo.big{padding:20px 26px}
 .echo.big .e{width:100px}
@@ -258,6 +262,8 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .card.light .echo p{color:#1B2430}
 .card.light .foot .src{color:#4A5769}
 .card.light .foot .src b{color:#A87C0C}
+.card.light .eyebrow,.card.light .greet .who,.card.light .say .nm,
+.card.light .echo .nm,.card.light .bub2 .nm{color:#8F6A0A}
 .card.light .foot .dis{color:#78849A}
 
 /* Seasonal decoration drawn in near-white or cream disappears entirely on a
@@ -289,8 +295,8 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .greet .pair img{width:auto;display:block}
 .greet .pair img.t{height:304px}
 .greet .pair img.e{height:206px}
-.greet .who{font-family:'Archivo',Arial,sans-serif;font-size:12.5px;font-weight:700;
-  letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.greet .who{font-family:'Archivo',Arial,sans-serif;font-size:15px;font-weight:800;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:14px}
 .greet p{margin:0;font-size:24px;line-height:1.46;color:rgba(255,255,255,.95);max-width:78%}
 .greet p + p{margin-top:14px;font-size:21.5px;color:rgba(255,255,255,.84)}
 .card.light .greet p{color:#1B2430}
