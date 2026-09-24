@@ -1,0 +1,28 @@
+{
+  "_": "Tue 29 Sep 2026 · home slot · calendar id heat-service. Sober register: this card carries a death statistic and does not end on a joke.",
+
+  "approved": true,
+
+  "template": "home-safety",
+  "skin": "plain",
+  "eyebrow": "Home Safety",
+
+  "headline": "Check The Heat\nBefore You Need It",
+
+  "titan_line": "Echo, the NFPA counted 37,365 home heating fires a year from 2020 to 2024. Space heaters and heating stoves caused 30% of those fires — and 73% of the deaths.",
+
+  "rows": [
+    "Chimneys and heating systems get inspected and cleaned each year before the season — a licensed contractor's job",
+    "Anything that burns stays three feet clear of a heater — the spacing a fire department repeats every winter",
+    "A furnace that sat unused all summer is worth a look from a licensed HVAC contractor before the first cold night"
+  ],
+
+  "echo_line": "Thirty percent of the fires. Seventy-three percent of the deaths. That gap stays with me.",
+
+  "source": "NFPA · Home Heating Fires, 2020–2024 annual averages · retrieved September 24, 2026",
+  "disclaimer": "National figures, not local ones. General safety information only — not an inspection, and not advice about any particular home, appliance or heating system.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-alt",
+  "hashtag": "#HomeownerTips"
+}
