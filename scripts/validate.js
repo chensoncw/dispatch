@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * validate.js â€” gate every card before it renders.
+ * validate.js — gate every card before it renders.
  *
  *   node scripts/validate.js content/2026-09-29-market.json
  *   node scripts/validate.js content/*.json
@@ -82,7 +82,7 @@ function checkLengths(file, card, tpl) {
     if (Array.isArray(spec.count) && Array.isArray(val)) {
       const [lo, hi] = spec.count;
       if (val.length < lo || val.length > hi) {
-        fail(file, 'count', `"${name}" has ${val.length} items, allowed ${lo}â€“${hi}`);
+        fail(file, 'count', `"${name}" has ${val.length} items, allowed ${lo}–${hi}`);
       }
     }
     if (typeof spec.count === 'number' && Array.isArray(val) && val.length !== spec.count) {
@@ -112,22 +112,22 @@ function checkRules(file, card, tpl, tplName) {
   }
   if (isHoliday && (card.source || card.disclaimer)) {
     fail(file, 'sourced',
-      'a holiday card carries no source or disclaimer â€” if it states something checkable it is not a holiday card');
+      'a holiday card carries no source or disclaimer — if it states something checkable it is not a holiday card');
   }
 
   // --- dated figures ---
   if (tplName.startsWith('market-')) {
     if (tplName === 'market-two-figures' && !card.asof) {
-      fail(file, 'dated_figures', 'market cards must carry "asof" â€” the day the figure was true');
+      fail(file, 'dated_figures', 'market cards must carry "asof" — the day the figure was true');
     }
     const src = card.source || '';
     if (!/\d{4}|week ending|week of/i.test(src)) {
-      fail(file, 'dated_figures', 'source must name a date or a week â€” a figure without one reads as current');
+      fail(file, 'dated_figures', 'source must name a date or a week — a figure without one reads as current');
     }
   }
 
   // --- no forecast ---
-  // A disclaimer legitimately says "not a prediction" â€” that is the opposite of
+  // A disclaimer legitimately says "not a prediction" — that is the opposite of
   // forecasting, so the disclaimer is excluded. Negated forms are ignored
   // everywhere else too: "not a forecast" is a denial, not a forecast.
   const { disclaimer: _d, ...rest } = card;
@@ -149,7 +149,7 @@ function checkRules(file, card, tpl, tplName) {
     fail(file, 'no_bare_quantifiers', `"${q}" is a statistic wearing a word, and nothing sources it`);
   } else if (q) {
     warn(file, 'no_bare_quantifiers',
-      `"${q}" is used â€” confirm the source actually supports it, or drop the word`);
+      `"${q}" is used — confirm the source actually supports it, or drop the word`);
   }
 
   // --- echo ---
@@ -158,14 +158,14 @@ function checkRules(file, card, tpl, tplName) {
     const ins = findPhrase(e, INSTRUCTIONS);
     if (ins) fail(file, 'echo_first_person', `echo_line instructs the reader: "${ins}"`);
     if (plain(e).trim().endsWith('?')) {
-      fail(file, 'echo_lands', 'echo_line ends on a question â€” the question is the opening beat, not the close');
+      fail(file, 'echo_lands', 'echo_line ends on a question — the question is the opening beat, not the close');
     }
   }
 
   // --- titan names echo ---
   const titanFields = [card.titan_line, card.turn_1, card.correction].filter(Boolean).join(' ');
   if (titanFields && !/\bEcho\b/.test(titanFields)) {
-    warn(file, 'titan_names_echo', 'Titan does not say "Echo" â€” it should read as a conversation, not two captions');
+    warn(file, 'titan_names_echo', 'Titan does not say "Echo" — it should read as a conversation, not two captions');
   }
 
   // --- home rows name a professional ---
@@ -174,7 +174,7 @@ function checkRules(file, card, tpl, tplName) {
       const s = typeof row === 'string' ? row : (row.detail || '');
       if (!findPhrase(s, PROFESSIONALS)) {
         fail(file, 'home_rows_name_a_pro',
-          `rows[${i}] names no professional â€” the card says what to look at, never what to do`);
+          `rows[${i}] names no professional — the card says what to look at, never what to do`);
       }
     });
   }
@@ -183,7 +183,7 @@ function checkRules(file, card, tpl, tplName) {
   const priceHit = /\$\s?\d[\d,]*(\.\d+)?/.exec(text);
   if (priceHit && !tplName.startsWith('market-')) {
     warn(file, 'no_prices',
-      `contains "${priceHit[0]}" â€” dollar figures are only for sourced market data, never for repairs or services`);
+      `contains "${priceHit[0]}" — dollar figures are only for sourced market data, never for repairs or services`);
   }
 
   // --- event still ahead ---
@@ -197,7 +197,7 @@ function checkRules(file, card, tpl, tplName) {
       if (isNaN(ev)) fail(file, 'event_still_ahead', `event_date "${card.event_date}" is not a date`);
       else if (ev < pub) {
         fail(file, 'event_still_ahead',
-          `event_date ${card.event_date} is before publish time â€” that is the past in a future tense`);
+          `event_date ${card.event_date} is before publish time — that is the past in a future tense`);
       }
     }
   }
@@ -208,7 +208,7 @@ function checkRules(file, card, tpl, tplName) {
     [card.stat_a, card.stat_b].forEach((s, i) => {
       if (s && s.value && !sentence.includes(plain(s.value))) {
         fail(file, 'tile_needs_a_sentence',
-          `stat_${i ? 'b' : 'a'} value "${s.value}" never appears in titan_line â€” a bare tile reads as a random number`);
+          `stat_${i ? 'b' : 'a'} value "${s.value}" never appears in titan_line — a bare tile reads as a random number`);
       }
     });
   }
@@ -254,11 +254,11 @@ if (!files.length) {
 files.forEach(validateFile);
 
 if (warnings.length) {
-  console.log('\nWARNINGS â€” worth a look, not blocking:\n');
+  console.log('\nWARNINGS — worth a look, not blocking:\n');
   warnings.forEach(w => console.log('  ' + w + '\n'));
 }
 if (failures.length) {
-  console.error('\nFAILED â€” nothing renders until these are fixed:\n');
+  console.error('\nFAILED — nothing renders until these are fixed:\n');
   failures.forEach(f => console.error('  ' + f + '\n'));
   console.error(`${failures.length} problem(s) across ${files.length} file(s).\n`);
   process.exit(1);
