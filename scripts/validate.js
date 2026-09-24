@@ -26,6 +26,15 @@ const FORECAST = [
   'predict', 'next month will', 'by the end of the year', 'going to rise',
   'going to fall', 'should climb', 'should drop'
 ];
+// Bodies whose published projections may be reported as theirs. Naming one near
+// a forecast phrase is what turns a prediction into a quotation. Keep this list
+// to institutions that publish projections on the record — not commentators.
+const ATTRIBUTION = [
+  'federal reserve', 'the fed', "fed's", 'fomc', 'freddie mac', 'fannie mae',
+  'mortgage bankers association', 'mba', 'national association of realtors',
+  'nar', 'census bureau', 'bureau of labor statistics', 'projections', 'projects',
+  'projected', 'according to', 'forecasts that'
+];
 const QUANTIFIERS = ['most', 'many', 'usually', 'typically', 'rarely', 'often', 'generally'];
 const INSTRUCTIONS = [
   'you should', 'you need to', 'you must', 'you have to',
@@ -130,18 +139,37 @@ function checkRules(file, card, tpl, tplName) {
   // A disclaimer legitimately says "not a prediction" — that is the opposite of
   // forecasting, so the disclaimer is excluded. Negated forms are ignored
   // everywhere else too: "not a forecast" is a denial, not a forecast.
+  //
+  // Attributed projections are allowed, at Chenson's instruction on 2026-09-24.
+  // What the Fed or Fannie Mae projects is a fact about what they said; whether
+  // it comes true is, in his words, a whole different matter. Reporting it is
+  // reporting. Making one is not.
+  //
+  //   allowed  — "The Fed's September projections put it at X by year end."
+  //   blocked  — "Rates are heading down."
+  //
+  // The test is attribution: a named body within 60 characters before the
+  // phrase. A word list cannot tell a careful sentence from a careless one, so
+  // this narrows what reaches him — it does not replace him reading the card.
   const { disclaimer: _d, ...rest } = card;
   const forecastText = allText(rest).join(' \u0001 ').toLowerCase();
   const fc = FORECAST.find(p => {
     let i = forecastText.indexOf(p);
     while (i >= 0) {
-      const before = forecastText.slice(Math.max(0, i - 16), i);
-      if (!/\b(not|never|no|isn't|is not|aren't|nobody knows)\s+(a\s+|an\s+)?$/.test(before)) return true;
+      const before = forecastText.slice(Math.max(0, i - 60), i);
+      const negated = /\b(not|never|no|isn't|is not|aren't|nobody knows)\s+(a\s+|an\s+)?$/
+        .test(forecastText.slice(Math.max(0, i - 16), i));
+      const attributed = ATTRIBUTION.some(a => before.includes(a));
+      if (!negated && !attributed) return true;
       i = forecastText.indexOf(p, i + 1);
     }
     return false;
   });
-  if (fc) fail(file, 'no_forecast', `contains forecasting language: "${fc}"`);
+  if (fc) {
+    fail(file, 'no_forecast',
+      `forecasting language with nobody's name on it: "${fc}" — ` +
+      `attribute it to a named body, or drop it`);
+  }
 
   // --- bare quantifiers ---
   const q = findWord(text, QUANTIFIERS);
