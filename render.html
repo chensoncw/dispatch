@@ -280,8 +280,12 @@ body{margin:0;background:var(--ground);color:var(--ink);
    Echo underneath restating) is the wrong shape for it. Here the two
    of them stand together in the middle and say the thing once.
    ================================================================ */
-.greet{margin-top:auto;display:flex;flex-direction:column;align-items:center;
-  text-align:center;padding-bottom:18px;position:relative;z-index:3}
+/* margin-top:auto used to shove this whole block to the floor, which opened a
+   dead gap of two or three inches between the headline and the characters and
+   squeezed the words into the bottom edge. flex:1 with centred content spreads
+   the space evenly instead: the gap closes and the copy gets room to be read. */
+.greet{margin-top:26px;flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding-bottom:10px;position:relative;z-index:3}
 /* Titan is the leader and stands taller. Echo is a kid - smaller, and not by a
    lot, but enough that you can see who is who at a glance. align-items:flex-end
    stands them on the same ground so the difference reads as height, not as one
@@ -297,10 +301,13 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .greet .pair img.e{height:206px}
 .greet .who{font-family:'Archivo',Arial,sans-serif;font-size:15px;font-weight:800;
   letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lift);margin-bottom:14px}
-.greet p{margin:0;font-size:24px;line-height:1.46;color:rgba(255,255,255,.95);max-width:78%}
-.greet p + p{margin-top:14px;font-size:21.5px;color:rgba(255,255,255,.84)}
-.card.light .greet p{color:#1B2430}
-.card.light .greet p + p{color:#3A4657}
+/* These two lines ARE the card - there is no figure, no list, nothing else to
+   read. They were set at body-copy size and dimmed like a caption, which made
+   the only content on the card the hardest thing on it to read. */
+.greet p{margin:0;font-size:31px;line-height:1.42;color:#fff;max-width:84%;font-weight:500}
+.greet p + p{margin-top:18px;font-size:27px;color:rgba(255,255,255,.92);font-weight:400}
+.card.light .greet p{color:var(--navy)}
+.card.light .greet p + p{color:#2A3444}
 
 /* ================================================================
    STORY — the same card on a 1080x1920 canvas.
@@ -345,8 +352,8 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .card.story .foot{padding:20px 0 22px}
 .card.story .greet .pair img.t{height:372px}
 .card.story .greet .pair img.e{height:252px}
-.card.story .greet p{font-size:27px}
-.card.story .greet p + p{font-size:24px}
+.card.story .greet p{font-size:36px}
+.card.story .greet p + p{font-size:31px}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
