@@ -33,17 +33,21 @@ async function main() {
   fs.mkdirSync(OUT, { recursive: true });
 
   const browser = await chromium.launch();
-  const page = await browser.newPage({
-    viewport: { width: 1080, height: 1080 },
-    deviceScaleFactor: 1
-  });
 
   for (const file of files) {
     const card = JSON.parse(fs.readFileSync(file, 'utf8'));
     const name = path.basename(file, '.json');
 
-    // render.html fetches ./card.json â€” give it this one
-    fs.writeFileSync(CARD_FILE, JSON.stringify(card));
+    // A fresh page per card. Injected scripts accumulate on a reused page, so
+    // this keeps each render honest about which record it drew.
+    const page = await browser.newPage({
+      viewport: { width: 1080, height: 1080 },
+      deviceScaleFactor: 1
+    });
+
+    // Inject the record rather than fetch it â€” fetch() is blocked on file://
+    // in Chromium, which would silently fall back to the sample gallery.
+    await page.addInitScript(c => { window.__CARD__ = c; }, card);
 
     await page.goto('file://' + path.join(ROOT, 'render.html'), { waitUntil: 'load' });
 
@@ -58,6 +62,8 @@ async function main() {
 
     const { size } = fs.statSync(dest);
     console.log(`rendered  ${name}.png  ${(size / 1024).toFixed(0)} KB  [${card.template}]`);
+
+    await page.close();
   }
 
   await browser.close();
