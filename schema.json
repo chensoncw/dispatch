@@ -13,13 +13,13 @@
       "checklist": "home-walkround with a different eyebrow. Same rows."
     },
     "_not_a_template": {
-      "seasonal-pairing": "A content relationship, not a layout. The `pair` field in calendar.json already handles it â€” AC in April points at heat in September."
+      "seasonal-pairing": "A content relationship, not a layout. The `pair` field in calendar.json already handles it — AC in April points at heat in September."
     }
   },
 
   "fixed": {
     "signature_left": "CHENSON WEDDERBURN",
-    "signature_left_sub": "ARMY VETERAN Â· REALTORÂ®",
+    "signature_left_sub": "ARMY VETERAN · REALTOR®",
     "signature_right": "KELLER WILLIAMS ATLANTA PARTNERS",
     "signature_right_sub": "STOCKBRIDGE, GEORGIA",
     "_note": "Never editable. Same on every card, every week."
@@ -230,13 +230,13 @@
         "disclaimer": { "max": 200, "required": true },
         "hashtag":    { "fixed": "#HomeownerTips" }
       },
-      "_note": "Sober register. No 'huh', no joke â€” a card about fire deaths does not end on a quip."
+      "_note": "Sober register. No 'huh', no joke — a card about fire deaths does not end on a quip."
     },
 
     "deadline-countdown": {
       "slot": "teaching", "eyebrow": "DEADLINE", "skin": "seasonal",
       "_new": true,
-      "_runs": "8 a year â€” homestead Ã—3, veteran exemption, assessment appeal Ã—2, tax bill Ã—3",
+      "_runs": "8 a year — homestead ×3, veteran exemption, assessment appeal ×2, tax bill ×3",
       "fields": {
         "headline":     { "max": 46, "lines": 2, "required": true },
         "the_date":     { "max": 24, "required": true },
@@ -253,7 +253,7 @@
       },
       "_rules": [
         "what_you_lose states the consequence exactly. Never dramatised, never a dollar figure.",
-        "source names the county office, not a state page â€” county practice differs.",
+        "source names the county office, not a state page — county practice differs.",
         "Echo checks his own situation. He does not instruct the reader's."
       ]
     },
@@ -323,11 +323,11 @@
         "hashtag":    { "free": true }
       },
       "_rules": [
-        "No source and no disclaimer â€” the card makes no factual claim, so there is nothing to cite.",
+        "No source and no disclaimer — the card makes no factual claim, so there is nothing to cite.",
         "The moment it states something checkable, it is not a holiday card and the sourcing rules apply in full.",
         "Emptiest card in the system on purpose. Both characters render larger; nothing competes.",
         "Faith-adjacent days: meaning is carried in what is said ABOUT the day, never named outright.",
-        "Draft first, then show Chenson â€” he often adds his own material to these."
+        "Draft first, then show Chenson — he often adds his own material to these."
       ]
     }
   }
