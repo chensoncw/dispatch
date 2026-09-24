@@ -1,27 +1,48 @@
 {
-  "_": "Example series card. Shows the two things series cards are for: Titan's backstory, and loose marks placed by hand rather than a fixed skin. Rename to YYYY-MM-DD-slug.json to schedule it. Note where the marks sit - out at the edges, because Titan and Echo stand in the middle column and anything drawn there is hidden behind them.",
-
-  "approved": false,
-
-  "template": "series",
-  "skin": "plain",
-  "layout": "apart",
-  "eyebrow": "Story Time",
-
-  "headline": "Titan's First\nWinter Back",
-
-  "titan_line": "Echo, my first winter out of uniform, I let the furnace go. Never checked it once. Came on in December, smelled like a bonfire, and I stood there in a cold house feeling clever.",
-
-  "echo_line": "So the guy who tells everyone to check the heat in September learned it the expensive way. …Noted. I'm not letting you forget that one.",
-
-  "marks": [
-    { "id": "snowflake", "x": 118, "y": 196, "size": 1.1, "rot": 12, "opacity": 0.5 },
-    { "id": "snowflake", "x": 968, "y": 258, "size": 0.85, "rot": -18, "opacity": 0.42 },
-    { "id": "snowflake", "x": 180, "y": 700, "size": 0.7, "rot": 6, "opacity": 0.35 },
-    { "id": "house", "x": 908, "y": 742, "size": 1.25, "rot": 0, "opacity": 0.55 }
-  ],
-
-  "titan_pose": "titan-front",
-  "echo_pose": "echo-surprised",
-  "hashtag": "#TitanAndEcho"
+    "_":  "Example series card. Shows the two things series cards are for: Titan\u0027s backstory, and loose marks placed by hand rather than a fixed skin. Rename to YYYY-MM-DD-slug.json to schedule it. Note where the marks sit - out at the edges, because Titan and Echo stand in the middle column and anything drawn there is hidden behind them.",
+    "approved":  false,
+    "template":  "series",
+    "skin":  "plain",
+    "layout":  "apart",
+    "eyebrow":  "Story Time",
+    "headline":  "Titan\u0027s First\nWinter Back",
+    "titan_line":  "Echo, my first winter out of uniform, I let the furnace go. Never checked it once. Came on in December, smelled like a bonfire, and I stood there in a cold house feeling clever.",
+    "echo_line":  "So the guy who tells everyone to check the heat in September learned it the expensive way. …Noted. I\u0027m not letting you forget that one.",
+    "marks":  [
+                  {
+                      "id":  "snowflake",
+                      "opacity":  0.85,
+                      "y":  205,
+                      "rot":  10,
+                      "x":  130,
+                      "size":  0.95
+                  },
+                  {
+                      "id":  "snowflake",
+                      "opacity":  0.7,
+                      "y":  268,
+                      "rot":  -16,
+                      "x":  955,
+                      "size":  0.65
+                  },
+                  {
+                      "id":  "snowflake",
+                      "opacity":  0.6,
+                      "y":  700,
+                      "rot":  6,
+                      "x":  190,
+                      "size":  0.5
+                  },
+                  {
+                      "id":  "house",
+                      "opacity":  0.9,
+                      "y":  735,
+                      "rot":  0,
+                      "x":  915,
+                      "size":  1
+                  }
+              ],
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-surprised",
+    "hashtag":  "#TitanAndEcho"
 }
