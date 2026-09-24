@@ -1,0 +1,19 @@
+{
+  "name": "dispatch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automated social card rendering and publishing for Chenson Wedderburn, REALTOR.",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "render": "node scripts/render.js",
+    "preflight": "node scripts/preflight.js",
+    "publish": "node scripts/publish.js",
+    "dry": "DRY_RUN=1 node scripts/publish.js"
+  },
+  "devDependencies": {
+    "playwright": "1.48.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
