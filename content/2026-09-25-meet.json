@@ -1,0 +1,19 @@
+{
+  "_": "The Instagram Story path cannot be rehearsed - Instagram has no unpublished state, so the first one is live. This card exists to be that first one. Deliberately inconsequential: no figures, no dates, no deadline, nothing anyone could act on wrongly. If it breaks, nothing was riding on it. First card of the Titan and Echo series.",
+
+  "approved": false,
+
+  "template": "series",
+  "skin": "plain",
+  "eyebrow": "Meet The Pair",
+
+  "headline": "Titan And Echo\nWill Take It From Here",
+
+  "titan_line": "Echo, from here on we handle the updates. What is happening around the county, what the numbers actually did, and the bits of a house nobody thinks about until they leak.",
+
+  "echo_line": "And when I don't follow something, I'll say so. If it takes me two goes, it probably takes someone else two goes.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#MeetTheTeam"
+}
