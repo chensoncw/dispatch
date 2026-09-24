@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * render.js â€” turn a card record into a 1080x1080 PNG.
+ * render.js — turn a card record into a 1080x1080 PNG.
  *
  *   node scripts/render.js content/2026-09-29-market.json
  *   node scripts/render.js            # renders everything in content/
@@ -45,7 +45,7 @@ async function main() {
       deviceScaleFactor: 1
     });
 
-    // Inject the record rather than fetch it â€” fetch() is blocked on file://
+    // Inject the record rather than fetch it — fetch() is blocked on file://
     // in Chromium, which would silently fall back to the sample gallery.
     await page.addInitScript(c => { window.__CARD__ = c; }, card);
 
