@@ -33,16 +33,25 @@ const ROOT = path.join(__dirname, '..');
 
 const FIXED_TAGS = '#HenryCountyGA #SouthMetroAtlanta #KellerWilliams #Realtor';
 
+// Templates that are not offering anything. A greeting and a story about the
+// characters have nothing to send, so the standing call to action would be a
+// sales line with no offer behind it.
+//
+// This shipped live on 2026-09-24: the introduction card went out reading
+// 'Comment "INFO" below and I'll send it over' with nothing to send. Caught by
+// Chenson on the published post, not here.
+const NO_CTA = ['series', 'holiday'];
+
 function caption(card) {
   const tag = card.hashtag || '';
-  return [
-    `Comment "INFO" below and I'll send it over.`,
-    ``,
+  const sign = [
     `Chenson | Keller Williams Atlanta Partners`,
     `chensoncw.kw.com`,
     ``,
     `${FIXED_TAGS} ${tag}`.trim()
-  ].join('\n');
+  ];
+  if (NO_CTA.includes(card.template)) return sign.join('\n');
+  return [`Comment "INFO" below and I'll send it over.`, ``].concat(sign).join('\n');
 }
 
 function imageUrl(name) {
