@@ -1,0 +1,57 @@
+name: Render the week
+
+# Renders every card in content/ and commits the PNGs, so the whole week can
+# be looked at in one sitting. Approve by exception: publishing runs on its own
+# schedule unless something gets pulled.
+
+on:
+  schedule:
+    - cron: '0 13 * * 0'   # Sundays 13:00 UTC â€” early Sunday morning in Georgia
+  workflow_dispatch:        # or run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        run: npm install
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Validate
+        run: node scripts/validate.js
+
+      - name: Render
+        run: node scripts/render.js
+
+      - name: Commit the PNGs
+        run: |
+          git config user.name  "dispatch"
+          git config user.email "dispatch@users.noreply.github.com"
+          git add out/
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "Render $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Where to look
+        run: |
+          echo "### Cards rendered" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          for f in out/*.png; do
+            echo "- \`$f\`" >> $GITHUB_STEP_SUMMARY
+          done
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Look them over. Publishing runs on schedule unless a card is pulled." >> $GITHUB_STEP_SUMMARY
