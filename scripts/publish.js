@@ -123,11 +123,30 @@ async function main() {
     return;
   }
 
+  // Nothing publishes that Chenson has not seen rendered and approved.
+  //
+  // This used to gate only the rate card. It now gates everything, at his
+  // instruction on 2026-09-24: the card carries his licence, his name and his
+  // face to the public, so automation does not get to decide what goes out
+  // under it. It may fetch, render and post — it may not approve.
+  //
+  // The flag lives in the content file rather than in an environment variable
+  // on purpose. A workflow input approves whatever happens to run; `approved`
+  // in the JSON approves the exact card he looked at. Change a figure after
+  // approval and the field has to be set again, which is the intended friction.
+  if (card.approved !== true) {
+    console.error('\npublish: this card has not been approved.');
+    console.error('Every card is shown to Chenson rendered, and approved by him, before it posts.');
+    console.error('Set "approved": true in the content file once he has seen the image.');
+    console.error('Nothing was sent.');
+    process.exit(1);
+  }
+
   if (card.human_gate || card.template === 'market-one-figure') {
     if (process.env.APPROVED !== '1') {
-      console.error('\npublish: this card is gated and APPROVED is not set.');
-      console.error('The rate card never publishes unseen — it is the figure agents check most');
-      console.error('and the one that goes stale fastest. Re-run with APPROVED=1 once looked at.');
+      console.error('\npublish: the rate card needs APPROVED=1 as well as "approved": true.');
+      console.error('It is the figure agents check most and the one that goes stale fastest,');
+      console.error('so it is confirmed at the moment of sending, not only at review time.');
       process.exit(1);
     }
   }
