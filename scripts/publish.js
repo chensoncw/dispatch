@@ -74,6 +74,64 @@ async function post(url, body) {
   return j;
 }
 
+async function get(url) {
+  const r = await fetch(url);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || j.error) {
+    const e = j.error || {};
+    throw new Error(`${r.status} ${e.type || ''} (${e.code || '?'}) ${e.message || r.statusText}`);
+  }
+  return j;
+}
+
+/* ----------------------------------------------------------------
+   The duplicate guard.
+
+   On 2026-09-29 GitHub silently skipped the scheduled run entirely —
+   no run, no failure, no notice — and the card had to be fired by
+   hand. That is going to keep happening: Actions cron is best effort,
+   and the two runs before it were four hours late rather than absent.
+
+   So something has to re-fire a missed run. The moment anything can
+   re-fire it, the same card can post twice, and a duplicate under his
+   licence is worse than a late post.
+
+   This asks the platform what is already on the feed instead of
+   trusting a log. A run that succeeded but posted nothing, and a run
+   that posted but reported failure, both look the same in Actions and
+   opposite here.
+
+   Each channel is checked on its own, so a run that got Facebook out
+   and then broke on Instagram will finish the job on a retry rather
+   than either duplicating or giving up.
+
+   It compares the exact caption, which is built deterministically from
+   the card, and only looks at today. Same words tomorrow would be a
+   different post and is allowed.
+   ---------------------------------------------------------------- */
+function isToday(ts) {
+  if (!ts) return false;
+  const d = new Date(ts);
+  if (isNaN(d)) return false;
+  return d.toISOString().slice(0, 10) === new Date().toISOString().slice(0, 10);
+}
+
+async function facebookAlreadyHas(msg) {
+  const j = await get(
+    `https://graph.facebook.com/${API}/${PAGE_ID}/feed` +
+    `?fields=message,created_time&limit=25&access_token=${TOKEN}`
+  );
+  return (j.data || []).some(p => p.message === msg && isToday(p.created_time));
+}
+
+async function instagramAlreadyHas(msg) {
+  const j = await get(
+    `https://graph.facebook.com/${API}/${IG_ID}/media` +
+    `?fields=caption,timestamp&limit=25&access_token=${TOKEN}`
+  );
+  return (j.data || []).some(p => p.caption === msg && isToday(p.timestamp));
+}
+
 async function publishFacebook(url, msg) {
   const res = await post(`https://graph.facebook.com/${API}/${PAGE_ID}/photos`, {
     url, message: msg, published: true, access_token: TOKEN
@@ -216,11 +274,30 @@ async function main() {
     }
   }
 
-  const fbId = await publishFacebook(url, msg);
-  console.log(`  facebook  posted ${fbId}`);
+  // Ask the platform, not the log, whether this card is already out.
+  // See the duplicate guard above for why this exists.
+  const fbDone = await facebookAlreadyHas(msg);
+  const igDone = await instagramAlreadyHas(msg);
 
-  const igId = await publishInstagram(url, msg);
-  console.log(`  instagram posted ${igId}`);
+  if (fbDone && igDone) {
+    console.log('\npublish: this card is ALREADY on Facebook and Instagram today.');
+    console.log('Nothing sent. This is the duplicate guard doing its job, not a failure.');
+    return;
+  }
+
+  if (fbDone) {
+    console.log('  facebook  already posted today — skipped');
+  } else {
+    const fbId = await publishFacebook(url, msg);
+    console.log(`  facebook  posted ${fbId}`);
+  }
+
+  if (igDone) {
+    console.log('  instagram already posted today — skipped');
+  } else {
+    const igId = await publishInstagram(url, msg);
+    console.log(`  instagram posted ${igId}`);
+  }
 
   // --- stories -------------------------------------------------------------
   //
