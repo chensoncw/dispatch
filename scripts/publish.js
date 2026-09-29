@@ -116,14 +116,44 @@ function isToday(ts) {
   return d.toISOString().slice(0, 10) === new Date().toISOString().slice(0, 10);
 }
 
+/* Facebook is the UNRELIABLE half of this check, and it is advisory only.
+ *
+ * Reading the Page's own posts needs pages_read_engagement, which this token
+ * does not have. preflight.js already records that dead end twice and says in
+ * so many words that a third should not be written. On 2026-09-29 this guard
+ * shipped calling /{page-id}/feed anyway and killed the scheduled run — the
+ * exact failure the comment was left to prevent.
+ *
+ * So: it is attempted, it is allowed to fail, and failure is not fatal. When
+ * it cannot answer, Instagram answers for it. Returns true / false / null,
+ * where null means "could not tell".
+ */
 async function facebookAlreadyHas(msg) {
-  const j = await get(
-    `https://graph.facebook.com/${API}/${PAGE_ID}/feed` +
-    `?fields=message,created_time&limit=25&access_token=${TOKEN}`
-  );
-  return (j.data || []).some(p => p.message === msg && isToday(p.created_time));
+  try {
+    const j = await get(
+      `https://graph.facebook.com/${API}/${PAGE_ID}/photos?type=uploaded` +
+      `&fields=name,created_time&limit=25&access_token=${TOKEN}`
+    );
+    return (j.data || []).some(p => p.name === msg && isToday(p.created_time));
+  } catch (e) {
+    console.log(`  note      facebook check unavailable (${e.message})`);
+    console.log('            falling back to the Instagram result — see the guard comment.');
+    return null;
+  }
 }
 
+/* Instagram is the RELIABLE half and the one the decision rests on.
+ *
+ * preflight already proves the token can read this account, and the feed post
+ * to Facebook happens BEFORE the one to Instagram in the same run — so if
+ * today's caption is on Instagram, Facebook necessarily went out too. That is
+ * what lets Instagram stand in when the Facebook check cannot answer.
+ *
+ * If THIS cannot be read, the run stops without posting. A missed day is
+ * recoverable — the watchdog looks at the real pages at 4pm and re-fires. A
+ * duplicate under his licence is public and is not recoverable. So when the
+ * guard is blind, it fails closed.
+ */
 async function instagramAlreadyHas(msg) {
   const j = await get(
     `https://graph.facebook.com/${API}/${IG_ID}/media` +
@@ -276,8 +306,20 @@ async function main() {
 
   // Ask the platform, not the log, whether this card is already out.
   // See the duplicate guard above for why this exists.
-  const fbDone = await facebookAlreadyHas(msg);
-  const igDone = await instagramAlreadyHas(msg);
+  let igDone;
+  try {
+    igDone = await instagramAlreadyHas(msg);
+  } catch (e) {
+    console.error(`\npublish: cannot read Instagram to check for a duplicate — ${e.message}`);
+    console.error('Stopping WITHOUT posting. Posting blind risks a duplicate under his licence,');
+    console.error('and a missed day is recoverable: the 4pm watchdog checks the real pages.');
+    process.exit(1);
+  }
+
+  // null means the Facebook check could not answer; Instagram then speaks for
+  // both, because Facebook is posted first in this same run.
+  const fbChecked = await facebookAlreadyHas(msg);
+  const fbDone = fbChecked === null ? igDone : fbChecked;
 
   if (fbDone && igDone) {
     console.log('\npublish: this card is ALREADY on Facebook and Instagram today.');
