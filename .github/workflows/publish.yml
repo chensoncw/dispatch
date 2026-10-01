@@ -5,7 +5,15 @@ name: Publish
 
 on:
   schedule:
-    - cron: '0 14 * * 2,3,4,5'   # Tue–Fri 14:00 UTC — mid-morning in Georgia
+    # TEST, started 2026-10-01. This was '0 14 * * 2,3,4,5' (10:00 AM Eastern) and every scheduled
+    # run for a week fired 4h16m-5h09m late, never on time, across both workflows. The lateness
+    # sits almost exactly on the UTC-to-Eastern offset (4h) plus a normal 15-70 min of jitter,
+    # so this moves the trigger 4 hours EARLIER, to 10:00 UTC = 6:00 AM EDT (5:00 AM after the
+    # clocks change on 1 Nov). If the runs now land near 10 AM Eastern, the schedule is shifted
+    # by 4 hours and this is the fix. If they land near 6 AM, GitHub was never shifted and the
+    # delay is something else. Either way the answer is in the Actions run list.
+    # Minute is deliberately left at :00 so the only thing changed is the hour.
+    - cron: '0 10 * * 2,3,4,5'
   workflow_dispatch:
     inputs:
       card:
