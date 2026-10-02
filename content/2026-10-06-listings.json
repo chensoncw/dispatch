@@ -1,0 +1,31 @@
+{
+  "_": "Tue 6 Oct 2026 · market slot. Realtor.com county counts read off FRED on 2 Oct 2026 (series ACTLISCOU13151 and PRIREDCOU13151, updated 1 Oct). Active listings: Sep 2026 1,348 · Aug 2026 1,340 · Sep 2025 1,341 (from the FRED data file). Price-reduced count: Sep 2026 490 · Aug 2026 532. No Sep 2025 price-reduced figure was available, so the card compares price cuts with August only and never claims a year-on-year change for them. Deliberately NOT the Freddie Mac rate card: market-one-figure needs APPROVED=1 at publish and the scheduled run cannot supply it.",
+
+  "approved": false,
+
+  "template": "market-two-figures",
+  "skin": "plain",
+  "eyebrow": "Market",
+
+  "headline": "About The Same Number\nOf Homes For Sale",
+  "asof": "Henry County · September 2026",
+
+  "stat_a": { "label": "For Sale",   "value": "1,348", "sub": "1,341 last year" },
+  "stat_b": { "label": "Price Cuts", "value": "490",   "sub": "532 in August" },
+
+  "titan_line": "Echo, Realtor.com counted 1,348 homes for sale in Henry County in September. Last September it was 1,341. And 490 had a price cut, down from 532 in August.",
+
+  "checks_rows": [
+    "Counts single-family homes, condos and townhomes",
+    "Active listings are homes on the market that month"
+  ],
+
+  "echo_line": "A price cut? …Oh. The seller lowered the asking number. So fewer sellers did that than in August.",
+
+  "source": "Realtor.com via FRED · Henry County, GA active & price-reduced listings · retrieved Oct 2, 2026",
+  "disclaimer": "County-wide counts for the month stated. Not a valuation or a prediction for any individual home.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#MarketUpdate"
+}
