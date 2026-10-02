@@ -1,0 +1,29 @@
+{
+  "_": "Fri 9 Oct 2026 · home slot. Fire Prevention Week 2026 is Oct 4-10, theme 'Charge into Fire Safety: Safe Charging Is a Superpower' (FireRescue1 and Security Systems News, both reporting NFPA). Wording and tips taken from NFPA's own lithium-ion lesson plan (nfpa.org, FPW 2025 edition, text extracted 2 Oct 2026): 'Lithium-ion batteries store a lot of energy in a small place. These batteries can overheat, start a fire, or explode if overcharged or damaged.' Tips used: use the cables that came with the product; charge on a hard surface, not under a pillow or on a bed or couch; charge large devices (e-bikes, e-scooters, tools) outside, away from doors and windows; signs of a problem are too hot, a strange smell, popping noises, or a change in shape or color, then stop using it and call 9-1-1. No statistics are used because none could be read from a primary NFPA page. Sober register, so no joke at the end and no echo-surprised.",
+
+  "approved": false,
+
+  "template": "home-safety",
+  "skin": "plain",
+  "eyebrow": "Home Safety",
+
+  "headline": "Know Where You Charge\nYour Phone And Tools",
+
+  "titan_line": "Echo, it's Fire Prevention Week. NFPA says lithium-ion batteries store a lot of energy in a small place and can overheat, start a fire, or explode if overcharged or damaged.",
+
+  "rows": [
+    "NFPA says to use the cable that came with the device. A licensed electrician can look at a worn outlet.",
+    "Charging goes on a hard surface, never under a pillow or on a bed or couch. Ask your fire department.",
+    "E-bikes, e-scooters and power tools charge best outside, away from doors and windows. A licensed contractor can advise.",
+    "A device that runs hot, smells strange, pops or changes shape: stop using it and call 9-1-1, the fire department."
+  ],
+
+  "echo_line": "A phone charger. I never thought of it as a fire question.",
+
+  "source": "NFPA · Fire Prevention Week lithium-ion battery lesson plan · retrieved Oct 2, 2026",
+  "disclaimer": "General fire-safety information, not an inspection or advice about any device, outlet or home. Ask your fire department or a licensed electrician about yours.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-alt",
+  "hashtag": "#HomeownerTips"
+}
