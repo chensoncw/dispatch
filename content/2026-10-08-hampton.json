@@ -1,0 +1,42 @@
+{
+  "_": "Thu 8 Oct 2026 · community slot. All three items read on the Visit Henry County calendar on 2 Oct 2026 and each venue confirmed on its own page: Electrify Expo (Oct 10-11, EchoPark Speedway, 1500 Tara Place, Hampton), Bags, Bands & Bites Oktoberfest (Oct 10, Rutabaga's Market & Cafe, 1 Cherry Street, Hampton, no time listed), 2026 Kiwanis Fair (Oct 13 6:00pm to Oct 18 10:00pm, Nash Farm Park, 4361 Jonesboro Road, Hampton). Earliest event is Oct 10, which is after the Oct 8 publish. Admission prices exist on the Electrify Expo page and are deliberately left off. Dropped: '3rd Annual Food Truck Fly-In' (no venue could be confirmed) and the Fall Georgia State Fair (already on the 1 Oct card).",
+
+  "approved": false,
+
+  "template": "community-diary",
+  "skin": "autumn",
+  "eyebrow": "Around The County",
+
+  "headline": "A Busy Ten Days\nIn Hampton",
+
+  "titan_line": "Echo, three things going on in Hampton over the next ten days. All three are still ahead of us as this goes up.",
+
+  "items": [
+    {
+      "when": "Oct 10-11",
+      "title": "Electrify Expo",
+      "detail": "EchoPark Speedway, 1500 Tara Place. Vehicle demos, plus go-kart racing for kids."
+    },
+    {
+      "when": "Oct 10",
+      "title": "Bags, Bands & Bites Oktoberfest",
+      "detail": "At Rutabaga's Market & Cafe, 1 Cherry Street. Times are on the county calendar."
+    },
+    {
+      "when": "Oct 13-18",
+      "title": "Kiwanis Fair",
+      "detail": "Nash Farm Park, 4361 Jonesboro Road. Opens Oct 13 at 6pm, runs to Oct 18 at 10pm."
+    }
+  ],
+
+  "event_date": "2026-10-10",
+
+  "echo_line": "Three events, one town. …Oh, that's a lot of Hampton. I'd take the kids to the fair.",
+
+  "source": "Visit Henry County Georgia events calendar · retrieved Oct 2, 2026",
+  "disclaimer": "Dates as published by the organizers on the date retrieved. Confirm with each event before you go.",
+
+  "titan_pose": "titan-alt",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#AroundTheCounty"
+}
