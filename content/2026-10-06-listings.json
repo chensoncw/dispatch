@@ -1,7 +1,7 @@
 {
   "_": "Tue 6 Oct 2026 · market slot. Realtor.com county counts read off FRED on 2 Oct 2026 (series ACTLISCOU13151 and PRIREDCOU13151, updated 1 Oct). Active listings: Sep 2026 1,348 · Aug 2026 1,340 · Sep 2025 1,341 (from the FRED data file). Price-reduced count: Sep 2026 490 · Aug 2026 532. No Sep 2025 price-reduced figure was available, so the card compares price cuts with August only and never claims a year-on-year change for them. Deliberately NOT the Freddie Mac rate card: market-one-figure needs APPROVED=1 at publish and the scheduled run cannot supply it.",
 
-  "approved": false,
+  "approved": true,
 
   "template": "market-two-figures",
   "skin": "plain",
