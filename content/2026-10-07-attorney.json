@@ -1,0 +1,24 @@
+{
+  "_": "Wed 7 Oct 2026 · teaching slot. Primary source READ on 2 Oct 2026: In re UPL Advisory Opinion 2003-2, 277 Ga. 472 (2003), State Bar of Georgia PDF. Quote: 'we have consistently held that it is the unauthorized practice of law for someone other than a duly-licensed Georgia attorney to close a real estate transaction or to prepare or facilitate the execution of such deed(s) for the benefit of a seller, borrower, or lender.' Statute O.C.G.A. 15-19-50 lists conveyancing and title opinions as practicing law (FindLaw text). The card says an attorney closes the sale and never names a price, fee or which attorney.",
+
+  "approved": false,
+
+  "template": "teaching-lesson",
+  "skin": "autumn",
+  "eyebrow": "Teaching",
+
+  "headline": "In Georgia, An Attorney\nCloses Your Home Sale",
+
+  "turn_1": "Echo, in Georgia only a licensed Georgia attorney can close a home sale. The Georgia Supreme Court confirmed it in 2003.",
+  "turn_2": "Not my agent? I thought my agent took care of the whole thing.",
+  "turn_3": "Your agent guides the sale. The attorney handles the legal side of the closing, including the deed. Two different jobs.",
+
+  "echo_line": "So the agent guides it and the attorney closes it. Two jobs. I'd want that clear before closing day.",
+
+  "source": "In re UPL Advisory Opinion 2003-2, 277 Ga. 472 (2003) · retrieved Oct 2, 2026",
+  "disclaimer": "General information about Georgia practice, not legal advice. Ask a Georgia real estate attorney about your own closing.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-notepad",
+  "hashtag": "#RealEstateExplained"
+}
