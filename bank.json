@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-09-27",
+  "_built": "2026-10-02",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
@@ -11,7 +11,7 @@
     "series": 6,
     "_default": 12
   },
-  "count": 5,
+  "count": 9,
   "by_year": {
     "2026": {
       "2026-09": [
@@ -41,6 +41,26 @@
           "date": "2026-10-02",
           "topic": "taxdate",
           "headline": "The Only Tax Due Date That Counts Is On Your Bill"
+        },
+        {
+          "date": "2026-10-06",
+          "topic": "listings",
+          "headline": "About The Same Number Of Homes For Sale"
+        },
+        {
+          "date": "2026-10-07",
+          "topic": "attorney",
+          "headline": "In Georgia, An Attorney Closes Your Home Sale"
+        },
+        {
+          "date": "2026-10-08",
+          "topic": "hampton",
+          "headline": "A Busy Ten Days In Hampton"
+        },
+        {
+          "date": "2026-10-09",
+          "topic": "charging",
+          "headline": "Know Where You Charge Your Phone And Tools"
         }
       ]
     }
@@ -224,6 +244,155 @@
         ],
         "source": "Georgia Dept. of Revenue & Henry County Tax Commissioner · retrieved Sept 24, 2026"
       }
+    ],
+    "listings": [
+      {
+        "date": "2026-10-06",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "listings",
+        "template": "market-two-figures",
+        "slot": "market",
+        "headline": "About The Same Number Of Homes For Sale",
+        "said": [
+          "About The Same Number\nOf Homes For Sale",
+          "Henry County · September 2026",
+          "For Sale",
+          "1,348",
+          "1,341 last year",
+          "Price Cuts",
+          "490",
+          "532 in August",
+          "Echo, Realtor.com counted 1,348 homes for sale in Henry County in September. Last September it was 1,341. And 490 had a price cut, down from 532 in August.",
+          "Counts single-family homes, condos and townhomes",
+          "Active listings are homes on the market that month",
+          "A price cut? …Oh. The seller lowered the asking number. So fewer sellers did that than in August."
+        ],
+        "keywords": [
+          "homes",
+          "sale",
+          "september",
+          "price",
+          "august",
+          "number",
+          "henry",
+          "county",
+          "last",
+          "2026",
+          "about",
+          "same"
+        ],
+        "source": "Realtor.com via FRED · Henry County, GA active & price-reduced listings · retrieved Oct 2, 2026"
+      }
+    ],
+    "attorney": [
+      {
+        "date": "2026-10-07",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "attorney",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "In Georgia, An Attorney Closes Your Home Sale",
+        "said": [
+          "In Georgia, An Attorney\nCloses Your Home Sale",
+          "Echo, in Georgia only a licensed Georgia attorney can close a home sale. The Georgia Supreme Court confirmed it in 2003.",
+          "Not my agent? I thought my agent took care of the whole thing.",
+          "Your agent guides the sale. The attorney handles the legal side of the closing, including the deed. Two different jobs.",
+          "So the agent guides it and the attorney closes it. Two jobs. I'd want that clear before closing day."
+        ],
+        "keywords": [
+          "georgia",
+          "attorney",
+          "agent",
+          "sale",
+          "closes",
+          "home",
+          "guides",
+          "closing",
+          "jobs",
+          "2003",
+          "echo",
+          "only"
+        ],
+        "source": "In re UPL Advisory Opinion 2003-2, 277 Ga. 472 (2003) · retrieved Oct 2, 2026"
+      }
+    ],
+    "hampton": [
+      {
+        "date": "2026-10-08",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "hampton",
+        "template": "community-diary",
+        "slot": "community",
+        "headline": "A Busy Ten Days In Hampton",
+        "said": [
+          "A Busy Ten Days\nIn Hampton",
+          "Echo, three things going on in Hampton over the next ten days. All three are still ahead of us as this goes up.",
+          "Oct 10-11",
+          "Electrify Expo",
+          "EchoPark Speedway, 1500 Tara Place. Vehicle demos, plus go-kart racing for kids.",
+          "Oct 10",
+          "Bags, Bands & Bites Oktoberfest",
+          "At Rutabaga's Market & Cafe, 1 Cherry Street. Times are on the county calendar.",
+          "Oct 13-18",
+          "Kiwanis Fair",
+          "Nash Farm Park, 4361 Jonesboro Road. Opens Oct 13 at 6pm, runs to Oct 18 at 10pm.",
+          "2026-10-10",
+          "Three events, one town. …Oh, that's a lot of Hampton. I'd take the kids to the fair."
+        ],
+        "keywords": [
+          "hampton",
+          "three",
+          "days",
+          "kids",
+          "fair",
+          "1500",
+          "2026",
+          "4361",
+          "busy",
+          "echo",
+          "things",
+          "going"
+        ],
+        "source": "Visit Henry County Georgia events calendar · retrieved Oct 2, 2026"
+      }
+    ],
+    "charging": [
+      {
+        "date": "2026-10-09",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "charging",
+        "template": "home-safety",
+        "slot": "home",
+        "headline": "Know Where You Charge Your Phone And Tools",
+        "said": [
+          "Know Where You Charge\nYour Phone And Tools",
+          "Echo, it's Fire Prevention Week. NFPA says lithium-ion batteries store a lot of energy in a small place and can overheat, start a fire, or explode if overcharged or damaged.",
+          "NFPA says to use the cable that came with the device. A licensed electrician can look at a worn outlet.",
+          "Charging goes on a hard surface, never under a pillow or on a bed or couch. Ask your fire department.",
+          "E-bikes, e-scooters and power tools charge best outside, away from doors and windows. A licensed contractor can advise.",
+          "A device that runs hot, smells strange, pops or changes shape: stop using it and call 9-1-1, the fire department.",
+          "A phone charger. I never thought of it as a fire question."
+        ],
+        "keywords": [
+          "fire",
+          "charge",
+          "phone",
+          "tools",
+          "nfpa",
+          "says",
+          "device",
+          "licensed",
+          "never",
+          "department",
+          "know",
+          "echo"
+        ],
+        "source": "NFPA · Fire Prevention Week lithium-ion battery lesson plan · retrieved Oct 2, 2026"
+      }
     ]
   },
   "entries": [
@@ -395,6 +564,147 @@
         "move"
       ],
       "source": "Georgia Dept. of Revenue & Henry County Tax Commissioner · retrieved Sept 24, 2026"
+    },
+    {
+      "date": "2026-10-06",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "listings",
+      "template": "market-two-figures",
+      "slot": "market",
+      "headline": "About The Same Number Of Homes For Sale",
+      "said": [
+        "About The Same Number\nOf Homes For Sale",
+        "Henry County · September 2026",
+        "For Sale",
+        "1,348",
+        "1,341 last year",
+        "Price Cuts",
+        "490",
+        "532 in August",
+        "Echo, Realtor.com counted 1,348 homes for sale in Henry County in September. Last September it was 1,341. And 490 had a price cut, down from 532 in August.",
+        "Counts single-family homes, condos and townhomes",
+        "Active listings are homes on the market that month",
+        "A price cut? …Oh. The seller lowered the asking number. So fewer sellers did that than in August."
+      ],
+      "keywords": [
+        "homes",
+        "sale",
+        "september",
+        "price",
+        "august",
+        "number",
+        "henry",
+        "county",
+        "last",
+        "2026",
+        "about",
+        "same"
+      ],
+      "source": "Realtor.com via FRED · Henry County, GA active & price-reduced listings · retrieved Oct 2, 2026"
+    },
+    {
+      "date": "2026-10-07",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "attorney",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "In Georgia, An Attorney Closes Your Home Sale",
+      "said": [
+        "In Georgia, An Attorney\nCloses Your Home Sale",
+        "Echo, in Georgia only a licensed Georgia attorney can close a home sale. The Georgia Supreme Court confirmed it in 2003.",
+        "Not my agent? I thought my agent took care of the whole thing.",
+        "Your agent guides the sale. The attorney handles the legal side of the closing, including the deed. Two different jobs.",
+        "So the agent guides it and the attorney closes it. Two jobs. I'd want that clear before closing day."
+      ],
+      "keywords": [
+        "georgia",
+        "attorney",
+        "agent",
+        "sale",
+        "closes",
+        "home",
+        "guides",
+        "closing",
+        "jobs",
+        "2003",
+        "echo",
+        "only"
+      ],
+      "source": "In re UPL Advisory Opinion 2003-2, 277 Ga. 472 (2003) · retrieved Oct 2, 2026"
+    },
+    {
+      "date": "2026-10-08",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "hampton",
+      "template": "community-diary",
+      "slot": "community",
+      "headline": "A Busy Ten Days In Hampton",
+      "said": [
+        "A Busy Ten Days\nIn Hampton",
+        "Echo, three things going on in Hampton over the next ten days. All three are still ahead of us as this goes up.",
+        "Oct 10-11",
+        "Electrify Expo",
+        "EchoPark Speedway, 1500 Tara Place. Vehicle demos, plus go-kart racing for kids.",
+        "Oct 10",
+        "Bags, Bands & Bites Oktoberfest",
+        "At Rutabaga's Market & Cafe, 1 Cherry Street. Times are on the county calendar.",
+        "Oct 13-18",
+        "Kiwanis Fair",
+        "Nash Farm Park, 4361 Jonesboro Road. Opens Oct 13 at 6pm, runs to Oct 18 at 10pm.",
+        "2026-10-10",
+        "Three events, one town. …Oh, that's a lot of Hampton. I'd take the kids to the fair."
+      ],
+      "keywords": [
+        "hampton",
+        "three",
+        "days",
+        "kids",
+        "fair",
+        "1500",
+        "2026",
+        "4361",
+        "busy",
+        "echo",
+        "things",
+        "going"
+      ],
+      "source": "Visit Henry County Georgia events calendar · retrieved Oct 2, 2026"
+    },
+    {
+      "date": "2026-10-09",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "charging",
+      "template": "home-safety",
+      "slot": "home",
+      "headline": "Know Where You Charge Your Phone And Tools",
+      "said": [
+        "Know Where You Charge\nYour Phone And Tools",
+        "Echo, it's Fire Prevention Week. NFPA says lithium-ion batteries store a lot of energy in a small place and can overheat, start a fire, or explode if overcharged or damaged.",
+        "NFPA says to use the cable that came with the device. A licensed electrician can look at a worn outlet.",
+        "Charging goes on a hard surface, never under a pillow or on a bed or couch. Ask your fire department.",
+        "E-bikes, e-scooters and power tools charge best outside, away from doors and windows. A licensed contractor can advise.",
+        "A device that runs hot, smells strange, pops or changes shape: stop using it and call 9-1-1, the fire department.",
+        "A phone charger. I never thought of it as a fire question."
+      ],
+      "keywords": [
+        "fire",
+        "charge",
+        "phone",
+        "tools",
+        "nfpa",
+        "says",
+        "device",
+        "licensed",
+        "never",
+        "department",
+        "know",
+        "echo"
+      ],
+      "source": "NFPA · Fire Prevention Week lithium-ion battery lesson plan · retrieved Oct 2, 2026"
     }
   ]
 }
