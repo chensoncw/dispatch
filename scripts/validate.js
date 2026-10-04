@@ -265,7 +265,21 @@ function checkRules(file, card, tpl, tplName) {
       fail(file, 'event_still_ahead', 'event_date is required on this template');
     } else {
       const ev = new Date(card.event_date + 'T23:59:59');
-      const pub = card.publish_at ? new Date(card.publish_at) : new Date();
+      // The publish time is the card's OWN date, read from its filename
+      // (YYYY-MM-DD-slug.json), because the filename date is what the schedule posts.
+      // This used to fall back to "now". That meant every community card began
+      // failing the day its event passed, EVEN ONE THAT HAD ALREADY POSTED, and
+      // because this validator gates the whole render, one old card blocked the
+      // week's render for everyone. Found 2026-10-04: the 1 Oct events card
+      // (event_date 2 Oct) failed the Sunday render on 4 Oct. A card with no date
+      // in its name (the _EXAMPLE files) still falls back to now.
+      let pub;
+      if (card.publish_at) {
+        pub = new Date(card.publish_at);
+      } else {
+        const dm = /^(\d{4}-\d{2}-\d{2})-/.exec(path.basename(String(file)));
+        pub = dm ? new Date(dm[1] + 'T12:00:00') : new Date();
+      }
       if (isNaN(ev)) fail(file, 'event_still_ahead', `event_date "${card.event_date}" is not a date`);
       else if (ev < pub) {
         fail(file, 'event_still_ahead',
