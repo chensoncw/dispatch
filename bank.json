@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-10-02",
+  "_built": "2026-10-04",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
