@@ -99,6 +99,9 @@ body{margin:0;background:var(--ground);color:var(--ink);
 
 .statement{text-align:center;font-family:'Archivo',Arial,sans-serif;font-weight:800;
   font-size:58px;line-height:1.14;margin:38px 0 0;color:#fff}
+.smid{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:10px}
+.smid .statement{margin-top:0}
+.smid .say{margin-top:44px}
 
 /* rows / checks / steps / items */
 .rows{display:flex;flex-direction:column;gap:10px;margin-top:18px}
@@ -751,9 +754,14 @@ T['home-safety'] = function(c){
     rows(c.rows) + echo(c) + foot(c);
 };
 
+/* The headline and Titan's line sit in ONE block that takes all the free height and
+   centres its contents, so the spare space splits above and below instead of pooling
+   as a dead gap between Titan and Echo. Found on the 2026-10-09 weather alert card,
+   where a short statement left ~250px empty. */
 T['single-statement'] = function(c){
-  return eyebrow(c.eyebrow) + '<div class="statement">'+rich(c.statement)+'</div>' +
-    say(c,c.titan_line) + echo(c) + foot(c);
+  return eyebrow(c.eyebrow) +
+    '<div class="smid"><div class="statement">'+rich(c.statement)+'</div>' + say(c,c.titan_line) + '</div>' +
+    echo(c) + foot(c);
 };
 
 /* Series cards are not one shape. "together" stands them shoulder to shoulder
