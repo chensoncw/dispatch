@@ -375,26 +375,25 @@
         "headline": "",
         "said": [
           "State of Emergency for all of Georgia. Wind Warning and Flood Watch for Henry County.",
-          "Echo, Governor Kemp declared a State of Emergency for all 159 counties, and the NWS has two alerts out for Henry County.",
+          "Echo, Governor Kemp declared a State of Emergency for all 159 Georgia counties.",
           "Governor Kemp: \"As we always do with weather events, we're hoping for the best but preparing for the worst.\"",
-          "The Wind Warning and Flood Watch run from midnight tonight to 8 AM Sunday, says the NWS.",
-          "Secure loose objects the wind could blow around. Watch for falling limbs, and use caution if you must drive.",
-          "Do not drive or walk through standing water. Stay away from downed power lines.",
-          "Loose things outside, no driving through water, and keep clear of power lines. I'd start with the yard."
+          "Wind Warning and Flood Watch: midnight tonight to 8 AM Sunday, says the NWS.",
+          "Secure loose objects. Never drive or walk through standing water. Stay away from downed power lines.",
+          "Secure the yard, stay out of the water, avoid power lines. I'd start now."
         ],
         "keywords": [
-          "wind",
-          "watch",
           "state",
           "emergency",
+          "georgia",
+          "wind",
           "warning",
           "flood",
-          "henry",
-          "county",
+          "watch",
           "governor",
           "kemp",
-          "loose",
-          "drive"
+          "secure",
+          "water",
+          "stay"
         ],
         "source": "Gov. Kemp press release Oct 8, 2026 and NWS Peachtree City alerts Oct 9, 2026"
       }
@@ -723,26 +722,25 @@
       "headline": "",
       "said": [
         "State of Emergency for all of Georgia. Wind Warning and Flood Watch for Henry County.",
-        "Echo, Governor Kemp declared a State of Emergency for all 159 counties, and the NWS has two alerts out for Henry County.",
+        "Echo, Governor Kemp declared a State of Emergency for all 159 Georgia counties.",
         "Governor Kemp: \"As we always do with weather events, we're hoping for the best but preparing for the worst.\"",
-        "The Wind Warning and Flood Watch run from midnight tonight to 8 AM Sunday, says the NWS.",
-        "Secure loose objects the wind could blow around. Watch for falling limbs, and use caution if you must drive.",
-        "Do not drive or walk through standing water. Stay away from downed power lines.",
-        "Loose things outside, no driving through water, and keep clear of power lines. I'd start with the yard."
+        "Wind Warning and Flood Watch: midnight tonight to 8 AM Sunday, says the NWS.",
+        "Secure loose objects. Never drive or walk through standing water. Stay away from downed power lines.",
+        "Secure the yard, stay out of the water, avoid power lines. I'd start now."
       ],
       "keywords": [
-        "wind",
-        "watch",
         "state",
         "emergency",
+        "georgia",
+        "wind",
         "warning",
         "flood",
-        "henry",
-        "county",
+        "watch",
         "governor",
         "kemp",
-        "loose",
-        "drive"
+        "secure",
+        "water",
+        "stay"
       ],
       "source": "Gov. Kemp press release Oct 8, 2026 and NWS Peachtree City alerts Oct 9, 2026"
     },
