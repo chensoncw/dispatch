@@ -1,0 +1,23 @@
+{
+  "_": "Fri 9 Oct 2026 · EMERGENCY weather card, written at Chenson's request. Read from api.weather.gov for McDonough/Henry County at about 1:15 PM EDT on 9 Oct: High Wind Warning (issued 11:02 AM, 12 AM Sat Oct 10 to 8 AM Sun Oct 11), Flood Watch (issued 11:19 AM, same window), and a Tropical Cyclone Local Statement. NWS instruction text used: 'secure loose objects that could be blown around or damaged by the wind', 'watch for falling debris and tree limbs', 'use caution if you must drive'. NWS point forecast for McDonough: 1-2 in rain Friday night, 2-3 in Saturday, gusts to 40 mph. The storm is NOT named on the card because sources conflicted on its strength and track. no_cta drops the usual 'Comment INFO' line. Sober register: no joke.",
+
+  "approved": false,
+  "no_cta": true,
+
+  "template": "single-statement",
+  "skin": "plain",
+  "eyebrow": "Weather Alert",
+
+  "statement": "High Wind Warning and Flood Watch for Henry County, midnight tonight to 8 AM Sunday.",
+
+  "titan_line": "Echo, the National Weather Service says to secure loose objects outside, watch for falling limbs, and use caution if you must drive.",
+
+  "echo_line": "Loose things outside, falling limbs, and care on the road. I'd start with the yard.",
+
+  "source": "NWS Peachtree City alerts issued Oct 9, 2026, 11:02 AM and 11:19 AM EDT",
+  "disclaimer": "Alert details as published by the National Weather Service at the times shown. Check weather.gov for updates. In an emergency, call 9-1-1.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-notepad",
+  "hashtag": "#GeorgiaWeather"
+}
