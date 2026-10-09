@@ -760,7 +760,8 @@ T['home-safety'] = function(c){
    where a short statement left ~250px empty. */
 T['single-statement'] = function(c){
   return eyebrow(c.eyebrow) +
-    '<div class="smid"><div class="statement">'+rich(c.statement)+'</div>' + say(c,c.titan_line) + '</div>' +
+    '<div class="smid"><div class="statement">'+rich(c.statement)+'</div>' + say(c,c.titan_line) +
+    (c.rows && c.rows.length ? rows(c.rows) : '') + '</div>' +
     echo(c) + foot(c);
 };
 
