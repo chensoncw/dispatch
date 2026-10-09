@@ -1,7 +1,7 @@
 {
   "_": "Fri 9 Oct 2026 · EMERGENCY weather card, written at Chenson's request. Sources READ on 9 Oct 2026: (1) Governor Kemp's press release dated 8 Oct, gov.georgia.gov, 'Gov. Kemp Declares State of Emergency Ahead of Hurricane Isaias': updated State of Emergency for all 159 counties; quote 'As we always do with weather events, we're hoping for the best but preparing for the worst'; residents told not to drive or walk through standing water and to stay away from downed power lines. (2) NWS Peachtree City alerts for Henry County: High Wind Warning issued 11:02 AM and Flood Watch issued 11:19 AM, both midnight Sat 10 Oct to 8 AM Sun 11 Oct; NWS instruction 'secure loose objects that could be blown around or damaged by the wind', 'watch for falling debris and tree limbs'. The storm is NOT named on the card and no track or rainfall is stated. no_cta drops the usual 'Comment INFO' line. Sober register: no joke.",
 
-  "approved": false,
+  "approved": true,
   "no_cta": true,
 
   "template": "single-statement",
