@@ -1,5 +1,5 @@
 {
-  "_": "Fri 9 Oct 2026 · EMERGENCY weather card, written at Chenson's request. Read from api.weather.gov for McDonough/Henry County at about 1:15 PM EDT on 9 Oct: High Wind Warning (issued 11:02 AM, 12 AM Sat Oct 10 to 8 AM Sun Oct 11), Flood Watch (issued 11:19 AM, same window), and a Tropical Cyclone Local Statement. NWS instruction text used: 'secure loose objects that could be blown around or damaged by the wind', 'watch for falling debris and tree limbs', 'use caution if you must drive'. NWS text for McDonough: 1-2 in rain Friday night, 2-3 in Saturday, gusts to 40 mph. The storm is NOT named on the card because sources conflicted on its strength and track. no_cta drops the usual 'Comment INFO' line. Sober register: no joke.",
+  "_": "Fri 9 Oct 2026 · EMERGENCY weather card, written at Chenson's request. Sources READ on 9 Oct 2026: (1) Governor Kemp's press release dated 8 Oct, gov.georgia.gov, 'Gov. Kemp Declares State of Emergency Ahead of Hurricane Isaias': updated State of Emergency for all 159 counties; quote 'As we always do with weather events, we're hoping for the best but preparing for the worst'; residents told not to drive or walk through standing water and to stay away from downed power lines. (2) NWS Peachtree City alerts for Henry County: High Wind Warning issued 11:02 AM and Flood Watch issued 11:19 AM, both midnight Sat 10 Oct to 8 AM Sun 11 Oct; NWS instruction 'secure loose objects that could be blown around or damaged by the wind', 'watch for falling debris and tree limbs'. The storm is NOT named on the card and no track or rainfall is stated. no_cta drops the usual 'Comment INFO' line. Sober register: no joke.",
 
   "approved": false,
   "no_cta": true,
@@ -8,21 +8,21 @@
   "skin": "plain",
   "eyebrow": "Weather Alert",
 
-  "statement": "High Wind Warning and Flood Watch for Henry County, midnight tonight to 8 AM Sunday.",
+  "statement": "State of Emergency for all of Georgia. Wind Warning and Flood Watch for Henry County.",
 
-  "titan_line": "Echo, the National Weather Service has two alerts out for Henry County right now, a High Wind Warning and a Flood Watch.",
+  "titan_line": "Echo, Governor Kemp declared a State of Emergency for all 159 counties, and the NWS has two alerts out for Henry County.",
 
   "rows": [
-    "The NWS says to secure loose objects that could be blown around or damaged by the wind.",
-    "Watch for falling debris and tree limbs. Use caution if you must drive.",
-    "A Flood Watch means flooding is possible. Those in flood-prone areas should be prepared to act if it develops.",
-    "NWS text for McDonough lists wind gusts up to 40 mph and 2 to 3 inches of rain on Saturday."
+    "Governor Kemp: \"As we always do with weather events, we're hoping for the best but preparing for the worst.\"",
+    "The Wind Warning and Flood Watch run from midnight tonight to 8 AM Sunday, says the NWS.",
+    "Secure loose objects the wind could blow around. Watch for falling limbs, and use caution if you must drive.",
+    "Do not drive or walk through standing water. Stay away from downed power lines."
   ],
 
-  "echo_line": "Loose things outside, falling limbs, and care on the road. I'd start with the yard.",
+  "echo_line": "Loose things outside, no driving through water, and keep clear of power lines. I'd start with the yard.",
 
-  "source": "NWS Peachtree City alerts issued Oct 9, 2026, 11:02 AM and 11:19 AM EDT",
-  "disclaimer": "Alert details as published by the NWS at the times shown. Check weather.gov for updates. Emergency: call 9-1-1.",
+  "source": "Gov. Kemp press release Oct 8, 2026 and NWS Peachtree City alerts Oct 9, 2026",
+  "disclaimer": "Details as published by the Governor's office and the NWS on those dates. Check gema.georgia.gov and weather.gov for updates. Emergency: call 9-1-1.",
 
   "titan_pose": "titan-front",
   "echo_pose": "echo-notepad",
