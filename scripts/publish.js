@@ -50,7 +50,9 @@ function caption(card) {
     ``,
     `${FIXED_TAGS} ${tag}`.trim()
   ];
-  if (NO_CTA.includes(card.template)) return sign.join('\n');
+  // card.no_cta lets a single card drop the sales line. Used for weather alerts,
+  // where "Comment INFO and I'll send it over" would be tone-deaf. 2026-10-09.
+  if (NO_CTA.includes(card.template) || card.no_cta === true) return sign.join('\n');
   return [`Comment "INFO" below and I'll send it over.`, ``].concat(sign).join('\n');
 }
 
