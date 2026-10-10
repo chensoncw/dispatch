@@ -102,6 +102,7 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .smid{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:10px}
 .smid .statement{margin-top:0}
 .smid .say{margin-top:44px}
+.smid .dlg{margin-top:0}
 
 /* rows / checks / steps / items */
 .rows{display:flex;flex-direction:column;gap:10px;margin-top:18px}
@@ -681,7 +682,9 @@ T['market-one-figure'] = function(c){
 
 T['teaching-lesson'] = function(c){
   return eyebrow(c.eyebrow||'Teaching') + head(c.headline) +
-    '<div class="dlg">'+
+    // .smid takes the free height and centres the dialogue, so spare space splits
+    // above and below it instead of pooling as a gap before Echo's line.
+    '<div class="smid"><div class="dlg">'+
     '<div class="turn a"><div class="who"><img src="'+pose('titan-front')+'" alt=""></div>'+
       '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_1)+'</p></div></div>'+
     '<div class="turn b"><div class="bub2"><div class="nm">Echo</div><p>'+rich(c.turn_2)+'</p></div>'+
@@ -693,7 +696,7 @@ T['teaching-lesson'] = function(c){
     // own art, so nothing can drift.
     '<div class="turn a"><div class="who"><img src="'+pose('titan-alt')+'" alt=""></div>'+
       '<div class="bub2"><div class="nm">Titan</div><p>'+rich(c.turn_3)+'</p></div></div>'+
-    '</div>' + echo(c) + foot(c);
+    '</div></div>' + echo(c) + foot(c);
 };
 
 T['teaching-definition'] = function(c){
