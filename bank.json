@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-10-09",
+  "_built": "2026-10-10",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
@@ -11,7 +11,7 @@
     "series": 6,
     "_default": 12
   },
-  "count": 10,
+  "count": 15,
   "by_year": {
     "2026": {
       "2026-09": [
@@ -66,6 +66,31 @@
           "date": "2026-10-09",
           "topic": "charging",
           "headline": "Know Where You Charge Your Phone And Tools"
+        },
+        {
+          "date": "2026-10-12",
+          "topic": "loanestimate",
+          "headline": "Ask More Than One Lender For A Loan Estimate"
+        },
+        {
+          "date": "2026-10-13",
+          "topic": "days",
+          "headline": "Homes Took A Bit Longer To Sell In September"
+        },
+        {
+          "date": "2026-10-14",
+          "topic": "closingdisclosure",
+          "headline": "Your Closing Disclosure Should Come Early"
+        },
+        {
+          "date": "2026-10-15",
+          "topic": "saturday",
+          "headline": "A Full Saturday Around The County"
+        },
+        {
+          "date": "2026-10-16",
+          "topic": "afterstorm",
+          "headline": "Walk The Outside First Before You Go Back In"
         }
       ]
     }
@@ -432,6 +457,191 @@
         ],
         "source": "NFPA · Fire Prevention Week lithium-ion battery lesson plan · retrieved Oct 2, 2026"
       }
+    ],
+    "loanestimate": [
+      {
+        "date": "2026-10-12",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "loanestimate",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "Ask More Than One Lender For A Loan Estimate",
+        "said": [
+          "Ask More Than One Lender\nFor A Loan Estimate",
+          "Echo, a Loan Estimate tells you the details of a mortgage loan you have asked for. The CFPB says to request more than one.",
+          "More than one? Isn't a loan just a loan?",
+          "The CFPB says the best way to tell if you have a competitive offer is to compare it with Loan Estimates from other lenders.",
+          "So I ask a few lenders before I choose one. That's how I'd know mine is a good one."
+        ],
+        "keywords": [
+          "loan",
+          "more",
+          "estimate",
+          "cfpb",
+          "says",
+          "lenders",
+          "lender",
+          "echo",
+          "tells",
+          "details",
+          "mortgage",
+          "asked"
+        ],
+        "source": "CFPB, Loan Estimate, consumerfinance.gov · retrieved Oct 9, 2026"
+      }
+    ],
+    "days": [
+      {
+        "date": "2026-10-13",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "days",
+        "template": "market-two-figures",
+        "slot": "market",
+        "headline": "Homes Took A Bit Longer To Sell In September",
+        "said": [
+          "Homes Took A Bit Longer\nTo Sell In September",
+          "Henry County · September 2026",
+          "Days On Market",
+          "63",
+          "68 last year",
+          "New Listings",
+          "390",
+          "388 in August",
+          "Echo, Realtor.com says the median home in Henry County sat on the market 63 days in September, up from 59 in August. New listings were 390.",
+          "Last September the median was 68 days",
+          "Counts single-family homes, condos and townhomes",
+          "Median? …Oh, the middle one. So a little slower than August, but quicker than last year."
+        ],
+        "keywords": [
+          "september",
+          "days",
+          "last",
+          "august",
+          "median",
+          "homes",
+          "henry",
+          "county",
+          "market",
+          "year",
+          "listings",
+          "2026"
+        ],
+        "source": "Realtor.com via FRED · Henry County, GA median days on market and new listings · retrieved Oct 9, 2026"
+      }
+    ],
+    "closingdisclosure": [
+      {
+        "date": "2026-10-14",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "closingdisclosure",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "Your Closing Disclosure Should Come Early",
+        "said": [
+          "Your Closing Disclosure\nShould Come Early",
+          "Echo, the CFPB says lenders are required to provide your Closing Disclosure three business days before your scheduled closing.",
+          "Three days. What am I supposed to do with them?",
+          "The CFPB says to use those days wisely, because now is the time to resolve problems. If something looks different than you thought, ask why.",
+          "So I read it early and ask about anything that looks off. That's what the days are for."
+        ],
+        "keywords": [
+          "days",
+          "closing",
+          "disclosure",
+          "early",
+          "cfpb",
+          "says",
+          "three",
+          "looks",
+          "should",
+          "come",
+          "echo",
+          "lenders"
+        ],
+        "source": "CFPB, Closing Disclosure, consumerfinance.gov · retrieved Oct 9, 2026"
+      }
+    ],
+    "saturday": [
+      {
+        "date": "2026-10-15",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "saturday",
+        "template": "community-diary",
+        "slot": "community",
+        "headline": "A Full Saturday Around The County",
+        "said": [
+          "A Full Saturday\nAround The County",
+          "Echo, here is what's on this Saturday, Oct 17, around Henry County. All of it is still ahead of us as this goes up.",
+          "Oct 17",
+          "Smoke & Mirrors Truck Show",
+          "Sweet Auburn BBQ, 1828 Jonesboro Road, McDonough. 9am to 1pm.",
+          "Oct 17-18",
+          "Fall Market",
+          "Tanger Outlet Center, 1000 Tanger Drive, Locust Grove. 10am to 5pm.",
+          "Oct 17",
+          "Bags, Bands & Bites Oktoberfest",
+          "Rutabaga's Market & Cafe, 1 Cherry Street, Hampton. Times are on the county calendar.",
+          "Oct 17",
+          "Disc Golf Tournament",
+          "Bud Kelley Park, 1605 Kelleytown Road, McDonough. Times are on the county calendar.",
+          "2026-10-17",
+          "Four things in one Saturday. …Oh, that's a lot. I'd start with the truck show."
+        ],
+        "keywords": [
+          "county",
+          "saturday",
+          "around",
+          "truck",
+          "show",
+          "road",
+          "mcdonough",
+          "market",
+          "tanger",
+          "times",
+          "calendar",
+          "1000"
+        ],
+        "source": "Visit Henry County Georgia events calendar · retrieved Oct 9, 2026"
+      }
+    ],
+    "afterstorm": [
+      {
+        "date": "2026-10-16",
+        "year": "2026",
+        "month": "2026-10",
+        "topic": "afterstorm",
+        "template": "home-safety",
+        "slot": "home",
+        "headline": "Walk The Outside First Before You Go Back In",
+        "said": [
+          "Walk The Outside First\nBefore You Go Back In",
+          "Echo, after a big storm FEMA says to walk around the outside first and check for loose power lines, gas leaks and structural damage.",
+          "Treat any downed line as live and stay away. Report it to the power company. A licensed electrician checks the rest.",
+          "Do not wade through standing water; lines can charge it. A licensed contractor handles cleanup.",
+          "If you smell gas or hear hissing, leave and call the fire department. Use a flashlight, not a match.",
+          "If the building looks unstable, a qualified inspector or engineer should look before anyone goes in.",
+          "Outside first, then inside. I never thought to check the lines before the door."
+        ],
+        "keywords": [
+          "outside",
+          "first",
+          "before",
+          "lines",
+          "walk",
+          "check",
+          "power",
+          "licensed",
+          "back",
+          "echo",
+          "after",
+          "storm"
+        ],
+        "source": "FEMA and Ready.gov, returning home after a disaster · retrieved Oct 9, 2026"
+      }
     ]
   },
   "entries": [
@@ -776,6 +986,181 @@
         "echo"
       ],
       "source": "NFPA · Fire Prevention Week lithium-ion battery lesson plan · retrieved Oct 2, 2026"
+    },
+    {
+      "date": "2026-10-12",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "loanestimate",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "Ask More Than One Lender For A Loan Estimate",
+      "said": [
+        "Ask More Than One Lender\nFor A Loan Estimate",
+        "Echo, a Loan Estimate tells you the details of a mortgage loan you have asked for. The CFPB says to request more than one.",
+        "More than one? Isn't a loan just a loan?",
+        "The CFPB says the best way to tell if you have a competitive offer is to compare it with Loan Estimates from other lenders.",
+        "So I ask a few lenders before I choose one. That's how I'd know mine is a good one."
+      ],
+      "keywords": [
+        "loan",
+        "more",
+        "estimate",
+        "cfpb",
+        "says",
+        "lenders",
+        "lender",
+        "echo",
+        "tells",
+        "details",
+        "mortgage",
+        "asked"
+      ],
+      "source": "CFPB, Loan Estimate, consumerfinance.gov · retrieved Oct 9, 2026"
+    },
+    {
+      "date": "2026-10-13",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "days",
+      "template": "market-two-figures",
+      "slot": "market",
+      "headline": "Homes Took A Bit Longer To Sell In September",
+      "said": [
+        "Homes Took A Bit Longer\nTo Sell In September",
+        "Henry County · September 2026",
+        "Days On Market",
+        "63",
+        "68 last year",
+        "New Listings",
+        "390",
+        "388 in August",
+        "Echo, Realtor.com says the median home in Henry County sat on the market 63 days in September, up from 59 in August. New listings were 390.",
+        "Last September the median was 68 days",
+        "Counts single-family homes, condos and townhomes",
+        "Median? …Oh, the middle one. So a little slower than August, but quicker than last year."
+      ],
+      "keywords": [
+        "september",
+        "days",
+        "last",
+        "august",
+        "median",
+        "homes",
+        "henry",
+        "county",
+        "market",
+        "year",
+        "listings",
+        "2026"
+      ],
+      "source": "Realtor.com via FRED · Henry County, GA median days on market and new listings · retrieved Oct 9, 2026"
+    },
+    {
+      "date": "2026-10-14",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "closingdisclosure",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "Your Closing Disclosure Should Come Early",
+      "said": [
+        "Your Closing Disclosure\nShould Come Early",
+        "Echo, the CFPB says lenders are required to provide your Closing Disclosure three business days before your scheduled closing.",
+        "Three days. What am I supposed to do with them?",
+        "The CFPB says to use those days wisely, because now is the time to resolve problems. If something looks different than you thought, ask why.",
+        "So I read it early and ask about anything that looks off. That's what the days are for."
+      ],
+      "keywords": [
+        "days",
+        "closing",
+        "disclosure",
+        "early",
+        "cfpb",
+        "says",
+        "three",
+        "looks",
+        "should",
+        "come",
+        "echo",
+        "lenders"
+      ],
+      "source": "CFPB, Closing Disclosure, consumerfinance.gov · retrieved Oct 9, 2026"
+    },
+    {
+      "date": "2026-10-15",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "saturday",
+      "template": "community-diary",
+      "slot": "community",
+      "headline": "A Full Saturday Around The County",
+      "said": [
+        "A Full Saturday\nAround The County",
+        "Echo, here is what's on this Saturday, Oct 17, around Henry County. All of it is still ahead of us as this goes up.",
+        "Oct 17",
+        "Smoke & Mirrors Truck Show",
+        "Sweet Auburn BBQ, 1828 Jonesboro Road, McDonough. 9am to 1pm.",
+        "Oct 17-18",
+        "Fall Market",
+        "Tanger Outlet Center, 1000 Tanger Drive, Locust Grove. 10am to 5pm.",
+        "Oct 17",
+        "Bags, Bands & Bites Oktoberfest",
+        "Rutabaga's Market & Cafe, 1 Cherry Street, Hampton. Times are on the county calendar.",
+        "Oct 17",
+        "Disc Golf Tournament",
+        "Bud Kelley Park, 1605 Kelleytown Road, McDonough. Times are on the county calendar.",
+        "2026-10-17",
+        "Four things in one Saturday. …Oh, that's a lot. I'd start with the truck show."
+      ],
+      "keywords": [
+        "county",
+        "saturday",
+        "around",
+        "truck",
+        "show",
+        "road",
+        "mcdonough",
+        "market",
+        "tanger",
+        "times",
+        "calendar",
+        "1000"
+      ],
+      "source": "Visit Henry County Georgia events calendar · retrieved Oct 9, 2026"
+    },
+    {
+      "date": "2026-10-16",
+      "year": "2026",
+      "month": "2026-10",
+      "topic": "afterstorm",
+      "template": "home-safety",
+      "slot": "home",
+      "headline": "Walk The Outside First Before You Go Back In",
+      "said": [
+        "Walk The Outside First\nBefore You Go Back In",
+        "Echo, after a big storm FEMA says to walk around the outside first and check for loose power lines, gas leaks and structural damage.",
+        "Treat any downed line as live and stay away. Report it to the power company. A licensed electrician checks the rest.",
+        "Do not wade through standing water; lines can charge it. A licensed contractor handles cleanup.",
+        "If you smell gas or hear hissing, leave and call the fire department. Use a flashlight, not a match.",
+        "If the building looks unstable, a qualified inspector or engineer should look before anyone goes in.",
+        "Outside first, then inside. I never thought to check the lines before the door."
+      ],
+      "keywords": [
+        "outside",
+        "first",
+        "before",
+        "lines",
+        "walk",
+        "check",
+        "power",
+        "licensed",
+        "back",
+        "echo",
+        "after",
+        "storm"
+      ],
+      "source": "FEMA and Ready.gov, returning home after a disaster · retrieved Oct 9, 2026"
     }
   ]
 }
