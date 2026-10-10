@@ -1,0 +1,24 @@
+{
+  "_": "Wed 14 Oct 2026 · teaching slot. Source READ 9 Oct 2026: CFPB 'Closing Disclosure' page, consumerfinance.gov/owning-a-home/closing-disclosure. Exact wording: 'Lenders are required to provide your Closing Disclosure three business days before your scheduled closing.' and 'Use these days wisely—now is the time to resolve problems.' and 'If something looks different from what you expected, ask why.' (paraphrased on the card). Does not say who closes or what happens at the table, so neither does the card.",
+
+  "approved": false,
+
+  "template": "teaching-lesson",
+  "skin": "autumn",
+  "eyebrow": "Teaching",
+
+  "headline": "Your Closing Disclosure\nShould Come Early",
+
+  "turn_1": "Echo, the CFPB says lenders are required to provide your Closing Disclosure three business days before your scheduled closing.",
+  "turn_2": "Three days. What am I supposed to do with them?",
+  "turn_3": "The CFPB says to use those days wisely, because now is the time to resolve problems. If something looks different than you thought, ask why.",
+
+  "echo_line": "So I read it early and ask about anything that looks off. That's what the days are for.",
+
+  "source": "CFPB, Closing Disclosure, consumerfinance.gov · retrieved Oct 9, 2026",
+  "disclaimer": "General information, not legal or lending advice. Ask your lender or your closing attorney about your own closing.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-alt",
+  "hashtag": "#RealEstateExplained"
+}
