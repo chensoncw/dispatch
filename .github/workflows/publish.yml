@@ -13,7 +13,8 @@ on:
     # by 4 hours and this is the fix. If they land near 6 AM, GitHub was never shifted and the
     # delay is something else. Either way the answer is in the Actions run list.
     # Minute is deliberately left at :00 so the only thing changed is the hour.
-    - cron: '0 10 * * 2,3,4,5'
+    # Mon-Fri since 2026-10-09: Monday added for a fifth, buyer-facing card.
+    - cron: '0 10 * * 1,2,3,4,5'
   workflow_dispatch:
     inputs:
       card:
