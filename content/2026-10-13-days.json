@@ -1,7 +1,7 @@
 {
   "_": "Tue 13 Oct 2026 · market slot. Realtor.com county series read off FRED on 9 Oct 2026: MEDDAYONMAR13151 (median days on market, Henry County): Sep 2026 63, Aug 2026 59, Sep 2025 68. NEWLISCOU13151 (new listing count): Sep 2026 390, Aug 2026 388. Last week's market card used the active and price-reduced listing counts, so this one uses different series. Not the rate card: that needs APPROVED=1 at publish.",
 
-  "approved": false,
+  "approved": true,
 
   "template": "market-two-figures",
   "skin": "plain",
