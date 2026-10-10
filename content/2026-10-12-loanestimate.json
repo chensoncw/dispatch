@@ -1,7 +1,7 @@
 {
   "_": "Mon 12 Oct 2026 · BUYER card (the new fifth day). Source READ 9 Oct 2026: CFPB 'Loan Estimate' page, consumerfinance.gov/owning-a-home/loan-estimate. Exact wording used: 'A Loan Estimate tells you important details about a mortgage loan you have requested.' and 'The best way to tell if you have a competitive loan offer is to compare it to Loan Estimates from other lenders.' and 'Request multiple Loan Estimates from different lenders so you can compare and choose the loan that's right for you.' The page does NOT state how many days a lender has to send it, so the card does not either. Normal call to action stays on: this is the card meant to make a buyer comment.",
 
-  "approved": false,
+  "approved": true,
 
   "template": "teaching-lesson",
   "skin": "autumn",
