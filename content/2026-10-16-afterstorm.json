@@ -1,0 +1,29 @@
+{
+  "_": "Fri 16 Oct 2026 · home slot, sober register, no joke. Sources READ 9 Oct 2026: FEMA 'Tips for returning home safely after a disaster' (fema.gov) and Ready.gov recovering-from-disaster guidance. Used: walk around the outside before going in and check for loose power lines, gas leaks and structural damage; treat downed lines as live and report them to the power company; do not walk, drive or wade through standing water because lines can electrically charge it; if you smell gas or hear hissing leave and call the fire department, use a flashlight not a match; if in doubt have the home looked at by a qualified building inspector or structural engineer. Written after the 10-11 Oct storm so it reads as a general check, not a live alert.",
+
+  "approved": false,
+
+  "template": "home-safety",
+  "skin": "plain",
+  "eyebrow": "Home Safety",
+
+  "headline": "Walk The Outside First\nBefore You Go Back In",
+
+  "titan_line": "Echo, after a big storm FEMA says to walk around the outside first and check for loose power lines, gas leaks and structural damage.",
+
+  "rows": [
+    "Treat any downed line as live and stay away. Report it to the power company. A licensed electrician checks the rest.",
+    "Do not wade through standing water; lines can charge it. A licensed contractor handles cleanup.",
+    "If you smell gas or hear hissing, leave and call the fire department. Use a flashlight, not a match.",
+    "If the building looks unstable, a qualified inspector or engineer should look before anyone goes in."
+  ],
+
+  "echo_line": "Outside first, then inside. I never thought to check the lines before the door.",
+
+  "source": "FEMA and Ready.gov, returning home after a disaster · retrieved Oct 9, 2026",
+  "disclaimer": "General safety information, not an inspection or advice about any home. Follow local officials and ask a licensed professional about yours.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-alt",
+  "hashtag": "#HomeownerTips"
+}
