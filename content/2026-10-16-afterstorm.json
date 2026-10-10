@@ -1,7 +1,7 @@
 {
   "_": "Fri 16 Oct 2026 · home slot, sober register, no joke. Sources READ 9 Oct 2026: FEMA 'Tips for returning home safely after a disaster' (fema.gov) and Ready.gov recovering-from-disaster guidance. Used: walk around the outside before going in and check for loose power lines, gas leaks and structural damage; treat downed lines as live and report them to the power company; do not walk, drive or wade through standing water because lines can electrically charge it; if you smell gas or hear hissing leave and call the fire department, use a flashlight not a match; if in doubt have the home looked at by a qualified building inspector or structural engineer. Written after the 10-11 Oct storm so it reads as a general check, not a live alert.",
 
-  "approved": false,
+  "approved": true,
 
   "template": "home-safety",
   "skin": "plain",
