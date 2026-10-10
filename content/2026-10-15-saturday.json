@@ -1,0 +1,47 @@
+{
+  "_": "Thu 15 Oct 2026 · community slot. Read 9 Oct 2026 on the Visit Henry County events calendar, venue and time as listed: Smoke & Mirrors Truck and Car Show (Oct 17, 9am to 1pm, Sweet Auburn BBQ McDonough, 1828 Jonesboro Road, McDonough); Fall Market (Oct 17-18, 10 AM to 5 PM in the description, Tanger Outlet Center, 1000 Tanger Drive Suite 211, Locust Grove); Bags, Bands & Bites Oktoberfest cornhole tournament (postponed to Oct 17, Rutabaga's Market & Cafe, 1 Cherry Street, Hampton, no time listed); Disc Golf Tournament (Oct 17, Bud Kelley Park, 1605 Kelleytown Road, McDonough, no time listed). Earliest is Oct 17, after the Oct 15 publish. Kiwanis Fair left off: it ran on the Oct 8 card.",
+
+  "approved": false,
+
+  "template": "community-diary",
+  "skin": "autumn",
+  "eyebrow": "Around The County",
+
+  "headline": "A Full Saturday\nAround The County",
+
+  "titan_line": "Echo, here is what's on this Saturday, Oct 17, around Henry County. All of it is still ahead of us as this goes up.",
+
+  "items": [
+    {
+      "when": "Oct 17",
+      "title": "Smoke & Mirrors Truck Show",
+      "detail": "Sweet Auburn BBQ, 1828 Jonesboro Road, McDonough. 9am to 1pm."
+    },
+    {
+      "when": "Oct 17-18",
+      "title": "Fall Market",
+      "detail": "Tanger Outlet Center, 1000 Tanger Drive, Locust Grove. 10am to 5pm."
+    },
+    {
+      "when": "Oct 17",
+      "title": "Bags, Bands & Bites Oktoberfest",
+      "detail": "Rutabaga's Market & Cafe, 1 Cherry Street, Hampton. Times are on the county calendar."
+    },
+    {
+      "when": "Oct 17",
+      "title": "Disc Golf Tournament",
+      "detail": "Bud Kelley Park, 1605 Kelleytown Road, McDonough. Times are on the county calendar."
+    }
+  ],
+
+  "event_date": "2026-10-17",
+
+  "echo_line": "Four things in one Saturday. …Oh, that's a lot. I'd start with the truck show.",
+
+  "source": "Visit Henry County Georgia events calendar · retrieved Oct 9, 2026",
+  "disclaimer": "Dates as published by the organizers on the date retrieved. Confirm with each event before you go.",
+
+  "titan_pose": "titan-alt",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#AroundTheCounty"
+}
