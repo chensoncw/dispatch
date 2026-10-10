@@ -85,7 +85,7 @@
         {
           "date": "2026-10-15",
           "topic": "saturday",
-          "headline": "A Full Saturday Around The County"
+          "headline": "Fall Festival Is Saturday On The Square"
         },
         {
           "date": "2026-10-16",
@@ -572,40 +572,37 @@
         "topic": "saturday",
         "template": "community-diary",
         "slot": "community",
-        "headline": "A Full Saturday Around The County",
+        "headline": "Fall Festival Is Saturday On The Square",
         "said": [
-          "A Full Saturday\nAround The County",
-          "Echo, here is what's on this Saturday, Oct 17, around Henry County. All of it is still ahead of us as this goes up.",
+          "Fall Festival Is Saturday\nOn The Square",
+          "Echo, McDonough's Fall Festival on the Square is this Saturday, Oct 17, and two more things are on the same day.",
+          "Oct 17",
+          "Fall Festival on the Square",
+          "McDonough Square, 5 Griffin Street, McDonough. 12pm to 4pm.",
           "Oct 17",
           "Smoke & Mirrors Truck Show",
           "Sweet Auburn BBQ, 1828 Jonesboro Road, McDonough. 9am to 1pm.",
           "Oct 17-18",
           "Fall Market",
           "Tanger Outlet Center, 1000 Tanger Drive, Locust Grove. 10am to 5pm.",
-          "Oct 17",
-          "Bags, Bands & Bites Oktoberfest",
-          "Rutabaga's Market & Cafe, 1 Cherry Street, Hampton. Times are on the county calendar.",
-          "Oct 17",
-          "Disc Golf Tournament",
-          "Bud Kelley Park, 1605 Kelleytown Road, McDonough. Times are on the county calendar.",
           "2026-10-17",
-          "Four things in one Saturday. …Oh, that's a lot. I'd start with the truck show."
+          "A festival, a truck show and a market. …Oh, all in one Saturday. I'd start on the Square."
         ],
         "keywords": [
-          "county",
+          "square",
+          "fall",
+          "festival",
+          "mcdonough",
           "saturday",
-          "around",
           "truck",
           "show",
-          "road",
-          "mcdonough",
           "market",
           "tanger",
-          "times",
-          "calendar",
-          "1000"
+          "1000",
+          "1828",
+          "2026"
         ],
-        "source": "Visit Henry County Georgia events calendar · retrieved Oct 9, 2026"
+        "source": "City of McDonough and Visit Henry County calendars · retrieved Oct 9, 2026"
       }
     ],
     "afterstorm": [
@@ -1094,40 +1091,37 @@
       "topic": "saturday",
       "template": "community-diary",
       "slot": "community",
-      "headline": "A Full Saturday Around The County",
+      "headline": "Fall Festival Is Saturday On The Square",
       "said": [
-        "A Full Saturday\nAround The County",
-        "Echo, here is what's on this Saturday, Oct 17, around Henry County. All of it is still ahead of us as this goes up.",
+        "Fall Festival Is Saturday\nOn The Square",
+        "Echo, McDonough's Fall Festival on the Square is this Saturday, Oct 17, and two more things are on the same day.",
+        "Oct 17",
+        "Fall Festival on the Square",
+        "McDonough Square, 5 Griffin Street, McDonough. 12pm to 4pm.",
         "Oct 17",
         "Smoke & Mirrors Truck Show",
         "Sweet Auburn BBQ, 1828 Jonesboro Road, McDonough. 9am to 1pm.",
         "Oct 17-18",
         "Fall Market",
         "Tanger Outlet Center, 1000 Tanger Drive, Locust Grove. 10am to 5pm.",
-        "Oct 17",
-        "Bags, Bands & Bites Oktoberfest",
-        "Rutabaga's Market & Cafe, 1 Cherry Street, Hampton. Times are on the county calendar.",
-        "Oct 17",
-        "Disc Golf Tournament",
-        "Bud Kelley Park, 1605 Kelleytown Road, McDonough. Times are on the county calendar.",
         "2026-10-17",
-        "Four things in one Saturday. …Oh, that's a lot. I'd start with the truck show."
+        "A festival, a truck show and a market. …Oh, all in one Saturday. I'd start on the Square."
       ],
       "keywords": [
-        "county",
+        "square",
+        "fall",
+        "festival",
+        "mcdonough",
         "saturday",
-        "around",
         "truck",
         "show",
-        "road",
-        "mcdonough",
         "market",
         "tanger",
-        "times",
-        "calendar",
-        "1000"
+        "1000",
+        "1828",
+        "2026"
       ],
-      "source": "Visit Henry County Georgia events calendar · retrieved Oct 9, 2026"
+      "source": "City of McDonough and Visit Henry County calendars · retrieved Oct 9, 2026"
     },
     {
       "date": "2026-10-16",
