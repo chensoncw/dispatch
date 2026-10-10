@@ -1,0 +1,31 @@
+{
+  "_": "Tue 13 Oct 2026 · market slot. Realtor.com county series read off FRED on 9 Oct 2026: MEDDAYONMAR13151 (median days on market, Henry County): Sep 2026 63, Aug 2026 59, Sep 2025 68. NEWLISCOU13151 (new listing count): Sep 2026 390, Aug 2026 388. Last week's market card used the active and price-reduced listing counts, so this one uses different series. Not the rate card: that needs APPROVED=1 at publish.",
+
+  "approved": false,
+
+  "template": "market-two-figures",
+  "skin": "plain",
+  "eyebrow": "Market",
+
+  "headline": "Homes Took A Bit Longer\nTo Sell In September",
+  "asof": "Henry County · September 2026",
+
+  "stat_a": { "label": "Days On Market", "value": "63", "sub": "68 last year" },
+  "stat_b": { "label": "New Listings",   "value": "390", "sub": "388 in August" },
+
+  "titan_line": "Echo, Realtor.com says the median home in Henry County sat on the market 63 days in September, up from 59 in August. New listings were 390.",
+
+  "checks_rows": [
+    "Last September the median was 68 days",
+    "Counts single-family homes, condos and townhomes"
+  ],
+
+  "echo_line": "Median? …Oh, the middle one. So a little slower than August, but quicker than last year.",
+
+  "source": "Realtor.com via FRED · Henry County, GA median days on market and new listings · retrieved Oct 9, 2026",
+  "disclaimer": "County-wide figures for the month stated. Not a valuation or a prediction for any individual home.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#MarketUpdate"
+}
