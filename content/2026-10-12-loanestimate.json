@@ -1,0 +1,24 @@
+{
+  "_": "Mon 12 Oct 2026 · BUYER card (the new fifth day). Source READ 9 Oct 2026: CFPB 'Loan Estimate' page, consumerfinance.gov/owning-a-home/loan-estimate. Exact wording used: 'A Loan Estimate tells you important details about a mortgage loan you have requested.' and 'The best way to tell if you have a competitive loan offer is to compare it to Loan Estimates from other lenders.' and 'Request multiple Loan Estimates from different lenders so you can compare and choose the loan that's right for you.' The page does NOT state how many days a lender has to send it, so the card does not either. Normal call to action stays on: this is the card meant to make a buyer comment.",
+
+  "approved": false,
+
+  "template": "teaching-lesson",
+  "skin": "autumn",
+  "eyebrow": "For Buyers",
+
+  "headline": "Ask More Than One Lender\nFor A Loan Estimate",
+
+  "turn_1": "Echo, a Loan Estimate tells you the details of a mortgage loan you have asked for. The CFPB says to request more than one.",
+  "turn_2": "More than one? Isn't a loan just a loan?",
+  "turn_3": "The CFPB says the best way to tell if you have a competitive offer is to compare it with Loan Estimates from other lenders.",
+
+  "echo_line": "So I ask a few lenders before I choose one. That's how I'd know mine is a good one.",
+
+  "source": "CFPB, Loan Estimate, consumerfinance.gov · retrieved Oct 9, 2026",
+  "disclaimer": "General information, not financial or lending advice. Your own loan terms depend on your lender and your credit.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-notepad",
+  "hashtag": "#RealEstateExplained"
+}
