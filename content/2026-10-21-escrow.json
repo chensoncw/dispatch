@@ -1,7 +1,7 @@
 {
   "_": "Wed 21 Oct 2026 · teaching slot. Source READ 17 Oct 2026: CFPB Ask CFPB 'What is an escrow or impound account?' (consumerfinance.gov/ask-cfpb/what-is-an-escrow-or-impound-account-en-140/, last reviewed Sep 11, 2024). Wording used: an escrow account 'is set up by your mortgage lender to pay certain property-related expenses'; lenders require 'that you pay your taxes and insurance using escrow'; 'The money that goes into the account comes from a portion of your monthly mortgage payment'; 'Your mortgage servicer will manage the escrow account and pay these bills on your behalf'; 'Your property taxes and insurance premiums can change from year to year' and the escrow payment and total monthly payment 'will change accordingly.' No dollar figures. Bank: the 2 Oct taxdate card covered the tax due date, a different angle.",
 
-  "approved": true,
+  "approved": false,
 
   "template": "teaching-lesson",
   "skin": "autumn",
