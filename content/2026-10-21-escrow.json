@@ -1,0 +1,24 @@
+{
+  "_": "Wed 21 Oct 2026 · teaching slot. Source READ 17 Oct 2026: CFPB Ask CFPB 'What is an escrow or impound account?' (consumerfinance.gov/ask-cfpb/what-is-an-escrow-or-impound-account-en-140/, last reviewed Sep 11, 2024). Wording used: an escrow account 'is set up by your mortgage lender to pay certain property-related expenses'; lenders require 'that you pay your taxes and insurance using escrow'; 'The money that goes into the account comes from a portion of your monthly mortgage payment'; 'Your mortgage servicer will manage the escrow account and pay these bills on your behalf'; 'Your property taxes and insurance premiums can change from year to year' and the escrow payment and total monthly payment 'will change accordingly.' No dollar figures. Bank: the 2 Oct taxdate card covered the tax due date, a different angle.",
+
+  "approved": false,
+
+  "template": "teaching-lesson",
+  "skin": "autumn",
+  "eyebrow": "Teaching",
+
+  "headline": "What An Escrow Account\nActually Pays For",
+
+  "turn_1": "Echo, the CFPB says an escrow account is set up by your mortgage lender to pay certain property costs, like your taxes and insurance.",
+  "turn_2": "So where does that money come from? Do I mail it in separately?",
+  "turn_3": "A portion of your monthly mortgage payment goes into it, and your servicer pays the bills. Taxes and insurance can change each year, so your payment can too.",
+
+  "echo_line": "So part of the payment is the loan and part is the bills. If my payment ever changed, I'd look at the escrow first.",
+
+  "source": "CFPB, What is an escrow or impound account?, consumerfinance.gov · retrieved Oct 17, 2026",
+  "disclaimer": "General information, not financial or lending advice. Ask your lender or servicer how your own escrow account works.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#RealEstateExplained"
+}
