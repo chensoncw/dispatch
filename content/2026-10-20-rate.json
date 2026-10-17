@@ -1,7 +1,7 @@
 {
   "_": "Tue 20 Oct 2026 · market slot, the rate (first rate card in the feed). Source READ 17 Oct 2026 on freddiemac.com/pmms: 'The 30-year fixed-rate mortgage averaged 7.40% as of October 15, 2026, unchanged from last week. A year ago at this time, the 30-year FRM averaged 6.27%. The 15-year fixed-rate mortgage averaged 6.71%, down from last week when it averaged 6.73%. A year ago at this time, the 15-year FRM averaged 5.52%.' PMMS publishes Thursdays at noon ET, so on Tue 20 Oct this is still the latest release. Built on market-two-figures, NOT market-one-figure, so it can ride the scheduled publish once Chenson approves it (market-one-figure also needs APPROVED=1 at publish). No projection is reported.",
 
-  "approved": false,
+  "approved": true,
 
   "template": "market-two-figures",
   "skin": "plain",
