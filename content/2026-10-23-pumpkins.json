@@ -1,0 +1,29 @@
+{
+  "_": "Fri 23 Oct 2026 · home slot, the week before Halloween. Source READ 17 Oct 2026: NFPA Public Education Division 'Halloween Fire Safety Tips' tip sheet (copyright NFPA 2016; nfpa.org's own copy returned a server error, so the text was read from the identical NFPA sheet re-hosted by the Village of Penn Yan, NY, and matches NFPA's tips as reported by Fire Engineering). Wording used: 'Dried flowers, cornstalks and crepe paper catch fire easily. Keep all decorations away from open flames and other heat sources like light bulbs and heaters.'; 'Use a battery-operated candle or glow-stick in jack-o-lanterns.'; 'place lit pumpkins well away from anything that can burn and far enough out of the way of trick-or-treaters, doorsteps, walkways and yards.'; 'keep exits clear of decorations, so nothing blocks escape routes.'; 'Make sure all smoke alarms in the home are working.' The sheet's '900 reported home fires each year' figure is NOT used because the sheet gives no years for it. Light register, not the sober home-safety template: no injury or death figure on the card.",
+
+  "approved": false,
+
+  "template": "home-walkround",
+  "skin": "autumn",
+  "eyebrow": "Home",
+
+  "headline": "Before The Pumpkins\nGo Out On The Porch",
+
+  "titan_line": "Echo, NFPA says dried flowers, cornstalks and crepe paper catch fire easily. They belong away from open flames and heat like light bulbs and heaters.",
+
+  "rows": [
+    "NFPA points to a battery candle or a glow stick inside a jack-o-lantern. Your fire department can say more.",
+    "Lit pumpkins sit away from anything that burns and clear of doorsteps and walkways. Ask your fire department.",
+    "Exits stay clear of decorations, so nothing blocks the way out. Your fire department can talk it through.",
+    "Every smoke alarm in the home working before the 31st. A licensed electrician can check hardwired ones."
+  ],
+
+  "echo_line": "Cornstalks catch fire easily? …Oh. My whole porch is cornstalks. I'd move them away from the pumpkin first.",
+
+  "source": "NFPA, Halloween Fire Safety Tips tip sheet · retrieved Oct 17, 2026",
+  "disclaimer": "General fire-safety information, not an inspection or advice about any home. Ask your local fire department about yours.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-surprised",
+  "hashtag": "#HomeownerTips"
+}
