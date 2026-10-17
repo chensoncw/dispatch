@@ -1,7 +1,7 @@
 {
   "_": "Fri 23 Oct 2026 · home slot, the week before Halloween. Source READ 17 Oct 2026: NFPA Public Education Division 'Halloween Fire Safety Tips' tip sheet (copyright NFPA 2016; nfpa.org's own copy returned a server error, so the text was read from the identical NFPA sheet re-hosted by the Village of Penn Yan, NY, and matches NFPA's tips as reported by Fire Engineering). Wording used: 'Dried flowers, cornstalks and crepe paper catch fire easily. Keep all decorations away from open flames and other heat sources like light bulbs and heaters.'; 'Use a battery-operated candle or glow-stick in jack-o-lanterns.'; 'place lit pumpkins well away from anything that can burn and far enough out of the way of trick-or-treaters, doorsteps, walkways and yards.'; 'keep exits clear of decorations, so nothing blocks escape routes.'; 'Make sure all smoke alarms in the home are working.' The sheet's '900 reported home fires each year' figure is NOT used because the sheet gives no years for it. Light register, not the sober home-safety template: no injury or death figure on the card.",
 
-  "approved": true,
+  "approved": false,
 
   "template": "home-walkround",
   "skin": "autumn",
