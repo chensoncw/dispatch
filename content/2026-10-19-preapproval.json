@@ -1,0 +1,24 @@
+{
+  "_": "Mon 19 Oct 2026 · BUYER card. Written by hand 17 Oct 2026 for the dispatch-write-the-week task (its scheduled run stalled). Source READ 17 Oct 2026: CFPB Ask CFPB 'What's the difference between a prequalification letter and a preapproval letter?' (consumerfinance.gov/ask-cfpb/...-en-127/, last reviewed Dec 5, 2023). Wording used: 'Prequalification and preapproval letters both specify how much the lender is willing to lend to you' and the letters 'are not guaranteed loan offers'; 'Lenders use the terms prequalification and preapproval differently'; 'getting preapproved earlier in the process can be a good way to spot potential issues with your credit in time to correct them.' The card does not say how long a letter lasts or whether credit is pulled, beyond what CFPB says. Bank: no earlier card on preapproval.",
+
+  "approved": false,
+
+  "template": "teaching-lesson",
+  "skin": "autumn",
+  "eyebrow": "For Buyers",
+
+  "headline": "Prequalified Or Preapproved?\nThe Word Matters Less",
+
+  "turn_1": "Echo, the CFPB says a prequalification or preapproval letter shows how much a lender is willing to lend you. It is not a guaranteed loan offer.",
+  "turn_2": "So which one do I need? I thought preapproved was the real one.",
+  "turn_3": "The CFPB says lenders use the two words differently. It also says getting preapproved earlier can help you spot credit issues in time to correct them.",
+
+  "echo_line": "So the name on the letter matters less than I thought. I'd get mine early, before I fall for a house.",
+
+  "source": "CFPB, prequalification and preapproval letters, consumerfinance.gov · retrieved Oct 17, 2026",
+  "disclaimer": "General information, not financial or lending advice. What your letter covers depends on your lender and your credit.",
+
+  "titan_pose": "titan-front",
+  "echo_pose": "echo-notepad",
+  "hashtag": "#RealEstateExplained"
+}
