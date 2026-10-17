@@ -95,7 +95,7 @@
         {
           "date": "2026-10-19",
           "topic": "preapproval",
-          "headline": "Prequalified Or Preapproved? The Word Matters Less"
+          "headline": "Prequalified Or Preapproved? What The Letter Means"
         },
         {
           "date": "2026-10-20",
@@ -673,27 +673,27 @@
         "topic": "preapproval",
         "template": "teaching-lesson",
         "slot": "teaching",
-        "headline": "Prequalified Or Preapproved? The Word Matters Less",
+        "headline": "Prequalified Or Preapproved? What The Letter Means",
         "said": [
-          "Prequalified Or Preapproved?\nThe Word Matters Less",
+          "Prequalified Or Preapproved?\nWhat The Letter Means",
           "Echo, the CFPB says a prequalification or preapproval letter shows how much a lender is willing to lend you. It is not a guaranteed loan offer.",
           "So which one do I need? I thought preapproved was the real one.",
           "The CFPB says lenders use the two words differently. It also says getting preapproved earlier can help you spot credit issues in time to correct them.",
-          "So the name on the letter matters less than I thought. I'd get mine early, before I fall for a house."
+          "So the letter isn't a promise. I'd get mine early, before I fall for a house."
         ],
         "keywords": [
           "preapproved",
-          "says",
-          "matters",
-          "less",
-          "cfpb",
           "letter",
-          "thought",
+          "says",
+          "cfpb",
           "prequalified",
-          "word",
+          "means",
           "echo",
           "prequalification",
-          "preapproval"
+          "preapproval",
+          "shows",
+          "much",
+          "lender"
         ],
         "source": "CFPB, prequalification and preapproval letters, consumerfinance.gov · retrieved Oct 17, 2026"
       }
@@ -1370,27 +1370,27 @@
       "topic": "preapproval",
       "template": "teaching-lesson",
       "slot": "teaching",
-      "headline": "Prequalified Or Preapproved? The Word Matters Less",
+      "headline": "Prequalified Or Preapproved? What The Letter Means",
       "said": [
-        "Prequalified Or Preapproved?\nThe Word Matters Less",
+        "Prequalified Or Preapproved?\nWhat The Letter Means",
         "Echo, the CFPB says a prequalification or preapproval letter shows how much a lender is willing to lend you. It is not a guaranteed loan offer.",
         "So which one do I need? I thought preapproved was the real one.",
         "The CFPB says lenders use the two words differently. It also says getting preapproved earlier can help you spot credit issues in time to correct them.",
-        "So the name on the letter matters less than I thought. I'd get mine early, before I fall for a house."
+        "So the letter isn't a promise. I'd get mine early, before I fall for a house."
       ],
       "keywords": [
         "preapproved",
-        "says",
-        "matters",
-        "less",
-        "cfpb",
         "letter",
-        "thought",
+        "says",
+        "cfpb",
         "prequalified",
-        "word",
+        "means",
         "echo",
         "prequalification",
-        "preapproval"
+        "preapproval",
+        "shows",
+        "much",
+        "lender"
       ],
       "source": "CFPB, prequalification and preapproval letters, consumerfinance.gov · retrieved Oct 17, 2026"
     },
