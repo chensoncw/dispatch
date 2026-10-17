@@ -1,24 +1,17 @@
 {
-  "_": "Mon 19 Oct 2026 · BUYER card. Written by hand 17 Oct 2026 for the dispatch-write-the-week task (its scheduled run stalled). Source READ 17 Oct 2026: CFPB Ask CFPB 'What's the difference between a prequalification letter and a preapproval letter?' (consumerfinance.gov/ask-cfpb/...-en-127/, last reviewed Dec 5, 2023). Wording used: 'Prequalification and preapproval letters both specify how much the lender is willing to lend to you' and the letters 'are not guaranteed loan offers'; 'Lenders use the terms prequalification and preapproval differently'; 'getting preapproved earlier in the process can be a good way to spot potential issues with your credit in time to correct them.' The card does not say how long a letter lasts or whether credit is pulled, beyond what CFPB says. Bank: no earlier card on preapproval.",
-
-  "approved": false,
-
-  "template": "teaching-lesson",
-  "skin": "autumn",
-  "eyebrow": "For Buyers",
-
-  "headline": "Prequalified Or Preapproved?\nWhat The Letter Means",
-
-  "turn_1": "Echo, the CFPB says a prequalification or preapproval letter shows how much a lender is willing to lend you. It is not a guaranteed loan offer.",
-  "turn_2": "So which one do I need? I thought preapproved was the real one.",
-  "turn_3": "The CFPB says lenders use the two words differently. It also says getting preapproved earlier can help you spot credit issues in time to correct them.",
-
-  "echo_line": "So the letter isn't a promise. I'd get mine early, before I fall for a house.",
-
-  "source": "CFPB, prequalification and preapproval letters, consumerfinance.gov · retrieved Oct 17, 2026",
-  "disclaimer": "General information, not financial or lending advice. What your letter covers depends on your lender and your credit.",
-
-  "titan_pose": "titan-front",
-  "echo_pose": "echo-notepad",
-  "hashtag": "#RealEstateExplained"
+    "_":  "Mon 19 Oct 2026 · BUYER card, series \u0027Buying In South Metro\u0027 episode 1 (SERIES PLAN - The Market Right Now). Approved by Chenson in Main\u0027s chat 17 Oct 2026 (\u0027Okay, fine\u0027). Source READ 17 Oct 2026: Simply List Atlanta August 2026 county reports (FMLS, source date Sep 15 2026): homes for sale YoY Henry 1,016 +14.5%, Clayton 677 +3.7%, Fayette 258 +50.0%, Spalding 128 +24.3%, Rockdale 415 -4.4%, Newton 437 -0.9%.",
+    "approved":  true,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Buyers",
+    "headline":  "Buying In South Metro\nMore Homes In Most Counties",
+    "turn_1":  "Echo, FMLS numbers for August show more homes for sale than a year earlier in Henry, Clayton, Fayette and Spalding counties.",
+    "turn_2":  "All of South Metro? So buyers have more to pick from everywhere?",
+    "turn_3":  "Not everywhere. Rockdale and Newton had slightly fewer. Henry, the biggest, had 1,016 homes for sale, up 14.5% from a year earlier.",
+    "echo_line":  "Most counties, not all. …Oh. Where I look matters as much as when.",
+    "source":  "FMLS via Simply List Atlanta, August 2026 reports for Henry, Clayton, Rockdale, Newton, Fayette, Spalding · retrieved Oct 17, 2026",
+    "disclaimer":  "General market information for South Metro Atlanta, not advice about any home or purchase. Numbers change month to month.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
 }
