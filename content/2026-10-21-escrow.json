@@ -1,24 +1,17 @@
 {
-  "_": "Wed 21 Oct 2026 · teaching slot. Source READ 17 Oct 2026: CFPB Ask CFPB 'What is an escrow or impound account?' (consumerfinance.gov/ask-cfpb/what-is-an-escrow-or-impound-account-en-140/, last reviewed Sep 11, 2024). Wording used: an escrow account 'is set up by your mortgage lender to pay certain property-related expenses'; lenders require 'that you pay your taxes and insurance using escrow'; 'The money that goes into the account comes from a portion of your monthly mortgage payment'; 'Your mortgage servicer will manage the escrow account and pay these bills on your behalf'; 'Your property taxes and insurance premiums can change from year to year' and the escrow payment and total monthly payment 'will change accordingly.' No dollar figures. Bank: the 2 Oct taxdate card covered the tax due date, a different angle.",
-
-  "approved": false,
-
-  "template": "teaching-lesson",
-  "skin": "autumn",
-  "eyebrow": "Teaching",
-
-  "headline": "What An Escrow Account\nActually Pays For",
-
-  "turn_1": "Echo, the CFPB says an escrow account is set up by your mortgage lender to pay certain property costs, like your taxes and insurance.",
-  "turn_2": "So where does that money come from? Do I mail it in separately?",
-  "turn_3": "A portion of your monthly mortgage payment goes into it, and your servicer pays the bills. Taxes and insurance can change each year, so your payment can too.",
-
-  "echo_line": "So part of the payment is the loan and part is the bills. If my payment ever changed, I'd look at the escrow first.",
-
-  "source": "CFPB, What is an escrow or impound account?, consumerfinance.gov · retrieved Oct 17, 2026",
-  "disclaimer": "General information, not financial or lending advice. Ask your lender or servicer how your own escrow account works.",
-
-  "titan_pose": "titan-front",
-  "echo_pose": "echo-surprised",
-  "hashtag": "#RealEstateExplained"
+    "_":  "Wed 21 Oct 2026 · SELLER card, series \u0027Selling In South Metro\u0027 episode 1 (replaces the escrow card). Approved by Chenson 17 Oct 2026. Source READ 17 Oct 2026: Simply List Atlanta Henry County August 2026 (FMLS, source date Sep 15): sale-to-original-list 96.4% (+3.0% YoY), new listings 397 (+15.7%), avg cumulative DOM 63 (-12.5%).",
+    "approved":  true,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Sellers",
+    "headline":  "Selling In South Metro\nSold At 96% Of Asking",
+    "turn_1":  "Echo, FMLS numbers for August show Henry County homes sold for about 96% of their first asking price. That\u0027s up from a year ago.",
+    "turn_2":  "96%? That\u0027s almost full price.",
+    "turn_3":  "And that held even with 397 new listings in August, up 15.7%. Homes still sold 12.5% faster than last year.",
+    "echo_line":  "More competition, same strong price. …Oh. So the first price is the one to get right.",
+    "source":  "FMLS via Simply List Atlanta, Henry County report, August 2026 · retrieved Oct 17, 2026",
+    "disclaimer":  "Averages across all homes sold in Henry County, not a valuation of any home. Pricing depends on each home\u0027s condition, location and comparable sales.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
 }
