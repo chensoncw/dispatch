@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-10-17",
+  "_built": "2026-10-18",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
@@ -105,7 +105,7 @@
         {
           "date": "2026-10-21",
           "topic": "escrow",
-          "headline": "What An Escrow Account Actually Pays For"
+          "headline": "Selling In South Metro Sold At 96% Of Asking"
         },
         {
           "date": "2026-10-22",
@@ -746,29 +746,29 @@
         "topic": "escrow",
         "template": "teaching-lesson",
         "slot": "teaching",
-        "headline": "What An Escrow Account Actually Pays For",
+        "headline": "Selling In South Metro Sold At 96% Of Asking",
         "said": [
-          "What An Escrow Account\nActually Pays For",
-          "Echo, the CFPB says an escrow account is set up by your mortgage lender to pay certain property costs, like your taxes and insurance.",
-          "So where does that money come from? Do I mail it in separately?",
-          "A portion of your monthly mortgage payment goes into it, and your servicer pays the bills. Taxes and insurance can change each year, so your payment can too.",
-          "So part of the payment is the loan and part is the bills. If my payment ever changed, I'd look at the escrow first."
+          "Selling In South Metro\nSold At 96% Of Asking",
+          "Echo, FMLS numbers for August show Henry County homes sold for about 96% of their first asking price. That's up from a year ago.",
+          "96%? That's almost full price.",
+          "And that held even with 397 new listings in August, up 15.7%. Homes still sold 12.5% faster than last year.",
+          "More competition, same strong price. …Oh. So the first price is the one to get right."
         ],
         "keywords": [
-          "payment",
-          "escrow",
-          "account",
-          "pays",
-          "mortgage",
-          "taxes",
-          "insurance",
-          "bills",
-          "part",
-          "actually",
+          "price",
+          "sold",
+          "asking",
+          "august",
+          "homes",
+          "first",
+          "year",
+          "selling",
+          "south",
+          "metro",
           "echo",
-          "cfpb"
+          "fmls"
         ],
-        "source": "CFPB, What is an escrow or impound account?, consumerfinance.gov · retrieved Oct 17, 2026"
+        "source": "FMLS via Simply List Atlanta, Henry County report, August 2026 · retrieved Oct 17, 2026"
       }
     ],
     "trunkortreat": [
@@ -1439,29 +1439,29 @@
       "topic": "escrow",
       "template": "teaching-lesson",
       "slot": "teaching",
-      "headline": "What An Escrow Account Actually Pays For",
+      "headline": "Selling In South Metro Sold At 96% Of Asking",
       "said": [
-        "What An Escrow Account\nActually Pays For",
-        "Echo, the CFPB says an escrow account is set up by your mortgage lender to pay certain property costs, like your taxes and insurance.",
-        "So where does that money come from? Do I mail it in separately?",
-        "A portion of your monthly mortgage payment goes into it, and your servicer pays the bills. Taxes and insurance can change each year, so your payment can too.",
-        "So part of the payment is the loan and part is the bills. If my payment ever changed, I'd look at the escrow first."
+        "Selling In South Metro\nSold At 96% Of Asking",
+        "Echo, FMLS numbers for August show Henry County homes sold for about 96% of their first asking price. That's up from a year ago.",
+        "96%? That's almost full price.",
+        "And that held even with 397 new listings in August, up 15.7%. Homes still sold 12.5% faster than last year.",
+        "More competition, same strong price. …Oh. So the first price is the one to get right."
       ],
       "keywords": [
-        "payment",
-        "escrow",
-        "account",
-        "pays",
-        "mortgage",
-        "taxes",
-        "insurance",
-        "bills",
-        "part",
-        "actually",
+        "price",
+        "sold",
+        "asking",
+        "august",
+        "homes",
+        "first",
+        "year",
+        "selling",
+        "south",
+        "metro",
         "echo",
-        "cfpb"
+        "fmls"
       ],
-      "source": "CFPB, What is an escrow or impound account?, consumerfinance.gov · retrieved Oct 17, 2026"
+      "source": "FMLS via Simply List Atlanta, Henry County report, August 2026 · retrieved Oct 17, 2026"
     },
     {
       "date": "2026-10-22",
