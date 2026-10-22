@@ -15,6 +15,11 @@ on:
     # Minute is deliberately left at :00 so the only thing changed is the hour.
     # Mon-Fri since 2026-10-09: Monday added for a fifth, buyer-facing card.
     - cron: '0 10 * * 1,2,3,4,5'
+    # 2026-10-22: two more runs a day replace the old morning catch-up task on the main PC. Safe by design: publish.js asks Instagram
+    # whether today's card is already up and skips anything done, so extra runs never duplicate. They only matter when an earlier
+    # run was skipped or failed.
+    - cron: '0 13 * * 1,2,3,4,5'
+    - cron: '0 16 * * 1,2,3,4,5'
   workflow_dispatch:
     inputs:
       card:
