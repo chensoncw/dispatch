@@ -8,7 +8,7 @@ name: Publish Video
 
 on:
   schedule:
-    - cron: '0 14 * * 6'
+    - cron: '0 15 * * 6'   # 11:00 Eastern; GitHub runs this about 4 to 6 hours late, which lands near 4 PM Eastern, the same hour as YouTube and TikTok
   workflow_dispatch:
     inputs:
       record:
