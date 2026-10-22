@@ -1,0 +1,69 @@
+name: Publish Video
+
+# Posts the weekly recap video to Facebook and Instagram (Reel) on Saturdays.
+# Video records live in video-posts/YYYY-MM-DD-recap.json (the date is the Saturday it posts).
+# Separate from publish.yml on purpose: the card posting that works today is never touched.
+# GitHub's own schedule runs hours late, so the cron is set early; the duplicate guard in
+# publish-video.js makes a re-run safe.
+
+on:
+  schedule:
+    - cron: '0 14 * * 6'
+  workflow_dispatch:
+    inputs:
+      record:
+        description: 'Record to publish (blank = the one dated today)'
+        required: false
+      dry_run:
+        description: '1 = print only, 2 = Facebook smoke test (unpublished), blank = real'
+        required: false
+        default: ''
+
+jobs:
+  publish-video:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Preflight, is the token still alive
+        env:
+          META_PAGE_TOKEN:  ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID:     ${{ secrets.META_PAGE_ID }}
+          META_IG_USER_ID:  ${{ secrets.META_IG_USER_ID }}
+        run: node scripts/preflight.js
+
+      - name: Find the video record
+        id: pick
+        run: |
+          REC="${{ github.event.inputs.record }}"
+          if [ -z "$REC" ]; then
+            TODAY=$(date -u +%Y-%m-%d)
+            REC=$(ls video-posts/${TODAY}-*.json 2>/dev/null | head -n1)
+          fi
+          if [ -z "$REC" ]; then
+            echo "No video record for today. Nothing to publish."
+            echo "rec=" >> $GITHUB_OUTPUT
+          else
+            echo "Publishing $REC"
+            echo "rec=$REC" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Publish
+        if: steps.pick.outputs.rec != ''
+        env:
+          META_PAGE_TOKEN:  ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID:     ${{ secrets.META_PAGE_ID }}
+          META_IG_USER_ID:  ${{ secrets.META_IG_USER_ID }}
+          DRY_RUN:          ${{ github.event.inputs.dry_run }}
+        run: node scripts/publish-video.js "${{ steps.pick.outputs.rec }}"
+
+      - name: Tell Chenson it broke
+        if: failure()
+        run: |
+          echo "### Video publish failed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Check the preflight step first (the token), then the Publish step. If Instagram timed out processing, nothing was published on Instagram." >> $GITHUB_STEP_SUMMARY
