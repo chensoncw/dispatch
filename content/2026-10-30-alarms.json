@@ -1,0 +1,20 @@
+{
+    "_":  "Fri 30 Oct 2026, home slot. Clocks go back Sunday 1 Nov 2026. Sources READ 23 Oct 2026: Fox 29 article of 21 Oct 2026 (daylight saving time ends Sunday Nov. 1, 2026, 2 a.m.); U.S. Fire Administration \"Smoke Alarms\" page: \"Test the alarm monthly.\" \"Replace the batteries at least once every year.\" \"Replace the entire smoke alarm every 10 years.\" \"Put smoke alarms inside and outside each bedroom and sleeping area.\" \"Put alarms on every level of the home.\" The 23 Oct card already told people to check smoke alarms before the 31st; this one is the clock-change reminder with the monthly, yearly and ten-year facts. Not used: Red Cross (pages blocked), any carbon monoxide rule (not found on a readable page).",
+    "approved":  false,
+    "template":  "home-walkround",
+    "skin":  "autumn",
+    "eyebrow":  "Home",
+    "headline":  "When The Clocks Go Back\nCheck Your Smoke Alarms",
+    "titan_line":  "Echo, clocks go back one hour on Sunday, November 1. The U.S. Fire Administration has a few simple steps for smoke alarms.",
+    "rows":  [
+                 "Test each smoke alarm once a month, says the U.S. Fire Administration.",
+                 "Replace the batteries at least once a year. Replace the whole alarm every 10 years.",
+                 "Alarms go inside and outside each bedroom, and on every level of the home."
+             ],
+    "echo_line":  "Once a month? …Oh. I only check mine when the clocks change. I\u0027d start this weekend.",
+    "source":  "U.S. Fire Administration, Smoke Alarms · Fox 29, clock change date · read October 23, 2026",
+    "disclaimer":  "General fire-safety information, not an inspection or advice about any home. Ask your local fire department about yours.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-surprised",
+    "hashtag":  "#HomeownerTips"
+}
