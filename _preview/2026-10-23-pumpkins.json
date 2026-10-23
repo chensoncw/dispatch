@@ -1,0 +1,25 @@
+{
+    "_":  "Fri 23 Oct 2026 · home slot, the week before Halloween. Source READ 17 Oct 2026: NFPA Public Education Division \u0027Halloween Fire Safety Tips\u0027 tip sheet (copyright NFPA 2016; nfpa.org\u0027s own copy returned a server error, so the text was read from the identical NFPA sheet re-hosted by the Village of Penn Yan, NY, and matches NFPA\u0027s tips as reported by Fire Engineering). Wording used: \u0027Dried flowers, cornstalks and crepe paper catch fire easily. Keep all decorations away from open flames and other heat sources like light bulbs and heaters.\u0027; \u0027Use a battery-operated candle or glow-stick in jack-o-lanterns.\u0027; \u0027place lit pumpkins well away from anything that can burn and far enough out of the way of trick-or-treaters, doorsteps, walkways and yards.\u0027; \u0027keep exits clear of decorations, so nothing blocks escape routes.\u0027; \u0027Make sure all smoke alarms in the home are working.\u0027 The sheet\u0027s \u0027900 reported home fires each year\u0027 figure is NOT used because the sheet gives no years for it. Light register, not the sober home-safety template: no injury or death figure on the card.",
+    "approved":  true,
+    "template":  "home-walkround",
+    "skin":  "autumn",
+    "eyebrow":  "Home",
+    "headline":  "Before The Pumpkins\nGo Out On The Porch",
+    "titan_line":  "Echo, NFPA says dried flowers, cornstalks and crepe paper catch fire easily. They belong away from open flames and heat like light bulbs and heaters.",
+    "rows":  [
+                 "NFPA points to a battery candle or a glow stick inside a jack-o-lantern. Your fire department can say more.",
+                 "Lit pumpkins sit away from anything that burns and clear of doorsteps and walkways. Ask your fire department.",
+                 "Exits stay clear of decorations, so nothing blocks the way out. Your fire department can talk it through.",
+                 "Every smoke alarm in the home working before the 31st. A licensed electrician can check hardwired ones."
+             ],
+    "echo_line":  "Cornstalks catch fire easily? …Oh. My whole porch is cornstalks. I\u0027d move them away from the pumpkin first.",
+    "source":  "NFPA, Halloween Fire Safety Tips tip sheet · retrieved Oct 17, 2026",
+    "disclaimer":  "General fire-safety information, not an inspection or advice about any home. Ask your local fire department about yours.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-surprised",
+    "hashtag":  "#HomeownerTips",
+    "caption_details":  [
+                            "TEST LINE ONE: full address goes here.",
+                            "TEST LINE TWO: times go here."
+                        ]
+}
