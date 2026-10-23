@@ -1,0 +1,17 @@
+{
+    "_":  "Mon 26 Oct 2026, BUYER card, series Buying In This Market episode 2 (months of supply in plain words). Source READ 23 Oct 2026: Simply List Atlanta county statistics (Multiple Listing Service data), series \"supply\" for September 2026 vs September 2025: Henry 6.8 vs 5.3, Clayton 5.3 vs 4.4, Rockdale 5.1 vs 5.3, Newton 5.4 vs 4.9, Fayette 9.1 vs 6.1, Spalding 6.3 vs 5.4. Months of supply = how long it would take to sell the homes for sale at the current pace of sales (standard definition, not a figure). No verdict, no prediction.",
+    "approved":  false,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Buyers",
+    "headline":  "Buying In South Metro\nWhat Months Of Supply Means",
+    "turn_1":  "Echo, months of supply is how long it would take to sell every home for sale at today\u0027s pace. Henry County was at 6.8 months in September.",
+    "turn_2":  "Is that a lot?",
+    "turn_3":  "A year earlier it was 5.3. Clayton, Newton, Fayette and Spalding were also higher than last year. Rockdale was about the same.",
+    "echo_line":  "More months of supply? …Oh. That means more homes out there. I\u0027d look at a few before I pick one.",
+    "source":  "Multiple Listing Service via Simply List Atlanta · September 2026 · read October 23, 2026",
+    "disclaimer":  "General market information for six South Metro counties, not advice about any home or purchase. Numbers change month to month.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
