@@ -52,8 +52,10 @@ function caption(card) {
   ];
   // card.no_cta lets a single card drop the sales line. Used for weather alerts,
   // where "Comment INFO and I'll send it over" would be tone-deaf. 2026-10-09.
-  if (NO_CTA.includes(card.template) || card.no_cta === true) return sign.join('\n');
-  return [`Comment "INFO" below and I'll send it over.`, ``].concat(sign).join('\n');
+  // caption_details (2026-10-22, Chenson): the full address, times and anything extra for event cards live here, not on the card image.
+  const det = (Array.isArray(card.caption_details) && card.caption_details.length) ? card.caption_details.concat(['']) : [];
+  if (NO_CTA.includes(card.template) || card.no_cta === true) return det.concat(sign).join('\n');
+  return det.concat([`Comment "INFO" below and I'll send it over.`, ``]).concat(sign).join('\n');
 }
 
 function imageUrl(name) {
