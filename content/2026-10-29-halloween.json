@@ -1,0 +1,38 @@
+{
+    "_":  "Thu 29 Oct 2026, community slot, Halloween weekend. Sources READ 23 Oct 2026, each on a page showing the 2026 date: (1) Spooky Skelebration, Olde Town Conyers, Thu Oct 29, 5pm to 7pm family portion, 901 Railroad Street, Conyers: exploregeorgia.org listing provided by Olde Town Conyers (adult evening part after 7pm NOT used). (2) Trick or Treat on the McDonough Square, Fri Oct 30, 2pm to 5pm, 5 Griffin Street, McDonough: City of McDonough calendar (mcdonoughga.org/calendar); street address read through the fetch tool, confirm on the page. (3) Trunk or Treat, Rockdale County Sheriff\u0027s Office, Fri Oct 30, 6pm to 9:30pm, 911 Chambers Drive, Conyers: rockdalecountyga.gov events list. (4) 2026 Halloween Carnival, Morrow High School, 4930 Steele Road, Ellenwood, Sat Oct 31, 1pm to 4pm, Clayton County Parks and Recreation: claytoncountyga.gov news release of Oct 8, 2026 (no ZIP code used). Admission cost is not stated on the McDonough, Rockdale or Clayton pages, so no cost is claimed. The McDonough Square event also ran in the Oct 22 card; it is repeated because it is this week and Henry County has no other verified event.",
+    "approved":  false,
+    "template":  "community-diary",
+    "skin":  "autumn",
+    "eyebrow":  "Around The County",
+    "headline":  "Halloween Weekend\nAround The County",
+    "titan_line":  "Echo, four Halloween events are coming up in Conyers, McDonough and Ellenwood. All four are still ahead of us as this goes up.",
+    "items":  [
+                  {
+                      "when":  "Oct 29",
+                      "title":  "Spooky Skelebration",
+                      "detail":  "Olde Town Conyers, 901 Railroad Street, Conyers. 5pm to 7pm."
+                  },
+                  {
+                      "when":  "Oct 30",
+                      "title":  "Trick or Treat on the Square",
+                      "detail":  "McDonough Square, 5 Griffin Street, McDonough. 2pm to 5pm."
+                  },
+                  {
+                      "when":  "Oct 30",
+                      "title":  "Sheriff\u0027s Office Trunk or Treat",
+                      "detail":  "Rockdale County Sheriff\u0027s Office, 911 Chambers Drive, Conyers. 6pm to 9:30pm."
+                  },
+                  {
+                      "when":  "Oct 31",
+                      "title":  "Halloween Carnival",
+                      "detail":  "Morrow High School, 4930 Steele Road, Ellenwood. 1pm to 4pm."
+                  }
+              ],
+    "event_date":  "2026-10-29",
+    "echo_line":  "Four events in three days? …Oh. I only packed one bucket. I\u0027d start in Conyers.",
+    "source":  "City of McDonough, Rockdale and Clayton County, Explore Georgia · read October 23, 2026",
+    "disclaimer":  "Dates and times as listed by each organizer. Check with the organizer before you go, as plans can change.",
+    "hashtag":  "#AroundTheCounty",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-surprised"
+}
