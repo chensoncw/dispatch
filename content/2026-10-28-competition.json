@@ -1,0 +1,17 @@
+{
+    "_":  "Wed 28 Oct 2026, SELLER card, series Selling In This Market episode 1 (more homes competing than a year ago). Source READ 23 Oct 2026: Simply List Atlanta county statistics (Multiple Listing Service data), September 2026 vs September 2025. Homes for sale: Henry 1,050 vs 849, Clayton 674 vs 625, Fayette 272 vs 185, Newton 452 vs 416, Spalding 122 vs 117, Rockdale 409 vs 411. Henry closed sales 159 vs 160. No verdict, no prediction, no price on any home.",
+    "approved":  false,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Sellers",
+    "headline":  "Selling In South Metro\nMore Homes, Same Sales Pace",
+    "turn_1":  "Echo, Multiple Listing Service data for September shows 1,050 homes for sale in Henry County, up from 849 a year ago.",
+    "turn_2":  "More homes. Are fewer of them selling?",
+    "turn_3":  "No. 159 homes sold in Henry in September, about the same as the 160 a year ago. Four other counties had more homes for sale too.",
+    "echo_line":  "More homes, about the same sales? …Oh. I was going to list high and wait. I\u0027d rethink that.",
+    "source":  "Multiple Listing Service via Simply List Atlanta · September 2026 · read October 23, 2026",
+    "disclaimer":  "Counts across all homes in the county, not a valuation of any home. Pricing depends on each home\u0027s condition, location and comparable sales.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-surprised",
+    "hashtag":  "#RealEstateExplained"
+}
