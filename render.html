@@ -377,7 +377,28 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .card.story .greet p + p{font-size:31px}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style>
+
+/* ================================================================
+   PHOTO BACKGROUND (Chenson, 2026-10-22/23): every card sits on a still taken from one of the stock videos,
+   darkened so the words stay readable. The boxes take the same navy as the footer; the body text is bolder
+   and a little larger. The still is chosen the same way the video builder chooses its clip, so a card and its
+   video match. Override with "bg": "H4" in a card, or "bg": "none" for the plain navy look.
+   ================================================================ */
+.card.photo{background:linear-gradient(180deg,rgba(8,24,60,.78) 0%,rgba(8,24,60,.50) 40%,rgba(8,24,60,.50) 62%,rgba(8,24,60,.82) 100%),var(--bg) center/cover no-repeat}
+.card.photo .say .bub,.card.photo .row,.card.photo .item,.card.photo .defn,.card.photo .bub2,.card.photo .stat,.card.photo .datebox .dd,.card.photo .turn.b .bub2,.card.photo .echo{background:rgba(13,29,56,.90)}
+.card.photo .say p,.card.photo .row .t,.card.photo .item .d,.card.photo .check .t,.card.photo .bub2 p,.card.photo .echo p,.card.photo .defn p,.card.photo .foot .src,.card.photo .foot .dis{font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.card.photo .say p{font-size:21.5px}
+.card.photo .row .t,.card.photo .item .d,.card.photo .check .t{font-size:19.5px}
+.card.photo .bub2 p{font-size:21px}
+.card.photo .echo p{font-size:20.5px}
+.card.photo.story .say p{font-size:28px}
+.card.photo.story .row .t,.card.photo.story .item .d,.card.photo.story .check .t{font-size:26px}
+.card.photo.story .bub2 p{font-size:27px}
+.card.photo.story .echo p{font-size:27px}
+.card.photo.story .echo.big p{font-size:29px}
+.card.photo.story .foot .src{font-size:19px}
+.card.photo.story .foot .dis{font-size:17px}
+.card.photo.story .say .nm,.card.photo.story .echo .nm{font-size:17px}</style>
 
 <div id="app"></div>
 
@@ -831,6 +852,19 @@ T['holiday'] = function(c){
     '</div>';
 };
 
+/* which still sits behind the card: the card's own "bg" (or "stock"), else the same pick the video builder makes */
+function bgId(c){
+  var v = (c.bg !== undefined) ? c.bg : c.stock;
+  if (v === false || v === 'none') return '';
+  if (v) return String(v);
+  var t = c.template, L = 'M';
+  if (t === 'teaching-lesson') L = 'T'; else if (t === 'market-two-figures') L = 'M'; else if (t === 'community-diary') L = 'E';
+  else if (t === 'home-walkround' || t === 'home-safety' || t === 'single-statement') L = 'H';
+  var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(window.__NAME__ || '')), d;
+  if (m) d = Date.UTC(+m[1], +m[2]-1, +m[3]); else { var n = new Date(); d = Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()); }
+  var y = new Date(d).getUTCFullYear(), doy = Math.floor((d - Date.UTC(y, 0, 0)) / 86400000);
+  return L + ((doy % 5) + 1);
+}
 /* ---------------- render ---------------- */
 function renderCard(c, story){
   var fn = T[c.template];
@@ -841,7 +875,9 @@ function renderCard(c, story){
   // skin sits on either. Default stays dark so every existing record is unchanged.
   var theme = (c.theme === 'light') ? ' light' : '';
   var tall  = story ? ' story' : '';
-  return '<div class="card'+theme+tall+'">'+ skin(c.skin||'plain') + marks(c.marks) +
+  var bg = bgId(c), photo = '', style = '';
+  if (bg) { photo = ' photo'; theme = ''; style = ' style="--bg:url(backgrounds/'+bg+'.jpg)"'; }   // a photo card is always the dark colourway
+  return '<div class="card'+theme+photo+tall+'"'+style+'>'+ skin(c.skin||'plain') + marks(c.marks) +
          '<div class="hair"></div>'+
          '<div class="body">'+ fn(c) +'</div>'+ sig() +'</div>';
 }
