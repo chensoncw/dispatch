@@ -56,10 +56,11 @@ async function main() {
 
       // Inject the record rather than fetch it — fetch() is blocked on file://
       // in Chromium, which would silently fall back to the sample gallery.
-      await page.addInitScript(([c, s]) => {
+      await page.addInitScript(([c, s, n]) => {
         window.__CARD__ = c;
         window.__STORY__ = s;
-      }, [card, shape.story]);
+        window.__NAME__ = n;   // the file name, so the photo behind the card can be picked by date
+      }, [card, shape.story, name]);
 
       await page.goto('file://' + path.join(ROOT, 'render.html'), { waitUntil: 'load' });
 
