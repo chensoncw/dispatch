@@ -1,6 +1,6 @@
 {
     "_":  "Fri 30 Oct 2026, home slot. Clocks go back Sunday 1 Nov 2026. Sources READ 23 Oct 2026: Fox 29 article of 21 Oct 2026 (daylight saving time ends Sunday Nov. 1, 2026, 2 a.m.); U.S. Fire Administration \"Smoke Alarms\" page: \"Test the alarm monthly.\" \"Replace the batteries at least once every year.\" \"Replace the entire smoke alarm every 10 years.\" \"Put smoke alarms inside and outside each bedroom and sleeping area.\" \"Put alarms on every level of the home.\" The 23 Oct card already told people to check smoke alarms before the 31st; this one is the clock-change reminder with the monthly, yearly and ten-year facts. Not used: Red Cross (pages blocked), any carbon monoxide rule (not found on a readable page).",
-    "approved":  false,
+    "approved":  true,
     "template":  "home-walkround",
     "skin":  "autumn",
     "eyebrow":  "Home",
