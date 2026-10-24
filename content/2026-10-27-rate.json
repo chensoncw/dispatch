@@ -1,6 +1,6 @@
 {
     "_":  "Tue 27 Oct 2026, market slot, the rate. Source READ 23 Oct 2026 on freddiemac.com/pmms: 30-year fixed averaged 7.32% as of October 22, 2026, down from 7.40% last week; a year ago 6.19%. 15-year averaged 6.68%, down from 6.71%; a year ago 5.44%. PMMS publishes Thursdays at noon Eastern, so on Tue 27 Oct this is still the latest release. Built on market-two-figures (not market-one-figure). No projection.",
-    "approved":  false,
+    "approved":  true,
     "template":  "market-two-figures",
     "skin":  "plain",
     "theme":  "light",
