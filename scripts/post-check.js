@@ -17,7 +17,9 @@ const API = process.env.GRAPH_VERSION || 'v21.0';
 const TOKEN = process.env.META_PAGE_TOKEN;
 const IG_ID = process.env.META_IG_USER_ID;
 const ROOT = path.join(__dirname, '..');
-const today = new Date().toISOString().slice(0, 10);
+// "today" is the Eastern date: GitHub can start this run after midnight UTC, which is still evening here
+const etDay = d => new Date(d).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+const today = etDay(Date.now());
 
 function pick(dir, approvedOnly) {
   const d = path.join(ROOT, dir);
@@ -41,7 +43,7 @@ async function main() {
   const r = await fetch(`https://graph.facebook.com/${API}/${IG_ID}/media?fields=caption,timestamp,media_type&limit=25&access_token=${TOKEN}`);
   const j = await r.json().catch(() => ({}));
   if (!r.ok || j.error) { console.error(`post-check: could not read Instagram (${(j.error || {}).message || r.status}). Cannot tell.`); process.exit(1); }
-  const todays = (j.data || []).filter(p => p.timestamp && p.timestamp.slice(0, 10) === today && /Keller Williams Atlanta Partners/.test(p.caption || ''));
+  const todays = (j.data || []).filter(p => p.timestamp && etDay(p.timestamp) === today && /Keller Williams Atlanta Partners/.test(p.caption || ''));
   const reels = todays.filter(p => p.media_type === 'VIDEO');
   const images = todays.filter(p => p.media_type !== 'VIDEO');
 
