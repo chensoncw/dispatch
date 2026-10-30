@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-10-25",
+  "_built": "2026-10-30",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
@@ -11,7 +11,7 @@
     "series": 6,
     "_default": 12
   },
-  "count": 25,
+  "count": 30,
   "by_year": {
     "2026": {
       "2026-09": [
@@ -141,6 +141,33 @@
           "date": "2026-10-30",
           "topic": "alarms",
           "headline": "When The Clocks Go Back Check Your Smoke Alarms"
+        }
+      ],
+      "2026-11": [
+        {
+          "date": "2026-11-02",
+          "topic": "builder",
+          "headline": "Buying Across The U.S. Builders Offer Incentives"
+        },
+        {
+          "date": "2026-11-03",
+          "topic": "rate",
+          "headline": "The 30-Year Rate Fell Again To 7.24%"
+        },
+        {
+          "date": "2026-11-04",
+          "topic": "pricecuts",
+          "headline": "Selling Across The U.S. Homes Sold At 98% Of List"
+        },
+        {
+          "date": "2026-11-05",
+          "topic": "heroes5k",
+          "headline": "Saturday 5K, Fun Run In McDonough"
+        },
+        {
+          "date": "2026-11-06",
+          "topic": "faucets",
+          "headline": "Before The First Freeze A Look At Outdoor Faucets"
         }
       ]
     }
@@ -799,6 +826,44 @@
           "edged"
         ],
         "source": "Freddie Mac Primary Mortgage Market Survey · week of October 22, 2026 · read October 23, 2026"
+      },
+      {
+        "date": "2026-11-03",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "rate",
+        "template": "market-two-figures",
+        "slot": "market",
+        "headline": "The 30-Year Rate Fell Again To 7.24%",
+        "said": [
+          "The 30-Year Rate Fell Again\nTo 7.24%",
+          "National average · week of October 29, 2026",
+          "30-Year Fixed",
+          "7.24%",
+          "7.32% last week",
+          "15-Year Fixed",
+          "6.60%",
+          "6.68% last week",
+          "Echo, Freddie Mac says the 30-year fixed rate averaged 7.24% as of October 29, down from 7.32% last week. The 15-year averaged 6.60%, down from 6.68%.",
+          "Freddie Mac calls it the lowest level this month",
+          "A national average from loan applications, not a quote",
+          "Down again? …Oh, but a year ago was 6.17%. I'd compare a few lenders for my own number."
+        ],
+        "keywords": [
+          "year",
+          "week",
+          "fixed",
+          "last",
+          "down",
+          "rate",
+          "again",
+          "national",
+          "average",
+          "october",
+          "freddie",
+          "averaged"
+        ],
+        "source": "Freddie Mac Primary Mortgage Market Survey · week of October 29, 2026 · read October 30, 2026"
       }
     ],
     "escrow": [
@@ -1049,6 +1114,144 @@
           "sunday"
         ],
         "source": "U.S. Fire Administration, Smoke Alarms · Fox 29, clock change date · read October 23, 2026"
+      }
+    ],
+    "builder": [
+      {
+        "date": "2026-11-02",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "builder",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "Buying Across The U.S. Builders Offer Incentives",
+        "said": [
+          "Buying Across The U.S.\nBuilders Offer Incentives",
+          "Echo, the National Association of Home Builders (NAHB) says 65 out of every 100 builders offered buyers sales incentives in October.",
+          "Is that a lot of builders?",
+          "NAHB says it is the 19th month in a row at 60 out of 100 or more. These are national numbers, not South Metro numbers.",
+          "Builders are offering extras? …Oh. I'd ask a builder what they offer before I toured one."
+        ],
+        "keywords": [
+          "builders",
+          "offer",
+          "incentives",
+          "national",
+          "nahb",
+          "says",
+          "numbers",
+          "buying",
+          "across",
+          "echo",
+          "association",
+          "home"
+        ],
+        "source": "NAHB/Wells Fargo Housing Market Index · October 2026 · read October 30, 2026"
+      }
+    ],
+    "pricecuts": [
+      {
+        "date": "2026-11-04",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "pricecuts",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "Selling Across The U.S. Homes Sold At 98% Of List",
+        "said": [
+          "Selling Across The U.S.\nHomes Sold At 98% Of List",
+          "Echo, Redfin says homes that sold across the U.S. in the four weeks ending October 18 went for 98.4% of their list price.",
+          "But I keep hearing about price cuts.",
+          "About 22 out of every 100 listings had a price drop. About 23 out of every 100 homes sold above list price. These are U.S. numbers.",
+          "Price drops and above-list sales together? …Oh. I'd price mine to compete from the start."
+        ],
+        "keywords": [
+          "price",
+          "list",
+          "homes",
+          "sold",
+          "about",
+          "across",
+          "every",
+          "above",
+          "selling",
+          "echo",
+          "redfin",
+          "says"
+        ],
+        "source": "Redfin weekly housing market report · four weeks ending Oct 18, 2026 · read Oct 30, 2026"
+      }
+    ],
+    "heroes5k": [
+      {
+        "date": "2026-11-05",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "heroes5k",
+        "template": "community-spotlight",
+        "slot": "community",
+        "headline": "Saturday 5K, Fun Run In McDonough",
+        "said": [
+          "Saturday 5K, Fun Run\nIn McDonough",
+          "Echo, the Mighty Hero Homes 5K and Fun Run is this Saturday, November 7, in McDonough. It is dog and stroller friendly, with a free fun run for ages 6 and under.",
+          "Where",
+          "1720 Lake Dow Road, McDonough.",
+          "When",
+          "Saturday, Nov 7. The 5K starts at 8:00 am.",
+          "Worth knowing",
+          "Dog and stroller friendly. Free fun run, ages 6 and under.",
+          "2026-11-07",
+          "A fun run for ages 6 and under? …Oh. I'd bring the dog and cheer from the curb."
+        ],
+        "keywords": [
+          "saturday",
+          "mcdonough",
+          "ages",
+          "under",
+          "stroller",
+          "friendly",
+          "free",
+          "1720",
+          "2026",
+          "echo",
+          "mighty",
+          "hero"
+        ],
+        "source": "RunSignup, Mighty Hero Homes 5K and Fun Run · read October 30, 2026"
+      }
+    ],
+    "faucets": [
+      {
+        "date": "2026-11-06",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "faucets",
+        "template": "home-walkround",
+        "slot": "home",
+        "headline": "Before The First Freeze A Look At Outdoor Faucets",
+        "said": [
+          "Before The First Freeze\nA Look At Outdoor Faucets",
+          "Echo, the University of Georgia (UGA) Cooperative Extension has a few simple notes on outdoor pipes and hoses before freezing weather.",
+          "UGA Extension says a frozen exposed pipe can burst. A licensed plumber can look at yours.",
+          "UGA Extension says hoses can be disconnected from the faucet. A plumber can say more about yours.",
+          "Exposed valves and pipes can be wrapped, per UGA Extension. Ask a professional about the ones at your home.",
+          "My hose is still on the spigot? …Oh. I'd go look at it this weekend."
+        ],
+        "keywords": [
+          "extension",
+          "look",
+          "before",
+          "outdoor",
+          "pipes",
+          "hoses",
+          "says",
+          "exposed",
+          "plumber",
+          "yours",
+          "about",
+          "first"
+        ],
+        "source": "University of Georgia Cooperative Extension, winterizing outdoor pipes · seen October 30, 2026"
       }
     ]
   },
@@ -1909,6 +2112,174 @@
         "sunday"
       ],
       "source": "U.S. Fire Administration, Smoke Alarms · Fox 29, clock change date · read October 23, 2026"
+    },
+    {
+      "date": "2026-11-02",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "builder",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "Buying Across The U.S. Builders Offer Incentives",
+      "said": [
+        "Buying Across The U.S.\nBuilders Offer Incentives",
+        "Echo, the National Association of Home Builders (NAHB) says 65 out of every 100 builders offered buyers sales incentives in October.",
+        "Is that a lot of builders?",
+        "NAHB says it is the 19th month in a row at 60 out of 100 or more. These are national numbers, not South Metro numbers.",
+        "Builders are offering extras? …Oh. I'd ask a builder what they offer before I toured one."
+      ],
+      "keywords": [
+        "builders",
+        "offer",
+        "incentives",
+        "national",
+        "nahb",
+        "says",
+        "numbers",
+        "buying",
+        "across",
+        "echo",
+        "association",
+        "home"
+      ],
+      "source": "NAHB/Wells Fargo Housing Market Index · October 2026 · read October 30, 2026"
+    },
+    {
+      "date": "2026-11-03",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "rate",
+      "template": "market-two-figures",
+      "slot": "market",
+      "headline": "The 30-Year Rate Fell Again To 7.24%",
+      "said": [
+        "The 30-Year Rate Fell Again\nTo 7.24%",
+        "National average · week of October 29, 2026",
+        "30-Year Fixed",
+        "7.24%",
+        "7.32% last week",
+        "15-Year Fixed",
+        "6.60%",
+        "6.68% last week",
+        "Echo, Freddie Mac says the 30-year fixed rate averaged 7.24% as of October 29, down from 7.32% last week. The 15-year averaged 6.60%, down from 6.68%.",
+        "Freddie Mac calls it the lowest level this month",
+        "A national average from loan applications, not a quote",
+        "Down again? …Oh, but a year ago was 6.17%. I'd compare a few lenders for my own number."
+      ],
+      "keywords": [
+        "year",
+        "week",
+        "fixed",
+        "last",
+        "down",
+        "rate",
+        "again",
+        "national",
+        "average",
+        "october",
+        "freddie",
+        "averaged"
+      ],
+      "source": "Freddie Mac Primary Mortgage Market Survey · week of October 29, 2026 · read October 30, 2026"
+    },
+    {
+      "date": "2026-11-04",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "pricecuts",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "Selling Across The U.S. Homes Sold At 98% Of List",
+      "said": [
+        "Selling Across The U.S.\nHomes Sold At 98% Of List",
+        "Echo, Redfin says homes that sold across the U.S. in the four weeks ending October 18 went for 98.4% of their list price.",
+        "But I keep hearing about price cuts.",
+        "About 22 out of every 100 listings had a price drop. About 23 out of every 100 homes sold above list price. These are U.S. numbers.",
+        "Price drops and above-list sales together? …Oh. I'd price mine to compete from the start."
+      ],
+      "keywords": [
+        "price",
+        "list",
+        "homes",
+        "sold",
+        "about",
+        "across",
+        "every",
+        "above",
+        "selling",
+        "echo",
+        "redfin",
+        "says"
+      ],
+      "source": "Redfin weekly housing market report · four weeks ending Oct 18, 2026 · read Oct 30, 2026"
+    },
+    {
+      "date": "2026-11-05",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "heroes5k",
+      "template": "community-spotlight",
+      "slot": "community",
+      "headline": "Saturday 5K, Fun Run In McDonough",
+      "said": [
+        "Saturday 5K, Fun Run\nIn McDonough",
+        "Echo, the Mighty Hero Homes 5K and Fun Run is this Saturday, November 7, in McDonough. It is dog and stroller friendly, with a free fun run for ages 6 and under.",
+        "Where",
+        "1720 Lake Dow Road, McDonough.",
+        "When",
+        "Saturday, Nov 7. The 5K starts at 8:00 am.",
+        "Worth knowing",
+        "Dog and stroller friendly. Free fun run, ages 6 and under.",
+        "2026-11-07",
+        "A fun run for ages 6 and under? …Oh. I'd bring the dog and cheer from the curb."
+      ],
+      "keywords": [
+        "saturday",
+        "mcdonough",
+        "ages",
+        "under",
+        "stroller",
+        "friendly",
+        "free",
+        "1720",
+        "2026",
+        "echo",
+        "mighty",
+        "hero"
+      ],
+      "source": "RunSignup, Mighty Hero Homes 5K and Fun Run · read October 30, 2026"
+    },
+    {
+      "date": "2026-11-06",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "faucets",
+      "template": "home-walkround",
+      "slot": "home",
+      "headline": "Before The First Freeze A Look At Outdoor Faucets",
+      "said": [
+        "Before The First Freeze\nA Look At Outdoor Faucets",
+        "Echo, the University of Georgia (UGA) Cooperative Extension has a few simple notes on outdoor pipes and hoses before freezing weather.",
+        "UGA Extension says a frozen exposed pipe can burst. A licensed plumber can look at yours.",
+        "UGA Extension says hoses can be disconnected from the faucet. A plumber can say more about yours.",
+        "Exposed valves and pipes can be wrapped, per UGA Extension. Ask a professional about the ones at your home.",
+        "My hose is still on the spigot? …Oh. I'd go look at it this weekend."
+      ],
+      "keywords": [
+        "extension",
+        "look",
+        "before",
+        "outdoor",
+        "pipes",
+        "hoses",
+        "says",
+        "exposed",
+        "plumber",
+        "yours",
+        "about",
+        "first"
+      ],
+      "source": "University of Georgia Cooperative Extension, winterizing outdoor pipes · seen October 30, 2026"
     }
   ]
 }
