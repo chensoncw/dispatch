@@ -147,7 +147,7 @@
         {
           "date": "2026-11-02",
           "topic": "builder",
-          "headline": "Buying Across The U.S. Builders Offer Incentives"
+          "headline": "Buying In South Metro More Homes To Choose From"
         },
         {
           "date": "2026-11-03",
@@ -157,7 +157,7 @@
         {
           "date": "2026-11-04",
           "topic": "pricecuts",
-          "headline": "Selling Across The U.S. Homes Sold At 98% Of List"
+          "headline": "Selling In South Metro Henry Got 96.6% Of List"
         },
         {
           "date": "2026-11-05",
@@ -847,7 +847,7 @@
           "Echo, Freddie Mac says the 30-year fixed rate averaged 7.24% as of October 29, down from 7.32% last week. The 15-year averaged 6.60%, down from 6.68%.",
           "Freddie Mac calls it the lowest level this month",
           "A national average from loan applications, not a quote",
-          "Down again? …Oh, but a year ago was 6.17%. I'd compare a few lenders for my own number."
+          "It keeps inching down, and I check it more than the weather."
         ],
         "keywords": [
           "year",
@@ -856,12 +856,12 @@
           "last",
           "down",
           "rate",
-          "again",
           "national",
           "average",
           "october",
           "freddie",
-          "averaged"
+          "averaged",
+          "2026"
         ],
         "source": "Freddie Mac Primary Mortgage Market Survey · week of October 29, 2026 · read October 30, 2026"
       }
@@ -1124,29 +1124,29 @@
         "topic": "builder",
         "template": "teaching-lesson",
         "slot": "teaching",
-        "headline": "Buying Across The U.S. Builders Offer Incentives",
+        "headline": "Buying In South Metro More Homes To Choose From",
         "said": [
-          "Buying Across The U.S.\nBuilders Offer Incentives",
-          "Echo, the National Association of Home Builders (NAHB) says 65 out of every 100 builders offered buyers sales incentives in October.",
-          "Is that a lot of builders?",
-          "NAHB says it is the 19th month in a row at 60 out of 100 or more. These are national numbers, not South Metro numbers.",
-          "Builders are offering extras? …Oh. I'd ask a builder what they offer before I toured one."
+          "Buying In South Metro\nMore Homes To Choose From",
+          "Echo, Henry County had 1,059 homes for sale at the end of September, up from 849 a year ago.",
+          "So buyers have more to pick from?",
+          "Yes. Sellers also listed 416 new homes in September, against 333 the year before.",
+          "More homes on the list than last year. I'm going to need a bigger notepad."
         ],
         "keywords": [
-          "builders",
-          "offer",
-          "incentives",
-          "national",
-          "nahb",
-          "says",
-          "numbers",
+          "homes",
+          "more",
+          "year",
+          "september",
           "buying",
-          "across",
+          "south",
+          "metro",
+          "choose",
           "echo",
-          "association",
-          "home"
+          "henry",
+          "county",
+          "sale"
         ],
-        "source": "NAHB/Wells Fargo Housing Market Index · October 2026 · read October 30, 2026"
+        "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
       }
     ],
     "pricecuts": [
@@ -1157,29 +1157,29 @@
         "topic": "pricecuts",
         "template": "teaching-lesson",
         "slot": "teaching",
-        "headline": "Selling Across The U.S. Homes Sold At 98% Of List",
+        "headline": "Selling In South Metro Henry Got 96.6% Of List",
         "said": [
-          "Selling Across The U.S.\nHomes Sold At 98% Of List",
-          "Echo, Redfin says homes that sold across the U.S. in the four weeks ending October 18 went for 98.4% of their list price.",
+          "Selling In South Metro\nHenry Got 96.6% Of List",
+          "Echo, in September Henry County sellers got 96.6% of their original list price, up from 95.0% a year ago.",
           "But I keep hearing about price cuts.",
-          "About 22 out of every 100 listings had a price drop. About 23 out of every 100 homes sold above list price. These are U.S. numbers.",
-          "Price drops and above-list sales together? …Oh. I'd price mine to compete from the start."
+          "That number is measured from the original price, so the cuts are already counted. Homes sold in 54 days, down from 79 a year ago.",
+          "Midnight headline scrolling is officially over for me. The cuts were in that number the whole time."
         ],
         "keywords": [
           "price",
+          "cuts",
+          "henry",
           "list",
-          "homes",
-          "sold",
-          "about",
-          "across",
-          "every",
-          "above",
+          "original",
+          "year",
+          "number",
           "selling",
+          "south",
+          "metro",
           "echo",
-          "redfin",
-          "says"
+          "september"
         ],
-        "source": "Redfin weekly housing market report · four weeks ending Oct 18, 2026 · read Oct 30, 2026"
+        "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
       }
     ],
     "heroes5k": [
@@ -1231,25 +1231,25 @@
         "headline": "Before The First Freeze A Look At Outdoor Faucets",
         "said": [
           "Before The First Freeze\nA Look At Outdoor Faucets",
-          "Echo, the University of Georgia (UGA) Cooperative Extension has a few simple notes on outdoor pipes and hoses before freezing weather.",
-          "UGA Extension says a frozen exposed pipe can burst. A licensed plumber can look at yours.",
-          "UGA Extension says hoses can be disconnected from the faucet. A plumber can say more about yours.",
-          "Exposed valves and pipes can be wrapped, per UGA Extension. Ask a professional about the ones at your home.",
-          "My hose is still on the spigot? …Oh. I'd go look at it this weekend."
+          "Echo, the University of Georgia (UGA) Cooperative Extension has a few notes on outdoor pipes and hoses before freezing weather.",
+          "Water freezing inside an outdoor pipe can split it, and that means a call to a plumber.",
+          "Hoses just unscrew from the faucet, so no professional is needed for that one.",
+          "Exposed pipes and valves can be wrapped. A plumber can help with the hard-to-reach ones.",
+          "Mine has been on the spigot since August. Slippers on, walking out there now."
         ],
         "keywords": [
-          "extension",
-          "look",
-          "before",
           "outdoor",
+          "before",
           "pipes",
           "hoses",
-          "says",
-          "exposed",
+          "freezing",
           "plumber",
-          "yours",
-          "about",
-          "first"
+          "first",
+          "freeze",
+          "look",
+          "faucets",
+          "echo",
+          "university"
         ],
         "source": "University of Georgia Cooperative Extension, winterizing outdoor pipes · seen October 30, 2026"
       }
@@ -2120,29 +2120,29 @@
       "topic": "builder",
       "template": "teaching-lesson",
       "slot": "teaching",
-      "headline": "Buying Across The U.S. Builders Offer Incentives",
+      "headline": "Buying In South Metro More Homes To Choose From",
       "said": [
-        "Buying Across The U.S.\nBuilders Offer Incentives",
-        "Echo, the National Association of Home Builders (NAHB) says 65 out of every 100 builders offered buyers sales incentives in October.",
-        "Is that a lot of builders?",
-        "NAHB says it is the 19th month in a row at 60 out of 100 or more. These are national numbers, not South Metro numbers.",
-        "Builders are offering extras? …Oh. I'd ask a builder what they offer before I toured one."
+        "Buying In South Metro\nMore Homes To Choose From",
+        "Echo, Henry County had 1,059 homes for sale at the end of September, up from 849 a year ago.",
+        "So buyers have more to pick from?",
+        "Yes. Sellers also listed 416 new homes in September, against 333 the year before.",
+        "More homes on the list than last year. I'm going to need a bigger notepad."
       ],
       "keywords": [
-        "builders",
-        "offer",
-        "incentives",
-        "national",
-        "nahb",
-        "says",
-        "numbers",
+        "homes",
+        "more",
+        "year",
+        "september",
         "buying",
-        "across",
+        "south",
+        "metro",
+        "choose",
         "echo",
-        "association",
-        "home"
+        "henry",
+        "county",
+        "sale"
       ],
-      "source": "NAHB/Wells Fargo Housing Market Index · October 2026 · read October 30, 2026"
+      "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
     },
     {
       "date": "2026-11-03",
@@ -2164,7 +2164,7 @@
         "Echo, Freddie Mac says the 30-year fixed rate averaged 7.24% as of October 29, down from 7.32% last week. The 15-year averaged 6.60%, down from 6.68%.",
         "Freddie Mac calls it the lowest level this month",
         "A national average from loan applications, not a quote",
-        "Down again? …Oh, but a year ago was 6.17%. I'd compare a few lenders for my own number."
+        "It keeps inching down, and I check it more than the weather."
       ],
       "keywords": [
         "year",
@@ -2173,12 +2173,12 @@
         "last",
         "down",
         "rate",
-        "again",
         "national",
         "average",
         "october",
         "freddie",
-        "averaged"
+        "averaged",
+        "2026"
       ],
       "source": "Freddie Mac Primary Mortgage Market Survey · week of October 29, 2026 · read October 30, 2026"
     },
@@ -2189,29 +2189,29 @@
       "topic": "pricecuts",
       "template": "teaching-lesson",
       "slot": "teaching",
-      "headline": "Selling Across The U.S. Homes Sold At 98% Of List",
+      "headline": "Selling In South Metro Henry Got 96.6% Of List",
       "said": [
-        "Selling Across The U.S.\nHomes Sold At 98% Of List",
-        "Echo, Redfin says homes that sold across the U.S. in the four weeks ending October 18 went for 98.4% of their list price.",
+        "Selling In South Metro\nHenry Got 96.6% Of List",
+        "Echo, in September Henry County sellers got 96.6% of their original list price, up from 95.0% a year ago.",
         "But I keep hearing about price cuts.",
-        "About 22 out of every 100 listings had a price drop. About 23 out of every 100 homes sold above list price. These are U.S. numbers.",
-        "Price drops and above-list sales together? …Oh. I'd price mine to compete from the start."
+        "That number is measured from the original price, so the cuts are already counted. Homes sold in 54 days, down from 79 a year ago.",
+        "Midnight headline scrolling is officially over for me. The cuts were in that number the whole time."
       ],
       "keywords": [
         "price",
+        "cuts",
+        "henry",
         "list",
-        "homes",
-        "sold",
-        "about",
-        "across",
-        "every",
-        "above",
+        "original",
+        "year",
+        "number",
         "selling",
+        "south",
+        "metro",
         "echo",
-        "redfin",
-        "says"
+        "september"
       ],
-      "source": "Redfin weekly housing market report · four weeks ending Oct 18, 2026 · read Oct 30, 2026"
+      "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
     },
     {
       "date": "2026-11-05",
@@ -2259,25 +2259,25 @@
       "headline": "Before The First Freeze A Look At Outdoor Faucets",
       "said": [
         "Before The First Freeze\nA Look At Outdoor Faucets",
-        "Echo, the University of Georgia (UGA) Cooperative Extension has a few simple notes on outdoor pipes and hoses before freezing weather.",
-        "UGA Extension says a frozen exposed pipe can burst. A licensed plumber can look at yours.",
-        "UGA Extension says hoses can be disconnected from the faucet. A plumber can say more about yours.",
-        "Exposed valves and pipes can be wrapped, per UGA Extension. Ask a professional about the ones at your home.",
-        "My hose is still on the spigot? …Oh. I'd go look at it this weekend."
+        "Echo, the University of Georgia (UGA) Cooperative Extension has a few notes on outdoor pipes and hoses before freezing weather.",
+        "Water freezing inside an outdoor pipe can split it, and that means a call to a plumber.",
+        "Hoses just unscrew from the faucet, so no professional is needed for that one.",
+        "Exposed pipes and valves can be wrapped. A plumber can help with the hard-to-reach ones.",
+        "Mine has been on the spigot since August. Slippers on, walking out there now."
       ],
       "keywords": [
-        "extension",
-        "look",
-        "before",
         "outdoor",
+        "before",
         "pipes",
         "hoses",
-        "says",
-        "exposed",
+        "freezing",
         "plumber",
-        "yours",
-        "about",
-        "first"
+        "first",
+        "freeze",
+        "look",
+        "faucets",
+        "echo",
+        "university"
       ],
       "source": "University of Georgia Cooperative Extension, winterizing outdoor pipes · seen October 30, 2026"
     }
