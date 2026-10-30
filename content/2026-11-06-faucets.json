@@ -1,20 +1,20 @@
 {
-    "_":  "Fri 6 Nov 2026, home slot, seasonal (outdoor faucets and hoses before freezing weather). REVISED Oct 30: same message, looser wording, source named once in the card body, no price, no forecast. Source: University of Georgia Cooperative Extension (fieldreport.caes.uga.edu, Winterize outdoor pipes now, before they freeze), seen October 30 2026 only as search-result text, the page itself was not opened. Facts used: freezing can burst exposed pipes; hoses can be disconnected from faucets; exposed valves and pipes can be wrapped. The professional pointer sits in the burst-pipe row and the hard-to-reach row; the hose row says no professional is needed, which is my wording, not UGA's.",
+    "_":  "Fri 6 Nov 2026, home slot. REPLACED Oct 30 (file name kept). The old faucet topic is gone: the University of Georgia article I opened (fieldreport.caes.uga.edu, Winterize outdoor pipes now, before they freeze) is dated Oct 31 2007, so it is not new this week. How this one is new: clocks went back at 2 a.m. Sunday Nov 1 2026, and fire safety groups run their smoke alarm reminder that weekend. The card goes out the following Friday and speaks of it as past. SOURCE LIMIT: National Fire Protection Association (NFPA) Change Your Clock Change Your Battery points were seen only as search-result text on Oct 30. The NFPA page returned 404 and the Red Cross Georgia page returned 403, so no page was opened in full. Facts used: test alarms once a month; if one chirps the battery is low and should be changed right away. Left out: any fire statistic (none verified), the ten year replacement rule (snippet unclear). No price, no forecast. No figures used, so nothing from the used list repeats. Echo ending is new and not a rate, notepad or weather joke.",
     "approved":  false,
     "template":  "home-walkround",
     "skin":  "autumn",
     "eyebrow":  "Home",
-    "headline":  "Before The First Freeze\nA Look At Outdoor Faucets",
-    "titan_line":  "Echo, the University of Georgia (UGA) Cooperative Extension has a few notes on outdoor pipes and hoses before freezing weather.",
+    "headline":  "Clocks Went Back Sunday\nA Look At Your Smoke Alarms",
+    "titan_line":  "Echo, the clocks went back last Sunday, and fire safety groups use that weekend to remind people about smoke alarms.",
     "rows":  [
-                 "Water freezing inside an outdoor pipe can split it, and that means a call to a plumber.",
-                 "Hoses just unscrew from the faucet, so no professional is needed for that one.",
-                 "Exposed pipes and valves can be wrapped. A plumber can help with the hard-to-reach ones."
+                 "Press the test button on each alarm once a month. The fire department asks people to do this.",
+                 "A chirp means the battery is low. Swap it right away, like the fire department teaches.",
+                 "A licensed electrician can look at hard-wired alarms that act up."
              ],
-    "echo_line":  "Mine has been on the spigot since August. Slippers on, walking out there now.",
-    "source":  "University of Georgia Cooperative Extension, winterizing outdoor pipes · seen October 30, 2026",
-    "disclaimer":  "General home information, not an inspection or advice about any home. Ask a licensed plumber about yours.",
+    "echo_line":  "I pressed mine. It beeped back like it had been waiting all year.",
+    "source":  "National Fire Protection Association (NFPA), Change Your Clock, Change Your Battery · seen October 30, 2026",
+    "disclaimer":  "General home information, not an inspection or advice about any home. Ask your local fire department about yours.",
     "titan_pose":  "titan-front",
-    "echo_pose":  "echo-surprised",
+    "echo_pose":  "echo-notepad",
     "hashtag":  "#HomeownerTips"
 }
