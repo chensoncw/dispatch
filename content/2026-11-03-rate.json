@@ -1,0 +1,31 @@
+{
+    "_":  "Tue 3 Nov 2026, market slot, the rate. Source READ Oct 30 2026 on freddiemac.com/pmms: release of Oct 29 2026, 30-year fixed 7.24 percent, 15-year 6.60 percent; previous week (Oct 22) 7.32 and 6.68; a year ago (Oct 29 2025) 6.17 and 5.41. Freddie Mac page wording: the average 30-year rate declined again this week, reaching its lowest level this month. New angle this week: declined again and lowest of the month (earlier cards: vs last week, vs a year ago). The next release is Thu Nov 5 at noon Eastern, so on Tue Nov 3 this is still the newest. The chief economist statement was not on the page, so none is quoted. No projection.",
+    "approved":  false,
+    "template":  "market-two-figures",
+    "skin":  "plain",
+    "theme":  "light",
+    "eyebrow":  "Market",
+    "headline":  "The 30-Year Rate Fell Again\nTo 7.24%",
+    "asof":  "National average · week of October 29, 2026",
+    "stat_a":  {
+                   "label":  "30-Year Fixed",
+                   "value":  "7.24%",
+                   "sub":  "7.32% last week"
+               },
+    "stat_b":  {
+                   "label":  "15-Year Fixed",
+                   "value":  "6.60%",
+                   "sub":  "6.68% last week"
+               },
+    "titan_line":  "Echo, Freddie Mac says the 30-year fixed rate averaged 7.24% as of October 29, down from 7.32% last week. The 15-year averaged 6.60%, down from 6.68%.",
+    "checks_rows":  [
+                        "Freddie Mac calls it the lowest level this month",
+                        "A national average from loan applications, not a quote"
+                    ],
+    "echo_line":  "Down again? …Oh, but a year ago was 6.17%. I'd compare a few lenders for my own number.",
+    "source":  "Freddie Mac Primary Mortgage Market Survey · week of October 29, 2026 · read October 30, 2026",
+    "disclaimer":  "National weekly averages for the week stated. Not a rate quote or a prediction. Your own rate depends on your lender and your credit.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#MarketUpdate"
+}
