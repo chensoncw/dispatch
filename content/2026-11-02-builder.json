@@ -1,0 +1,17 @@
+{
+    "_":  "Mon 2 Nov 2026, BUYER card, series Buying In This Market episode 3 (builder incentives). Source: NAHB/Wells Fargo Housing Market Index for October 2026, released Fri Oct 23 2026, read in full on a Mortgage News Daily copy of the release on Oct 30 (nahb.org page itself not opened). Figures used: 65 percent of builders offered sales incentives, the 19th straight month at least 60 percent have. This is national data, so the headline says so. No South Metro builder figure was found. Rate buydowns are not named because the page opened does not give a buydown figure. Left out: the price cut share and the buyer traffic remark.",
+    "approved":  false,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Buyers",
+    "headline":  "Buying Across The U.S.\nBuilders Offer Incentives",
+    "turn_1":  "Echo, the National Association of Home Builders (NAHB) says 65 out of every 100 builders offered buyers sales incentives in October.",
+    "turn_2":  "Is that a lot of builders?",
+    "turn_3":  "NAHB says it is the 19th month in a row at 60 out of 100 or more. These are national numbers, not South Metro numbers.",
+    "echo_line":  "Builders are offering extras? …Oh. I'd ask a builder what they offer before I toured one.",
+    "source":  "NAHB/Wells Fargo Housing Market Index · October 2026 · read October 30, 2026",
+    "disclaimer":  "National survey of builders, not a South Metro figure and not advice about any home or purchase. Offers differ by builder.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
