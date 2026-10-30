@@ -147,7 +147,7 @@
         {
           "date": "2026-11-02",
           "topic": "builder",
-          "headline": "Buying In South Metro More Homes To Choose From"
+          "headline": "Buying In South Metro Rockdale Allows Backyard Homes"
         },
         {
           "date": "2026-11-03",
@@ -157,7 +157,7 @@
         {
           "date": "2026-11-04",
           "topic": "pricecuts",
-          "headline": "Selling In South Metro Henry Got 96.6% Of List"
+          "headline": "Selling In South Metro Atlanta Listings Down 26.5%"
         },
         {
           "date": "2026-11-05",
@@ -1124,29 +1124,29 @@
         "topic": "builder",
         "template": "teaching-lesson",
         "slot": "teaching",
-        "headline": "Buying In South Metro More Homes To Choose From",
+        "headline": "Buying In South Metro Rockdale Allows Backyard Homes",
         "said": [
-          "Buying In South Metro\nMore Homes To Choose From",
-          "Echo, Henry County had 1,059 homes for sale at the end of September, up from about 849 a year ago.",
-          "So buyers have more to pick from?",
-          "Yes. Sellers also listed 416 new homes in September, against about 333 the year before.",
-          "More homes on the list than last year. I'm going to need a bigger notepad."
+          "Buying In South Metro\nRockdale Allows Backyard Homes",
+          "Echo, Rockdale County has a new development code, in effect since October 1. It allows a second small home on eligible lots.",
+          "Like a guest house in the backyard?",
+          "Yes. They are called accessory dwelling units (ADUs). The code also sets rules for tiny home and cottage home villages.",
+          "A tiny home sounds great until I count how much stuff I own."
         ],
         "keywords": [
-          "homes",
-          "more",
-          "year",
-          "september",
-          "about",
+          "home",
+          "rockdale",
+          "allows",
+          "backyard",
+          "code",
+          "tiny",
           "buying",
           "south",
           "metro",
-          "choose",
+          "homes",
           "echo",
-          "henry",
           "county"
         ],
-        "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
+        "source": "Rockdale Citizen, Rockdale County code update · Oct 29, 2026 · read Oct 30, 2026"
       }
     ],
     "pricecuts": [
@@ -1157,29 +1157,29 @@
         "topic": "pricecuts",
         "template": "teaching-lesson",
         "slot": "teaching",
-        "headline": "Selling In South Metro Henry Got 96.6% Of List",
+        "headline": "Selling In South Metro Atlanta Listings Down 26.5%",
         "said": [
-          "Selling In South Metro\nHenry Got 96.6% Of List",
-          "Echo, in September Henry County sellers got 96.6% of their original list price, up from about 95% a year ago.",
-          "But I keep hearing about price cuts.",
-          "That number is measured from the original price, so the cuts are already counted. Homes sold in 54 days, down from 79 a year ago.",
-          "So the cuts were already counted. I worried for nothing, and I was really good at it."
+          "Selling In South Metro\nAtlanta Listings Down 26.5%",
+          "Echo, in metro Atlanta, new listings in the four weeks ending October 25 were down 26.5% from a year ago.",
+          "So sellers have fewer new homes to compete with?",
+          "Fewer new homes, yes. Homes going under contract were down 25.9% over the same four weeks, so the two slowed together.",
+          "Two numbers almost the same size. I noticed that one all by myself."
         ],
         "keywords": [
-          "price",
-          "cuts",
-          "henry",
-          "list",
-          "original",
-          "about",
-          "year",
-          "already",
-          "counted",
+          "down",
+          "homes",
+          "metro",
+          "atlanta",
+          "listings",
+          "four",
+          "weeks",
+          "were",
+          "fewer",
+          "same",
           "selling",
-          "south",
-          "metro"
+          "south"
         ],
-        "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
+        "source": "Redfin weekly housing report · four weeks ending Oct 25, 2026 · released Oct 29, 2026"
       }
     ],
     "heroes5k": [
@@ -2120,29 +2120,29 @@
       "topic": "builder",
       "template": "teaching-lesson",
       "slot": "teaching",
-      "headline": "Buying In South Metro More Homes To Choose From",
+      "headline": "Buying In South Metro Rockdale Allows Backyard Homes",
       "said": [
-        "Buying In South Metro\nMore Homes To Choose From",
-        "Echo, Henry County had 1,059 homes for sale at the end of September, up from about 849 a year ago.",
-        "So buyers have more to pick from?",
-        "Yes. Sellers also listed 416 new homes in September, against about 333 the year before.",
-        "More homes on the list than last year. I'm going to need a bigger notepad."
+        "Buying In South Metro\nRockdale Allows Backyard Homes",
+        "Echo, Rockdale County has a new development code, in effect since October 1. It allows a second small home on eligible lots.",
+        "Like a guest house in the backyard?",
+        "Yes. They are called accessory dwelling units (ADUs). The code also sets rules for tiny home and cottage home villages.",
+        "A tiny home sounds great until I count how much stuff I own."
       ],
       "keywords": [
-        "homes",
-        "more",
-        "year",
-        "september",
-        "about",
+        "home",
+        "rockdale",
+        "allows",
+        "backyard",
+        "code",
+        "tiny",
         "buying",
         "south",
         "metro",
-        "choose",
+        "homes",
         "echo",
-        "henry",
         "county"
       ],
-      "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
+      "source": "Rockdale Citizen, Rockdale County code update · Oct 29, 2026 · read Oct 30, 2026"
     },
     {
       "date": "2026-11-03",
@@ -2189,29 +2189,29 @@
       "topic": "pricecuts",
       "template": "teaching-lesson",
       "slot": "teaching",
-      "headline": "Selling In South Metro Henry Got 96.6% Of List",
+      "headline": "Selling In South Metro Atlanta Listings Down 26.5%",
       "said": [
-        "Selling In South Metro\nHenry Got 96.6% Of List",
-        "Echo, in September Henry County sellers got 96.6% of their original list price, up from about 95% a year ago.",
-        "But I keep hearing about price cuts.",
-        "That number is measured from the original price, so the cuts are already counted. Homes sold in 54 days, down from 79 a year ago.",
-        "So the cuts were already counted. I worried for nothing, and I was really good at it."
+        "Selling In South Metro\nAtlanta Listings Down 26.5%",
+        "Echo, in metro Atlanta, new listings in the four weeks ending October 25 were down 26.5% from a year ago.",
+        "So sellers have fewer new homes to compete with?",
+        "Fewer new homes, yes. Homes going under contract were down 25.9% over the same four weeks, so the two slowed together.",
+        "Two numbers almost the same size. I noticed that one all by myself."
       ],
       "keywords": [
-        "price",
-        "cuts",
-        "henry",
-        "list",
-        "original",
-        "about",
-        "year",
-        "already",
-        "counted",
+        "down",
+        "homes",
+        "metro",
+        "atlanta",
+        "listings",
+        "four",
+        "weeks",
+        "were",
+        "fewer",
+        "same",
         "selling",
-        "south",
-        "metro"
+        "south"
       ],
-      "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
+      "source": "Redfin weekly housing report · four weeks ending Oct 25, 2026 · released Oct 29, 2026"
     },
     {
       "date": "2026-11-05",
