@@ -1127,9 +1127,9 @@
         "headline": "Buying In South Metro More Homes To Choose From",
         "said": [
           "Buying In South Metro\nMore Homes To Choose From",
-          "Echo, Henry County had 1,059 homes for sale at the end of September, up from 849 a year ago.",
+          "Echo, Henry County had 1,059 homes for sale at the end of September, up from about 849 a year ago.",
           "So buyers have more to pick from?",
-          "Yes. Sellers also listed 416 new homes in September, against 333 the year before.",
+          "Yes. Sellers also listed 416 new homes in September, against about 333 the year before.",
           "More homes on the list than last year. I'm going to need a bigger notepad."
         ],
         "keywords": [
@@ -1137,14 +1137,14 @@
           "more",
           "year",
           "september",
+          "about",
           "buying",
           "south",
           "metro",
           "choose",
           "echo",
           "henry",
-          "county",
-          "sale"
+          "county"
         ],
         "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
       }
@@ -1160,10 +1160,10 @@
         "headline": "Selling In South Metro Henry Got 96.6% Of List",
         "said": [
           "Selling In South Metro\nHenry Got 96.6% Of List",
-          "Echo, in September Henry County sellers got 96.6% of their original list price, up from 95.0% a year ago.",
+          "Echo, in September Henry County sellers got 96.6% of their original list price, up from about 95% a year ago.",
           "But I keep hearing about price cuts.",
           "That number is measured from the original price, so the cuts are already counted. Homes sold in 54 days, down from 79 a year ago.",
-          "Midnight headline scrolling is officially over for me. The cuts were in that number the whole time."
+          "So the cuts were already counted. I worried for nothing, and I was really good at it."
         ],
         "keywords": [
           "price",
@@ -1171,13 +1171,13 @@
           "henry",
           "list",
           "original",
+          "about",
           "year",
-          "number",
+          "already",
+          "counted",
           "selling",
           "south",
-          "metro",
-          "echo",
-          "september"
+          "metro"
         ],
         "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
       }
@@ -2123,9 +2123,9 @@
       "headline": "Buying In South Metro More Homes To Choose From",
       "said": [
         "Buying In South Metro\nMore Homes To Choose From",
-        "Echo, Henry County had 1,059 homes for sale at the end of September, up from 849 a year ago.",
+        "Echo, Henry County had 1,059 homes for sale at the end of September, up from about 849 a year ago.",
         "So buyers have more to pick from?",
-        "Yes. Sellers also listed 416 new homes in September, against 333 the year before.",
+        "Yes. Sellers also listed 416 new homes in September, against about 333 the year before.",
         "More homes on the list than last year. I'm going to need a bigger notepad."
       ],
       "keywords": [
@@ -2133,14 +2133,14 @@
         "more",
         "year",
         "september",
+        "about",
         "buying",
         "south",
         "metro",
         "choose",
         "echo",
         "henry",
-        "county",
-        "sale"
+        "county"
       ],
       "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
     },
@@ -2192,10 +2192,10 @@
       "headline": "Selling In South Metro Henry Got 96.6% Of List",
       "said": [
         "Selling In South Metro\nHenry Got 96.6% Of List",
-        "Echo, in September Henry County sellers got 96.6% of their original list price, up from 95.0% a year ago.",
+        "Echo, in September Henry County sellers got 96.6% of their original list price, up from about 95% a year ago.",
         "But I keep hearing about price cuts.",
         "That number is measured from the original price, so the cuts are already counted. Homes sold in 54 days, down from 79 a year ago.",
-        "Midnight headline scrolling is officially over for me. The cuts were in that number the whole time."
+        "So the cuts were already counted. I worried for nothing, and I was really good at it."
       ],
       "keywords": [
         "price",
@@ -2203,13 +2203,13 @@
         "henry",
         "list",
         "original",
+        "about",
         "year",
-        "number",
+        "already",
+        "counted",
         "selling",
         "south",
-        "metro",
-        "echo",
-        "september"
+        "metro"
       ],
       "source": "Simply List Atlanta, Henry County report · September 2026 · read Oct 30, 2026"
     },
