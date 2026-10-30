@@ -1,0 +1,20 @@
+{
+    "_":  "Fri 6 Nov 2026, home slot, seasonal (outdoor faucets and hoses before freezing weather; calendar winterizing item). Source: University of Georgia Cooperative Extension (fieldreport.caes.uga.edu, Winterize outdoor pipes now, before they freeze, and related pieces), seen October 30 2026 only as search-result text, the pages themselves could not be opened in this run. Facts used: freezing can burst exposed pipes; hoses can be disconnected from faucets; exposed valves and pipes can be wrapped. Also opened in full: the EPA WaterSense Fix a Leak Week page, which says check an in-ground irrigation system each spring for frost damage, not used on the card. No cost, no instruction beyond what UGA says, each row names a professional.",
+    "approved":  false,
+    "template":  "home-walkround",
+    "skin":  "autumn",
+    "eyebrow":  "Home",
+    "headline":  "Before The First Freeze\nA Look At Outdoor Faucets",
+    "titan_line":  "Echo, the University of Georgia (UGA) Cooperative Extension has a few simple notes on outdoor pipes and hoses before freezing weather.",
+    "rows":  [
+                 "UGA Extension says a frozen exposed pipe can burst. A licensed plumber can look at yours.",
+                 "UGA Extension says hoses can be disconnected from the faucet. A plumber can say more about yours.",
+                 "Exposed valves and pipes can be wrapped, per UGA Extension. Ask a professional about the ones at your home."
+             ],
+    "echo_line":  "My hose is still on the spigot? …Oh. I'd go look at it this weekend.",
+    "source":  "University of Georgia Cooperative Extension, winterizing outdoor pipes · seen October 30, 2026",
+    "disclaimer":  "General home information, not an inspection or advice about any home. Ask a licensed plumber about yours.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-surprised",
+    "hashtag":  "#HomeownerTips"
+}
