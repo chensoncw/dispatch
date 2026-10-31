@@ -1,6 +1,6 @@
 {
     "_":  "Tue 3 Nov 2026, market slot, the rate. REVISED Oct 30: facts unchanged, only echo_line rewritten (old ending retired). Source OPENED Oct 30 2026 on freddiemac.com/pmms (page text via fetch): release of Oct 29 2026, 30-year fixed 7.24 percent, 15-year 6.60; previous week 7.32 and 6.68; a year ago 6.17 and 5.41. Page wording: declined again, lowest level this month. The rate is national by nature, headline does not say U.S. Next release Thu Nov 5 at noon Eastern. No projection.",
-    "approved":  false,
+    "approved":  true,
     "template":  "market-two-figures",
     "skin":  "plain",
     "theme":  "light",
