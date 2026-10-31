@@ -763,8 +763,9 @@ T['community-diary'] = function(c){
 T['community-spotlight'] = function(c){
   return eyebrow(c.eyebrow||'Around The County') + head(c.headline) + say(c,c.titan_line) +
     '<div class="rows">'+(c.rows||[]).map(function(r,i){
-      return '<div class="row"><div class="n">'+(i+1)+'</div><div class="t"><b>'+
-        esc(r.label)+'</b> '+rich(r.detail)+'</div></div>'; }).join('')+'</div>' +
+      var lab = (r && typeof r === 'object' && r.label) ? String(r.label).trim() : '';   /* a row with no label shows the sentence only (Chenson 2026-10-30) */
+      var det = (typeof r === 'string') ? r : r.detail;
+      return '<div class="row"><div class="n">'+(i+1)+'</div><div class="t">'+(lab ? '<b>'+esc(lab)+'</b> ' : '')+rich(det)+'</div></div>'; }).join('')+'</div>' +
     echo(c) + foot(c);
 };
 
