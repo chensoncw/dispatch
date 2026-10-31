@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-10-30",
+  "_built": "2026-10-31",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
@@ -147,7 +147,7 @@
         {
           "date": "2026-11-02",
           "topic": "builder",
-          "headline": "Buying In South Metro Rockdale Allows Backyard Homes"
+          "headline": "Rockdale Now Allows Smaller Homes On Eligible Lots"
         },
         {
           "date": "2026-11-03",
@@ -167,7 +167,7 @@
         {
           "date": "2026-11-06",
           "topic": "faucets",
-          "headline": "Clocks Went Back Sunday A Look At Your Smoke Alarms"
+          "headline": "Fallen Leaves Make Free Mulch Mow Them, Don't Bag Them"
         }
       ]
     }
@@ -1124,29 +1124,29 @@
         "topic": "builder",
         "template": "teaching-lesson",
         "slot": "teaching",
-        "headline": "Buying In South Metro Rockdale Allows Backyard Homes",
+        "headline": "Rockdale Now Allows Smaller Homes On Eligible Lots",
         "said": [
-          "Buying In South Metro\nRockdale Allows Backyard Homes",
-          "Echo, Rockdale County has a new development code, in effect since October 1. It allows a second small home on eligible lots.",
-          "Like a guest house in the backyard?",
-          "Yes. They are called accessory dwelling units (ADUs). The code also sets rules for tiny home and cottage home villages.",
-          "A tiny home sounds great until I count how much stuff I own."
+          "Rockdale Now Allows\nSmaller Homes On Eligible Lots",
+          "Echo, Rockdale County's new development code took effect October 1. Owners on eligible lots can add a smaller second home.",
+          "A second home on the same lot? What does that open up?",
+          "Think guest cottage or in-law suite on the same lot as the main house. The code also sets standards for tiny home and cottage home villages.",
+          "So a parent could move in next door, and a buyer gets one more kind of home to look at. I only need a lot first."
         ],
         "keywords": [
           "home",
           "rockdale",
-          "allows",
-          "backyard",
+          "smaller",
+          "eligible",
+          "lots",
           "code",
-          "tiny",
-          "buying",
-          "south",
-          "metro",
+          "second",
+          "same",
+          "cottage",
+          "allows",
           "homes",
-          "echo",
-          "county"
+          "echo"
         ],
-        "source": "Rockdale Citizen, Rockdale County code update · Oct 29, 2026 · read Oct 30, 2026"
+        "source": "Rockdale County news release · rockdalecountyga.gov · posted October 26, 2026"
       }
     ],
     "pricecuts": [
@@ -1160,22 +1160,22 @@
         "headline": "Selling In South Metro Atlanta Listings Down 26.5%",
         "said": [
           "Selling In South Metro\nAtlanta Listings Down 26.5%",
-          "Echo, in metro Atlanta, new listings in the four weeks ending October 25 were down 26.5% from a year ago.",
-          "So sellers have fewer new homes to compete with?",
-          "Fewer new homes, yes. Homes going under contract were down 25.9% over the same four weeks, so the two slowed together.",
-          "Two numbers almost the same size. I noticed that one all by myself."
+          "Echo, fewer homes are coming up for sale in metro Atlanta. New listings were down 26.5% from a year ago, over the four weeks ending Oct 25.",
+          "So what does that mean for a seller?",
+          "A seller has fewer new homes competing for buyers. Homes going under contract fell 25.9%, so fewer buyers are signing on too.",
+          "So fewer new homes to pick from and fewer buyers signing. I can barely pick a lunch spot."
         ],
         "keywords": [
-          "down",
+          "fewer",
           "homes",
+          "buyers",
           "metro",
           "atlanta",
           "listings",
-          "four",
-          "weeks",
-          "were",
-          "fewer",
-          "same",
+          "down",
+          "seller",
+          "signing",
+          "pick",
           "selling",
           "south"
         ],
@@ -1192,6 +1192,7 @@
         "slot": "community",
         "headline": "Saturday 5K, Fun Run In McDonough",
         "said": [
+          "E6",
           "Saturday 5K, Fun Run\nIn McDonough",
           "Echo, the Mighty Hero Homes 5K and Fun Run is this Saturday, November 7, in McDonough. It is dog and stroller friendly, with a free fun run for ages 6 and under.",
           "Where",
@@ -1201,16 +1202,16 @@
           "Worth knowing",
           "Dog and stroller friendly. Free fun run, ages 6 and under.",
           "2026-11-07",
-          "A fun run for ages 6 and under? …Oh. I'd bring the dog and cheer from the curb."
+          "Saturday at 8 a.m. is earlier than my legs usually agree to."
         ],
         "keywords": [
           "saturday",
           "mcdonough",
-          "ages",
-          "under",
           "stroller",
           "friendly",
           "free",
+          "ages",
+          "under",
           "1720",
           "2026",
           "echo",
@@ -1228,30 +1229,32 @@
         "topic": "faucets",
         "template": "home-walkround",
         "slot": "home",
-        "headline": "Clocks Went Back Sunday A Look At Your Smoke Alarms",
+        "headline": "Fallen Leaves Make Free Mulch Mow Them, Don't Bag Them",
         "said": [
-          "Clocks Went Back Sunday\nA Look At Your Smoke Alarms",
-          "Echo, the clocks went back last Sunday, and fire safety groups use that weekend to remind people about smoke alarms.",
-          "Press the test button on each alarm once a month. The fire department asks people to do this.",
-          "A chirp means the battery is low. Swap it right away, like the fire department teaches.",
-          "A licensed electrician can look at hard-wired alarms that act up.",
-          "I pressed mine. It beeped back like it had been waiting all year."
+          "H4",
+          "Fallen Leaves Make Free Mulch\nMow Them, Don't Bag Them",
+          "Echo, if you don't want to rake, just run the mower over the leaves. Chopped leaves are useful, and a thick pile can smother the lawn.",
+          "Mulch: spread chopped leaves around trees, shrubs and flower beds.",
+          "In the cold they work like a blanket on the roots.",
+          "Compost: chopped leaves are a good addition to a compost pile.",
+          "Soil: as they break down, chopped leaves feed the soil.",
+          "Mulch, compost and a clear lawn. Those leaves work harder than I do."
         ],
         "keywords": [
-          "back",
-          "alarms",
-          "fire",
-          "clocks",
-          "went",
-          "sunday",
-          "look",
-          "smoke",
-          "people",
-          "department",
-          "like",
+          "leaves",
+          "chopped",
+          "mulch",
+          "compost",
+          "pile",
+          "lawn",
+          "work",
+          "soil",
+          "fallen",
+          "make",
+          "free",
           "echo"
         ],
-        "source": "National Fire Protection Association (NFPA), Change Your Clock, Change Your Battery · seen October 30, 2026"
+        "source": "General fall yard care knowledge"
       }
     ]
   },
@@ -2120,29 +2123,29 @@
       "topic": "builder",
       "template": "teaching-lesson",
       "slot": "teaching",
-      "headline": "Buying In South Metro Rockdale Allows Backyard Homes",
+      "headline": "Rockdale Now Allows Smaller Homes On Eligible Lots",
       "said": [
-        "Buying In South Metro\nRockdale Allows Backyard Homes",
-        "Echo, Rockdale County has a new development code, in effect since October 1. It allows a second small home on eligible lots.",
-        "Like a guest house in the backyard?",
-        "Yes. They are called accessory dwelling units (ADUs). The code also sets rules for tiny home and cottage home villages.",
-        "A tiny home sounds great until I count how much stuff I own."
+        "Rockdale Now Allows\nSmaller Homes On Eligible Lots",
+        "Echo, Rockdale County's new development code took effect October 1. Owners on eligible lots can add a smaller second home.",
+        "A second home on the same lot? What does that open up?",
+        "Think guest cottage or in-law suite on the same lot as the main house. The code also sets standards for tiny home and cottage home villages.",
+        "So a parent could move in next door, and a buyer gets one more kind of home to look at. I only need a lot first."
       ],
       "keywords": [
         "home",
         "rockdale",
-        "allows",
-        "backyard",
+        "smaller",
+        "eligible",
+        "lots",
         "code",
-        "tiny",
-        "buying",
-        "south",
-        "metro",
+        "second",
+        "same",
+        "cottage",
+        "allows",
         "homes",
-        "echo",
-        "county"
+        "echo"
       ],
-      "source": "Rockdale Citizen, Rockdale County code update · Oct 29, 2026 · read Oct 30, 2026"
+      "source": "Rockdale County news release · rockdalecountyga.gov · posted October 26, 2026"
     },
     {
       "date": "2026-11-03",
@@ -2192,22 +2195,22 @@
       "headline": "Selling In South Metro Atlanta Listings Down 26.5%",
       "said": [
         "Selling In South Metro\nAtlanta Listings Down 26.5%",
-        "Echo, in metro Atlanta, new listings in the four weeks ending October 25 were down 26.5% from a year ago.",
-        "So sellers have fewer new homes to compete with?",
-        "Fewer new homes, yes. Homes going under contract were down 25.9% over the same four weeks, so the two slowed together.",
-        "Two numbers almost the same size. I noticed that one all by myself."
+        "Echo, fewer homes are coming up for sale in metro Atlanta. New listings were down 26.5% from a year ago, over the four weeks ending Oct 25.",
+        "So what does that mean for a seller?",
+        "A seller has fewer new homes competing for buyers. Homes going under contract fell 25.9%, so fewer buyers are signing on too.",
+        "So fewer new homes to pick from and fewer buyers signing. I can barely pick a lunch spot."
       ],
       "keywords": [
-        "down",
+        "fewer",
         "homes",
+        "buyers",
         "metro",
         "atlanta",
         "listings",
-        "four",
-        "weeks",
-        "were",
-        "fewer",
-        "same",
+        "down",
+        "seller",
+        "signing",
+        "pick",
         "selling",
         "south"
       ],
@@ -2222,6 +2225,7 @@
       "slot": "community",
       "headline": "Saturday 5K, Fun Run In McDonough",
       "said": [
+        "E6",
         "Saturday 5K, Fun Run\nIn McDonough",
         "Echo, the Mighty Hero Homes 5K and Fun Run is this Saturday, November 7, in McDonough. It is dog and stroller friendly, with a free fun run for ages 6 and under.",
         "Where",
@@ -2231,16 +2235,16 @@
         "Worth knowing",
         "Dog and stroller friendly. Free fun run, ages 6 and under.",
         "2026-11-07",
-        "A fun run for ages 6 and under? …Oh. I'd bring the dog and cheer from the curb."
+        "Saturday at 8 a.m. is earlier than my legs usually agree to."
       ],
       "keywords": [
         "saturday",
         "mcdonough",
-        "ages",
-        "under",
         "stroller",
         "friendly",
         "free",
+        "ages",
+        "under",
         "1720",
         "2026",
         "echo",
@@ -2256,30 +2260,32 @@
       "topic": "faucets",
       "template": "home-walkround",
       "slot": "home",
-      "headline": "Clocks Went Back Sunday A Look At Your Smoke Alarms",
+      "headline": "Fallen Leaves Make Free Mulch Mow Them, Don't Bag Them",
       "said": [
-        "Clocks Went Back Sunday\nA Look At Your Smoke Alarms",
-        "Echo, the clocks went back last Sunday, and fire safety groups use that weekend to remind people about smoke alarms.",
-        "Press the test button on each alarm once a month. The fire department asks people to do this.",
-        "A chirp means the battery is low. Swap it right away, like the fire department teaches.",
-        "A licensed electrician can look at hard-wired alarms that act up.",
-        "I pressed mine. It beeped back like it had been waiting all year."
+        "H4",
+        "Fallen Leaves Make Free Mulch\nMow Them, Don't Bag Them",
+        "Echo, if you don't want to rake, just run the mower over the leaves. Chopped leaves are useful, and a thick pile can smother the lawn.",
+        "Mulch: spread chopped leaves around trees, shrubs and flower beds.",
+        "In the cold they work like a blanket on the roots.",
+        "Compost: chopped leaves are a good addition to a compost pile.",
+        "Soil: as they break down, chopped leaves feed the soil.",
+        "Mulch, compost and a clear lawn. Those leaves work harder than I do."
       ],
       "keywords": [
-        "back",
-        "alarms",
-        "fire",
-        "clocks",
-        "went",
-        "sunday",
-        "look",
-        "smoke",
-        "people",
-        "department",
-        "like",
+        "leaves",
+        "chopped",
+        "mulch",
+        "compost",
+        "pile",
+        "lawn",
+        "work",
+        "soil",
+        "fallen",
+        "make",
+        "free",
         "echo"
       ],
-      "source": "National Fire Protection Association (NFPA), Change Your Clock, Change Your Battery · seen October 30, 2026"
+      "source": "General fall yard care knowledge"
     }
   ]
 }
