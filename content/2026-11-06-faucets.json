@@ -1,21 +1,21 @@
 {
-    "_":  "Fri 6 Nov 2026, home slot, step 2 seasonal upkeep (leaf drop; step 1 dry). File name kept from the earlier faucet topic. Every row is a claim the Colorado State University Extension page supports (opened in full by the Social Media chat and the box writer; reviewed July 2024): leaves as mulch insulate tender or newly planted plants; leaves in garden beds are organic matter; tree leaves go in compost; mowing leaves into the lawn adds organic matter to the soil over time; mow with the deck on its highest setting. Not on the page and therefore left out: trees or shrubs mulching, a blanket on the roots, a thick pile smothering the lawn. The Minnesota page was not available. No figure, no price, no forecast, no professional line (the card is yard leaves, not trade work).",
+    "_":  "Fri 6 Nov 2026, home slot, step 2 seasonal upkeep (leaf drop; step 1 dry). File name kept from the earlier faucet topic. Every row is a claim the Colorado State University Extension page supports (opened in full by the Social Media chat and the box writer; reviewed July 2024): leaves as mulch insulate tender or newly planted plants; leaves in garden beds are organic matter; tree leaves go in compost; mowing leaves into the lawn adds organic matter to the soil over time. REWORKED Oct 30 night on Chenson's order (safety over a hook): the just-run-the-mower-over-them hook is gone; the card now says leaves can do work around the yard, and the disclaimer carries the mower safety note. Not on the page and therefore left out: trees or shrubs mulching, a blanket on the roots, a thick pile smothering the lawn. The Minnesota page was not available. No figure, no price, no forecast, no professional line (the card is yard leaves, not trade work).",
     "approved":  true,
     "template":  "home-walkround",
     "skin":  "autumn",
     "bg":  "H4",
     "eyebrow":  "Home",
-    "headline":  "Fallen Leaves Make Free Mulch\nMow Them, Don\u0027t Bag Them",
-    "titan_line":  "Echo, if you don\u0027t want to rake, just run the mower over the leaves. Set it on its highest setting, and chopped leaves are useful around the yard.",
+    "headline":  "Fallen Leaves Are Free Mulch\nFour Ways To Use Them",
+    "titan_line":  "Echo, before those leaves go in a bag, they can do some work around the yard.",
     "rows":  [
-                 "Mulch: use chopped leaves in garden beds and around young plants.",
+                 "Mulch: use leaves in garden beds and around young plants.",
                  "In the cold they help protect young or tender plants.",
-                 "Compost: chopped leaves are a good addition to a compost pile.",
-                 "Soil: as they break down, chopped leaves add organic matter to the soil."
+                 "Compost: leaves are a good addition to a compost pile.",
+                 "Soil: as they break down, leaves add organic matter to the soil."
              ],
     "echo_line":  "Mulch, compost and richer soil. Those leaves work harder than I do.",
     "source":  "Colorado State University Extension, Using Leaves in the Landscape, reviewed July 2024 · read Oct 30, 2026",
-    "disclaimer":  "General home information. Check your own yard and mower before you start.",
+    "disclaimer":  "General home information, not advice about any home. If you chop leaves with a mower, clear sticks and stones first and follow its safety guide.",
     "titan_pose":  "titan-front",
     "echo_pose":  "echo-notepad",
     "hashtag":  "#HomeownerTips"
