@@ -8,18 +8,9 @@
     "headline":  "Saturday 5K, Fun Run\nIn McDonough",
     "titan_line":  "Echo, the Mighty Hero Homes 5K and Fun Run is this Saturday, November 7, in McDonough. It is dog and stroller friendly, with a free fun run for ages 6 and under.",
     "rows":  [
-                 {
-                     "label":  "Where",
-                     "detail":  "1720 Lake Dow Road, McDonough."
-                 },
-                 {
-                     "label":  "When",
-                     "detail":  "Saturday, Nov 7. The 5K starts at 8:00 am."
-                 },
-                 {
-                     "label":  "Worth knowing",
-                     "detail":  "Dog and stroller friendly. Free fun run, ages 6 and under."
-                 }
+                 "At 1720 Lake Dow Road in McDonough.",
+                 "On Saturday, Nov 7. The 5K starts at 8:00 am.",
+                 "Dog and stroller friendly. Free fun run for ages 6 and under."
              ],
     "event_date":  "2026-11-07",
     "echo_line":  "Saturday at 8 a.m. is earlier than my legs usually agree to.",
