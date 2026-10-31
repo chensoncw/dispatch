@@ -241,7 +241,11 @@ function checkRules(file, card, tpl, tplName) {
   }
 
   // --- home rows name a professional ---
-  if (tplName === 'home-walkround' || tplName === 'home-safety') {
+  // Exception (Social Media chat, Oct 30 2026, Chenson's rules 16 and 24): a card whose source line begins with "General" and ends with "knowledge"
+  // (for example "General seasonal home knowledge", "General fall yard care knowledge") states no figure, rule or work instruction, so there is
+  // nothing to point a professional at. Every other home card still names one in every row.
+  const generalKnowledge = /^General\b.*\bknowledge$/i.test((card.source || '').trim());
+  if ((tplName === 'home-walkround' || tplName === 'home-safety') && !generalKnowledge) {
     (card.rows || []).forEach((row, i) => {
       const s = typeof row === 'string' ? row : (row.detail || '');
       if (!findPhrase(s, PROFESSIONALS)) {
