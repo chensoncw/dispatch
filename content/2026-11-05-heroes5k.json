@@ -1,8 +1,9 @@
 {
-    "_":  "Thu 5 Nov 2026, community slot, spotlight. Source READ Oct 30 2026: RunSignup race page for the Mighty Hero Homes 5K and Fun Run: Saturday Nov 7 2026, 5K starts 8:00 AM, 1720 Lake Dow Rd., McDonough GA, dog and stroller friendly, 50M Fun Run for ages 6 and under with no registration fee. Entry fee for the 5K left out: listings show different amounts. Who the race benefits was seen only in search snippets, not on an opened page, so it is not on the card. Only one event could be verified for the week: the McDonough, Rockdale, Henry and Explore Georgia event pages were blocked or could not be opened in this run, so a diary card was not possible. A Covington Fall Festival and a Griffin Veterans Day concert, both Nov 7, were seen only in snippets and were not used.",
+    "_":  "Thu 5 Nov 2026, community slot, spotlight. Source READ Oct 30 2026: RunSignup race page for the Mighty Hero Homes 5K and Fun Run: Saturday Nov 7 2026, 5K starts 8:00 AM, 1720 Lake Dow Rd., McDonough GA, dog and stroller friendly, 50M Fun Run for ages 6 and under with no registration fee. Entry fee for the 5K left out: listings show different amounts. Who the race benefits was seen only in search snippets, not on an opened page, so it is not on the card. Only one event could be verified for the week: the McDonough, Rockdale, Henry and Explore Georgia event pages were blocked or could not be opened in this run, so a diary card was not possible. A Covington Fall Festival and a Griffin Veterans Day concert, both Nov 7, were seen only in snippets and were not used. REVISION Oct 30: only Echo's ending changed and the bg field E6 (finish-line picture) was added.",
     "approved":  false,
     "template":  "community-spotlight",
     "skin":  "autumn",
+    "bg":  "E6",
     "eyebrow":  "Around The County",
     "headline":  "Saturday 5K, Fun Run\nIn McDonough",
     "titan_line":  "Echo, the Mighty Hero Homes 5K and Fun Run is this Saturday, November 7, in McDonough. It is dog and stroller friendly, with a free fun run for ages 6 and under.",
@@ -21,7 +22,7 @@
                  }
              ],
     "event_date":  "2026-11-07",
-    "echo_line":  "A fun run for ages 6 and under? …Oh. I'd bring the dog and cheer from the curb.",
+    "echo_line":  "Saturday at 8 a.m. is earlier than my legs usually agree to.",
     "source":  "RunSignup, Mighty Hero Homes 5K and Fun Run · read October 30, 2026",
     "disclaimer":  "Details as listed by the organizer. Check the race page for fees and any changes before you go.",
     "hashtag":  "#AroundTheCounty",
