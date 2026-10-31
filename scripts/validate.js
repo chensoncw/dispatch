@@ -244,7 +244,12 @@ function checkRules(file, card, tpl, tplName) {
   // Exception (Social Media chat, Oct 30 2026, Chenson's rules 16 and 24): a card whose source line begins with "General" and ends with "knowledge"
   // (for example "General seasonal home knowledge", "General fall yard care knowledge") states no figure, rule or work instruction, so there is
   // nothing to point a professional at. Every other home card still names one in every row.
-  const generalKnowledge = /^General\b.*\bknowledge$/i.test((card.source || '').trim());
+  const srcLine = (card.source || '').trim();
+  const rowsText = (card.rows || []).map(r => typeof r === 'string' ? r : (r.detail || '')).join(' ') + ' ' + (card.titan_line || '');
+  // Extension cards (Chenson, Oct 30, rule 26): a source that names a university Extension counts, unless the rows or Titan's line touch trade work.
+  // This is a keyword list; the Social Media chat's review (check 7) reads each Extension card's rows for trade risk.
+  const tradeRisk = /\b(electric\w*|\w*wir(?:e|es|ed|ing)\w*|breaker|gas|furnace|boiler|water heater|plumb\w*|pipe\w*|roof\w*|chimney|ladder|smoke|carbon monoxide|detector|heater|generator|asbestos|mold|structural|foundation)\b/i.test(rowsText);
+  const generalKnowledge = /^General\b.*\bknowledge$/i.test(srcLine) || (/\bExtension\b/i.test(srcLine) && !tradeRisk);
   if ((tplName === 'home-walkround' || tplName === 'home-safety') && !generalKnowledge) {
     (card.rows || []).forEach((row, i) => {
       const s = typeof row === 'string' ? row : (row.detail || '');
