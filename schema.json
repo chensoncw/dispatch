@@ -221,7 +221,7 @@
       "fields": {
         "headline":   { "max": 36, "lines": 2, "required": true },
         "titan_line": { "max": 200, "required": true },
-        "rows":       { "count": 3, "labels": ["Where", "When", "Worth knowing"], "detail": 62 },
+        "rows":       { "count": 3, "labels": ["Where", "When", "Worth knowing"], "labels_optional": true, "detail": 62, "_note": "Chenson 2026-10-30: the labels are optional. A row may be a plain sentence (a string, or an object with no label); then neither the card nor the video prints or says a label." },
         "event_date": { "type": "date", "required": true },
         "echo_line":  { "max": 100, "required": true, "register": "tight" },
         "source":     { "max": 108, "required": true },
