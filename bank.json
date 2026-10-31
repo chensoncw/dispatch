@@ -1233,11 +1233,11 @@
         "said": [
           "H4",
           "Fallen Leaves Make Free Mulch\nMow Them, Don't Bag Them",
-          "Echo, if you don't want to rake, just run the mower over the leaves. Chopped leaves are useful, and a thick pile can smother the lawn.",
-          "Mulch: spread chopped leaves around trees, shrubs and flower beds.",
-          "In the cold they work like a blanket on the roots.",
+          "Echo, if you don't want to rake, just run the mower over the leaves. Set it on its highest setting, and chopped leaves are useful around the yard.",
+          "Mulch: use chopped leaves in garden beds and around young plants.",
+          "In the cold they help protect young or tender plants.",
           "Compost: chopped leaves are a good addition to a compost pile.",
-          "Soil: as they break down, chopped leaves feed the soil.",
+          "Soil: as they break down, chopped leaves add organic matter to the soil.",
           "Mulch, compost and richer soil. Those leaves work harder than I do."
         ],
         "keywords": [
@@ -1246,15 +1246,15 @@
           "mulch",
           "compost",
           "soil",
-          "pile",
-          "work",
+          "around",
+          "young",
+          "plants",
           "fallen",
           "make",
           "free",
-          "echo",
-          "want"
+          "echo"
         ],
-        "source": "General fall yard care knowledge"
+        "source": "Colorado State University Extension, Using Leaves in the Landscape, reviewed July 2024 · read Oct 30, 2026"
       }
     ]
   },
@@ -2264,11 +2264,11 @@
       "said": [
         "H4",
         "Fallen Leaves Make Free Mulch\nMow Them, Don't Bag Them",
-        "Echo, if you don't want to rake, just run the mower over the leaves. Chopped leaves are useful, and a thick pile can smother the lawn.",
-        "Mulch: spread chopped leaves around trees, shrubs and flower beds.",
-        "In the cold they work like a blanket on the roots.",
+        "Echo, if you don't want to rake, just run the mower over the leaves. Set it on its highest setting, and chopped leaves are useful around the yard.",
+        "Mulch: use chopped leaves in garden beds and around young plants.",
+        "In the cold they help protect young or tender plants.",
         "Compost: chopped leaves are a good addition to a compost pile.",
-        "Soil: as they break down, chopped leaves feed the soil.",
+        "Soil: as they break down, chopped leaves add organic matter to the soil.",
         "Mulch, compost and richer soil. Those leaves work harder than I do."
       ],
       "keywords": [
@@ -2277,15 +2277,15 @@
         "mulch",
         "compost",
         "soil",
-        "pile",
-        "work",
+        "around",
+        "young",
+        "plants",
         "fallen",
         "make",
         "free",
-        "echo",
-        "want"
+        "echo"
       ],
-      "source": "General fall yard care knowledge"
+      "source": "Colorado State University Extension, Using Leaves in the Landscape, reviewed July 2024 · read Oct 30, 2026"
     }
   ]
 }
