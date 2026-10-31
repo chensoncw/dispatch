@@ -167,7 +167,7 @@
         {
           "date": "2026-11-06",
           "topic": "faucets",
-          "headline": "Fallen Leaves Make Free Mulch Mow Them, Don't Bag Them"
+          "headline": "Fallen Leaves Are Free Mulch Four Ways To Use Them"
         }
       ]
     }
@@ -1226,30 +1226,30 @@
         "topic": "faucets",
         "template": "home-walkround",
         "slot": "home",
-        "headline": "Fallen Leaves Make Free Mulch Mow Them, Don't Bag Them",
+        "headline": "Fallen Leaves Are Free Mulch Four Ways To Use Them",
         "said": [
           "H4",
-          "Fallen Leaves Make Free Mulch\nMow Them, Don't Bag Them",
-          "Echo, if you don't want to rake, just run the mower over the leaves. Set it on its highest setting, and chopped leaves are useful around the yard.",
-          "Mulch: use chopped leaves in garden beds and around young plants.",
+          "Fallen Leaves Are Free Mulch\nFour Ways To Use Them",
+          "Echo, before those leaves go in a bag, they can do some work around the yard.",
+          "Mulch: use leaves in garden beds and around young plants.",
           "In the cold they help protect young or tender plants.",
-          "Compost: chopped leaves are a good addition to a compost pile.",
-          "Soil: as they break down, chopped leaves add organic matter to the soil.",
+          "Compost: leaves are a good addition to a compost pile.",
+          "Soil: as they break down, leaves add organic matter to the soil.",
           "Mulch, compost and richer soil. Those leaves work harder than I do."
         ],
         "keywords": [
           "leaves",
-          "chopped",
           "mulch",
           "compost",
           "soil",
+          "those",
+          "work",
           "around",
           "young",
           "plants",
           "fallen",
-          "make",
           "free",
-          "echo"
+          "four"
         ],
         "source": "Colorado State University Extension, Using Leaves in the Landscape, reviewed July 2024 · read Oct 30, 2026"
       }
@@ -2254,30 +2254,30 @@
       "topic": "faucets",
       "template": "home-walkround",
       "slot": "home",
-      "headline": "Fallen Leaves Make Free Mulch Mow Them, Don't Bag Them",
+      "headline": "Fallen Leaves Are Free Mulch Four Ways To Use Them",
       "said": [
         "H4",
-        "Fallen Leaves Make Free Mulch\nMow Them, Don't Bag Them",
-        "Echo, if you don't want to rake, just run the mower over the leaves. Set it on its highest setting, and chopped leaves are useful around the yard.",
-        "Mulch: use chopped leaves in garden beds and around young plants.",
+        "Fallen Leaves Are Free Mulch\nFour Ways To Use Them",
+        "Echo, before those leaves go in a bag, they can do some work around the yard.",
+        "Mulch: use leaves in garden beds and around young plants.",
         "In the cold they help protect young or tender plants.",
-        "Compost: chopped leaves are a good addition to a compost pile.",
-        "Soil: as they break down, chopped leaves add organic matter to the soil.",
+        "Compost: leaves are a good addition to a compost pile.",
+        "Soil: as they break down, leaves add organic matter to the soil.",
         "Mulch, compost and richer soil. Those leaves work harder than I do."
       ],
       "keywords": [
         "leaves",
-        "chopped",
         "mulch",
         "compost",
         "soil",
+        "those",
+        "work",
         "around",
         "young",
         "plants",
         "fallen",
-        "make",
         "free",
-        "echo"
+        "four"
       ],
       "source": "Colorado State University Extension, Using Leaves in the Landscape, reviewed July 2024 · read Oct 30, 2026"
     }
