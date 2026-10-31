@@ -1,19 +1,21 @@
 {
-    "_":  "Fri 6 Nov 2026, home slot. REPLACED Oct 30 (file name kept). The old faucet topic is gone: the University of Georgia article I opened (fieldreport.caes.uga.edu, Winterize outdoor pipes now, before they freeze) is dated Oct 31 2007, so it is not new this week. How this one is new: clocks went back at 2 a.m. Sunday Nov 1 2026, and fire safety groups run their smoke alarm reminder that weekend. The card goes out the following Friday and speaks of it as past. SOURCE LIMIT: National Fire Protection Association (NFPA) Change Your Clock Change Your Battery points were seen only as search-result text on Oct 30. The NFPA page returned 404 and the Red Cross Georgia page returned 403, so no page was opened in full. Facts used: test alarms once a month; if one chirps the battery is low and should be changed right away. Left out: any fire statistic (none verified), the ten year replacement rule (snippet unclear). No price, no forecast. No figures used, so nothing from the used list repeats. Echo ending is new and not a rate, notepad or weather joke.",
+    "_":  "Fri 6 Nov 2026, home slot, step 2 seasonal upkeep (leaf drop). File name kept from the earlier faucet topic. Plain seasonal common sense with no figure, date, rule, program or quote, so no outside source is needed. Source line is the general-knowledge line. Rows are four true uses of chopped leaves: mulch around trees, shrubs and beds; a blanket on the roots in the cold; a compost pile; they feed the soil as they break down. The thick-pile line in Titan's sentence is the reason to mow, not a use.",
     "approved":  false,
     "template":  "home-walkround",
     "skin":  "autumn",
+    "bg":  "H4",
     "eyebrow":  "Home",
-    "headline":  "Clocks Went Back Sunday\nA Look At Your Smoke Alarms",
-    "titan_line":  "Echo, the clocks went back last Sunday, and fire safety groups use that weekend to remind people about smoke alarms.",
+    "headline":  "Fallen Leaves Make Free Mulch\nMow Them, Don't Bag Them",
+    "titan_line":  "Echo, if you don't want to rake, just run the mower over the leaves. Chopped leaves are useful, and a thick pile can smother the lawn.",
     "rows":  [
-                 "Press the test button on each alarm once a month. The fire department asks people to do this.",
-                 "A chirp means the battery is low. Swap it right away, like the fire department teaches.",
-                 "A licensed electrician can look at hard-wired alarms that act up."
+                 "Mulch: spread chopped leaves around trees, shrubs and flower beds.",
+                 "In the cold they work like a blanket on the roots.",
+                 "Compost: chopped leaves are a good addition to a compost pile.",
+                 "Soil: as they break down, chopped leaves feed the soil."
              ],
-    "echo_line":  "I pressed mine. It beeped back like it had been waiting all year.",
-    "source":  "National Fire Protection Association (NFPA), Change Your Clock, Change Your Battery · seen October 30, 2026",
-    "disclaimer":  "General home information, not an inspection or advice about any home. Ask your local fire department about yours.",
+    "echo_line":  "Mulch, compost and a clear lawn. Those leaves work harder than I do.",
+    "source":  "General fall yard care knowledge",
+    "disclaimer":  "General home information. Check your own yard and mower before you start.",
     "titan_pose":  "titan-front",
     "echo_pose":  "echo-notepad",
     "hashtag":  "#HomeownerTips"
