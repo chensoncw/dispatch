@@ -1,0 +1,17 @@
+{
+    "_":  "Tue 10 Nov 2026, BUYER card. APPROVED WORDING: tuesday-income-change-after-buying.md. Source: CFPB, If I cannot pay my mortgage loan, what are my options?, reviewed Aug 28 2026, read Nov 6 2026. This card JSON is a short two-bubble summary written by the box. approved is FALSE until Chenson types his yes.",
+    "approved":  false,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Buyers",
+    "headline":  "Worried About Your Income\nAfter You Buy?",
+    "turn_1":  "Echo, call the company you send your mortgage payment to as soon as you see trouble coming.",
+    "turn_2":  "Is the counselor only for when things are already bad?",
+    "turn_3":  "Not only then. A HUD-approved housing counselor\u0027s help is described as free, and the advice covers being worried about a missed payment.",
+    "echo_line":  "Free and early, I can work with that.",
+    "source":  "CFPB, If I can\u0027t pay my mortgage loan · reviewed Aug 28, 2026",
+    "disclaimer":  "General information, not advice. What is available depends on your own loan. Your lender can answer for your case.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
