@@ -1,0 +1,17 @@
+{
+    "_":  "Fri 13 Nov 2026 card. APPROVED WORDING: friday-furnace-filter.md (v2). Sources: ENERGY STAR, Ask the Experts (Feb 2 2024) and Save on Heating Costs, read Nov 6 2026. This card JSON is a short two-bubble summary written by the box. approved is FALSE until Chenson types his yes.",
+    "approved":  false,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Buyers",
+    "headline":  "Your Furnace Filter:\nA Monthly Check",
+    "turn_1":  "Echo, the furnace filter is a monthly look, especially through the winter months.",
+    "turn_2":  "What happens if I leave a dirty one in there?",
+    "turn_3":  "A dirty filter makes the system work harder, which can run up the energy bill and wear the equipment out early.",
+    "echo_line":  "That\u0027s a lot riding on one filter.",
+    "source":  "ENERGY STAR, Ask the Experts · Feb 2, 2024 · Save on Heating Costs",
+    "disclaimer":  "General information, not advice. For your own system, check your equipment instructions.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
