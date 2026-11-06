@@ -1,0 +1,17 @@
+{
+    "_":  "Thu 12 Nov 2026 card. APPROVED WORDING: thursday-choosing-a-home-inspector.md (v4). Source: CFPB, Schedule a home inspection, page last modified Dec 12 2024, read Nov 6 2026. This card JSON is a short two-bubble summary written by the box. approved is FALSE until Chenson types his yes.",
+    "approved":  false,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Buyers",
+    "headline":  "Is Your Home Inspector\nWorking For You?",
+    "turn_1":  "Echo, you want an inspector who is independent and accountable to you.",
+    "turn_2":  "How do I know they are really working for me?",
+    "turn_3":  "One paid by someone else, or not paid until closing, might underemphasize problems with the home. The link is on screen.",
+    "echo_line":  "I hadn\u0027t thought about who the check comes from.",
+    "source":  "CFPB, Schedule a home inspection · page last modified Dec 12, 2024",
+    "disclaimer":  "General information, not advice. Details are on the CFPB page.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
