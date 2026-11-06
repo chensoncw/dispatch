@@ -1,0 +1,17 @@
+{
+    "_":  "Mon 9 Nov 2026, BUYER/rate card. APPROVED WORDING: the conversation in TITAN AND ECHO\\CONVERSATIONS\\week-of-2026-11-09\\monday-rate.md (Chenson approved all five 2026-11-06). This card JSON is a short two-bubble summary written by the box from that conversation; the picture posted is the new-look card from the video build. Source: Freddie Mac PMMS, data as of 11/05/2026 (30-year 7.18, week before 7.24), read Nov 6 2026. approved is FALSE until Chenson types his yes.",
+    "approved":  false,
+    "template":  "teaching-lesson",
+    "skin":  "autumn",
+    "eyebrow":  "For Buyers",
+    "headline":  "Rate Moved A Little:\nIs It Your Rate?",
+    "turn_1":  "Echo, last week the 30-year averaged 7.24%. As of the Nov 5 release, it is 7.18%. A national average, not your rate.",
+    "turn_2":  "What makes someone\u0027s own rate different from that number?",
+    "turn_3":  "The survey counts one kind of borrower: good or excellent credit, 20% down and a conventional loan. A lender can quote your own.",
+    "echo_line":  "How would I go about finding my own rate?",
+    "source":  "Freddie Mac PMMS · data as of Nov 5, 2026 · read Nov 6, 2026",
+    "disclaimer":  "National weekly average for one borrower profile. Not a quote. Your own lender can tell you your rate.",
+    "titan_pose":  "titan-front",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
