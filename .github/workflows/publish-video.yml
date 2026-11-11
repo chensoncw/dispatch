@@ -8,7 +8,12 @@ name: Publish Video
 
 on:
   schedule:
-    - cron: '0 10 * * 6'   # 6:00 Eastern; GitHub runs this about 4 to 6 hours late, which lands between 10 AM and noon Eastern, near the 11 AM YouTube and TikTok time
+    # 2026-11-11 (Chenson): every weekday AND Saturday. The video-posts folder is the slot: if a record dated
+    # today is in it, the video goes to Facebook and Instagram; if not, the run finds nothing, posts nothing
+    # and sends nothing. Before this it was Saturday only, so a Wednesday video (Veterans Day) never went out.
+    # GitHub runs this about 4 to 6 hours late, which lands between 10 AM and noon Eastern.
+    # One run a day on purpose: Facebook cannot be read back, so a retry after an Instagram failure could double-post it.
+    - cron: '0 10 * * 1,2,3,4,5,6'
   workflow_dispatch:
     inputs:
       record:
