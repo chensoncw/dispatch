@@ -34,6 +34,10 @@ on:
         required: false
         default: '0'
 
+# 2026-11-14: a Facebook-only card writes a small claim file (posted/<card>.facebook.json) as its duplicate guard, so the job needs to write to the repo.
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -75,6 +79,7 @@ jobs:
           META_IG_USER_ID:  ${{ secrets.META_IG_USER_ID }}
           APPROVED:         ${{ github.event.inputs.approved }}
           DRY_RUN:          ${{ github.event.inputs.dry_run }}
+          GH_TOKEN:         ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/publish.js "${{ steps.pick.outputs.card }}"
 
       - name: Tell Chenson it broke
