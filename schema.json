@@ -188,6 +188,20 @@
       "_note": "Three turns, never four. A fourth pushes the source line off the card."
     },
 
+    "teaching-echo-first": {
+      "slot": "teaching", "eyebrow": "TEACHING", "skin": "seasonal",
+      "_note": "Added to the schema 2026-11-14. The template itself was added to render.html on 2026-11-10 for the Tuesday income card (Echo asks, Titan answers, Echo closes, shown in full) but was never registered here, so the weekly validation rejected that card. Limits are set from that card.",
+      "fields": {
+        "headline":     { "max": 52, "lines": 2, "required": true },
+        "echo_q":       { "max": 160, "required": true, "speaker": "echo" },
+        "titan_answer": { "max": 340, "required": true, "speaker": "titan" },
+        "echo_reply":   { "max": 150, "required": true, "speaker": "echo" },
+        "source":       { "max": 100, "required": true },
+        "disclaimer":   { "max": 190, "required": true },
+        "hashtag":      { "fixed": "#RealEstateExplained" }
+      }
+    },
+
     "teaching-answer-summary": {
       "slot": "teaching", "eyebrow": "TEACHING", "skin": "plain",
       "_note": "Added 2026-11-14 for the series cards. Echo asks, Titan answers, then a summary (the bigger one) said by Titan (summary_by titan, the default) or Echo (summary_by echo). Chenson: 'Question, answer, summary. The summary would, of course, be the bigger one.' A condensed retelling of the approved video script, not the script cut up.",
