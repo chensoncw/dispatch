@@ -73,7 +73,7 @@
       "id": "echo_lands",
       "applies_to": "all",
       "field": "echo_line",
-      "rule": "must not end with a question mark",
+      "rule": "a question at the end is now only a warning (changed 2026-11-06: Echo's ending is not forced into one shape)",
       "why": "The question is the opening beat. The line closes in understanding."
     },
     {
@@ -186,6 +186,21 @@
         "hashtag":    { "fixed": "#RealEstateExplained" }
       },
       "_note": "Three turns, never four. A fourth pushes the source line off the card."
+    },
+
+    "teaching-answer-summary": {
+      "slot": "teaching", "eyebrow": "TEACHING", "skin": "plain",
+      "_note": "Added 2026-11-14 for the series cards. Echo asks, Titan answers, then a summary (the bigger one) said by Titan (summary_by titan, the default) or Echo (summary_by echo). Chenson: 'Question, answer, summary. The summary would, of course, be the bigger one.' A condensed retelling of the approved video script, not the script cut up.",
+      "fields": {
+        "headline":     { "max": 52, "lines": 2, "required": true },
+        "echo_q":       { "max": 120, "speaker": "echo", "_note": "optional: the headline can be the question" },
+        "titan_answer": { "max": 300, "required": true, "speaker": "titan" },
+        "summary":      { "max": 320, "_note": "optional: Tuesday and Thursday cards are the headline question plus Titan's full answer" },
+        "summary_by":   { "options": ["titan", "echo"] },
+        "source":       { "max": 110, "required": true },
+        "disclaimer":   { "max": 190, "required": true },
+        "hashtag":      { "fixed": "#RealEstateExplained" }
+      }
     },
 
     "teaching-definition": {
