@@ -132,22 +132,37 @@ async function main() {
     process.exit(1);
   }
 
-  let igDone;
-  try { igDone = await instagramAlreadyHas(caption); }
-  catch (e) {
-    console.error(`\npublish-video: cannot read Instagram to check for a duplicate — ${e.message}\nStopping WITHOUT posting.`);
-    process.exit(1);
+  // Platforms (2026-11-14, Chenson: "fb gets card only, insta gets video only, not both"): a record may carry
+  // "platforms": ["instagram"]. Without the field it goes to both, exactly as before (the weekly recap).
+  const platforms = (Array.isArray(rec.platforms) && rec.platforms.length) ? rec.platforms.map(s => String(s).toLowerCase()) : ['facebook', 'instagram'];
+  const wantFB = platforms.includes('facebook'), wantIG = platforms.includes('instagram');
+  console.log(`  platforms ${platforms.join(' + ')}`);
+
+  let igDone = true;
+  if (wantIG) {
+    try { igDone = await instagramAlreadyHas(caption); }
+    catch (e) {
+      console.error(`\npublish-video: cannot read Instagram to check for a duplicate — ${e.message}\nStopping WITHOUT posting.`);
+      process.exit(1);
+    }
   }
-  const fbChecked = await facebookAlreadyHas(caption);
-  const fbDone = fbChecked === null ? igDone : fbChecked;
+  let fbDone = true;
+  if (wantFB) {
+    const fbChecked = await facebookAlreadyHas(caption);
+    fbDone = fbChecked === null ? (wantIG ? igDone : false) : fbChecked;
+  }
 
-  if (fbDone && igDone) { console.log('\npublish-video: already on Facebook and Instagram today. Nothing sent (the duplicate guard, not a failure).'); return; }
+  if (fbDone && igDone) { console.log('\npublish-video: already posted today on the platforms this record names. Nothing sent (the duplicate guard, not a failure).'); return; }
 
-  if (fbDone) console.log('  facebook  already posted today — skipped');
-  else console.log(`  facebook  posted ${await publishFacebook(url, caption, true)}`);
+  if (wantFB) {
+    if (fbDone) console.log('  facebook  already posted today — skipped');
+    else console.log(`  facebook  posted ${await publishFacebook(url, caption, true)}`);
+  } else console.log('  facebook  not requested for this video (Instagram only)');
 
-  if (igDone) console.log('  instagram already posted today — skipped');
-  else console.log(`  instagram posted ${await publishInstagramReel(url, caption)}`);
+  if (wantIG) {
+    if (igDone) console.log('  instagram already posted today — skipped');
+    else console.log(`  instagram posted ${await publishInstagramReel(url, caption)}`);
+  }
 
   console.log('publish-video: done');
 }
