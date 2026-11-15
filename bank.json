@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-11-01",
+  "_built": "2026-11-15",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
@@ -11,7 +11,7 @@
     "series": 6,
     "_default": 12
   },
-  "count": 30,
+  "count": 39,
   "by_year": {
     "2026": {
       "2026-09": [
@@ -168,6 +168,51 @@
           "date": "2026-11-06",
           "topic": "faucets",
           "headline": "Fallen Leaves Are Free Mulch Four Ways To Use Them"
+        },
+        {
+          "date": "2026-11-09",
+          "topic": "rate",
+          "headline": "Rate Moved A Little: Is It Your Rate?"
+        },
+        {
+          "date": "2026-11-10",
+          "topic": "income",
+          "headline": "Worried About Your Income After You Buy?"
+        },
+        {
+          "date": "2026-11-12",
+          "topic": "inspector",
+          "headline": "Is Your Home Inspector Working For You?"
+        },
+        {
+          "date": "2026-11-13",
+          "topic": "furnace",
+          "headline": "Your Furnace Filter: A Monthly Check"
+        },
+        {
+          "date": "2026-11-16",
+          "topic": "rate",
+          "headline": "Does The Fed Set My Mortgage Rate?"
+        },
+        {
+          "date": "2026-11-17",
+          "topic": "closingcosts",
+          "headline": "Closing Costs: Flat Fee Or A Percent?"
+        },
+        {
+          "date": "2026-11-18",
+          "topic": "sits",
+          "headline": "Why A House Sits For Months"
+        },
+        {
+          "date": "2026-11-19",
+          "topic": "warranty",
+          "headline": "If Something Breaks, Who's On The Hook?"
+        },
+        {
+          "date": "2026-11-20",
+          "topic": "foreclosure",
+          "headline": "Are Foreclosures Really Going Up?"
         }
       ]
     }
@@ -864,6 +909,69 @@
           "2026"
         ],
         "source": "Freddie Mac Primary Mortgage Market Survey · week of October 29, 2026 · read October 30, 2026"
+      },
+      {
+        "date": "2026-11-09",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "rate",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "Rate Moved A Little: Is It Your Rate?",
+        "said": [
+          "Rate Moved A Little:\nIs It Your Rate?",
+          "Echo, last week the 30-year averaged 7.24%. As of the Nov 5 release, it is 7.18%. A national average, not your rate.",
+          "What makes someone's own rate different from that number?",
+          "The survey counts one kind of borrower: good or excellent credit, 20% down and a conventional loan. A lender can quote your own.",
+          "How would I go about finding my own rate?"
+        ],
+        "keywords": [
+          "rate",
+          "moved",
+          "little",
+          "echo",
+          "last",
+          "week",
+          "year",
+          "averaged",
+          "release",
+          "national",
+          "average",
+          "makes"
+        ],
+        "source": "Freddie Mac PMMS · data as of Nov 5, 2026 · read Nov 6, 2026"
+      },
+      {
+        "date": "2026-11-16",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "rate",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "Does The Fed Set My Mortgage Rate?",
+        "said": [
+          "titan",
+          "T1",
+          "Does The Fed Set\nMy Mortgage Rate?",
+          "I keep hearing the Fed has cut. So why are mortgage rates going up?",
+          "Echo, the Fed hasn't cut this year. It held its rate at 3-3/4 to 4 percent, and it doesn't set mortgage rates.",
+          "Mortgage rates have been more closely associated with the 10‑year Treasury than with the Fed's rate. The daily survey you check closed Friday at 7.50 percent, up from the day before. Your own rate depends on your credit, down payment and loan type."
+        ],
+        "keywords": [
+          "mortgage",
+          "rate",
+          "rates",
+          "year",
+          "percent",
+          "titan",
+          "does",
+          "keep",
+          "hearing",
+          "going",
+          "echo",
+          "hasn"
+        ],
+        "source": "Federal Reserve, Oct 28, 2026 · Atlanta Fed, Nov 10, 2025 · Mortgage News Daily, Nov 13, 2026"
       }
     ],
     "escrow": [
@@ -1252,6 +1360,233 @@
           "four"
         ],
         "source": "Colorado State University Extension, Using Leaves in the Landscape, reviewed July 2024 · read Oct 30, 2026"
+      }
+    ],
+    "income": [
+      {
+        "date": "2026-11-10",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "income",
+        "template": "teaching-echo-first",
+        "slot": "teaching",
+        "headline": "Worried About Your Income After You Buy?",
+        "said": [
+          "Worried About Your Income\nAfter You Buy?",
+          "Hey Titan, here's what keeps me up about buying. What happens if I lose my job, or my income changes, after I've already closed?",
+          "Say your hours get cut a few months after you close. I'd call the company you send your payment to right away, even before you miss one, and be ready to explain your income and expenses. A HUD-approved housing counselor can help too, at little or no cost. What's offered depends on your own loan.",
+          "Yeah, I suppose anything can happen. I'll save the number for the company I pay, just in case. Thanks, Titan."
+        ],
+        "keywords": [
+          "income",
+          "after",
+          "about",
+          "titan",
+          "company",
+          "worried",
+          "here",
+          "keeps",
+          "buying",
+          "happens",
+          "lose",
+          "changes"
+        ],
+        "source": "CFPB, If I can't pay my mortgage loan · reviewed Aug 28, 2026"
+      }
+    ],
+    "inspector": [
+      {
+        "date": "2026-11-12",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "inspector",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "Is Your Home Inspector Working For You?",
+        "said": [
+          "Is Your Home Inspector\nWorking For You?",
+          "Echo, you want an inspector who is independent and accountable to you.",
+          "How do I know they are really working for me?",
+          "One paid by someone else, or not paid until closing, might underemphasize problems with the home. The link is on screen.",
+          "I hadn't thought about who the check comes from."
+        ],
+        "keywords": [
+          "home",
+          "inspector",
+          "working",
+          "paid",
+          "echo",
+          "want",
+          "independent",
+          "accountable",
+          "know",
+          "really",
+          "someone",
+          "else"
+        ],
+        "source": "CFPB, Schedule a home inspection · page last modified Dec 12, 2024"
+      }
+    ],
+    "furnace": [
+      {
+        "date": "2026-11-13",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "furnace",
+        "template": "teaching-lesson",
+        "slot": "teaching",
+        "headline": "Your Furnace Filter: A Monthly Check",
+        "said": [
+          "Your Furnace Filter:\nA Monthly Check",
+          "Echo, the furnace filter is a monthly look, especially through the winter months.",
+          "What happens if I leave a dirty one in there?",
+          "A dirty filter makes the system work harder, which can run up the energy bill and wear the equipment out early.",
+          "That's a lot riding on one filter."
+        ],
+        "keywords": [
+          "filter",
+          "furnace",
+          "monthly",
+          "dirty",
+          "check",
+          "echo",
+          "look",
+          "especially",
+          "through",
+          "winter",
+          "months",
+          "happens"
+        ],
+        "source": "ENERGY STAR, Ask the Experts · Feb 2, 2024 · Save on Heating Costs"
+      }
+    ],
+    "closingcosts": [
+      {
+        "date": "2026-11-17",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "closingcosts",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "Closing Costs: Flat Fee Or A Percent?",
+        "said": [
+          "R2",
+          "Closing Costs:\nFlat Fee Or A Percent?",
+          "There's no set amount. The CFPB says closing costs typically run 2 to 5 percent of the price, not counting the down payment. Some of the services on the Loan Estimate you can shop for, and the rest your lender picks."
+        ],
+        "keywords": [
+          "closing",
+          "costs",
+          "percent",
+          "flat",
+          "amount",
+          "cfpb",
+          "says",
+          "typically",
+          "price",
+          "counting",
+          "down",
+          "payment"
+        ],
+        "source": "CFPB, updated Feb 18, 2026 · CFPB Loan Estimate page, updated Oct 29, 2025"
+      }
+    ],
+    "sits": [
+      {
+        "date": "2026-11-18",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "sits",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "Why A House Sits For Months",
+        "said": [
+          "echo",
+          "M3",
+          "Why A House\nSits For Months",
+          "What is actually going on with a house that just sits?",
+          "Echo, buyers have been holding back lately. Rates, prices and the economy have them wary.",
+          "So homes are taking longer to sell. In Atlanta, homes put under contract in October were down 26.8 percent from a year ago."
+        ],
+        "keywords": [
+          "echo",
+          "house",
+          "sits",
+          "homes",
+          "months",
+          "actually",
+          "going",
+          "just",
+          "buyers",
+          "been",
+          "holding",
+          "back"
+        ],
+        "source": "Redfin, Mar 30, 2026 · Georgia MLS, Atlanta area, Oct 2026"
+      }
+    ],
+    "warranty": [
+      {
+        "date": "2026-11-19",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "warranty",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "If Something Breaks, Who's On The Hook?",
+        "said": [
+          "H5",
+          "If Something Breaks,\nWho's On The Hook?",
+          "It depends on the home and the paperwork. A newly built home can come with a builder warranty, limited coverage on certain parts like plumbing or heating. A home warranty is a service contract that a buyer can buy or a seller can offer. An attorney can read your own paperwork."
+        ],
+        "keywords": [
+          "home",
+          "paperwork",
+          "warranty",
+          "something",
+          "breaks",
+          "hook",
+          "depends",
+          "newly",
+          "built",
+          "come",
+          "builder",
+          "limited"
+        ],
+        "source": "FTC, May 2021 · FTC, Feb 24, 2023 · Redfin, Jul 18, 2025"
+      }
+    ],
+    "foreclosure": [
+      {
+        "date": "2026-11-20",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "foreclosure",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "Are Foreclosures Really Going Up?",
+        "said": [
+          "echo",
+          "R3",
+          "Are Foreclosures\nReally Going Up?",
+          "One tracker counts 21 percent more properties with a foreclosure filing in the first half of 2026 than the first half of 2025.",
+          "So a filing isn't losing the house. The report calls the broader picture a market gradually returning to more typical patterns."
+        ],
+        "keywords": [
+          "more",
+          "filing",
+          "first",
+          "half",
+          "2025",
+          "2026",
+          "echo",
+          "foreclosures",
+          "really",
+          "going",
+          "tracker",
+          "counts"
+        ],
+        "source": "ATTOM, first half of 2026 (published Jul 16, 2026)"
       }
     ]
   },
@@ -2280,6 +2615,282 @@
         "four"
       ],
       "source": "Colorado State University Extension, Using Leaves in the Landscape, reviewed July 2024 · read Oct 30, 2026"
+    },
+    {
+      "date": "2026-11-09",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "rate",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "Rate Moved A Little: Is It Your Rate?",
+      "said": [
+        "Rate Moved A Little:\nIs It Your Rate?",
+        "Echo, last week the 30-year averaged 7.24%. As of the Nov 5 release, it is 7.18%. A national average, not your rate.",
+        "What makes someone's own rate different from that number?",
+        "The survey counts one kind of borrower: good or excellent credit, 20% down and a conventional loan. A lender can quote your own.",
+        "How would I go about finding my own rate?"
+      ],
+      "keywords": [
+        "rate",
+        "moved",
+        "little",
+        "echo",
+        "last",
+        "week",
+        "year",
+        "averaged",
+        "release",
+        "national",
+        "average",
+        "makes"
+      ],
+      "source": "Freddie Mac PMMS · data as of Nov 5, 2026 · read Nov 6, 2026"
+    },
+    {
+      "date": "2026-11-10",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "income",
+      "template": "teaching-echo-first",
+      "slot": "teaching",
+      "headline": "Worried About Your Income After You Buy?",
+      "said": [
+        "Worried About Your Income\nAfter You Buy?",
+        "Hey Titan, here's what keeps me up about buying. What happens if I lose my job, or my income changes, after I've already closed?",
+        "Say your hours get cut a few months after you close. I'd call the company you send your payment to right away, even before you miss one, and be ready to explain your income and expenses. A HUD-approved housing counselor can help too, at little or no cost. What's offered depends on your own loan.",
+        "Yeah, I suppose anything can happen. I'll save the number for the company I pay, just in case. Thanks, Titan."
+      ],
+      "keywords": [
+        "income",
+        "after",
+        "about",
+        "titan",
+        "company",
+        "worried",
+        "here",
+        "keeps",
+        "buying",
+        "happens",
+        "lose",
+        "changes"
+      ],
+      "source": "CFPB, If I can't pay my mortgage loan · reviewed Aug 28, 2026"
+    },
+    {
+      "date": "2026-11-12",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "inspector",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "Is Your Home Inspector Working For You?",
+      "said": [
+        "Is Your Home Inspector\nWorking For You?",
+        "Echo, you want an inspector who is independent and accountable to you.",
+        "How do I know they are really working for me?",
+        "One paid by someone else, or not paid until closing, might underemphasize problems with the home. The link is on screen.",
+        "I hadn't thought about who the check comes from."
+      ],
+      "keywords": [
+        "home",
+        "inspector",
+        "working",
+        "paid",
+        "echo",
+        "want",
+        "independent",
+        "accountable",
+        "know",
+        "really",
+        "someone",
+        "else"
+      ],
+      "source": "CFPB, Schedule a home inspection · page last modified Dec 12, 2024"
+    },
+    {
+      "date": "2026-11-13",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "furnace",
+      "template": "teaching-lesson",
+      "slot": "teaching",
+      "headline": "Your Furnace Filter: A Monthly Check",
+      "said": [
+        "Your Furnace Filter:\nA Monthly Check",
+        "Echo, the furnace filter is a monthly look, especially through the winter months.",
+        "What happens if I leave a dirty one in there?",
+        "A dirty filter makes the system work harder, which can run up the energy bill and wear the equipment out early.",
+        "That's a lot riding on one filter."
+      ],
+      "keywords": [
+        "filter",
+        "furnace",
+        "monthly",
+        "dirty",
+        "check",
+        "echo",
+        "look",
+        "especially",
+        "through",
+        "winter",
+        "months",
+        "happens"
+      ],
+      "source": "ENERGY STAR, Ask the Experts · Feb 2, 2024 · Save on Heating Costs"
+    },
+    {
+      "date": "2026-11-16",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "rate",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "Does The Fed Set My Mortgage Rate?",
+      "said": [
+        "titan",
+        "T1",
+        "Does The Fed Set\nMy Mortgage Rate?",
+        "I keep hearing the Fed has cut. So why are mortgage rates going up?",
+        "Echo, the Fed hasn't cut this year. It held its rate at 3-3/4 to 4 percent, and it doesn't set mortgage rates.",
+        "Mortgage rates have been more closely associated with the 10‑year Treasury than with the Fed's rate. The daily survey you check closed Friday at 7.50 percent, up from the day before. Your own rate depends on your credit, down payment and loan type."
+      ],
+      "keywords": [
+        "mortgage",
+        "rate",
+        "rates",
+        "year",
+        "percent",
+        "titan",
+        "does",
+        "keep",
+        "hearing",
+        "going",
+        "echo",
+        "hasn"
+      ],
+      "source": "Federal Reserve, Oct 28, 2026 · Atlanta Fed, Nov 10, 2025 · Mortgage News Daily, Nov 13, 2026"
+    },
+    {
+      "date": "2026-11-17",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "closingcosts",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "Closing Costs: Flat Fee Or A Percent?",
+      "said": [
+        "R2",
+        "Closing Costs:\nFlat Fee Or A Percent?",
+        "There's no set amount. The CFPB says closing costs typically run 2 to 5 percent of the price, not counting the down payment. Some of the services on the Loan Estimate you can shop for, and the rest your lender picks."
+      ],
+      "keywords": [
+        "closing",
+        "costs",
+        "percent",
+        "flat",
+        "amount",
+        "cfpb",
+        "says",
+        "typically",
+        "price",
+        "counting",
+        "down",
+        "payment"
+      ],
+      "source": "CFPB, updated Feb 18, 2026 · CFPB Loan Estimate page, updated Oct 29, 2025"
+    },
+    {
+      "date": "2026-11-18",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "sits",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "Why A House Sits For Months",
+      "said": [
+        "echo",
+        "M3",
+        "Why A House\nSits For Months",
+        "What is actually going on with a house that just sits?",
+        "Echo, buyers have been holding back lately. Rates, prices and the economy have them wary.",
+        "So homes are taking longer to sell. In Atlanta, homes put under contract in October were down 26.8 percent from a year ago."
+      ],
+      "keywords": [
+        "echo",
+        "house",
+        "sits",
+        "homes",
+        "months",
+        "actually",
+        "going",
+        "just",
+        "buyers",
+        "been",
+        "holding",
+        "back"
+      ],
+      "source": "Redfin, Mar 30, 2026 · Georgia MLS, Atlanta area, Oct 2026"
+    },
+    {
+      "date": "2026-11-19",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "warranty",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "If Something Breaks, Who's On The Hook?",
+      "said": [
+        "H5",
+        "If Something Breaks,\nWho's On The Hook?",
+        "It depends on the home and the paperwork. A newly built home can come with a builder warranty, limited coverage on certain parts like plumbing or heating. A home warranty is a service contract that a buyer can buy or a seller can offer. An attorney can read your own paperwork."
+      ],
+      "keywords": [
+        "home",
+        "paperwork",
+        "warranty",
+        "something",
+        "breaks",
+        "hook",
+        "depends",
+        "newly",
+        "built",
+        "come",
+        "builder",
+        "limited"
+      ],
+      "source": "FTC, May 2021 · FTC, Feb 24, 2023 · Redfin, Jul 18, 2025"
+    },
+    {
+      "date": "2026-11-20",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "foreclosure",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "Are Foreclosures Really Going Up?",
+      "said": [
+        "echo",
+        "R3",
+        "Are Foreclosures\nReally Going Up?",
+        "One tracker counts 21 percent more properties with a foreclosure filing in the first half of 2026 than the first half of 2025.",
+        "So a filing isn't losing the house. The report calls the broader picture a market gradually returning to more typical patterns."
+      ],
+      "keywords": [
+        "more",
+        "filing",
+        "first",
+        "half",
+        "2025",
+        "2026",
+        "echo",
+        "foreclosures",
+        "really",
+        "going",
+        "tracker",
+        "counts"
+      ],
+      "source": "ATTOM, first half of 2026 (published Jul 16, 2026)"
     }
   ]
 }
