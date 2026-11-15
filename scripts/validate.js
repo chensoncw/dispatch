@@ -230,7 +230,8 @@ function checkRules(file, card, tpl, tplName) {
     const ins = findPhrase(e, INSTRUCTIONS);
     if (ins) fail(file, 'echo_first_person', `echo_line instructs the reader: "${ins}"`);
     if (plain(e).trim().endsWith('?')) {
-      fail(file, 'echo_lands', 'echo_line ends on a question — the question is the opening beat, not the close');
+      // Was a hard fail (2026-11-06 Chenson: Echo's ending must not be forced into one shape). Now a note only.
+      warn(file, 'echo_lands', 'echo_line ends on a question — fine if that is how the conversation ended');
     }
   }
 
