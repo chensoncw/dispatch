@@ -950,6 +950,7 @@
         "slot": "teaching",
         "headline": "Does The Fed Set My Mortgage Rate?",
         "said": [
+          "facebook",
           "titan",
           "T1",
           "Does The Fed Set\nMy Mortgage Rate?",
@@ -963,13 +964,13 @@
           "rates",
           "year",
           "percent",
+          "facebook",
           "titan",
           "does",
           "keep",
           "hearing",
           "going",
-          "echo",
-          "hasn"
+          "echo"
         ],
         "source": "Federal Reserve, Oct 28, 2026 · Atlanta Fed, Nov 10, 2025 · Mortgage News Daily, Nov 13, 2026"
       }
@@ -1470,6 +1471,7 @@
         "slot": "teaching",
         "headline": "Closing Costs: Flat Fee Or A Percent?",
         "said": [
+          "facebook",
           "R2",
           "Closing Costs:\nFlat Fee Or A Percent?",
           "There's no set amount. The CFPB says closing costs typically run 2 to 5 percent of the price, not counting the down payment. Some of the services on the Loan Estimate you can shop for, and the rest your lender picks."
@@ -1478,6 +1480,7 @@
           "closing",
           "costs",
           "percent",
+          "facebook",
           "flat",
           "amount",
           "cfpb",
@@ -1485,8 +1488,7 @@
           "typically",
           "price",
           "counting",
-          "down",
-          "payment"
+          "down"
         ],
         "source": "CFPB, updated Feb 18, 2026 · CFPB Loan Estimate page, updated Oct 29, 2025"
       }
@@ -1501,6 +1503,7 @@
         "slot": "teaching",
         "headline": "Why A House Sits For Months",
         "said": [
+          "facebook",
           "echo",
           "M3",
           "Why A House\nSits For Months",
@@ -1513,14 +1516,14 @@
           "house",
           "sits",
           "homes",
+          "facebook",
           "months",
           "actually",
           "going",
           "just",
           "buyers",
           "been",
-          "holding",
-          "back"
+          "holding"
         ],
         "source": "Redfin, Mar 30, 2026 · Georgia MLS, Atlanta area, Oct 2026"
       }
@@ -1535,6 +1538,7 @@
         "slot": "teaching",
         "headline": "If Something Breaks, Who's On The Hook?",
         "said": [
+          "facebook",
           "H5",
           "If Something Breaks,\nWho's On The Hook?",
           "It depends on the home and the paperwork. A newly built home can come with a builder warranty, limited coverage on certain parts like plumbing or heating. A home warranty is a service contract that a buyer can buy or a seller can offer. An attorney can read your own paperwork."
@@ -1543,6 +1547,7 @@
           "home",
           "paperwork",
           "warranty",
+          "facebook",
           "something",
           "breaks",
           "hook",
@@ -1550,8 +1555,7 @@
           "newly",
           "built",
           "come",
-          "builder",
-          "limited"
+          "builder"
         ],
         "source": "FTC, May 2021 · FTC, Feb 24, 2023 · Redfin, Jul 18, 2025"
       }
@@ -1566,6 +1570,7 @@
         "slot": "teaching",
         "headline": "Are Foreclosures Really Going Up?",
         "said": [
+          "facebook",
           "echo",
           "R3",
           "Are Foreclosures\nReally Going Up?",
@@ -1579,12 +1584,12 @@
           "half",
           "2025",
           "2026",
+          "facebook",
           "echo",
           "foreclosures",
           "really",
           "going",
-          "tracker",
-          "counts"
+          "tracker"
         ],
         "source": "ATTOM, first half of 2026 (published Jul 16, 2026)"
       }
@@ -2748,6 +2753,7 @@
       "slot": "teaching",
       "headline": "Does The Fed Set My Mortgage Rate?",
       "said": [
+        "facebook",
         "titan",
         "T1",
         "Does The Fed Set\nMy Mortgage Rate?",
@@ -2761,13 +2767,13 @@
         "rates",
         "year",
         "percent",
+        "facebook",
         "titan",
         "does",
         "keep",
         "hearing",
         "going",
-        "echo",
-        "hasn"
+        "echo"
       ],
       "source": "Federal Reserve, Oct 28, 2026 · Atlanta Fed, Nov 10, 2025 · Mortgage News Daily, Nov 13, 2026"
     },
@@ -2780,6 +2786,7 @@
       "slot": "teaching",
       "headline": "Closing Costs: Flat Fee Or A Percent?",
       "said": [
+        "facebook",
         "R2",
         "Closing Costs:\nFlat Fee Or A Percent?",
         "There's no set amount. The CFPB says closing costs typically run 2 to 5 percent of the price, not counting the down payment. Some of the services on the Loan Estimate you can shop for, and the rest your lender picks."
@@ -2788,6 +2795,7 @@
         "closing",
         "costs",
         "percent",
+        "facebook",
         "flat",
         "amount",
         "cfpb",
@@ -2795,8 +2803,7 @@
         "typically",
         "price",
         "counting",
-        "down",
-        "payment"
+        "down"
       ],
       "source": "CFPB, updated Feb 18, 2026 · CFPB Loan Estimate page, updated Oct 29, 2025"
     },
@@ -2809,6 +2816,7 @@
       "slot": "teaching",
       "headline": "Why A House Sits For Months",
       "said": [
+        "facebook",
         "echo",
         "M3",
         "Why A House\nSits For Months",
@@ -2821,14 +2829,14 @@
         "house",
         "sits",
         "homes",
+        "facebook",
         "months",
         "actually",
         "going",
         "just",
         "buyers",
         "been",
-        "holding",
-        "back"
+        "holding"
       ],
       "source": "Redfin, Mar 30, 2026 · Georgia MLS, Atlanta area, Oct 2026"
     },
@@ -2841,6 +2849,7 @@
       "slot": "teaching",
       "headline": "If Something Breaks, Who's On The Hook?",
       "said": [
+        "facebook",
         "H5",
         "If Something Breaks,\nWho's On The Hook?",
         "It depends on the home and the paperwork. A newly built home can come with a builder warranty, limited coverage on certain parts like plumbing or heating. A home warranty is a service contract that a buyer can buy or a seller can offer. An attorney can read your own paperwork."
@@ -2849,6 +2858,7 @@
         "home",
         "paperwork",
         "warranty",
+        "facebook",
         "something",
         "breaks",
         "hook",
@@ -2856,8 +2866,7 @@
         "newly",
         "built",
         "come",
-        "builder",
-        "limited"
+        "builder"
       ],
       "source": "FTC, May 2021 · FTC, Feb 24, 2023 · Redfin, Jul 18, 2025"
     },
@@ -2870,6 +2879,7 @@
       "slot": "teaching",
       "headline": "Are Foreclosures Really Going Up?",
       "said": [
+        "facebook",
         "echo",
         "R3",
         "Are Foreclosures\nReally Going Up?",
@@ -2883,12 +2893,12 @@
         "half",
         "2025",
         "2026",
+        "facebook",
         "echo",
         "foreclosures",
         "really",
         "going",
-        "tracker",
-        "counts"
+        "tracker"
       ],
       "source": "ATTOM, first half of 2026 (published Jul 16, 2026)"
     }
