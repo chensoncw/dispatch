@@ -27,16 +27,21 @@ function pick(dir, approvedOnly) {
   const f = fs.readdirSync(d).filter(n => n.startsWith(today + '-') && n.endsWith('.json')).sort()[0];
   if (!f) return null;
   const rec = JSON.parse(fs.readFileSync(path.join(d, f), 'utf8'));
-  if (approvedOnly && rec.approved !== true) return { name: f, approved: false };
-  return { name: f, approved: true };
+  const platforms = (Array.isArray(rec.platforms) && rec.platforms.length) ? rec.platforms.map(s => String(s).toLowerCase()) : ['facebook', 'instagram'];
+  if (approvedOnly && rec.approved !== true) return { name: f, approved: false, platforms };
+  return { name: f, approved: true, platforms };
 }
 
 async function main() {
   const card = pick('content', true);
   const video = pick('video-posts', true);
+  // 2026-11-14 (Chenson): a card that is Facebook only is not due on Instagram, and a video that is Instagram only is. Facebook cannot be read back, so a Facebook-only card cannot be checked here.
+  const cardOnIG = !!(card && card.approved && card.platforms.includes('instagram'));
+  const videoOnIG = !!(video && video.approved && video.platforms.includes('instagram'));
+  if (card && card.approved && !cardOnIG) console.log(`note: ${card.name} is Facebook only; Facebook cannot be read, so it is not checked here.`);
   const want = [];
-  if (card && card.approved) want.push(`today's card (${card.name})`);
-  if (video && video.approved) want.push(`today's recap video (${video.name})`);
+  if (cardOnIG) want.push(`today's card (${card.name})`);
+  if (videoOnIG) want.push(`today's video (${video.name})`);
   if (card && !card.approved) console.log(`note: ${card.name} is not approved, so nothing was due.`);
   if (!want.length) { console.log(`post-check: nothing due on ${today}. OK.`); return; }
 
@@ -48,8 +53,8 @@ async function main() {
   const images = todays.filter(p => p.media_type !== 'VIDEO');
 
   let bad = [];
-  if (card && card.approved && images.length === 0) bad.push(`today's card (${card.name}) is NOT on Instagram`);
-  if (video && video.approved && reels.length === 0) bad.push(`today's recap video (${video.name}) is NOT on Instagram`);
+  if (cardOnIG && images.length === 0) bad.push(`today's card (${card.name}) is NOT on Instagram`);
+  if (videoOnIG && reels.length === 0) bad.push(`today's video (${video.name}) is NOT on Instagram`);
   if (bad.length) {
     console.error('post-check PROBLEM: ' + bad.join('; ') + '. The publish workflow runs again later today and has a duplicate guard; re-run "Publish" / "Publish Video" by hand if this stays empty.');
     process.exit(1);
