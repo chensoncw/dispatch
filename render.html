@@ -380,6 +380,11 @@ body{margin:0;background:var(--ground);color:var(--ink);
 .card.story .greet .pair img.e{height:252px}
 .card.story .greet p{font-size:36px}
 .card.story .greet p + p{font-size:31px}
+/* holiday echo_first (optional): both lines the same size and weight, Echo first */
+.greet p.ef,.greet p.ef + p.ef{font-size:31px;font-weight:500;color:#fff}
+.greet p.ef + p.ef{margin-top:18px}
+.card.light .greet p.ef,.card.light .greet p.ef + p.ef{color:var(--navy)}
+.card.story .greet p.ef,.card.story .greet p.ef + p.ef{font-size:36px}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
@@ -892,8 +897,11 @@ T['holiday'] = function(c){
         '<img class="e" src="'+pose(c.echo_pose||'echo-surprised')+'" alt="">'+
       '</div>'+
       '<div class="who">Titan &amp; Echo</div>'+
-      '<p>'+rich(c.titan_line)+'</p>'+
-      (c.echo_line ? '<p>'+rich(c.echo_line)+'</p>' : '')+
+      // echo_first (optional, default off): Echo's greeting first and Titan's answer second, both lines the same size and weight (2026-11-21, Social). Without it the card draws exactly as before.
+      ((c.echo_first === true && c.echo_line) ?
+        '<p class="ef">'+rich(c.echo_line)+'</p><p class="ef">'+rich(c.titan_line)+'</p>' :
+        '<p>'+rich(c.titan_line)+'</p>'+
+        (c.echo_line ? '<p>'+rich(c.echo_line)+'</p>' : ''))+
     '</div>';
 };
 
@@ -981,6 +989,23 @@ var SAMPLES = [
 ];
 
 /* ---------------- boot ---------------- */
+/* 2026-11-21 (Social): two small fits, both a no-op on a card that already fits.
+   1) A headline split on purpose with a line break, whose widest line is wider than the card, is shrunk 2 px at a time until each line fits on ONE line. The split is kept; it is never re-wrapped.
+   2) A card with "dis_room": true gets room above the signature bar: the source and disclaimer block moves up 18 px (a long disclaimer wraps to two lines; the words are not changed). Default off. */
+function fitText(){
+  document.querySelectorAll('#stage h2.head').forEach(function(h){
+    if (h.innerHTML.indexOf('<br') < 0) return;
+    var ws = h.style.whiteSpace; h.style.whiteSpace = 'nowrap';
+    var fs = parseFloat(getComputedStyle(h).fontSize), min = fs * 0.55, changed = false;
+    while (h.scrollWidth > h.clientWidth + 1 && fs > min) { fs -= 2; h.style.fontSize = fs + 'px'; changed = true; }
+    if (changed) h.style.whiteSpace = ws; else h.style.removeProperty('white-space');
+  });
+  if (window.__CARD__ && window.__CARD__.dis_room === true) {   // opt-in per card: a two-line disclaimer over a busy photo gets room above the bar (other cards, even with two-line disclaimers, are untouched)
+    document.querySelectorAll('#stage .foot').forEach(function(f){
+      var dis = f.querySelector('.dis'); if (dis) f.style.marginBottom = '18px';
+    });
+  }
+}
 function solo(card, story){
   // story mode renders the same record on a 1080x1920 canvas. Same words, same
   // template, same colourway - only the shape changes, so nothing is written twice.
@@ -989,6 +1014,7 @@ function solo(card, story){
     '<div id="stage" class="'+cls+'">'+renderCard(card, story)+'</div>';
   document.body.style.background = '#fff';
   document.body.style.margin = '0';
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitText);   // after the fonts settle, so the measurements are the real ones
 }
 function gallery(){
   var html = '<div class="hero"><div class="hero-in">'+
