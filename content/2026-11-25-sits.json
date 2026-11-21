@@ -1,0 +1,19 @@
+{
+    "_":  "Wed 25 Nov 2026 card, The House That Won't Sell, 2 of 4 (price). Two lines: Echo asks, Titan answers, no separate summary. Wording copied word for word from TITAN AND ECHO\\CONVERSATIONS\\week-of-2026-11-23\\SCRIPTS AS APPROVED - extracted from Social chat (2026-11-21).md (Wednesday card, approved by Chenson at L99383). Built by Base Everson. approved is false: Chenson has not approved the rendered card. bg is my pick (the video's first clip).",
+    "approved":  true,
+    "platforms":  ["facebook"],
+    "template":  "teaching-answer-summary",
+    "summary_by":  "titan",
+    "skin":  "plain",
+    "natural":  true,
+    "bg":  "H5",
+    "eyebrow":  "The House That Won't Sell · 2 Of 4",
+    "headline":  "Does Price Decide\nWhether A House Sells?",
+    "echo_q":  "How much does the price actually matter?",
+    "titan_answer":  "One brokerage says pricing a home 10 percent or more too high can add more than a month on the market. Sellers check a price against similar homes nearby: what they recently sold for, and whether listings are sitting or cutting prices. A house that sits can see fewer showings and weaker offers.",
+    "source":  "Redfin: Nov 2, 2026 (pricing) · Mar 30, 2026 · Mar 27, 2026 · Jan 8, 2025 (comps)",
+    "disclaimer":  "General market information. It says nothing about any one home, and it is not a prediction or a price.",
+    "titan_pose":  "titan-alt",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
