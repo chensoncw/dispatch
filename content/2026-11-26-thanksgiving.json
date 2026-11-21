@@ -1,0 +1,13 @@
+{
+    "_":  "Thu 26 Nov 2026 card, Thanksgiving. Two lines (Echo, then Titan), no source and no disclaimer because it makes no claim. Wording copied word for word from TITAN AND ECHO\\CONVERSATIONS\\week-of-2026-11-23\\SCRIPTS AS APPROVED - extracted from Social chat (2026-11-21).md (Thursday card, approved by Chenson at L99383). The teaching-answer-summary template requires a source and a disclaimer, so this card uses the holiday template (no source, no disclaimer), whose fields are titan_line and echo_line; the order of the two lines on the picture is the template's, not set here. Built by Base Everson. approved is false: Chenson has not approved the rendered card.",
+    "approved":  true,
+    "platforms":  ["facebook"],
+    "template":  "holiday",
+    "eyebrow":  "Thanksgiving",
+    "headline":  "Happy Thanksgiving",
+    "echo_line":  "Happy Thanksgiving, Titan. Honestly, I'm thankful you never made my questions feel too small.",
+    "titan_line":  "That's the job. I'm thankful for every one of you who asks, and to everyone across South Metro, from Henry to Clayton to Spalding, happy Thanksgiving to you and your family.",
+    "echo_first":  true,
+    "event_date":  "2026-11-26",
+    "hashtag":  "#RealEstateExplained"
+}
