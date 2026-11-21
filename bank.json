@@ -1,6 +1,6 @@
 {
   "_about": "What has already been said, by year and month. Built from content/ by scripts/bank.js — never edited by hand, or it drifts from what actually ran.",
-  "_built": "2026-11-15",
+  "_built": "2026-11-21",
   "_how_to_use": "Before writing a card, run: node scripts/bank.js check <topic>. If the angle ran inside its interval, write a different one.",
   "_intervals_months": {
     "market": 1,
@@ -11,7 +11,7 @@
     "series": 6,
     "_default": 12
   },
-  "count": 39,
+  "count": 44,
   "by_year": {
     "2026": {
       "2026-09": [
@@ -213,6 +213,31 @@
           "date": "2026-11-20",
           "topic": "foreclosure",
           "headline": "Are Foreclosures Really Going Up?"
+        },
+        {
+          "date": "2026-11-23",
+          "topic": "rate",
+          "headline": "Rates This Week: 7.28% Up, 7.33% Down"
+        },
+        {
+          "date": "2026-11-24",
+          "topic": "closingcosts",
+          "headline": "Can The Seller Pay The Closing Costs?"
+        },
+        {
+          "date": "2026-11-25",
+          "topic": "sits",
+          "headline": "Does Price Decide Whether A House Sells?"
+        },
+        {
+          "date": "2026-11-26",
+          "topic": "thanksgiving",
+          "headline": "Happy Thanksgiving"
+        },
+        {
+          "date": "2026-11-27",
+          "topic": "foreclosure",
+          "headline": "What Happens After A Foreclosure Notice In Georgia?"
         }
       ]
     }
@@ -973,6 +998,38 @@
           "echo"
         ],
         "source": "Federal Reserve, Oct 28, 2026 · Atlanta Fed, Nov 10, 2025 · Mortgage News Daily, Nov 13, 2026"
+      },
+      {
+        "date": "2026-11-23",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "rate",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "Rates This Week: 7.28% Up, 7.33% Down",
+        "said": [
+          "facebook",
+          "titan",
+          "T1",
+          "Rates This Week: 7.28% Up,\n7.33% Down",
+          "One site says up, the other says down. Which one's right?",
+          "Both. The 7.28 percent is a weekly average of loan applications, up from the week before. The 7.33 percent is a daily read of lenders' rate sheets, down from Thursday. They count different things, so they can point different ways in the same week."
+        ],
+        "keywords": [
+          "week",
+          "down",
+          "says",
+          "percent",
+          "different",
+          "facebook",
+          "titan",
+          "rates",
+          "site",
+          "other",
+          "right",
+          "both"
+        ],
+        "source": "Freddie Mac, Nov 19, 2026 · Mortgage News Daily, Nov 20, 2026"
       }
     ],
     "escrow": [
@@ -1491,6 +1548,37 @@
           "down"
         ],
         "source": "CFPB, updated Feb 18, 2026 · CFPB Loan Estimate page, updated Oct 29, 2025"
+      },
+      {
+        "date": "2026-11-24",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "closingcosts",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "Can The Seller Pay The Closing Costs?",
+        "said": [
+          "facebook",
+          "titan",
+          "T2",
+          "Can The Seller Pay\nThe Closing Costs?",
+          "Sometimes. On one kind of conventional loan, a seller can put money toward your closing costs, up to a limit. It depends on your down payment: for the smallest ones it's three percent of the price or the appraisal, whichever is lower. It can't cover the down payment itself."
+        ],
+        "keywords": [
+          "seller",
+          "closing",
+          "costs",
+          "down",
+          "payment",
+          "facebook",
+          "titan",
+          "sometimes",
+          "kind",
+          "conventional",
+          "loan",
+          "money"
+        ],
+        "source": "Fannie Mae Selling Guide (conventional loans), current Nov 2026; section dated May 7, 2025"
       }
     ],
     "sits": [
@@ -1526,6 +1614,38 @@
           "holding"
         ],
         "source": "Redfin, Mar 30, 2026 · Georgia MLS, Atlanta area, Oct 2026"
+      },
+      {
+        "date": "2026-11-25",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "sits",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "Does Price Decide Whether A House Sells?",
+        "said": [
+          "facebook",
+          "titan",
+          "H5",
+          "Does Price Decide\nWhether A House Sells?",
+          "How much does the price actually matter?",
+          "One brokerage says pricing a home 10 percent or more too high can add more than a month on the market. Sellers check a price against similar homes nearby: what they recently sold for, and whether listings are sitting or cutting prices. A house that sits can see fewer showings and weaker offers."
+        ],
+        "keywords": [
+          "price",
+          "does",
+          "whether",
+          "house",
+          "more",
+          "facebook",
+          "titan",
+          "decide",
+          "sells",
+          "much",
+          "actually",
+          "matter"
+        ],
+        "source": "Redfin: Nov 2, 2026 (pricing) · Mar 30, 2026 · Mar 27, 2026 · Jan 8, 2025 (comps)"
       }
     ],
     "warranty": [
@@ -1592,6 +1712,70 @@
           "tracker"
         ],
         "source": "ATTOM, first half of 2026 (published Jul 16, 2026)"
+      },
+      {
+        "date": "2026-11-27",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "foreclosure",
+        "template": "teaching-answer-summary",
+        "slot": "teaching",
+        "headline": "What Happens After A Foreclosure Notice In Georgia?",
+        "said": [
+          "facebook",
+          "titan",
+          "T3",
+          "What Happens After A Foreclosure\nNotice In Georgia?",
+          "In Georgia, the mortgage company has to send the owner written notice at least 30 days before the sale. The sale is the first Tuesday of the month, on the courthouse steps. If you or someone you know is in this spot, reach out early to an attorney or a HUD-certified housing counselor."
+        ],
+        "keywords": [
+          "notice",
+          "georgia",
+          "sale",
+          "facebook",
+          "titan",
+          "happens",
+          "after",
+          "foreclosure",
+          "mortgage",
+          "company",
+          "send",
+          "owner"
+        ],
+        "source": "Georgia Legal Aid (updated Feb 13, 2026) · Georgia Attorney General (read Nov 20, 2026)"
+      }
+    ],
+    "thanksgiving": [
+      {
+        "date": "2026-11-26",
+        "year": "2026",
+        "month": "2026-11",
+        "topic": "thanksgiving",
+        "template": "holiday",
+        "slot": "holiday",
+        "headline": "Happy Thanksgiving",
+        "said": [
+          "facebook",
+          "Happy Thanksgiving",
+          "Happy Thanksgiving, Titan. Honestly, I'm thankful you never made my questions feel too small.",
+          "That's the job. I'm thankful for every one of you who asks, and to everyone across South Metro, from Henry to Clayton to Spalding, happy Thanksgiving to you and your family.",
+          "2026-11-26"
+        ],
+        "keywords": [
+          "happy",
+          "thanksgiving",
+          "thankful",
+          "2026",
+          "facebook",
+          "titan",
+          "honestly",
+          "never",
+          "made",
+          "questions",
+          "feel",
+          "small"
+        ],
+        "source": null
       }
     ]
   },
@@ -2901,6 +3085,163 @@
         "tracker"
       ],
       "source": "ATTOM, first half of 2026 (published Jul 16, 2026)"
+    },
+    {
+      "date": "2026-11-23",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "rate",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "Rates This Week: 7.28% Up, 7.33% Down",
+      "said": [
+        "facebook",
+        "titan",
+        "T1",
+        "Rates This Week: 7.28% Up,\n7.33% Down",
+        "One site says up, the other says down. Which one's right?",
+        "Both. The 7.28 percent is a weekly average of loan applications, up from the week before. The 7.33 percent is a daily read of lenders' rate sheets, down from Thursday. They count different things, so they can point different ways in the same week."
+      ],
+      "keywords": [
+        "week",
+        "down",
+        "says",
+        "percent",
+        "different",
+        "facebook",
+        "titan",
+        "rates",
+        "site",
+        "other",
+        "right",
+        "both"
+      ],
+      "source": "Freddie Mac, Nov 19, 2026 · Mortgage News Daily, Nov 20, 2026"
+    },
+    {
+      "date": "2026-11-24",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "closingcosts",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "Can The Seller Pay The Closing Costs?",
+      "said": [
+        "facebook",
+        "titan",
+        "T2",
+        "Can The Seller Pay\nThe Closing Costs?",
+        "Sometimes. On one kind of conventional loan, a seller can put money toward your closing costs, up to a limit. It depends on your down payment: for the smallest ones it's three percent of the price or the appraisal, whichever is lower. It can't cover the down payment itself."
+      ],
+      "keywords": [
+        "seller",
+        "closing",
+        "costs",
+        "down",
+        "payment",
+        "facebook",
+        "titan",
+        "sometimes",
+        "kind",
+        "conventional",
+        "loan",
+        "money"
+      ],
+      "source": "Fannie Mae Selling Guide (conventional loans), current Nov 2026; section dated May 7, 2025"
+    },
+    {
+      "date": "2026-11-25",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "sits",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "Does Price Decide Whether A House Sells?",
+      "said": [
+        "facebook",
+        "titan",
+        "H5",
+        "Does Price Decide\nWhether A House Sells?",
+        "How much does the price actually matter?",
+        "One brokerage says pricing a home 10 percent or more too high can add more than a month on the market. Sellers check a price against similar homes nearby: what they recently sold for, and whether listings are sitting or cutting prices. A house that sits can see fewer showings and weaker offers."
+      ],
+      "keywords": [
+        "price",
+        "does",
+        "whether",
+        "house",
+        "more",
+        "facebook",
+        "titan",
+        "decide",
+        "sells",
+        "much",
+        "actually",
+        "matter"
+      ],
+      "source": "Redfin: Nov 2, 2026 (pricing) · Mar 30, 2026 · Mar 27, 2026 · Jan 8, 2025 (comps)"
+    },
+    {
+      "date": "2026-11-26",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "thanksgiving",
+      "template": "holiday",
+      "slot": "holiday",
+      "headline": "Happy Thanksgiving",
+      "said": [
+        "facebook",
+        "Happy Thanksgiving",
+        "Happy Thanksgiving, Titan. Honestly, I'm thankful you never made my questions feel too small.",
+        "That's the job. I'm thankful for every one of you who asks, and to everyone across South Metro, from Henry to Clayton to Spalding, happy Thanksgiving to you and your family.",
+        "2026-11-26"
+      ],
+      "keywords": [
+        "happy",
+        "thanksgiving",
+        "thankful",
+        "2026",
+        "facebook",
+        "titan",
+        "honestly",
+        "never",
+        "made",
+        "questions",
+        "feel",
+        "small"
+      ],
+      "source": null
+    },
+    {
+      "date": "2026-11-27",
+      "year": "2026",
+      "month": "2026-11",
+      "topic": "foreclosure",
+      "template": "teaching-answer-summary",
+      "slot": "teaching",
+      "headline": "What Happens After A Foreclosure Notice In Georgia?",
+      "said": [
+        "facebook",
+        "titan",
+        "T3",
+        "What Happens After A Foreclosure\nNotice In Georgia?",
+        "In Georgia, the mortgage company has to send the owner written notice at least 30 days before the sale. The sale is the first Tuesday of the month, on the courthouse steps. If you or someone you know is in this spot, reach out early to an attorney or a HUD-certified housing counselor."
+      ],
+      "keywords": [
+        "notice",
+        "georgia",
+        "sale",
+        "facebook",
+        "titan",
+        "happens",
+        "after",
+        "foreclosure",
+        "mortgage",
+        "company",
+        "send",
+        "owner"
+      ],
+      "source": "Georgia Legal Aid (updated Feb 13, 2026) · Georgia Attorney General (read Nov 20, 2026)"
     }
   ]
 }
