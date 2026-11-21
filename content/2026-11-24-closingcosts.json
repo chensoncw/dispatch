@@ -1,0 +1,19 @@
+{
+    "_":  "Tue 24 Nov 2026 card, The Money After The Down Payment, 2 of 4 (can the seller pay closing costs). One Titan block, no Echo line. Wording copied word for word from TITAN AND ECHO\\CONVERSATIONS\\week-of-2026-11-23\\SCRIPTS AS APPROVED - extracted from Social chat (2026-11-21).md (Tuesday card, approved by Chenson at L99177). The card headline is \"Can The Seller Pay The Closing Costs?\" and the video's on-screen title is \"Can The Seller Pay My Closing Costs?\": different on purpose (Chenson, 2026-11-21). Built by Base Everson. approved is false: Chenson has not approved the rendered card. bg is my pick (the video's first clip).",
+    "approved":  true,
+    "platforms":  ["facebook"],
+    "template":  "teaching-answer-summary",
+    "summary_by":  "titan",
+    "skin":  "plain",
+    "natural":  true,
+    "bg":  "T2",
+    "eyebrow":  "The Money After The Down Payment · 2 Of 4",
+    "headline":  "Can The Seller Pay\nThe Closing Costs?",
+    "titan_answer":  "Sometimes. On one kind of conventional loan, a seller can put money toward your closing costs, up to a limit. It depends on your down payment: for the smallest ones it's three percent of the price or the appraisal, whichever is lower. It can't cover the down payment itself.",
+    "source":  "Fannie Mae Selling Guide (conventional loans), current Nov 2026; section dated May 7, 2025",
+    "disclaimer":  "General information about one kind of conventional loan, not loan advice. Your own limit depends on your loan type and down payment; ask your lender.",
+    "dis_room":  true,
+    "titan_pose":  "titan-alt",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
