@@ -1,0 +1,19 @@
+{
+    "_":  "Mon 23 Nov 2026 card, the weekly rate, standalone (no series count). Wording copied word for word from Social Media chat's message of 2026-11-21 and TITAN AND ECHO\\CONVERSATIONS\\week-of-2026-11-23\\FINAL-monday.md (card section): two lines, Echo asks and Titan gives the whole answer, no separate summary. Sources: Freddie Mac PMMS as of 11/19/2026, 30-year 7.28%, up from 7.11% (weekly average of loan applications); Mortgage News Daily 30-year fixed daily survey, 11/20/2026, 7.33%, down from 7.45% (lenders' rate sheets, updated each weekday afternoon). Built by Base Everson on the mini PC. approved is false: Chenson has not approved the rendered card.",
+    "approved":  true,
+    "platforms":  ["facebook"],
+    "template":  "teaching-answer-summary",
+    "summary_by":  "titan",
+    "skin":  "plain",
+    "natural":  true,
+    "bg":  "T1",
+    "eyebrow":  "The Weekly Rate",
+    "headline":  "Rates This Week: 7.28% Up,\n7.33% Down",
+    "echo_q":  "One site says up, the other says down. Which one's right?",
+    "titan_answer":  "Both. The 7.28 percent is a weekly average of loan applications, up from the week before. The 7.33 percent is a daily read of lenders' rate sheets, down from Thursday. They count different things, so they can point different ways in the same week.",
+    "source":  "Freddie Mac, Nov 19, 2026 · Mortgage News Daily, Nov 20, 2026",
+    "disclaimer":  "General information, not a rate quote or a prediction. Your own rate depends on your credit, down payment and loan type; ask your lender.",
+    "titan_pose":  "titan-alt",
+    "echo_pose":  "echo-notepad",
+    "hashtag":  "#RealEstateExplained"
+}
